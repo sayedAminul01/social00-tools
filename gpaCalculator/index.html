@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator - Calculate GPA, CGPA & Percentage | Social00</title>
+  <meta name="description" content="Free online GPA calculator. Calculate semester GPA, CGPA, convert GPA to percentage and percentage to GPA. Supports 4.0, 5.0 and 10.0 grading scales.">
+  <meta name="keywords" content="GPA calculator, CGPA calculator, GPA to percentage, percentage to GPA, semester GPA calculator, online GPA calculator, grade point calculator">
+  <link rel="canonical" href="https://social00.com/tools/gpa-calculator">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "GPA Calculator",
+    "url": "https://social00.com/tools/gpa-calculator",
+    "description": "Calculate your GPA, CGPA, and convert between GPA and percentage with support for multiple grading scales.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is GPA calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GPA is calculated by multiplying each grade point by credit hours, summing them up, and dividing by total credit hours. Formula: GPA = (Sum of Grade Points × Credit Hours) / Total Credit Hours"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to convert GPA to percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 4.0 scale: Percentage = (GPA / 4.0) × 100. For 10.0 scale: Percentage = GPA × 9.5. Different institutions may use different conversion formulas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between GPA and CGPA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GPA (Grade Point Average) is calculated for a single semester or term. CGPA (Cumulative Grade Point Average) is the average of all semesters combined throughout your academic program."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Social00</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>GPA Calculator</h1>
+      <p class="hero-desc">Calculate your GPA, CGPA, and convert between GPA and percentage with support for multiple grading scales</p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Calculator Tabs -->
+      <div class="calc-tabs">
+        <button class="tab-btn active" data-tab="semester">Semester GPA</button>
+        <button class="tab-btn" data-tab="cgpa">CGPA Calculator</button>
+        <button class="tab-btn" data-tab="gpa-to-percent">GPA to %</button>
+        <button class="tab-btn" data-tab="percent-to-gpa">% to GPA</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="calc-container">
+        
+        <!-- Semester GPA Calculator -->
+        <div class="tab-content active" id="semester">
+          <div class="calc-header">
+            <div class="scale-selector">
+              <label>Grading Scale:</label>
+              <select id="semesterScale">
+                <option value="4">4.0 Scale</option>
+                <option value="5">5.0 Scale</option>
+                <option value="10">10.0 Scale</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="subjects-list" id="subjectsList">
+            <!-- Dynamic subjects will be added here -->
+          </div>
+
+          <button class="btn-add" id="addSubject">+ Add Subject</button>
+
+          <div class="result-box" id="semesterResult">
+            <div class="result-label">Your Semester GPA</div>
+            <div class="result-value">0.00</div>
+            <div class="result-meta">Add subjects to calculate</div>
+          </div>
+
+          <div class="action-btns">
+            <button class="btn-secondary" id="resetSemester">Reset</button>
+            <button class="btn-primary" id="copySemester">Copy Result</button>
+          </div>
+        </div>
+
+        <!-- CGPA Calculator -->
+        <div class="tab-content" id="cgpa">
+          <div class="calc-header">
+            <div class="scale-selector">
+              <label>Grading Scale:</label>
+              <select id="cgpaScale">
+                <option value="4">4.0 Scale</option>
+                <option value="5">5.0 Scale</option>
+                <option value="10">10.0 Scale</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="semesters-list" id="semestersList">
+            <!-- Dynamic semesters will be added here -->
+          </div>
+
+          <button class="btn-add" id="addSemester">+ Add Semester</button>
+
+          <div class="result-box" id="cgpaResult">
+            <div class="result-label">Your CGPA</div>
+            <div class="result-value">0.00</div>
+            <div class="result-meta">Add semesters to calculate</div>
+          </div>
+
+          <div class="action-btns">
+            <button class="btn-secondary" id="resetCGPA">Reset</button>
+            <button class="btn-primary" id="copyCGPA">Copy Result</button>
+          </div>
+        </div>
+
+        <!-- GPA to Percentage -->
+        <div class="tab-content" id="gpa-to-percent">
+          <div class="converter-form">
+            <div class="form-group">
+              <label>Select Grading Scale</label>
+              <select id="gpaToPercentScale">
+                <option value="4">4.0 Scale</option>
+                <option value="5">5.0 Scale</option>
+                <option value="10">10.0 Scale</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Enter Your GPA</label>
+              <input type="number" id="gpaInput" placeholder="e.g., 3.5" step="0.01" min="0">
+            </div>
+
+            <div class="result-box" id="gpaToPercentResult">
+              <div class="result-label">Percentage</div>
+              <div class="result-value">0.00%</div>
+              <div class="result-meta">Enter GPA to convert</div>
+            </div>
+
+            <div class="action-btns">
+              <button class="btn-secondary" id="resetGpaToPercent">Reset</button>
+              <button class="btn-primary" id="copyGpaToPercent">Copy Result</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Percentage to GPA -->
+        <div class="tab-content" id="percent-to-gpa">
+          <div class="converter-form">
+            <div class="form-group">
+              <label>Select Grading Scale</label>
+              <select id="percentToGpaScale">
+                <option value="4">4.0 Scale</option>
+                <option value="5">5.0 Scale</option>
+                <option value="10">10.0 Scale</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Enter Your Percentage</label>
+              <input type="number" id="percentInput" placeholder="e.g., 85" step="0.01" min="0" max="100">
+            </div>
+
+            <div class="result-box" id="percentToGpaResult">
+              <div class="result-label">GPA</div>
+              <div class="result-value">0.00</div>
+              <div class="result-meta">Enter percentage to convert</div>
+            </div>
+
+            <div class="action-btns">
+              <button class="btn-secondary" id="resetPercentToGpa">Reset</button>
+              <button class="btn-primary" id="copyPercentToGpa">Copy Result</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Content Sections -->
+      <article class="content-section">
+        <h2>What is GPA and How is it Calculated?</h2>
+        <p>GPA (Grade Point Average) is a standardized way of measuring academic achievement. It's calculated by converting letter grades to grade points, multiplying by credit hours, and dividing by total credits.</p>
+        <p><strong>Formula:</strong> GPA = (Sum of Grade Points × Credit Hours) / Total Credit Hours</p>
+      </article>
+
+      <article class="content-section">
+        <h2>GPA to Percentage Conversion Formula</h2>
+        <p>Converting GPA to percentage depends on your grading scale:</p>
+        <ul>
+          <li><strong>4.0 Scale:</strong> Percentage = (GPA / 4.0) × 100</li>
+          <li><strong>5.0 Scale:</strong> Percentage = (GPA / 5.0) × 100</li>
+          <li><strong>10.0 Scale:</strong> Percentage = GPA × 9.5</li>
+        </ul>
+        <p>Note: Different institutions may use different conversion methods. Always check with your school's policy.</p>
+      </article>
+
+      <article class="content-section">
+        <h2>Understanding CGPA vs GPA</h2>
+        <p><strong>GPA</strong> measures your performance in a single semester or term, while <strong>CGPA</strong> (Cumulative Grade Point Average) represents your overall academic performance across all semesters.</p>
+        <p>CGPA is calculated by taking the weighted average of all semester GPAs, considering the credit hours of each semester.</p>
+      </article>
+
+      <article class="content-section">
+        <h2>Benefits of Using a GPA Calculator</h2>
+        <ul>
+          <li>Instant and accurate GPA calculations</li>
+          <li>Track academic progress throughout semesters</li>
+          <li>Plan course selection to achieve target GPA</li>
+          <li>Convert between different grading scales</li>
+          <li>Prepare for scholarship and admission requirements</li>
+          <li>Save time with automated calculations</li>
+        </ul>
+      </article>
+
+      <article class="content-section">
+        <h2>How to Improve Your GPA</h2>
+        <ul>
+          <li><strong>Attend all classes:</strong> Regular attendance improves understanding and grades</li>
+          <li><strong>Complete assignments on time:</strong> Consistent work builds better grades</li>
+          <li><strong>Study regularly:</strong> Daily study habits prevent last-minute cramming</li>
+          <li><strong>Seek help early:</strong> Don't wait until you're struggling to ask for help</li>
+          <li><strong>Focus on difficult subjects:</strong> Allocate more time to challenging courses</li>
+          <li><strong>Use study groups:</strong> Collaborative learning enhances understanding</li>
+          <li><strong>Take advantage of extra credit:</strong> Every point counts toward your GPA</li>
+        </ul>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How is GPA calculated?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>GPA is calculated by multiplying each grade point by credit hours, summing them up, and dividing by total credit hours. Formula: GPA = (Sum of Grade Points × Credit Hours) / Total Credit Hours</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How to convert GPA to percentage?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>For 4.0 scale: Percentage = (GPA / 4.0) × 100. For 10.0 scale: Percentage = GPA × 9.5. Different institutions may use different conversion formulas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the difference between GPA and CGPA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>GPA (Grade Point Average) is calculated for a single semester or term. CGPA (Cumulative Grade Point Average) is the average of all semesters combined throughout your academic program.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is a good GPA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>On a 4.0 scale, a GPA of 3.0 or above is generally considered good. A GPA of 3.5-4.0 is excellent and often required for honors and competitive programs. However, what's considered "good" varies by institution and field.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I calculate GPA for different grading scales?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our calculator supports 4.0, 5.0, and 10.0 grading scales. Simply select your institution's grading scale from the dropdown menu before entering your grades.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do credit hours affect GPA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Credit hours represent the weight of each course. Courses with more credit hours have a greater impact on your GPA. A high grade in a 4-credit course affects your GPA more than the same grade in a 2-credit course.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Tools -->
+      <section class="related-tools">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+          <a href="/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">🧮</span>
+            <h3>Percentage Calculator</h3>
+            <p>Calculate percentages, discounts and grade scores</p>
+          </a>
+          <a href="/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <h3>Word Counter</h3>
+            <p>Count words, characters and reading time</p>
+          </a>
+          <a href="/tools/citation-generator" class="tool-card">
+            <span class="tool-icon">📚</span>
+            <h3>Citation Generator</h3>
+            <p>Generate APA, MLA and Chicago citations</p>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
