@@ -261,7 +261,7 @@ const TOOLS = [
     category: 'student',
     badge: '📝 Write',
     desc: 'Count words, characters, sentences and estimated reading time for any text. Instant and accurate.',
-    url: ''
+    url: './wordCounter/index.html'
   },
   {
     id: 'citation-gen',
