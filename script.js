@@ -252,7 +252,7 @@ const TOOLS = [
     category: 'student',
     badge: '📊 Grades',
     desc: 'Calculate your semester GPA and cumulative GPA instantly using any grading scale worldwide.',
-    url: ''
+    url: './gpaCalculator/index.html'
   },
   {
     id: 'word-counter',
