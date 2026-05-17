@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Word Counter Tool - Count Words, Characters & Reading Time | social00.com</title>
+  <meta name="description" content="Free online word counter tool. Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for writers, students, and content creators. No sign-up required.">
+  <meta name="keywords" content="word counter, character counter, word count tool, reading time calculator, sentence counter">
+  <link rel="canonical" href="https://social00.com/tools/word-counter">
+  <meta property="og:title" content="Free Word Counter Tool - Count Words & Characters Instantly">
+  <meta property="og:description" content="Professional word counter with real-time character count, reading time, and more. Free forever.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Word Counter",
+    "url": "https://social00.com/tools/word-counter",
+    "description": "Free online word counter tool to count words, characters, sentences, and calculate reading time",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "social00.com"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/tools">Tools</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Word Counter</h1>
+        <p class="hero-subtitle">Count words, characters, sentences, and reading time instantly</p>
+      </div>
+    </section>
+
+    <!-- Tool Section - Above the Fold -->
+    <section id="tool" class="tool-section">
+      <div class="container">
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-value" id="wordCount">0</span>
+            <span class="stat-label">Words</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="charCount">0</span>
+            <span class="stat-label">Characters</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="charNoSpaceCount">0</span>
+            <span class="stat-label">No Spaces</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="sentenceCount">0</span>
+            <span class="stat-label">Sentences</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="paragraphCount">0</span>
+            <span class="stat-label">Paragraphs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="readingTime">0s</span>
+            <span class="stat-label">Reading Time</span>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="tool-box">
+          <textarea 
+            id="textInput" 
+            placeholder="Start typing or paste your text here..."
+            aria-label="Text input for word counting"
+            spellcheck="true"
+          ></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="tool-actions">
+          <button id="copyBtn" class="btn btn-secondary" aria-label="Copy text to clipboard">
+            <span class="btn-icon">📋</span> Copy
+          </button>
+          <button id="clearBtn" class="btn btn-outline" aria-label="Clear all text">
+            <span class="btn-icon">🗑️</span> Clear
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Ad Slot 1 -->
+    <div class="ad-container">
+      <div class="ad-placeholder">Advertisement</div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="container content-wrapper">
+
+      <!-- Intro -->
+      <section class="content-section">
+        <h2>Free Online Word Counter Tool</h2>
+        <p>Our word counter is a fast, accurate, and completely free tool designed for writers, students, bloggers, and content creators. Get instant statistics about your text including word count, character count, sentence count, paragraph count, and estimated reading time. Everything runs in your browser with no data sent to servers.</p>
+      </section>
+
+      <!-- How to Use -->
+      <section class="content-section">
+        <h2>How to Use the Word Counter</h2>
+        <ol class="steps-list">
+          <li><strong>Type or paste</strong> your text into the text box above</li>
+          <li><strong>Watch live updates</strong> as statistics appear in real-time</li>
+          <li><strong>Copy your text</strong> using the Copy button when done</li>
+          <li><strong>Clear the box</strong> to start fresh with new content</li>
+        </ol>
+        <p>Your text is automatically saved in your browser, so you won't lose your work if you refresh the page.</p>
+      </section>
+
+      <!-- Benefits -->
+      <section class="content-section">
+        <h2>Why Use Our Word Counter?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>Real-Time Counting</h3>
+            <p>See instant updates as you type with zero lag or delay</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🔒</div>
+            <h3>100% Private</h3>
+            <p>All processing happens locally. Your text never leaves your device</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📱</div>
+            <h3>Mobile Friendly</h3>
+            <p>Works perfectly on phones, tablets, and desktop computers</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>Always Free</h3>
+            <p>No sign-up, no limits, no hidden fees. Free forever</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <h3>Detailed Stats</h3>
+            <p>Get comprehensive metrics beyond just word count</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💾</div>
+            <h3>Auto-Save</h3>
+            <p>Your text is saved automatically so you never lose progress</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ad Slot 2 -->
+      <div class="ad-container">
+        <div class="ad-placeholder">Advertisement</div>
+      </div>
+
+      <!-- FAQ -->
+      <section class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the word counter work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our word counter analyzes your text in real-time using JavaScript. It counts words by splitting text at spaces, counts all characters including punctuation, detects sentences using punctuation marks, and identifies paragraphs by line breaks. All processing happens instantly in your browser.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is the word counter free?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, completely free with no limitations. No account required, no email needed, and no usage caps. Use it as much as you want, whenever you want.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How is reading time calculated?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Reading time is calculated based on an average reading speed of 238 words per minute, which is the standard for adult readers. The calculation updates automatically as your word count changes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does it save my text?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, your text is automatically saved in your browser's local storage. If you close the tab or refresh, your text will still be there. No data is sent to any server—everything stays on your device.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use this on mobile?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! The word counter is fully responsive and works great on all devices including smartphones and tablets. The interface adapts to your screen size for optimal usability.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What counts as a word?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A word is any sequence of characters separated by spaces. This includes numbers, hyphenated words, and contractions. Our counter uses the same logic as Microsoft Word and Google Docs.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Related Tools -->
+      <section class="content-section">
+        <h2>Related Tools</h2>
+        <div class="related-tools">
+          <a href="/tools/character-counter" class="tool-card">
+            <span class="tool-icon">🔤</span>
+            <h3>Character Counter</h3>
+            <p>Count characters for Twitter, SMS, and meta descriptions</p>
+          </a>
+          <a href="/tools/case-converter" class="tool-card">
+            <span class="tool-icon">Aa</span>
+            <h3>Case Converter</h3>
+            <p>Convert text to uppercase, lowercase, or title case</p>
+          </a>
+          <a href="/tools/text-formatter" class="tool-card">
+            <span class="tool-icon">📝</span>
+            <h3>Text Formatter</h3>
+            <p>Clean and format messy text instantly</p>
+          </a>
+          <a href="/tools/plagiarism-checker" class="tool-card">
+            <span class="tool-icon">🔍</span>
+            <h3>Plagiarism Checker</h3>
+            <p>Check content originality before publishing</p>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">social00</span>
+          </a>
+          <p>Free tools for content creators</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Tools</h4>
+            <ul>
+              <li><a href="/tools/word-counter">Word Counter</a></li>
+              <li><a href="/tools/character-counter">Character Counter</a></li>
+              <li><a href="/tools/case-converter">Case Converter</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/terms">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 social00.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
