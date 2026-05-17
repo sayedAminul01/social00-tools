@@ -279,7 +279,7 @@ const TOOLS = [
     category: 'student',
     badge: '✍️ Essays',
     desc: 'Create a structured essay outline for any topic with thesis, arguments and conclusion in seconds.',
-    url: ''
+    url: './essayOutlineGenerator/index.html'
   },
 
   // ── SEO Tools ────────────────────────────────────────────────
