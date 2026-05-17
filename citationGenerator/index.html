@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citation Generator - Free APA, MLA, Chicago Citation Tool | Social00</title>
+  <meta name="description" content="Free citation generator for APA, MLA, and Chicago formats. Generate accurate citations for websites, books, journals, and more. No sign-up required.">
+  <meta name="keywords" content="citation generator, APA citation generator, MLA citation generator, Chicago citation generator, free citation generator, bibliography generator, reference generator">
+  <link rel="canonical" href="https://social00.com/tools/citation-generator">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Citation Generator",
+    "url": "https://social00.com/tools/citation-generator",
+    "description": "Generate accurate citations in APA, MLA, and Chicago formats for websites, books, journals, and more.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a citation generator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A citation generator is a tool that automatically creates properly formatted citations and references for academic papers. It formats sources according to citation styles like APA, MLA, or Chicago."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I cite a website in APA format?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "APA website citation format: Author, A. A. (Year, Month Day). Title of page. Website Name. URL. Example: Smith, J. (2023, January 15). How to cite sources. Academic Writing. https://example.com"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between APA and MLA citations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "APA uses author-date format with publication year in parentheses, commonly used in social sciences. MLA uses author-page format with page numbers, typically used in humanities. Chicago offers both footnote and author-date systems."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Social00</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Citation Generator</h1>
+      <p class="hero-desc">Generate accurate citations in APA, MLA, and Chicago formats instantly</p>
+    </div>
+  </section>
+
+  <!-- Generator Section -->
+  <main class="main-content">
+    <div class="container">
+      
+      <div class="generator-wrapper">
+        
+        <!-- Citation Form -->
+        <div class="citation-form">
+          
+          <!-- Format Selector -->
+          <div class="format-tabs">
+            <button class="format-tab active" data-format="apa">APA 7th</button>
+            <button class="format-tab" data-format="mla">MLA 9th</button>
+            <button class="format-tab" data-format="chicago">Chicago</button>
+          </div>
+
+          <!-- Source Type Selector -->
+          <div class="form-group">
+            <label for="sourceType">Source Type</label>
+            <select id="sourceType">
+              <option value="website">Website</option>
+              <option value="book">Book</option>
+              <option value="journal">Journal Article</option>
+              <option value="newspaper">Newspaper Article</option>
+              <option value="youtube">YouTube Video</option>
+            </select>
+          </div>
+
+          <!-- Dynamic Form Fields -->
+          <div id="formFields">
+            <!-- Fields will be dynamically inserted here -->
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-generate" id="generateBtn">
+              <span>Generate Citation</span>
+              <span class="btn-icon">✨</span>
+            </button>
+            <button class="btn-clear" id="clearBtn">Clear Form</button>
+          </div>
+        </div>
+
+        <!-- Citation Output -->
+        <div class="citation-output">
+          <div class="output-header">
+            <h2>Generated Citation</h2>
+            <button class="btn-copy" id="copyBtn" title="Copy citation">
+              <span>📋</span> Copy
+            </button>
+          </div>
+
+          <div class="citation-preview" id="citationPreview">
+            <div class="empty-state">
+              <span class="empty-icon">📚</span>
+              <p>Your citation will appear here</p>
+              <p class="empty-hint">Fill in the form and click "Generate Citation"</p>
+            </div>
+          </div>
+
+          <div class="citation-info">
+            <p class="info-text">💡 <strong>Tip:</strong> Always double-check your citations against official style guides.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent Citations -->
+      <div class="recent-citations" id="recentCitations" style="display: none;">
+        <h3>Recent Citations</h3>
+        <div class="recent-list" id="recentList"></div>
+      </div>
+
+      <!-- Content Sections -->
+      <article class="content-section">
+        <h2>What is a Citation Generator?</h2>
+        <p>A citation generator is an automated tool that creates properly formatted citations and references for academic papers, research projects, and scholarly work. It eliminates the tedious manual formatting process by automatically arranging author names, titles, dates, and other publication information according to specific citation style guidelines.</p>
+        <p>Our citation generator supports the three most widely used academic citation formats: APA (American Psychological Association), MLA (Modern Language Association), and Chicago style, ensuring your references meet academic standards.</p>
+      </article>
+
+      <article class="content-section">
+        <h2>APA Citation Format Guide</h2>
+        <p><strong>APA 7th Edition</strong> is commonly used in social sciences, psychology, education, and business. It uses an author-date citation system.</p>
+        <p><strong>Basic Format:</strong></p>
+        <ul>
+          <li><strong>Website:</strong> Author, A. A. (Year, Month Day). Title of page. Website Name. URL</li>
+          <li><strong>Book:</strong> Author, A. A. (Year). Title of book. Publisher.</li>
+          <li><strong>Journal:</strong> Author, A. A. (Year). Title of article. Journal Name, Volume(Issue), pages. DOI</li>
+        </ul>
+        <p><strong>Example:</strong> Smith, J. D. (2023, March 15). Understanding citation formats. Academic Resources. https://example.com/citations</p>
+      </article>
+
+      <article class="content-section">
+        <h2>MLA Citation Format Guide</h2>
+        <p><strong>MLA 9th Edition</strong> is primarily used in humanities, literature, and language studies. It emphasizes the author and page number.</p>
+        <p><strong>Basic Format:</strong></p>
+        <ul>
+          <li><strong>Website:</strong> Author Last Name, First Name. "Title of Page." Website Name, Day Month Year, URL.</li>
+          <li><strong>Book:</strong> Author Last Name, First Name. Title of Book. Publisher, Year.</li>
+          <li><strong>Journal:</strong> Author Last Name, First Name. "Article Title." Journal Name, vol. #, no. #, Year, pp. #-#.</li>
+        </ul>
+        <p><strong>Example:</strong> Smith, John. "Understanding Citation Formats." Academic Resources, 15 Mar. 2023, example.com/citations.</p>
+      </article>
+
+      <article class="content-section">
+        <h2>Chicago Citation Format Guide</h2>
+        <p><strong>Chicago Manual of Style</strong> offers two systems: Notes-Bibliography (used in humanities) and Author-Date (used in sciences). Our generator uses the Author-Date system.</p>
+        <p><strong>Basic Format:</strong></p>
+        <ul>
+          <li><strong>Website:</strong> Author Last Name, First Name. Year. "Title of Page." Website Name. Accessed Month Day, Year. URL.</li>
+          <li><strong>Book:</strong> Author Last Name, First Name. Year. Title of Book. Place: Publisher.</li>
+          <li><strong>Journal:</strong> Author Last Name, First Name. Year. "Article Title." Journal Name Volume (Issue): pages.</li>
+        </ul>
+        <p><strong>Example:</strong> Smith, John. 2023. "Understanding Citation Formats." Academic Resources. Accessed March 15, 2023. https://example.com/citations.</p>
+      </article>
+
+      <article class="content-section">
+        <h2>Why Citations Matter</h2>
+        <ul>
+          <li><strong>Academic Integrity:</strong> Citations give credit to original authors and prevent plagiarism</li>
+          <li><strong>Credibility:</strong> Proper citations demonstrate thorough research and strengthen your arguments</li>
+          <li><strong>Verification:</strong> Readers can locate and verify your sources independently</li>
+          <li><strong>Scholarly Conversation:</strong> Citations connect your work to broader academic discussions</li>
+          <li><strong>Legal Protection:</strong> Proper attribution protects you from copyright infringement</li>
+          <li><strong>Professional Standards:</strong> Following citation guidelines shows attention to academic conventions</li>
+        </ul>
+      </article>
+
+      <article class="content-section">
+        <h2>Common Citation Mistakes to Avoid</h2>
+        <ul>
+          <li><strong>Missing information:</strong> Always include all required elements (author, date, title, source)</li>
+          <li><strong>Incorrect punctuation:</strong> Pay attention to periods, commas, and italics placement</li>
+          <li><strong>Wrong date format:</strong> Each style has specific date formatting requirements</li>
+          <li><strong>Inconsistent formatting:</strong> Use the same citation style throughout your paper</li>
+          <li><strong>Outdated style guides:</strong> Ensure you're using the latest edition (APA 7th, MLA 9th)</li>
+          <li><strong>Missing access dates:</strong> Include access dates for online sources when required</li>
+          <li><strong>Incorrect capitalization:</strong> Follow title case rules for each citation style</li>
+        </ul>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is a citation generator?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>A citation generator is a tool that automatically creates properly formatted citations and references for academic papers. It formats sources according to citation styles like APA, MLA, or Chicago.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I cite a website in APA format?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>APA website citation format: Author, A. A. (Year, Month Day). Title of page. Website Name. URL. Example: Smith, J. (2023, January 15). How to cite sources. Academic Writing. https://example.com</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What's the difference between APA and MLA citations?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>APA uses author-date format with publication year in parentheses, commonly used in social sciences. MLA uses author-page format with page numbers, typically used in humanities. Chicago offers both footnote and author-date systems.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do I need to cite every source I use?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you must cite any information, ideas, or direct quotes that aren't your own original work or common knowledge. This includes websites, books, articles, videos, and any other sources you reference.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I trust automated citation generators?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Citation generators are helpful tools, but always verify the output against official style guides. Automated tools can make mistakes, especially with complex sources or missing information.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I cite a source with no author?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>When no author is listed, start the citation with the title of the work. In APA, use the title in place of the author. In MLA, begin with the title in quotation marks or italics depending on the source type.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Tools -->
+      <section class="related-tools">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+          <a href="/tools/essay-outline-generator" class="tool-card">
+            <span class="tool-icon">📑</span>
+            <h3>Essay Outline Generator</h3>
+            <p>Create structured essay outlines instantly</p>
+          </a>
+          <a href="/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <h3>Word Counter</h3>
+            <p>Count words, characters and reading time</p>
+          </a>
+          <a href="/tools/gpa-calculator" class="tool-card">
+            <span class="tool-icon">🎓</span>
+            <h3>GPA Calculator</h3>
+            <p>Calculate your semester and cumulative GPA</p>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
