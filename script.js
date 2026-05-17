@@ -243,7 +243,7 @@ const TOOLS = [
     category: 'student',
     badge: '📐 Utility',
     desc: 'Instantly calculate percentages, discounts, markups and grade scores. No mental math needed.',
-    url: ''
+    url: '/percentageCalculator/index.html'
   },
   {
     id: 'gpa-calc',
