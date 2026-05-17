@@ -270,7 +270,7 @@ const TOOLS = [
     category: 'student',
     badge: '🏫 Academics',
     desc: 'Generate APA, MLA and Chicago citations instantly. No more formatting headaches for your papers.',
-    url: ''
+    url: './citationGenerator/index.html'
   },
   {
     id: 'essay-outline',
