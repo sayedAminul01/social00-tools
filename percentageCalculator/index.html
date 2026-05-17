@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percentage Calculator – Free Online % Calculator | Social00</title>
+  <meta name="description" content="Free online percentage calculator. Calculate what percent of a number is, percentage increase, decrease, discount, markup, and grade percentages instantly. Fast & accurate." />
+  <meta name="keywords" content="percentage calculator, discount calculator, percentage increase calculator, online percentage calculator, markup calculator, grade percentage calculator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/percentage-calculator" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Percentage Calculator – Free Online % Calculator | Social00" />
+  <meta property="og:description" content="Calculate percentages, discounts, markups, grade percentages and more. Instant results, free online tool." />
+  <meta property="og:url" content="https://social00.com/tools/percentage-calculator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Percentage Calculator",
+    "url": "https://social00.com/tools/percentage-calculator",
+    "description": "Free online percentage calculator with multiple modes: basic percentage, increase, decrease, discount, markup, and grade calculator.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate what percent of a number is?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the part by the whole and multiply by 100. Example: 25 is what percent of 200? (25 ÷ 200) × 100 = 12.5%." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage increase?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Subtract the original from the new value, divide by the original, and multiply by 100. Formula: ((New - Old) / Old) × 100." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate a discount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Multiply the original price by the discount percentage, then divide by 100 to get the discount amount. Subtract from original price for the final price." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">Percentage Calculator</h1>
+        <p class="hero-sub">Calculate percentages, discounts, markups, and more — instantly. No sign-up required.</p>
+      </div>
+    </section>
+
+    <!-- Ad Placeholder Top -->
+    <div class="container">
+      <div class="ad-slot ad-slot--top" aria-label="Advertisement">
+        <span>Advertisement</span>
+      </div>
+    </div>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+
+        <!-- Mode Tabs -->
+        <div class="mode-tabs" role="tablist" aria-label="Calculator modes">
+          <button class="tab active" role="tab" aria-selected="true"  data-mode="basic-percent"  >X% of Y</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="what-percent"   >What % is X of Y?</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="increase"       >% Increase</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="decrease"       >% Decrease</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="discount"       >Discount</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="markup"         >Markup</button>
+          <button class="tab" role="tab" aria-selected="false" data-mode="grade"          >Grade</button>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="calc-card" id="calcCard">
+
+          <!-- Mode: X% of Y -->
+          <div class="calc-panel active" id="panel-basic-percent">
+            <h2 class="calc-title">What is <span class="accent">X%</span> of <span class="accent">Y</span>?</h2>
+            <p class="calc-desc">Find the percentage of any number.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="bp-x">Percentage (X)</label>
+                <div class="input-wrap">
+                  <input type="number" id="bp-x" class="calc-input" placeholder="e.g. 25" min="0" inputmode="decimal" autocomplete="off" />
+                  <span class="input-unit">%</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="bp-y">Number (Y)</label>
+                <div class="input-wrap">
+                  <input type="number" id="bp-y" class="calc-input" placeholder="e.g. 200" min="0" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="result-box" id="result-basic-percent" aria-live="polite">
+              <span class="result-label">Result</span>
+              <span class="result-value" id="rv-basic-percent">—</span>
+              <span class="result-formula" id="rf-basic-percent"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="basic-percent">Clear</button>
+              <button class="btn-copy" data-result="rv-basic-percent">Copy Result</button>
+            </div>
+          </div>
+
+          <!-- Mode: What % is X of Y -->
+          <div class="calc-panel" id="panel-what-percent">
+            <h2 class="calc-title"><span class="accent">X</span> is what percent of <span class="accent">Y</span>?</h2>
+            <p class="calc-desc">Find what percentage one number is of another.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="wp-x">Value (X)</label>
+                <div class="input-wrap">
+                  <input type="number" id="wp-x" class="calc-input" placeholder="e.g. 50" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="wp-y">Total (Y)</label>
+                <div class="input-wrap">
+                  <input type="number" id="wp-y" class="calc-input" placeholder="e.g. 200" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="result-box" id="result-what-percent" aria-live="polite">
+              <span class="result-label">Result</span>
+              <span class="result-value" id="rv-what-percent">—</span>
+              <span class="result-formula" id="rf-what-percent"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="what-percent">Clear</button>
+              <button class="btn-copy" data-result="rv-what-percent">Copy Result</button>
+            </div>
+          </div>
+
+          <!-- Mode: Percentage Increase -->
+          <div class="calc-panel" id="panel-increase">
+            <h2 class="calc-title"><span class="accent">Percentage Increase</span> Calculator</h2>
+            <p class="calc-desc">Calculate the percentage increase between two values.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="inc-old">Original Value</label>
+                <div class="input-wrap">
+                  <input type="number" id="inc-old" class="calc-input" placeholder="e.g. 100" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="inc-new">New Value</label>
+                <div class="input-wrap">
+                  <input type="number" id="inc-new" class="calc-input" placeholder="e.g. 150" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="result-box" id="result-increase" aria-live="polite">
+              <span class="result-label">Increase</span>
+              <span class="result-value" id="rv-increase">—</span>
+              <span class="result-formula" id="rf-increase"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="increase">Clear</button>
+              <button class="btn-copy" data-result="rv-increase">Copy Result</button>
+            </div>
+          </div>
+
+          <!-- Mode: Percentage Decrease -->
+          <div class="calc-panel" id="panel-decrease">
+            <h2 class="calc-title"><span class="accent">Percentage Decrease</span> Calculator</h2>
+            <p class="calc-desc">Calculate the percentage decrease between two values.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="dec-old">Original Value</label>
+                <div class="input-wrap">
+                  <input type="number" id="dec-old" class="calc-input" placeholder="e.g. 200" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="dec-new">New Value</label>
+                <div class="input-wrap">
+                  <input type="number" id="dec-new" class="calc-input" placeholder="e.g. 150" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="result-box" id="result-decrease" aria-live="polite">
+              <span class="result-label">Decrease</span>
+              <span class="result-value" id="rv-decrease">—</span>
+              <span class="result-formula" id="rf-decrease"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="decrease">Clear</button>
+              <button class="btn-copy" data-result="rv-decrease">Copy Result</button>
+            </div>
+          </div>
+
+          <!-- Mode: Discount -->
+          <div class="calc-panel" id="panel-discount">
+            <h2 class="calc-title"><span class="accent">Discount</span> Calculator</h2>
+            <p class="calc-desc">Find final price after a percentage discount.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="disc-price">Original Price</label>
+                <div class="input-wrap">
+                  <span class="input-unit prefix">$</span>
+                  <input type="number" id="disc-price" class="calc-input has-prefix" placeholder="e.g. 120" min="0" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="disc-pct">Discount</label>
+                <div class="input-wrap">
+                  <input type="number" id="disc-pct" class="calc-input" placeholder="e.g. 20" min="0" max="100" inputmode="decimal" autocomplete="off" />
+                  <span class="input-unit">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="result-box discount-result" id="result-discount" aria-live="polite">
+              <div class="result-row">
+                <span class="result-label">Discount Amount</span>
+                <span class="result-value sub" id="rv-discount-amt">—</span>
+              </div>
+              <div class="result-row highlight">
+                <span class="result-label">Final Price</span>
+                <span class="result-value" id="rv-discount">—</span>
+              </div>
+              <span class="result-formula" id="rf-discount"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="discount">Clear</button>
+              <button class="btn-copy" data-result="rv-discount">Copy Final Price</button>
+            </div>
+          </div>
+
+          <!-- Mode: Markup -->
+          <div class="calc-panel" id="panel-markup">
+            <h2 class="calc-title"><span class="accent">Markup</span> Calculator</h2>
+            <p class="calc-desc">Calculate selling price after applying a markup percentage.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="mu-cost">Cost Price</label>
+                <div class="input-wrap">
+                  <span class="input-unit prefix">$</span>
+                  <input type="number" id="mu-cost" class="calc-input has-prefix" placeholder="e.g. 80" min="0" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="mu-pct">Markup</label>
+                <div class="input-wrap">
+                  <input type="number" id="mu-pct" class="calc-input" placeholder="e.g. 25" min="0" inputmode="decimal" autocomplete="off" />
+                  <span class="input-unit">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="result-box discount-result" id="result-markup" aria-live="polite">
+              <div class="result-row">
+                <span class="result-label">Markup Amount</span>
+                <span class="result-value sub" id="rv-markup-amt">—</span>
+              </div>
+              <div class="result-row highlight">
+                <span class="result-label">Selling Price</span>
+                <span class="result-value" id="rv-markup">—</span>
+              </div>
+              <span class="result-formula" id="rf-markup"></span>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="markup">Clear</button>
+              <button class="btn-copy" data-result="rv-markup">Copy Selling Price</button>
+            </div>
+          </div>
+
+          <!-- Mode: Grade -->
+          <div class="calc-panel" id="panel-grade">
+            <h2 class="calc-title"><span class="accent">Grade Percentage</span> Calculator</h2>
+            <p class="calc-desc">Calculate your score percentage from marks obtained vs total marks.</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="gr-obtained">Marks Obtained</label>
+                <div class="input-wrap">
+                  <input type="number" id="gr-obtained" class="calc-input" placeholder="e.g. 85" min="0" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="gr-total">Total Marks</label>
+                <div class="input-wrap">
+                  <input type="number" id="gr-total" class="calc-input" placeholder="e.g. 100" min="0" inputmode="decimal" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="result-box" id="result-grade" aria-live="polite">
+              <span class="result-label">Your Grade</span>
+              <span class="result-value" id="rv-grade">—</span>
+              <span class="result-formula" id="rf-grade"></span>
+              <div class="grade-badge" id="grade-badge"></div>
+            </div>
+            <div class="calc-actions">
+              <button class="btn-clear" data-panel="grade">Clear</button>
+              <button class="btn-copy" data-result="rv-grade">Copy Result</button>
+            </div>
+          </div>
+
+        </div><!-- /calc-card -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- Ad Placeholder Mid -->
+    <div class="container">
+      <div class="ad-slot ad-slot--mid" aria-label="Advertisement">
+        <span>Advertisement</span>
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+
+        <article class="content-block">
+          <h2>What is a Percentage Calculator?</h2>
+          <p>A percentage calculator is a tool that computes percentage values instantly — saving you from mental math or formula recall. Whether you're figuring out a sale price, analyzing business growth, or checking a test score, percentages are everywhere. Our free online percentage calculator handles 7 types of calculations in one clean interface.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>How to Calculate Percentages</h2>
+          <p>The core percentage formula is: <strong>Percentage = (Part ÷ Whole) × 100</strong>. For example, to find what percent 30 is of 150: (30 ÷ 150) × 100 = <strong>20%</strong>. To find X% of Y: (X ÷ 100) × Y. So 15% of 300 = (15 ÷ 100) × 300 = <strong>45</strong>.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>Percentage Increase &amp; Decrease Explained</h2>
+          <p><strong>Percentage Increase</strong> formula: ((New − Old) ÷ Old) × 100. If a stock goes from $50 to $65, the increase is ((65−50)÷50) × 100 = <strong>30%</strong>. <strong>Percentage Decrease</strong> uses the same formula — a negative result means it decreased. Great for tracking price drops, revenue changes, or weight loss.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>Discount Calculation Guide</h2>
+          <p>To find the final price after a discount: <strong>Final Price = Original Price × (1 − Discount% ÷ 100)</strong>. A $120 item at 25% off: 120 × (1 − 0.25) = <strong>$90</strong>. Our discount calculator also shows you the exact savings amount, making it perfect for shopping comparisons.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>Markup Calculator for Businesses</h2>
+          <p>Markup is the percentage added to the cost price to arrive at a selling price: <strong>Selling Price = Cost × (1 + Markup% ÷ 100)</strong>. If your product costs $80 and you apply a 25% markup, the selling price is 80 × 1.25 = <strong>$100</strong>. Use this to set profitable prices while staying competitive.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>Benefits of Using an Online Percentage Calculator</h2>
+          <ul class="feature-list">
+            <li>Instant, error-free results for complex calculations</li>
+            <li>Saves time in business, finance, and academic settings</li>
+            <li>Multiple modes in one place — no switching between tools</li>
+            <li>Mobile-friendly — calculate on the go</li>
+            <li>Free, no login, no data stored on servers</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>How do I calculate what percent X is of Y?</summary>
+            <p>Divide X by Y, then multiply by 100. Formula: (X ÷ Y) × 100. Example: 40 is what percent of 160? (40 ÷ 160) × 100 = <strong>25%</strong>.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I calculate a percentage increase?</summary>
+            <p>Subtract the original from the new value, divide by the original, multiply by 100. Formula: ((New − Old) ÷ Old) × 100. If revenue grew from $10,000 to $13,000: ((13000−10000)÷10000) × 100 = <strong>30%</strong>.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the formula for a discount?</summary>
+            <p>Discount Amount = Original Price × (Discount% ÷ 100). Final Price = Original Price − Discount Amount. Our calculator does both steps automatically.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the difference between markup and margin?</summary>
+            <p><strong>Markup</strong> is calculated on the cost price; <strong>Margin</strong> is calculated on the selling price. A 25% markup on $100 cost gives $125 selling price. That's a 20% margin (25÷125). Our markup calculator uses the cost-based formula.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is grade percentage calculated?</summary>
+            <p>Grade% = (Marks Obtained ÷ Total Marks) × 100. If you scored 76 out of 100, your grade is <strong>76%</strong>. Our calculator also shows the letter grade.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is this calculator free to use?</summary>
+            <p>Yes — completely free, no registration required, and no limits on calculations. Results are computed locally in your browser.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/gst-calculator" class="tool-card">
+            <span class="tool-icon">🧾</span>
+            <span class="tool-name">GST Calculator</span>
+            <span class="tool-desc">Calculate tax amounts quickly</span>
+          </a>
+          <a href="https://social00.com/tools/compound-interest-calculator" class="tool-card">
+            <span class="tool-icon">📈</span>
+            <span class="tool-name">Compound Interest Calculator</span>
+            <span class="tool-desc">Grow your investment projections</span>
+          </a>
+          <a href="https://social00.com/tools/loan-emi-calculator" class="tool-card">
+            <span class="tool-icon">🏦</span>
+            <span class="tool-name">Loan EMI Calculator</span>
+            <span class="tool-desc">Plan your monthly instalments</span>
+          </a>
+          <a href="https://social00.com/tools/bmi-calculator" class="tool-card">
+            <span class="tool-icon">⚖️</span>
+            <span class="tool-name">BMI Calculator</span>
+            <span class="tool-desc">Check your body mass index</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">🔁</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Convert any unit instantly</span>
+          </a>
+          <a href="https://social00.com/tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Bottom -->
+    <div class="container">
+      <div class="ad-slot ad-slot--bottom" aria-label="Advertisement">
+        <span>Advertisement</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2025 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
