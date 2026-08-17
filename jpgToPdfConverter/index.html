@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPG to PDF Converter – Free Online Image to PDF Tool | Social00</title>
+  <meta name="description" content="Free JPG to PDF converter. Combine one or more JPG or PNG images into a single downloadable PDF right in your browser. No upload, no sign-up, no watermark." />
+  <meta name="keywords" content="jpg to pdf, jpg to pdf converter, image to pdf, png to pdf, combine images into pdf, convert jpg to pdf online free" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/jpg-to-pdf" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JPG to PDF Converter – Free Online Image to PDF Tool | Social00" />
+  <meta property="og:description" content="Combine JPG or PNG images into a single PDF instantly in your browser. Free, no sign-up, no upload — 100% private and runs entirely on your device." />
+  <meta property="og:url" content="https://social00.com/tools/jpg-to-pdf" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JPG to PDF Converter",
+    "url": "https://social00.com/tools/jpg-to-pdf",
+    "description": "Free online tool that combines one or more JPG or PNG images into a single downloadable PDF, entirely in the browser with no upload required.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "JPG to PDF Converter", "item": "https://social00.com/tools/jpg-to-pdf" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Why combine JPG images into a PDF?", "acceptedAnswer": { "@type": "Answer", "text": "A single PDF is far easier to share, print, and store than a folder of loose image files. It's the standard format for scanned documents, photo portfolios, and file submissions to schools, employers, or government forms — one file instead of many attachments." } },
+      { "@type": "Question", "name": "Will converting to PDF reduce my image quality?", "acceptedAnswer": { "@type": "Answer", "text": "There is a small quality tradeoff. Every image is re-encoded as a JPEG at 92% quality before being embedded, so already-compressed JPEGs may lose a touch of detail on re-encoding, and PNGs lose transparency (converted to a white background). At 92% quality the difference is minor and rarely visible." } },
+      { "@type": "Question", "name": "Which page size should I choose — Original, A4, or Letter?", "acceptedAnswer": { "@type": "Answer", "text": "Original makes each PDF page exactly match that image's own pixel dimensions, with no borders — best for portfolios or scans you want reproduced edge to edge. A4 and Letter fit every image, centered with a small margin, onto a standard printable page size — best if the PDF will be printed." } },
+      { "@type": "Question", "name": "Can I combine PNG or other image types too?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any image file you drop in — PNG, WebP, GIF, and more — is automatically converted to JPEG internally before being embedded in the PDF, so you can mix formats freely in one file." } },
+      { "@type": "Question", "name": "Are my images uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Everything happens locally in your browser using the Canvas API to build the PDF byte by byte. Your images are never uploaded anywhere, and non-JPEG images are converted to JPEG internally as part of building the file, entirely on your device." } },
+      { "@type": "Question", "name": "Can I reorder or remove images before converting?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each thumbnail has up and down buttons to change its page order, plus a remove button to drop it entirely. You can also add more images at any point before generating the PDF." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / JPG to PDF Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📄 JPG to PDF Converter</h1>
+        <p class="hero-sub">Combine JPG or PNG images into a single PDF — right in your browser. No upload, no sign-up, no watermark.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <p class="privacy-note">🔒 Your images are processed entirely in your browser — nothing is ever uploaded to a server.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose images or drag and drop them here">
+            <input type="file" id="fileInput" accept="image/*" multiple class="sr-only" />
+            <div class="drop-zone-icon">🖼️</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop images here</strong><br/>or click to browse (JPG, PNG, WebP…) — add as many as you like</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No images selected yet — choose or drop files above to get started.</p>
+
+          <div class="items-panel" id="itemsPanel" hidden>
+            <ul class="thumb-list" id="thumbList"></ul>
+
+            <div class="calc-actions calc-actions--sub">
+              <button class="btn-clear" id="addMoreBtn">Add More Images</button>
+              <button class="btn-clear" id="startOverBtn">Start Over</button>
+            </div>
+
+            <div class="options-row">
+              <div class="option-group">
+                <label for="pageSizeSelect">Page size</label>
+                <select id="pageSizeSelect" class="tool-select">
+                  <option value="original" selected>Original size (per image)</option>
+                  <option value="a4">A4</option>
+                  <option value="letter">Letter</option>
+                </select>
+              </div>
+            </div>
+            <p class="format-note" id="pageSizeNote">Each page will exactly match that image's own dimensions — no borders or margins.</p>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="generateBtn">Generate PDF</button>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden>Building PDF…</div>
+
+            <div class="result-panel" id="resultPanel" hidden>
+              <p class="result-summary" id="resultSummary"></p>
+              <div class="pdf-preview-wrap">
+                <iframe id="pdfFrame" class="pdf-preview" title="Generated PDF preview"></iframe>
+              </div>
+              <a class="btn-copy btn-download" id="downloadBtn" download="converted.pdf">Download PDF</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is This JPG to PDF Converter?</h2>
+          <p>This tool combines one or more JPG or PNG images into a single, real, downloadable PDF file — built byte by byte directly in your browser with no external library and no server upload. Add your images, put them in the order you want, and generate a PDF you can preview and download immediately.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Combine Images Into a Single PDF?</h2>
+          <p>A folder of loose image files is awkward to share and easy to lose track of. A single PDF is the standard, expected format for scanned documents, photo or design portfolios, and file submissions to schools, employers, or government forms — recipients can open one file, in the right order, on any device.</p>
+        </article>
+        <article class="content-block">
+          <h2>How the Conversion Works</h2>
+          <p>Every image is drawn onto an offscreen <code>&lt;canvas&gt;</code> and re-exported as a JPEG. Those JPEG bytes are then embedded directly inside a PDF Image XObject using the standard <code>/DCTDecode</code> filter — the raw compressed image data is wrapped in valid PDF structure, not re-parsed or converted through any third-party library.</p>
+        </article>
+        <article class="content-block">
+          <h2>Choosing a Page Size</h2>
+          <p><strong>Original</strong> makes each PDF page exactly match that image's own pixel dimensions, so the image fills the page edge to edge with no border — ideal for portfolios or scans. <strong>A4</strong> and <strong>Letter</strong> place every image, scaled to fit and centered with a small margin, onto a standard printable page — ideal if you plan to print the result.</p>
+        </article>
+        <article class="content-block">
+          <h2>Image Quality &amp; JPEG Re-encoding</h2>
+          <p>Every image — including files that are already JPEGs — is re-encoded at 92% JPEG quality when it's drawn to canvas, and PNG transparency is flattened onto a white background. This keeps the process simple and reliable across formats. At 92% quality the loss is minor and rarely visible, but it is a real, honest tradeoff worth knowing about.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Produces a genuine, standards-compliant PDF — no external libraries</li>
+            <li>100% private — your images never leave your device</li>
+            <li>Reorder, remove, or add images before generating</li>
+            <li>Free, unlimited, no sign-up, no watermark</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Why combine JPG images into a PDF?</summary>
+            <p>A single PDF is far easier to share, print, and store than a folder of loose image files. It's the standard format for scanned documents, photo portfolios, and file submissions to schools, employers, or government forms — one file instead of many attachments.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will converting to PDF reduce my image quality?</summary>
+            <p>There is a small quality tradeoff. Every image is re-encoded as a JPEG at 92% quality before being embedded, so already-compressed JPEGs may lose a touch of detail on re-encoding, and PNGs lose transparency (converted to a white background). At 92% quality the difference is minor and rarely visible.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which page size should I choose — Original, A4, or Letter?</summary>
+            <p>Original makes each PDF page exactly match that image's own pixel dimensions, with no borders — best for portfolios or scans you want reproduced edge to edge. A4 and Letter fit every image, centered with a small margin, onto a standard printable page size — best if the PDF will be printed.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I combine PNG or other image types too?</summary>
+            <p>Yes. Any image file you drop in — PNG, WebP, GIF, and more — is automatically converted to JPEG internally before being embedded in the PDF, so you can mix formats freely in one file.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are my images uploaded to a server?</summary>
+            <p>No. Everything happens locally in your browser using the Canvas API to build the PDF byte by byte. Your images are never uploaded anywhere, and non-JPEG images are converted to JPEG internally as part of building the file, entirely on your device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I reorder or remove images before converting?</summary>
+            <p>Yes. Each thumbnail has up and down buttons to change its page order, plus a remove button to drop it entirely. You can also add more images at any point before generating the PDF.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink JPEG, PNG &amp; WebP file sizes</span>
+          </a>
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images to exact dimensions</span>
+          </a>
+          <a href="https://social00.com/tools/pdf-to-jpg" class="tool-card">
+            <span class="tool-icon">🔄</span>
+            <span class="tool-name">PDF to JPG</span>
+            <span class="tool-desc">Convert PDF pages back to images</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
