@@ -1,0 +1,97 @@
+/* Instagram Story Ideas — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .5rem .7rem; color: var(--text); font-size: .88rem;
+}
+
+.generate-row { margin-bottom: .3rem; }
+.btn-generate {
+  width: 100%;
+  padding: .85rem 1.4rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .98rem;
+  border: none; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transition: transform .2s, opacity .2s;
+}
+.btn-generate:hover { transform: translateY(-1px); opacity: .93; }
+
+.results-wrap { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--border); }
+.results-header {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem;
+  margin-bottom: 1.1rem;
+}
+.results-title { font-size: 1.15rem; }
+.results-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+.btn-clear, .btn-copy {
+  padding: .55rem 1.1rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .84rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.ideas-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;
+}
+
+.idea-card {
+  display: flex; flex-direction: column; gap: .7rem;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+
+.idea-badge {
+  display: inline-flex; align-items: center; gap: .35rem; align-self: flex-start;
+  background: var(--bg-3); border: 1px solid var(--border-2); border-radius: var(--radius-pill);
+  padding: .25rem .7rem; font-size: .72rem; font-weight: 700; color: var(--accent-3);
+  text-transform: uppercase; letter-spacing: .03em;
+}
+.idea-badge .badge-icon { font-size: .9rem; }
+
+.idea-text {
+  color: var(--text); font-size: .94rem; line-height: 1.55; flex: 1;
+}
+
+.idea-footer { display: flex; justify-content: flex-end; }
+
+.btn-copy-sm {
+  padding: .4rem .9rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .78rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s; flex-shrink: 0;
+}
+.btn-copy-sm:hover { border-color: var(--accent); color: var(--accent); }
+.btn-copy-sm.copied { border-color: var(--accent); color: var(--accent); }
+
+.content-block em { color: var(--text-2); font-style: normal; }
+
+@media (max-width: 560px) {
+  .btn-generate { font-size: .92rem; }
+  .results-actions { width: 100%; }
+  .results-actions .btn-clear, .results-actions .btn-copy { flex: 1; }
+}

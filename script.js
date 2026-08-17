@@ -37,7 +37,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '⚡ Hot',
     desc: 'Craft bold, punchy thumbnail text that stops the scroll and dramatically improves click-through rate.',
-    url: ''
+    url: '/tools/thumbnail-headline-generator'
   },
   {
     id: 'yt-desc',
@@ -46,7 +46,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '🆕 New',
     desc: 'Write keyword-rich, engaging YouTube descriptions that rank well and convert viewers to subscribers.',
-    url: ''
+    url: '/tools/youtube-description-generator'
   },
   {
     id: 'yt-tags',
@@ -64,7 +64,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '✨ AI',
     desc: 'Create compelling video openings that hook viewers in the first 30 seconds and reduce drop-off rate.',
-    url: ''
+    url: '/tools/youtube-hook-writer'
   },
   {
     id: 'yt-script',
@@ -73,7 +73,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '✍️ Write',
     desc: 'Generate a complete video script outline with intro, key points and call-to-action in seconds.',
-    url: ''
+    url: '/tools/youtube-script-outline'
   },
 
   // ── Instagram Tools ─────────────────────────────────────────
@@ -111,7 +111,7 @@ const TOOLS = [
     category: 'instagram',
     badge: '📱 Reels',
     desc: 'Generate punchy, scroll-stopping Reels scripts tailored to your niche and target audience.',
-    url: ''
+    url: '/tools/reel-script-generator'
   },
   {
     id: 'ig-story',
@@ -120,7 +120,7 @@ const TOOLS = [
     category: 'instagram',
     badge: '💡 Ideas',
     desc: 'Never run out of Story content. Get 10 creative Story ideas for your account with one click.',
-    url: ''
+    url: '/tools/instagram-story-ideas'
   },
 
   // ── AI Writing Tools ────────────────────────────────────────
@@ -158,7 +158,7 @@ const TOOLS = [
     category: 'writing',
     badge: '✍️ Blog',
     desc: 'Write captivating blog introductions that hook readers instantly and reduce bounce rate on your posts.',
-    url: ''
+    url: '/tools/blog-intro-generator'
   },
   {
     id: 'email-subject',
@@ -176,7 +176,7 @@ const TOOLS = [
     category: 'writing',
     badge: '💼 Career',
     desc: 'Generate personalised, professional cover letters that stand out from the pile and get interviews.',
-    url: ''
+    url: '/tools/cover-letter-generator'
   },
   {
     id: 'product-desc',
@@ -185,7 +185,7 @@ const TOOLS = [
     category: 'writing',
     badge: '🛒 Shop',
     desc: 'Write compelling product descriptions that highlight benefits and convert browsers into buyers.',
-    url: ''
+    url: '/tools/product-description-generator'
   },
   {
     id: 'tweet-writer',
@@ -194,7 +194,7 @@ const TOOLS = [
     category: 'writing',
     badge: '🔵 Twitter',
     desc: 'Craft viral-ready tweets and engaging Twitter/X threads on any topic in seconds with AI assistance.',
-    url: ''
+    url: '/tools/tweet-thread-writer'
   },
 
   // ── Image Tools ─────────────────────────────────────────────
@@ -232,7 +232,7 @@ const TOOLS = [
     category: 'image',
     badge: '🪄 Magic',
     desc: 'Remove image backgrounds instantly with AI. Perfect for product photos, profiles and thumbnails.',
-    url: ''
+    url: '/tools/background-remover'
   },
 
   // ── Student Tools ────────────────────────────────────────────
@@ -317,7 +317,7 @@ const TOOLS = [
     category: 'seo',
     badge: '♿ A11y',
     desc: 'Generate descriptive, SEO-friendly alt text for images that improves accessibility and search rankings.',
-    url: ''
+    url: '/tools/image-alt-text-generator'
   },
 ];
 

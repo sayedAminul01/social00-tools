@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Script Outline – Free Video Structure Generator | Social00</title>
+  <meta name="description" content="Free YouTube script outline generator. Turn any topic into a structured, timed video outline — Hook, Body beats, Outro, CTA — across 5 formats. No sign-up." />
+  <meta name="keywords" content="youtube script outline, video outline generator, youtube script template, video structure planner, youtube script generator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/youtube-script-outline" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YouTube Script Outline – Free Video Structure Generator | Social00" />
+  <meta property="og:description" content="Turn any topic into a structured, timed YouTube video outline — Hook, Body beats, Outro, CTA — across 5 formats. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/youtube-script-outline" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Script Outline",
+    "url": "https://social00.com/tools/youtube-script-outline",
+    "description": "Free online YouTube script outline generator that turns any topic into a structured, timed video outline — Hook, Body beats, Outro, CTA — across 5 proven video formats.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "YouTube Script Outline", "item": "https://social00.com/tools/youtube-script-outline" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does this generate my finished video script?", "acceptedAnswer": { "@type": "Answer", "text": "No. It builds the structural skeleton — section names, order and time budget — with bracketed placeholder prompts for each beat. You still write the actual words you'll say; this tool decides what goes where and for how long." } },
+      { "@type": "Question", "name": "Why use an outline instead of writing a full script?", "acceptedAnswer": { "@type": "Answer", "text": "Retention often drops when delivery sounds unnaturally over-scripted. An outline keeps you anchored to structure and pacing while letting you speak conversationally, which usually reads as more authentic on camera than a memorized script." } },
+      { "@type": "Question", "name": "How is the time allocation calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Your target length is split by percentage across each format's sections — a hook gets roughly 5-8%, the outro/CTA another 5-8%, and the remaining majority is divided across the body beats (steps, items, pros/cons, and so on) for that format." } },
+      { "@type": "Question", "name": "Which video format should I pick?", "acceptedAnswer": { "@type": "Answer", "text": "Match it to your content: Tutorial/How-To for step-by-step results, Listicle/Top N for ranked or grouped items, Story/Vlog for a narrative arc, Review/Reaction for an opinion on something, and Explainer for breaking down one concept." } },
+      { "@type": "Question", "name": "Is this powered by a real AI model?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is a template-based structure generator that runs entirely in your browser — it applies proven outline patterns and time-budgeting math to your topic. It does not call GPT, ChatGPT or any live AI model, and it is not writing your actual script content for you." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many outlines you generate. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / YouTube Script Outline</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🎬 YouTube Script Outline</h1>
+        <p class="hero-sub">Turn any topic into a structured, timed video outline — Hook, Body beats, Outro, CTA — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="topicInput" class="tool-label">Video topic</label>
+          <input type="text" id="topicInput" class="tool-input" placeholder="e.g. training a puppy to sit" autocomplete="off" />
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="lengthSelect">Target video length</label>
+              <select id="lengthSelect" class="tool-select">
+                <option value="3-5">3–5 min</option>
+                <option value="8-10" selected>8–10 min</option>
+                <option value="15-20">15–20 min</option>
+                <option value="30+">30+ min</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label for="formatSelect">Video format</label>
+              <select id="formatSelect" class="tool-select">
+                <option value="tutorial" selected>Tutorial / How-To</option>
+                <option value="listicle">Listicle / Top N</option>
+                <option value="story">Story / Vlog</option>
+                <option value="review">Review / Reaction</option>
+                <option value="explainer">Explainer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="generateBtn">Generate Outline</button>
+            <button class="btn-clear" id="regenerateBtn">Regenerate</button>
+            <button class="btn-clear" id="copyOutlineBtn">Copy Full Outline</button>
+          </div>
+
+          <p class="tool-note">This builds a structural template with time estimates and bracketed prompts — not finished script content. Fill in your own details under each beat.</p>
+
+          <div class="outline-output" id="outlineOutput" aria-live="polite">
+            <p class="outline-placeholder" id="outlinePlaceholder">Your generated outline will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why an Outline Beats a Full Script</h2>
+          <p>Most creators lose more time perfecting sentence-level script wording than they gain in delivery smoothness. An outline locks in structure and pacing — the two things that actually keep viewers watching — while leaving you free to talk naturally on camera, which almost always sounds more authentic than a read script.</p>
+        </article>
+        <article class="content-block">
+          <h2>How the Time Allocation Works</h2>
+          <p>Each format is broken into weighted sections — a hook gets roughly 5-8% of the runtime, your outro and call-to-action get another 5-8%, and the rest is split across the body beats for that format. Pick a target length and this generator converts those percentages into concrete mm:ss ranges for every beat.</p>
+        </article>
+        <article class="content-block">
+          <h2>The 5 Formats Explained</h2>
+          <p>Tutorial/How-To walks through numbered steps toward a result. Listicle/Top N counts through a list. Story/Vlog follows a narrative arc from cold open to resolution. Review/Reaction weighs pros and cons toward a verdict. Explainer breaks one concept into digestible sub-points. Choosing the right one shapes everything downstream.</p>
+        </article>
+        <article class="content-block">
+          <h2>Pacing Tips for Higher Retention</h2>
+          <p>Front-load your hook — the first 15 seconds decide whether a viewer stays. Keep each body beat tight enough that no single point overstays its welcome, and never let your outro run longer than your intro; a fast, single-ask CTA outperforms a long sign-off almost every time.</p>
+        </article>
+        <article class="content-block">
+          <h2>Worked Example</h2>
+          <p>Topic <strong>"training a puppy to sit"</strong>, format Tutorial, length 8-10 min → Hook (0:00-0:32), Problem Setup, Materials, five numbered Steps, Common Mistakes, Recap, CTA — each with its own time range ready for you to fill in.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Five real format-specific structures, not one generic template</li>
+            <li>Proportional time budgeting instead of a guess</li>
+            <li>Numbered, copy-ready outline in one click</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does this generate my finished video script?</summary>
+            <p>No. It builds the structural skeleton — section names, order and time budget — with bracketed placeholder prompts for each beat. You still write the actual words you'll say; this tool decides what goes where and for how long.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why use an outline instead of writing a full script?</summary>
+            <p>Retention often drops when delivery sounds unnaturally over-scripted. An outline keeps you anchored to structure and pacing while letting you speak conversationally, which usually reads as more authentic on camera than a memorized script.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is the time allocation calculated?</summary>
+            <p>Your target length is split by percentage across each format's sections — a hook gets roughly 5-8%, the outro/CTA another 5-8%, and the remaining majority is divided across the body beats (steps, items, pros/cons, and so on) for that format.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which video format should I pick?</summary>
+            <p>Match it to your content: Tutorial/How-To for step-by-step results, Listicle/Top N for ranked or grouped items, Story/Vlog for a narrative arc, Review/Reaction for an opinion on something, and Explainer for breaking down one concept.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this powered by a real AI model?</summary>
+            <p>No. This is a template-based structure generator that runs entirely in your browser — it applies proven outline patterns and time-budgeting math to your topic. It does not call GPT, ChatGPT or any live AI model, and it is not writing your actual script content for you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many outlines you generate. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/youtube-hook-writer" class="tool-card">
+            <span class="tool-icon">🪝</span>
+            <span class="tool-name">YouTube Hook Writer</span>
+            <span class="tool-desc">Opening lines that stop the scroll</span>
+          </a>
+          <a href="https://social00.com/tools/youtube-title-generator" class="tool-card">
+            <span class="tool-icon">📹</span>
+            <span class="tool-name">YouTube Title Generator</span>
+            <span class="tool-desc">Click-worthy titles from any topic</span>
+          </a>
+          <a href="https://social00.com/tools/youtube-description-generator" class="tool-card">
+            <span class="tool-icon">📝</span>
+            <span class="tool-name">YouTube Description Generator</span>
+            <span class="tool-desc">SEO-friendly video descriptions</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

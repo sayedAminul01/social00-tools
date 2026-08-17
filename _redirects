@@ -31,6 +31,20 @@
 /tools/seo-meta-tag-generator         /seoMetaTagGenerator/index.html          200
 /tools/keyword-ideas-generator        /keywordIdeasGenerator/index.html        200
 
+# ── New tools (batch 2) ────────────────────────────────────────────
+/tools/thumbnail-headline-generator   /thumbnailHeadlineGenerator/index.html   200
+/tools/youtube-description-generator  /youtubeDescriptionGenerator/index.html  200
+/tools/youtube-hook-writer            /youtubeHookWriter/index.html            200
+/tools/youtube-script-outline         /youtubeScriptOutline/index.html         200
+/tools/reel-script-generator          /reelScriptGenerator/index.html          200
+/tools/instagram-story-ideas          /instagramStoryIdeas/index.html          200
+/tools/blog-intro-generator           /blogIntroGenerator/index.html           200
+/tools/cover-letter-generator         /coverLetterGenerator/index.html         200
+/tools/product-description-generator  /productDescriptionGenerator/index.html  200
+/tools/tweet-thread-writer            /tweetThreadWriter/index.html            200
+/tools/background-remover             /backgroundRemover/index.html            200
+/tools/image-alt-text-generator       /imageAltTextGenerator/index.html        200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200

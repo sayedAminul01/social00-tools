@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Alt Text Generator – Free Alt Text Assistant | Social00</title>
+  <meta name="description" content="Free image alt text generator. Describe your image and get clean, WCAG- and SEO-friendly alt text variants instantly. This tool doesn't analyze image pixels — it helps you phrase your own description correctly." />
+  <meta name="keywords" content="image alt text generator, alt text generator, alt attribute generator, accessibility alt text, seo alt text, wcag alt text" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/image-alt-text-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Image Alt Text Generator – Free Alt Text Assistant | Social00" />
+  <meta property="og:description" content="Describe your image and get clean, WCAG- and SEO-friendly alt text variants instantly. Free, no sign-up, runs entirely in your browser — no image analysis, just smart phrasing help." />
+  <meta property="og:url" content="https://social00.com/tools/image-alt-text-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Alt Text Generator",
+    "url": "https://social00.com/tools/image-alt-text-generator",
+    "description": "Free online alt text assistant that helps you write WCAG- and SEO-friendly image alt text from your own description of the image. It does not analyze image pixels or run computer vision on uploaded pictures.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Image Alt Text Generator", "item": "https://social00.com/tools/image-alt-text-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does this tool analyze the image I upload?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool doesn't see, scan, or run any computer-vision analysis on your picture — it has no image-recognition model behind it. Instead, you describe what's in the image yourself, and the tool helps you phrase that description into clean, WCAG- and SEO-friendly alt text." } },
+      { "@type": "Question", "name": "What is alt text and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "Alt text (the alt attribute on an <img> tag) is read aloud by screen readers so blind and low-vision users know what an image shows, it displays as a fallback if the image fails to load, and search engines use it to understand image content for image search. It serves accessibility, UX, and SEO all at once." } },
+      { "@type": "Question", "name": "When should alt text be empty (alt=\"\")?", "acceptedAnswer": { "@type": "Answer", "text": "When an image is purely decorative — a background flourish, spacer, or icon that repeats information already in nearby text — it should get an empty alt=\"\" so screen readers skip over it instead of reading out meaningless noise. Never omit the alt attribute entirely; an empty value is different from a missing one." } },
+      { "@type": "Question", "name": "How long should alt text be?", "acceptedAnswer": { "@type": "Answer", "text": "Aim for roughly 125 characters or fewer. Many screen readers truncate alt text around that length, so keep it concise and lead with the most important information first." } },
+      { "@type": "Question", "name": "Should alt text start with \"image of\" or \"picture of\"?", "acceptedAnswer": { "@type": "Answer", "text": "No. Screen readers already announce that an element is an image before reading its alt text, so phrases like \"image of\", \"picture of\", or \"graphic of\" are redundant — just describe the content directly." } },
+      { "@type": "Question", "name": "Will stuffing keywords into alt text help my SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No — repeating a keyword unnaturally in alt text is a real anti-pattern that search engines can penalize and that makes the experience worse for screen reader users. Write alt text for the person hearing or reading it first; a natural, accurate description is what search engines actually reward." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Image Alt Text Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🏷️ Image Alt Text Generator</h1>
+        <p class="hero-sub">Describe what's in your image and get WCAG- and SEO-friendly alt text variants, instantly. This tool doesn't see or analyze your uploaded picture — it helps you phrase alt text correctly from your own description.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="alt-form-grid">
+            <div class="field">
+              <label for="imageType" class="tool-label">Image type</label>
+              <select id="imageType" class="tool-select">
+                <option value="photo" selected>Photo</option>
+                <option value="screenshot">Screenshot</option>
+                <option value="logo">Logo / Icon</option>
+                <option value="chart">Chart / Graph / Infographic</option>
+                <option value="illustration">Illustration / Graphic</option>
+                <option value="decorative">Decorative-only</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="topicKeyword" class="tool-label">Page/article topic or target keyword <span class="tool-optional">(optional)</span></label>
+              <input type="text" id="topicKeyword" class="tool-input" placeholder="e.g. dog training tips" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="field" id="descriptionField">
+            <label for="imageDescription" class="tool-label">What's in the image?</label>
+            <textarea id="imageDescription" class="tool-textarea" rows="2" placeholder="e.g. a golden retriever puppy running on a beach at sunset" autocomplete="off"></textarea>
+            <p class="field-hint" id="descriptionHint">Describe it the way you'd explain it to someone on the phone — subject, action, setting.</p>
+          </div>
+
+          <label class="option-toggle">
+            <input type="checkbox" id="isLinkImage" />
+            <span>This image is also a link or button (e.g. wrapped in an &lt;a&gt; or &lt;button&gt;)</span>
+          </label>
+
+          <div class="field field-conditional" id="destinationWrap" hidden>
+            <label for="destinationContext" class="tool-label">Where does it go / what does it do?</label>
+            <input type="text" id="destinationContext" class="tool-input" placeholder="e.g. the pricing page" autocomplete="off" />
+            <p class="field-hint">For clickable images, alt text should describe the destination or action — not just the picture.</p>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="copyAllBtn">Copy All Variants</button>
+          </div>
+
+          <div id="variantsOutput" class="variants-output" aria-live="polite"></div>
+
+          <div class="checker-panel">
+            <h3 class="checker-title">Alt Text Quality Checker</h3>
+            <p class="field-hint">Paste or write any alt text here to check its length and spot common mistakes — works on text you wrote yourself too, not just the variants above.</p>
+            <textarea id="checkerInput" class="tool-textarea" rows="2" placeholder="Paste alt text here to check it…" autocomplete="off"></textarea>
+            <div id="checkerResult" class="checker-result"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Alt Text Is Actually For</h2>
+          <p>Alt text (short for "alternative text") is the content of an image's <code>alt</code> attribute. Screen readers speak it aloud so blind and low-vision users know what an image shows, browsers display it if the image fails to load, and search engines read it to understand and index image content. One short attribute serves accessibility, user experience, and SEO at the same time.</p>
+        </article>
+        <article class="content-block">
+          <h2>Decorative Images: When Empty Alt Text Is Correct</h2>
+          <p>Purely decorative images — dividers, background flourishes, or icons that just repeat a nearby text label — should use an empty <code>alt=""</code>, not a description. An empty alt tells screen readers to skip the image silently. A missing alt attribute is different and worse: many screen readers fall back to reading the file name instead. If an image adds real information, describe it; if it's pure decoration, leave the alt empty.</p>
+        </article>
+        <article class="content-block">
+          <h2>Ideal Alt Text Length</h2>
+          <p>Keep alt text to roughly 125 characters or fewer. Many screen readers truncate longer alt text around that point, so front-load the most important detail first rather than burying it at the end of a long sentence.</p>
+        </article>
+        <article class="content-block">
+          <h2>Skip the "Image Of" Prefix</h2>
+          <p>Screen readers already announce that an element is an image before reading its alt text, so starting with "image of", "picture of", or "graphic of" just wastes characters and adds noise. Describe the content directly instead: "golden retriever puppy running on a beach" beats "image of a golden retriever puppy running on a beach."</p>
+        </article>
+        <article class="content-block">
+          <h2>Don't Keyword-Stuff Alt Text</h2>
+          <p>Repeating a target keyword multiple times in one alt attribute is a real, current SEO anti-pattern — it reads as spam to search engines and makes the experience worse for screen reader users, who hear the repetition too. Work a keyword in once, only if it fits naturally; otherwise leave it out and just describe the image accurately.</p>
+        </article>
+        <article class="content-block">
+          <h2>Special Cases: Linked Images &amp; Charts</h2>
+          <p>When an image is the only content inside a link or button, its alt text should describe the destination or action ("Opens the pricing page"), not the picture itself. For charts, graphs, and infographics, alt text is a poor substitute for the underlying data — use it as a short caption, and put the real numbers in a nearby text summary, table, or transcript.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does this tool analyze the image I upload?</summary>
+            <p>No. This tool doesn't see, scan, or run any computer-vision analysis on your picture — it has no image-recognition model behind it. Instead, you describe what's in the image yourself, and the tool helps you phrase that description into clean, WCAG- and SEO-friendly alt text.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is alt text and why does it matter?</summary>
+            <p>Alt text (the alt attribute on an &lt;img&gt; tag) is read aloud by screen readers so blind and low-vision users know what an image shows, it displays as a fallback if the image fails to load, and search engines use it to understand image content for image search. It serves accessibility, UX, and SEO all at once.</p>
+          </details>
+          <details class="faq-item">
+            <summary>When should alt text be empty (alt="")?</summary>
+            <p>When an image is purely decorative — a background flourish, spacer, or icon that repeats information already in nearby text — it should get an empty alt="" so screen readers skip over it instead of reading out meaningless noise. Never omit the alt attribute entirely; an empty value is different from a missing one.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long should alt text be?</summary>
+            <p>Aim for roughly 125 characters or fewer. Many screen readers truncate alt text around that length, so keep it concise and lead with the most important information first.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should alt text start with "image of" or "picture of"?</summary>
+            <p>No. Screen readers already announce that an element is an image before reading its alt text, so phrases like "image of", "picture of", or "graphic of" are redundant — just describe the content directly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will stuffing keywords into alt text help my SEO?</summary>
+            <p>No — repeating a keyword unnaturally in alt text is a real anti-pattern that search engines can penalize and that makes the experience worse for screen reader users. Write alt text for the person hearing or reading it first; a natural, accurate description is what search engines actually reward.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/seo-meta-tag-generator" class="tool-card">
+            <span class="tool-icon">🔍</span>
+            <span class="tool-name">SEO Meta Tag Generator</span>
+            <span class="tool-desc">Title &amp; description tags with SERP preview</span>
+          </a>
+          <a href="https://social00.com/tools/keyword-ideas-generator" class="tool-card">
+            <span class="tool-icon">💡</span>
+            <span class="tool-name">Keyword Ideas Generator</span>
+            <span class="tool-desc">Long-tail keyword suggestions</span>
+          </a>
+          <a href="https://social00.com/tools/url-slug-generator" class="tool-card">
+            <span class="tool-icon">🔗</span>
+            <span class="tool-name">URL Slug Generator</span>
+            <span class="tool-desc">Clean, SEO-friendly slugs from any title</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
