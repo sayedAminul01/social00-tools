@@ -1,0 +1,50 @@
+# social00.com — Cloudflare Pages redirects/rewrites
+#
+# Every tool's <link rel="canonical"> points at a clean /tools/slug
+# URL, but the actual file lives in its own folder (e.g.
+# /wordCounter/index.html). These rules make the canonical URL
+# itself resolve (200 = rewrite, serves the file without changing
+# the address bar or issuing a redirect), so the canonical tag
+# always points at a real, working page.
+
+# ── Existing tools ─────────────────────────────────────────────
+/tools/percentage-calculator      /percentageCalculator/index.html      200
+/tools/gpa-calculator             /gpaCalculator/index.html             200
+/tools/word-counter               /wordCounter/index.html               200
+/tools/citation-generator         /citationGenerator/index.html         200
+/tools/essay-outline-generator    /essayOutlineGenerator/index.html     200
+
+# ── New tools ───────────────────────────────────────────────────
+/tools/url-slug-generator             /urlSlugGenerator/index.html             200
+/tools/youtube-tags-generator         /youtubeTagsGenerator/index.html         200
+/tools/youtube-title-generator        /youtubeTitleGenerator/index.html        200
+/tools/hashtag-generator              /hashtagGenerator/index.html             200
+/tools/instagram-caption-generator    /instagramCaptionGenerator/index.html    200
+/tools/instagram-bio-generator        /instagramBioGenerator/index.html        200
+/tools/stylish-text-generator         /stylishTextGenerator/index.html         200
+/tools/ai-bio-generator               /aiBioGenerator/index.html               200
+/tools/resume-summary-generator       /resumeSummaryGenerator/index.html       200
+/tools/email-subject-line-generator   /emailSubjectGenerator/index.html        200
+/tools/image-compressor               /imageCompressor/index.html              200
+/tools/image-resizer                  /imageResizer/index.html                 200
+/tools/color-palette-generator        /colorPaletteGenerator/index.html        200
+/tools/seo-meta-tag-generator         /seoMetaTagGenerator/index.html          200
+/tools/keyword-ideas-generator        /keywordIdeasGenerator/index.html        200
+
+# ── New tools (batch 2) ────────────────────────────────────────────
+/tools/thumbnail-headline-generator   /thumbnailHeadlineGenerator/index.html   200
+/tools/youtube-description-generator  /youtubeDescriptionGenerator/index.html  200
+/tools/youtube-hook-writer            /youtubeHookWriter/index.html            200
+/tools/youtube-script-outline         /youtubeScriptOutline/index.html         200
+/tools/reel-script-generator          /reelScriptGenerator/index.html          200
+/tools/instagram-story-ideas          /instagramStoryIdeas/index.html          200
+/tools/blog-intro-generator           /blogIntroGenerator/index.html           200
+/tools/cover-letter-generator         /coverLetterGenerator/index.html         200
+/tools/product-description-generator  /productDescriptionGenerator/index.html  200
+/tools/tweet-thread-writer            /tweetThreadWriter/index.html            200
+/tools/background-remover             /backgroundRemover/index.html            200
+/tools/image-alt-text-generator       /imageAltTextGenerator/index.html        200
+
+# ── Misc clean URLs ──────────────────────────────────────────────
+/privacy    /privacy-policy.html    200
+/terms      /terms-of-service.html  200

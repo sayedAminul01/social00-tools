@@ -1,0 +1,97 @@
+/* Color Palette Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.input-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+@media (max-width: 640px) { .input-row { grid-template-columns: 1fr; } }
+
+.input-group { display: flex; flex-direction: column; }
+
+.color-picker-wrap {
+  display: flex; align-items: center; gap: .6rem;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .4rem .6rem;
+}
+.color-picker-wrap:focus-within { border-color: var(--accent); }
+
+#colorPicker {
+  width: 40px; height: 40px; border: none; border-radius: 8px; background: none;
+  padding: 0; cursor: pointer; flex-shrink: 0;
+}
+#colorPicker::-webkit-color-swatch-wrapper { padding: 0; }
+#colorPicker::-webkit-color-swatch { border: 1px solid var(--border-2); border-radius: 8px; }
+#colorPicker::-moz-color-swatch { border: 1px solid var(--border-2); border-radius: 8px; }
+
+.tool-input {
+  width: 100%; background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1rem; transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+.hex-input {
+  background: transparent; border: none; padding: .5rem .2rem;
+  font-family: 'DM Mono', 'Courier New', monospace; font-weight: 600; letter-spacing: .02em;
+}
+.hex-input:focus { border: none; }
+.hex-input.invalid { color: #f87171; }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .6rem .8rem; color: var(--text); font-size: .9rem; min-width: 200px;
+}
+
+.swatches-row {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: .9rem;
+  margin-bottom: 1.3rem;
+}
+@media (max-width: 640px) { .swatches-row { grid-template-columns: repeat(2, 1fr); } }
+
+.swatch-block { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.swatch {
+  width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius);
+  border: 1px solid var(--border-2); cursor: pointer;
+  transition: transform .18s, box-shadow .18s;
+}
+.swatch:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.swatch:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.swatch-label {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .8rem; font-weight: 600;
+  color: var(--text-2); user-select: all;
+}
+.swatch-empty {
+  grid-column: 1 / -1; text-align: center; color: var(--text-3); font-size: .92rem;
+  padding: 1.5rem 0;
+}
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; align-self: flex-end; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

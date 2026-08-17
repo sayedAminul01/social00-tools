@@ -1,0 +1,122 @@
+/* Background Remover — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.privacy-note {
+  font-size: .86rem; color: var(--text-2);
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .7rem .9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Drop zone ─────────────────────────────────────────────── */
+.drop-zone {
+  border: 2px dashed var(--border-2); border-radius: var(--radius-lg);
+  background: var(--bg-2); padding: 2.4rem 1.5rem; text-align: center;
+  cursor: pointer; transition: border-color .2s, background .2s;
+}
+.drop-zone:hover, .drop-zone:focus-visible { border-color: var(--accent); }
+.drop-zone.drag-over { border-color: var(--accent); background: var(--accent-glow); }
+.drop-zone-icon { font-size: 2.2rem; margin-bottom: .6rem; }
+.drop-zone-text { color: var(--text-2); font-size: .92rem; line-height: 1.55; }
+.drop-zone-text strong { color: var(--text); }
+
+.empty-state {
+  color: var(--text-3); font-size: .88rem; text-align: center;
+  margin-top: 1rem;
+}
+
+/* ── Workspace panel ───────────────────────────────────────── */
+.workspace-panel { margin-top: 1.3rem; }
+
+.file-meta {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 1rem;
+}
+.file-name { font-weight: 700; font-size: .96rem; color: var(--text); word-break: break-all; }
+.file-size { font-size: .84rem; color: var(--text-3); white-space: nowrap; }
+
+.controls-row {
+  display: flex; flex-wrap: wrap; align-items: start; gap: 1.4rem;
+  margin-bottom: 1rem;
+}
+.control-group { display: flex; flex-direction: column; gap: .4rem; min-width: 220px; }
+.control-group--grow { flex: 1; }
+.control-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.control-group label span { color: var(--accent); font-weight: 800; }
+.control-hint { font-size: .76rem; color: var(--text-3); line-height: 1.4; }
+
+.tool-range {
+  width: 100%; height: 6px; border-radius: 999px;
+  background: var(--bg-3); accent-color: var(--accent); cursor: pointer;
+}
+
+.key-color-row { display: flex; align-items: center; gap: .6rem; }
+.key-swatch {
+  display: inline-block; width: 34px; height: 34px; border-radius: var(--radius);
+  border: 1px solid var(--border-2); background: #808080;
+  box-shadow: inset 0 0 0 2px var(--bg-2);
+  flex-shrink: 0;
+}
+.key-color-text {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .86rem; color: var(--text-2);
+}
+
+.btn-small { padding: .4rem .8rem; font-size: .78rem; align-self: flex-start; }
+
+.pick-hint { font-size: .82rem; color: var(--text-3); margin-bottom: .8rem; }
+
+/* ── Preview: checkerboard transparency indicator ─────────────
+   Deliberately not theme-tokenised — a checkerboard must always
+   read as "transparent area" regardless of site light/dark theme. */
+.checker-bg {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, #cbcbcb 25%, transparent 25%),
+    linear-gradient(-45deg, #cbcbcb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #cbcbcb 75%),
+    linear-gradient(-45deg, transparent 75%, #cbcbcb 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.preview-wrap {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+  max-height: 480px; margin-bottom: 1.2rem;
+}
+#previewCanvas {
+  display: block; width: 100%; height: auto; max-height: 480px;
+  object-fit: contain; cursor: crosshair;
+}
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; text-decoration: none; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+.btn-download[disabled] { pointer-events: none; opacity: .5; transform: none; }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}
+
+@media (max-width: 640px) {
+  .controls-row { flex-direction: column; }
+  .control-group { min-width: 0; }
+}

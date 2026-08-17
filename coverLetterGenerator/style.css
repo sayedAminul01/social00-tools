@@ -1,0 +1,106 @@
+/* Cover Letter Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+.optional-tag { font-weight: 500; color: var(--text-3); text-transform: none; letter-spacing: 0; }
+
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.field-group--wide { grid-column: 1 / -1; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+
+.tool-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .8rem 1rem; color: var(--text); font-size: 1rem;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+.tool-input::placeholder { color: var(--text-3); }
+
+/* Tone selector */
+.tone-selector { margin-bottom: 1.2rem; }
+.tone-options { display: flex; flex-wrap: wrap; gap: .6rem; }
+.tone-pill {
+  position: relative; cursor: pointer;
+  padding: .55rem 1.1rem; border-radius: var(--radius-pill);
+  border: 1px solid var(--border-2); background: var(--bg-2);
+  color: var(--text-2); font-size: .86rem; font-weight: 600;
+  transition: all .2s;
+}
+.tone-pill input { position: absolute; opacity: 0; width: 0; height: 0; }
+.tone-pill:has(input:checked) {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+.tone-pill:hover { border-color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.btn-clear, .btn-copy, .btn-regenerate {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover, .btn-regenerate:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.ats-tip {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .8rem 1rem; margin-bottom: 1.3rem;
+  color: var(--text-2); font-size: .86rem;
+}
+
+/* Letter output */
+.letter-wrap { display: flex; flex-direction: column; gap: .9rem; }
+
+.results-empty {
+  color: var(--text-3); font-size: .92rem; text-align: center;
+  padding: 1.6rem 1rem; border: 1px dashed var(--border-2); border-radius: var(--radius);
+}
+
+.letter-doc {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  animation: letter-in .3s var(--ease);
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+@keyframes letter-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.letter-date { color: var(--text-3); font-size: .85rem; margin-bottom: 1.1rem; }
+
+.letter-body p {
+  color: var(--text); font-size: .98rem; line-height: 1.75; margin-bottom: 1.05rem;
+}
+.letter-body p:last-child { margin-bottom: 0; }
+
+.letter-signoff { margin-top: 1.3rem; color: var(--text); font-size: .98rem; line-height: 1.6; }
+.letter-signoff .sign-name { font-weight: 700; }
+
+.letter-toolbar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .7rem;
+  padding: .1rem .2rem;
+}
+.letter-count { font-size: .78rem; color: var(--text-3); }
+.letter-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .85em; color: var(--accent-3);
+  display: inline-block; margin-top: .3rem; line-height: 1.5;
+}

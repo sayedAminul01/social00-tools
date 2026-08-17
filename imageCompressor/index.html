@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Compressor – Free Online Image Compression | Social00</title>
+  <meta name="description" content="Free online image compressor. Reduce JPEG, PNG and WebP file sizes instantly in your browser — no upload, 100% private. Adjustable quality, instant download." />
+  <meta name="keywords" content="image compressor, compress image online, reduce image file size, jpeg compressor, webp compressor, png compressor, free image compression" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/image-compressor" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Image Compressor – Free Online Image Compression | Social00" />
+  <meta property="og:description" content="Reduce JPEG, PNG and WebP file sizes instantly in your browser. Free, no sign-up, no upload — 100% private and runs entirely on your device." />
+  <meta property="og:url" content="https://social00.com/tools/image-compressor" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Compressor",
+    "url": "https://social00.com/tools/image-compressor",
+    "description": "Free online image compressor that reduces JPEG, PNG and WebP file sizes instantly in the browser, with adjustable quality and instant download.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Image Compressor", "item": "https://social00.com/tools/image-compressor" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does compressing an image reduce its quality?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you use JPEG or WebP output. Both are lossy formats, so compression trades some fine detail for a smaller file size. At quality settings of 60-80% the difference is usually invisible to the eye, but it is a real tradeoff, not a free lunch." } },
+      { "@type": "Question", "name": "What's the difference between JPEG and WebP?", "acceptedAnswer": { "@type": "Answer", "text": "WebP generally produces smaller files than JPEG at the same visual quality thanks to a newer compression algorithm. JPEG has near-universal support across every browser, app and image editor, while WebP support is very good but occasionally still missing in older or niche software." } },
+      { "@type": "Question", "name": "Is my image uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool runs 100% client-side using your browser's Canvas API. Your image is loaded, resized and re-encoded entirely on your own device and is never sent to any server." } },
+      { "@type": "Question", "name": "What's the best quality setting for web images?", "acceptedAnswer": { "@type": "Answer", "text": "60-80% is the sweet spot for most photos — it cuts file size significantly while keeping visual quality high. Go lower (30-50%) for background or thumbnail images where detail matters less, and higher (85-95%) for hero images or photography portfolios." } },
+      { "@type": "Question", "name": "Can I compress PNG files?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can upload a PNG, but the compressed output is re-encoded as JPEG or WebP, since those are the formats with an adjustable lossy quality slider. This is expected behavior and usually shrinks PNGs dramatically." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free with no sign-up, no watermark and no limit on how many images you compress." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Image Compressor</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🗜️ Image Compressor</h1>
+        <p class="hero-sub">Shrink JPEG, PNG and WebP files right in your browser — adjustable quality, instant download, nothing ever uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <p class="privacy-note">🔒 Your image is processed entirely in your browser — it is never uploaded to any server.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose an image or drag and drop one here">
+            <input type="file" id="fileInput" accept="image/*" class="sr-only" />
+            <div class="drop-zone-icon">🖼️</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop an image here</strong><br/>or click to browse (JPEG, PNG, WebP, GIF…)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No image selected yet — choose or drop a file above to get started.</p>
+          <p class="warning-state" id="warningState" hidden></p>
+
+          <div class="file-panel" id="filePanel" hidden>
+            <div class="file-meta">
+              <span class="file-name" id="fileName"></span>
+              <span class="file-size" id="fileOriginalSize"></span>
+            </div>
+            <p class="dims-note" id="dimsNote"></p>
+
+            <div class="options-row">
+              <div class="option-group option-group--grow">
+                <label for="qualityRange">Quality <span id="qualityValue">75</span></label>
+                <input type="range" id="qualityRange" class="tool-range" min="10" max="100" value="75" />
+              </div>
+              <div class="option-group">
+                <label for="formatSelect">Output format</label>
+                <select id="formatSelect" class="tool-select">
+                  <option value="image/jpeg" selected>JPEG</option>
+                  <option value="image/webp">WebP</option>
+                </select>
+              </div>
+            </div>
+            <p class="format-note">Note: PNG (and any other) input is re-encoded as JPEG or WebP per the format you pick above — that's expected, and usually shrinks PNGs a lot.</p>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="compressBtn">Compress Image</button>
+              <button class="btn-clear" id="resetBtn">Compress Another Image</button>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden>Compressing…</div>
+
+            <div class="result-panel" id="resultPanel" hidden>
+              <div class="result-grid">
+                <div class="result-preview">
+                  <img id="resultImg" alt="Compressed image preview" />
+                </div>
+                <div class="result-stats">
+                  <div class="stat-row">
+                    <span class="stat-label">Original size</span>
+                    <span class="stat-value" id="statOriginal"></span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Compressed size</span>
+                    <span class="stat-value" id="statCompressed"></span>
+                  </div>
+                  <div class="stat-row stat-row--highlight">
+                    <span class="stat-label">Reduction</span>
+                    <span class="stat-value" id="statReduction"></span>
+                  </div>
+                  <a class="btn-copy btn-download" id="downloadBtn" download>Download Compressed Image</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How Lossy Image Compression Works</h2>
+          <p>JPEG and WebP are <strong>lossy</strong> formats: instead of storing every pixel exactly, they discard detail the human eye barely notices — subtle color gradients, high-frequency texture, noise — to shrink the file. The <strong>quality setting</strong> controls how aggressively that detail gets thrown away. Higher quality keeps more of the original data and produces a bigger file; lower quality discards more and produces a smaller one. It's a direct trade-off, not magic compression that costs nothing.</p>
+        </article>
+        <article class="content-block">
+          <h2>JPEG vs WebP: Which Should You Choose?</h2>
+          <p><strong>WebP</strong> uses a newer compression algorithm and generally produces noticeably smaller files than JPEG at the same visual quality — often 25-35% smaller. <strong>JPEG</strong> has near-universal support: every browser, image editor, social platform and printer handles it without a second thought. WebP support in modern browsers is excellent, but if you need maximum compatibility with older tools or systems, JPEG is still the safer default.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Smaller Images Matter for Speed &amp; SEO</h2>
+          <p>Images are typically the heaviest assets on a web page. Bloated images directly slow down <strong>Largest Contentful Paint (LCP)</strong> — one of Google's named Core Web Vitals and a real, documented ranking factor. Compressing your images before you upload them shrinks page weight, speeds up load times, improves LCP scores, and reduces bandwidth costs for you and your visitors.</p>
+        </article>
+        <article class="content-block">
+          <h2>Recommended Quality Settings</h2>
+          <p>For most web photography, <strong>60-80% quality</strong> is the sweet spot — a large reduction in file size with virtually no visible loss. Drop to <strong>30-50%</strong> for thumbnails, background images or anywhere fine detail doesn't matter. Reserve <strong>85-95%</strong> for hero banners, print-adjacent work, or portfolio images where every detail counts.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why This Runs Entirely in Your Browser</h2>
+          <p>This compressor uses the browser's built-in <code>&lt;canvas&gt;</code> API to decode, redraw and re-encode your image locally — nothing is ever uploaded to a server. That means your files stay completely private, there's no upload wait, no server costs to pass on to you, and it works even if you're offline once the page has loaded.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>100% private — your image never leaves your device</li>
+            <li>Adjustable quality slider with a live before/after comparison</li>
+            <li>Choose JPEG or WebP output to fit your use case</li>
+            <li>Free, unlimited, no sign-up, no watermark</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does compressing an image reduce its quality?</summary>
+            <p>Yes, if you use JPEG or WebP output. Both are lossy formats, so compression trades some fine detail for a smaller file size. At 60-80% quality the difference is usually invisible, but it's a real tradeoff, not a free lunch.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's the difference between JPEG and WebP?</summary>
+            <p>WebP generally produces smaller files than JPEG at equivalent visual quality thanks to a newer compression algorithm. JPEG has near-universal support everywhere; WebP support is excellent in modern browsers but occasionally missing in older or niche software.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my image uploaded anywhere?</summary>
+            <p>No. This tool is 100% client-side — your image is loaded, resized and re-encoded entirely on your own device using the browser's Canvas API, and is never sent to any server.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's the best quality setting for web images?</summary>
+            <p>60-80% is the sweet spot for most photos. Go lower (30-50%) for thumbnails or background images, and higher (85-95%) for hero images or detail-critical photography.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I compress PNG files?</summary>
+            <p>Yes — you can upload a PNG, but the compressed output is re-encoded as JPEG or WebP since those formats support an adjustable lossy quality slider. This is expected and usually shrinks PNGs significantly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no watermark, and no limit on how many images you compress. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images to exact dimensions</span>
+          </a>
+          <a href="https://social00.com/tools/color-palette-generator" class="tool-card">
+            <span class="tool-icon">🎨</span>
+            <span class="tool-name">Color Palette Generator</span>
+            <span class="tool-desc">Extract or generate matching color palettes</span>
+          </a>
+          <a href="https://social00.com/wordCounter/index.html" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Word Counter</span>
+            <span class="tool-desc">Count words, characters &amp; reading time</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

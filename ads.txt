@@ -1,0 +1,14 @@
+# social00.com — ads.txt
+#
+# Placeholder file. Google AdSense requires ads.txt to exist and list
+# your real publisher ID before ads will actually serve on this domain.
+#
+# Once your AdSense account is approved:
+#   1. Go to AdSense → Sites → social00.com → "View ads.txt instructions".
+#   2. Replace the line below with the exact line Google gives you —
+#      it will look like:
+#      google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#   3. Also set window.ADSENSE_CLIENT_ID in /assets/ads-config.js to the
+#      same pub- ID.
+#
+# google.com, pub-REPLACE-WITH-YOUR-PUBLISHER-ID, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cover Letter Generator – Free AI-Style Cover Letter Writer | Social00</title>
+  <meta name="description" content="Free cover letter generator. Turn your name, job title, company and skills into a complete 4-paragraph cover letter draft in seconds. No sign-up, no AI account needed." />
+  <meta name="keywords" content="cover letter generator, cover letter writer, cover letter template, job application letter, free cover letter maker" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/cover-letter-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cover Letter Generator – Free AI-Style Cover Letter Writer | Social00" />
+  <meta property="og:description" content="Turn your name, job title, company and skills into a complete 4-paragraph cover letter draft instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/cover-letter-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cover Letter Generator",
+    "url": "https://social00.com/tools/cover-letter-generator",
+    "description": "Free online cover letter generator that turns a name, job title, company, key skills and years of experience into a complete, ready-to-edit 4-paragraph cover letter draft.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Cover Letter Generator", "item": "https://social00.com/tools/cover-letter-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long should a cover letter be?", "acceptedAnswer": { "@type": "Answer", "text": "Keep it under 400 words and to a single page. Hiring managers skim, so four tight paragraphs that get to the point beat a long letter that repeats your resume." } },
+      { "@type": "Question", "name": "What do recruiters actually skim for?", "acceptedAnswer": { "@type": "Answer", "text": "The job title, the company name, and two or three concrete skills or results in the first few lines. If those aren't easy to spot in the opening paragraph, most recruiters move on before reaching paragraph two." } },
+      { "@type": "Question", "name": "What are the most common cover letter mistakes?", "acceptedAnswer": { "@type": "Answer", "text": "A generic opening that could apply to any job, simply restating the resume line by line instead of adding context, no mention of the specific company or role, and a closing that doesn't ask for next steps." } },
+      { "@type": "Question", "name": "Should I customize the generated letter before sending it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. Treat the output as a strong first draft: add a specific detail about the company, swap in a real achievement with a number where you can, and read it aloud once to make sure it sounds like you." } },
+      { "@type": "Question", "name": "Is this powered by a live AI model?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is a template generator, not a live AI model — it combines proven cover letter structures with the details you type using plain JavaScript in your browser. It's meant as a strong starting draft, not a finished letter, so personalize it before sending." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many letters you generate. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Cover Letter Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📋 Cover Letter Generator</h1>
+        <p class="hero-sub">Turn your name, job title, company and skills into a complete 4-paragraph cover letter draft — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="fullName" class="tool-label">Your name</label>
+              <input type="text" id="fullName" class="tool-input" placeholder="e.g. Jordan Reyes" autocomplete="off" />
+            </div>
+            <div class="field-group">
+              <label for="jobTitle" class="tool-label">Job title applying for</label>
+              <input type="text" id="jobTitle" class="tool-input" placeholder="e.g. Marketing Manager" autocomplete="off" />
+            </div>
+            <div class="field-group">
+              <label for="companyName" class="tool-label">Company name</label>
+              <input type="text" id="companyName" class="tool-input" placeholder="e.g. Northwind Studios" autocomplete="off" />
+            </div>
+            <div class="field-group">
+              <label for="yearsExp" class="tool-label">Years of experience <span class="optional-tag">(optional)</span></label>
+              <input type="number" id="yearsExp" class="tool-input" placeholder="e.g. 5" min="0" max="60" step="1" autocomplete="off" />
+            </div>
+            <div class="field-group field-group--wide">
+              <label for="keySkills" class="tool-label">Key skills / experience (comma-separated)</label>
+              <input type="text" id="keySkills" class="tool-input" placeholder="e.g. SEO, content strategy, team leadership" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="tone-selector">
+            <span class="tool-label">Tone</span>
+            <div class="tone-options" id="toneOptions">
+              <label class="tone-pill">
+                <input type="radio" name="tone" value="professional" checked />
+                <span>Professional</span>
+              </label>
+              <label class="tone-pill">
+                <input type="radio" name="tone" value="enthusiastic" />
+                <span>Enthusiastic</span>
+              </label>
+              <label class="tone-pill">
+                <input type="radio" name="tone" value="concise" />
+                <span>Concise</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="generateBtn">Generate Cover Letter</button>
+          </div>
+
+          <p class="ats-tip">💡 Tip: this is a strong starting draft, not a finished letter — swap in a specific detail about the company and a real number before you send it.</p>
+
+          <div class="letter-wrap" id="letterWrap" aria-live="polite">
+            <p class="results-empty" id="resultsEmpty">Fill in the fields above and click "Generate Cover Letter" to see your draft.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Ideal Length: Under 400 Words</h2>
+          <p>A cover letter should fit comfortably on a single page — roughly <strong>250-400 words</strong> across four short paragraphs. Anything longer tends to get skimmed rather than read, which defeats the purpose of a letter meant to earn a closer look at your resume.</p>
+        </article>
+        <article class="content-block">
+          <h2>What Recruiters Actually Skim For</h2>
+          <p>In the first few seconds, most recruiters look for the exact job title, the company name, and two or three concrete skills or results — not a life story. Put those where they're easy to spot, ideally in the opening paragraph, or the letter risks being skipped.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Cover Letter Mistakes</h2>
+          <p>The biggest offenders: a generic opening that could apply to any company, simply restating the resume line by line instead of adding context, no evidence you researched the role, and a closing that doesn't clearly ask for an interview or next step.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Four-Paragraph Structure</h2>
+          <p>This generator builds a letter in four parts: an <strong>opening</strong> that names the role and company, a <strong>fit paragraph</strong> that weaves in your skills and experience, a <strong>value paragraph</strong> that states what you bring, and a <strong>closing</strong> call-to-action that ends with your name.</p>
+        </article>
+        <article class="content-block">
+          <h2>How to Customize the Output</h2>
+          <p>Before sending, add one sentence about something specific to the company (a product, a value, recent news), replace a generic claim with a real number from your work history, and read the whole letter aloud once — if it doesn't sound like you, adjust the wording.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Complete 4-paragraph draft in one click, not just a few bullet phrases</li>
+            <li>Three tones and a "Regenerate" button for different phrasing on the same inputs</li>
+            <li>Live word count so you can stay under the one-page guideline</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How long should a cover letter be?</summary>
+            <p>Keep it under 400 words and to a single page. Hiring managers skim, so four tight paragraphs that get to the point beat a long letter that repeats your resume.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What do recruiters actually skim for?</summary>
+            <p>The job title, the company name, and two or three concrete skills or results in the first few lines. If those aren't easy to spot in the opening paragraph, most recruiters move on before reaching paragraph two.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are the most common cover letter mistakes?</summary>
+            <p>A generic opening that could apply to any job, simply restating the resume line by line instead of adding context, no mention of the specific company or role, and a closing that doesn't ask for next steps.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should I customize the generated letter before sending it?</summary>
+            <p>Yes, always. Treat the output as a strong first draft: add a specific detail about the company, swap in a real achievement with a number where you can, and read it aloud once to make sure it sounds like you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this powered by a live AI model?</summary>
+            <p>No. This is a template generator, not a live AI model — it combines proven cover letter structures with the details you type using plain JavaScript in your browser. It's meant as a strong starting draft, not a finished letter, so personalize it before sending.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many letters you generate. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/resume-summary-generator" class="tool-card">
+            <span class="tool-icon">📄</span>
+            <span class="tool-name">Resume Summary Generator</span>
+            <span class="tool-desc">ATS-friendly professional summaries</span>
+          </a>
+          <a href="https://social00.com/tools/ai-bio-generator" class="tool-card">
+            <span class="tool-icon">👤</span>
+            <span class="tool-name">AI Bio Generator</span>
+            <span class="tool-desc">Short bios for socials &amp; profiles</span>
+          </a>
+          <a href="https://social00.com/tools/email-subject-line-generator" class="tool-card">
+            <span class="tool-icon">✉️</span>
+            <span class="tool-name">Email Subject Line Generator</span>
+            <span class="tool-desc">Subject lines that get opened</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

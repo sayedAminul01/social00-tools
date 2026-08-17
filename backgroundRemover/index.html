@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Remover – Free Online Chroma-Key Tool | Social00</title>
+  <meta name="description" content="Free online background remover for solid or plain-color backgrounds. Real color-based (chroma-key) removal with edge softening, right in your browser. No upload, no sign-up." />
+  <meta name="keywords" content="background remover, remove background from image, transparent background, chroma key online, png background remover, remove white background" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/background-remover" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Background Remover – Free Online Chroma-Key Tool | Social00" />
+  <meta property="og:description" content="Remove solid or plain-color backgrounds from images instantly using real color-distance (chroma-key) processing, entirely in your browser. Free, no sign-up, no upload." />
+  <meta property="og:url" content="https://social00.com/tools/background-remover" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Background Remover",
+    "url": "https://social00.com/tools/background-remover",
+    "description": "Free online background remover that uses real color-distance (chroma-key) processing to remove solid or plain-color backgrounds from images, entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Background Remover", "item": "https://social00.com/tools/background-remover" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How does this background remover actually work?", "acceptedAnswer": { "@type": "Answer", "text": "It reads every pixel of your image and measures its color distance from a chosen \"key\" background color. Pixels close to that color are made transparent, pixels far from it are kept, and pixels near the boundary get a soft partial-transparency blend instead of a hard jagged edge. This is called chroma-key or color-distance removal, and it runs entirely on your device using the Canvas API." } },
+      { "@type": "Question", "name": "What kind of images work best?", "acceptedAnswer": { "@type": "Answer", "text": "Solid or plain backgrounds: product photos on white or a seamless studio backdrop, ID or passport-style photos, logos on a flat color, or footage shot against a green screen. The more uniform the background color, the cleaner the cutout." } },
+      { "@type": "Question", "name": "Why does it struggle with busy or textured backgrounds?", "acceptedAnswer": { "@type": "Answer", "text": "This tool keys out one target color plus nearby shades within a distance threshold. A busy, multi-color or textured background has no single dominant color to key on, and if your subject shares colors with the background, those matching areas get removed too. There is no object or person detection happening here." } },
+      { "@type": "Question", "name": "Is this true AI background removal?", "acceptedAnswer": { "@type": "Answer", "text": "No, and we want to be upfront about that. This is real-time color-based (chroma-key) removal, not AI subject or person segmentation. It works great for solid or plain backgrounds, but for complex photos with busy backgrounds you'll get better results from a dedicated AI tool like remove.bg or Canva Pro's background remover, both linked below." } },
+      { "@type": "Question", "name": "Why is the output only PNG?", "acceptedAnswer": { "@type": "Answer", "text": "PNG supports a transparent alpha channel; JPEG does not. Since the whole point of this tool is a transparent background, the download is always a PNG — saving as JPEG would just fill the removed area with a solid color." } },
+      { "@type": "Question", "name": "Any tips for a cleaner cutout?", "acceptedAnswer": { "@type": "Answer", "text": "Shoot your subject against as plain and evenly lit a backdrop as possible. Start with a low tolerance and increase it gradually until the background disappears without eating into your subject, and click directly on the background in the preview if the auto-detected corner color isn't quite right." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Background Remover</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">✂️ Background Remover</h1>
+        <p class="hero-sub">Remove solid or plain-color backgrounds from images instantly, right in your browser — real color-based (chroma-key) removal, not AI subject segmentation. Best for product photos, ID photos and plain backdrops.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <p class="privacy-note">🔒 100% client-side — your image is never uploaded. This tool uses real color-distance (chroma-key) removal, which works best on solid or plain backgrounds. It is not AI subject segmentation — for complex, busy photos see the Canva Pro / remove.bg recommendations below.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose an image or drag and drop one here">
+            <input type="file" id="fileInput" accept="image/*" class="sr-only" />
+            <div class="drop-zone-icon">✂️</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop an image here</strong><br/>or click to browse (JPEG, PNG, WebP…)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No image selected yet — choose or drop a file above to get started.</p>
+
+          <div class="workspace-panel" id="workspacePanel" hidden>
+            <div class="file-meta">
+              <span class="file-name" id="fileName"></span>
+              <span class="file-size" id="fileDims"></span>
+            </div>
+
+            <div class="controls-row">
+              <div class="control-group control-group--grow">
+                <label for="toleranceRange">Tolerance <span id="toleranceValue">35</span></label>
+                <input type="range" id="toleranceRange" class="tool-range" min="0" max="100" value="35" />
+                <p class="control-hint">How far a pixel's color can be from the key color and still get removed. Raise it gradually.</p>
+              </div>
+              <div class="control-group">
+                <label>Background color to remove</label>
+                <div class="key-color-row">
+                  <span class="key-swatch" id="keySwatch" aria-hidden="true"></span>
+                  <span class="key-color-text" id="keyColorText">—</span>
+                </div>
+                <button type="button" class="btn-clear btn-small" id="autoDetectBtn">Auto-Detect Corners</button>
+              </div>
+            </div>
+
+            <p class="pick-hint">🎯 Click anywhere on the image below to pick a different background color to remove.</p>
+
+            <div class="preview-wrap checker-bg">
+              <canvas id="previewCanvas" aria-label="Live preview with background removed"></canvas>
+            </div>
+
+            <div class="calc-actions">
+              <a class="btn-copy btn-download" id="downloadBtn" download disabled>Download PNG</a>
+              <button class="btn-clear" id="resetBtn">Remove Another Image</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How Chroma-Key Background Removal Works</h2>
+          <p>Every pixel in your image has a color, made of red, green and blue values. This tool picks one "key" color — either auto-detected from the image's corners or a spot you click — and measures the Euclidean distance between every pixel's color and that key color. Pixels close to the key color get their alpha (transparency) channel set to zero; pixels far away are left untouched. It's the same core idea used by green-screen video compositing, just running as a single pass over a still image.</p>
+        </article>
+        <article class="content-block">
+          <h2>Best Use Cases: Solid &amp; Plain Backgrounds</h2>
+          <p>This technique shines on product photos shot on a white or seamless backdrop, ID and passport-style headshots, logos sitting on a flat color card, and anything shot against an actual green or blue screen. In all of these cases the background is one dominant, fairly uniform color — exactly what a distance threshold can isolate cleanly.</p>
+        </article>
+        <article class="content-block">
+          <h2>Where This Technique Struggles</h2>
+          <p>A busy, patterned, textured or multi-tone background has no single color to key on, so a lot of it will survive the cutoff untouched. Worse, if your subject shares a similar shade with the background (skin tones near a beige wall, for example), those matching areas of the subject get removed too. There's no understanding of "this is a person" here — only color math, applied honestly and consistently.</p>
+        </article>
+        <article class="content-block">
+          <h2>Edge Softening: Avoiding Jagged Cutouts</h2>
+          <p>A hard alpha cutoff — fully opaque one pixel, fully transparent the next — produces a visibly jagged, aliased edge. Instead, pixels that fall in a narrow band just past the tolerance threshold get a linearly interpolated, partial alpha value rather than a binary on/off. That softened transition band is what keeps edges looking smooth instead of stair-stepped.</p>
+        </article>
+        <article class="content-block">
+          <h2>PNG vs JPEG for Transparency</h2>
+          <p><strong>PNG</strong> stores a full alpha channel, so "removed" pixels are genuinely transparent and will composite correctly over anything you place behind them. <strong>JPEG</strong> has no alpha channel at all — it can only store opaque pixels — so a JPEG "with a removed background" is a contradiction. That's why this tool always exports PNG, regardless of what format you uploaded.</p>
+        </article>
+        <article class="content-block">
+          <h2>Tips for a Cleaner Cutout</h2>
+          <ul class="feature-list">
+            <li>Shoot subjects against as plain and evenly lit a backdrop as you can manage</li>
+            <li>Start with a low tolerance and raise it slowly, watching the live preview</li>
+            <li>Click directly on the background in the preview if auto-detection picked up a shadow or reflection</li>
+            <li>Avoid backgrounds that share colors with your subject (e.g. skin tones near beige walls)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How does this background remover actually work?</summary>
+            <p>It reads every pixel of your image and measures its color distance from a chosen "key" background color. Pixels close to that color are made transparent, pixels far from it are kept, and pixels near the boundary get a soft partial-transparency blend instead of a hard jagged edge. This is called chroma-key or color-distance removal, and it runs entirely on your device using the Canvas API.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What kind of images work best?</summary>
+            <p>Solid or plain backgrounds: product photos on white or a seamless studio backdrop, ID or passport-style photos, logos on a flat color, or footage shot against a green screen. The more uniform the background color, the cleaner the cutout.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does it struggle with busy or textured backgrounds?</summary>
+            <p>This tool keys out one target color plus nearby shades within a distance threshold. A busy, multi-color or textured background has no single dominant color to key on, and if your subject shares colors with the background, those matching areas get removed too. There is no object or person detection happening here.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this true AI background removal?</summary>
+            <p>No, and we want to be upfront about that. This is real-time color-based (chroma-key) removal, not AI subject or person segmentation. It works great for solid or plain backgrounds, but for complex photos with busy backgrounds you'll get better results from a dedicated AI tool like remove.bg or Canva Pro's background remover, both linked below.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why is the output only PNG?</summary>
+            <p>PNG supports a transparent alpha channel; JPEG does not. Since the whole point of this tool is a transparent background, the download is always a PNG — saving as JPEG would just fill the removed area with a solid color.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Any tips for a cleaner cutout?</summary>
+            <p>Shoot your subject against as plain and evenly lit a backdrop as possible. Start with a low tolerance and increase it gradually until the background disappears without eating into your subject, and click directly on the background in the preview if the auto-detected corner color isn't quite right.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink JPEG, PNG &amp; WebP file sizes</span>
+          </a>
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images to exact dimensions</span>
+          </a>
+          <a href="https://social00.com/tools/color-palette-generator" class="tool-card">
+            <span class="tool-icon">🎨</span>
+            <span class="tool-name">Color Palette Generator</span>
+            <span class="tool-desc">Extract or generate matching color palettes</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

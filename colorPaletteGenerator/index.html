@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palette Generator – Free Harmonious Color Palettes | Social00</title>
+  <meta name="description" content="Free color palette generator. Create complementary, analogous, triadic and monochromatic palettes from any hex color or keyword. Export as CSS or Tailwind." />
+  <meta name="keywords" content="color palette generator, hex to hsl, complementary colors, color scheme generator, tailwind color palette, css color variables" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/color-palette-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Color Palette Generator – Free Harmonious Color Palettes | Social00" />
+  <meta property="og:description" content="Generate complementary, analogous, triadic and monochromatic color palettes from any hex color or keyword. Free, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/color-palette-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Color Palette Generator",
+    "url": "https://social00.com/tools/color-palette-generator",
+    "description": "Free online color palette generator that creates complementary, analogous, triadic, split-complementary, tetradic and monochromatic palettes from a hex color or keyword using real HSL color theory.",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Color Palette Generator", "item": "https://social00.com/tools/color-palette-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the difference between hue, saturation and lightness?", "acceptedAnswer": { "@type": "Answer", "text": "Hue is the base color on a 0-360° color wheel (0 is red, 120 is green, 240 is blue). Saturation is how intense or muted that color is, from grey (0%) to fully vivid (100%). Lightness is how close the color is to black (0%) or white (100%), with 50% being the purest version of the hue." } },
+      { "@type": "Question", "name": "Which harmony type should I use for a logo or brand?", "acceptedAnswer": { "@type": "Answer", "text": "Monochromatic or analogous harmonies tend to look cohesive and professional for brand identities, since the colors sit close together on the wheel. Complementary or triadic harmonies create more contrast and energy, which can work for a bold, youthful brand but is harder to keep balanced." } },
+      { "@type": "Question", "name": "Can I generate a palette from a color name instead of a hex code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Typing a keyword like 'ocean' or 'sunset' sums the character codes of the word and maps that number to a hue between 0 and 360 using modulo, then pairs it with a fixed 65% saturation and 50% lightness. It's a deterministic hash, not a curated designer choice, but the same word always produces the same color family." } },
+      { "@type": "Question", "name": "How do I use the CSS variables output?", "acceptedAnswer": { "@type": "Answer", "text": "Click 'Copy as CSS Variables' to copy a ready-made :root block with --color-1 through --color-5 custom properties set to your palette's hex codes, then paste it into your stylesheet and reference the variables with var(--color-1)." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many palettes you generate. Everything runs locally in your browser." } },
+      { "@type": "Question", "name": "Does this check color accessibility or contrast?", "acceptedAnswer": { "@type": "Answer", "text": "Not currently. This tool generates harmonious color combinations based on HSL color theory, but it doesn't calculate WCAG contrast ratios. If you plan to use a palette for text on a background, check the contrast separately with a dedicated contrast checker before shipping it." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Color Palette Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🎨 Color Palette Generator</h1>
+        <p class="hero-sub">Create complementary, analogous, triadic and monochromatic color palettes from any hex color or keyword — instantly, in your browser.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="input-row">
+            <div class="input-group">
+              <label for="colorPicker" class="tool-label">Base color</label>
+              <div class="color-picker-wrap">
+                <input type="color" id="colorPicker" value="#f97316" aria-label="Pick a base color" />
+                <input type="text" id="hexInput" class="tool-input hex-input" value="#F97316" maxlength="7" autocomplete="off" spellcheck="false" aria-label="Base color hex code" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="keywordInput" class="tool-label">...or generate from a keyword</label>
+              <input type="text" id="keywordInput" class="tool-input" placeholder="e.g. ocean, sunset, forest" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="harmonySelect">Harmony</label>
+              <select id="harmonySelect" class="tool-select">
+                <option value="complementary">Complementary</option>
+                <option value="analogous">Analogous</option>
+                <option value="triadic">Triadic</option>
+                <option value="split-complementary">Split-Complementary</option>
+                <option value="tetradic">Tetradic</option>
+                <option value="monochromatic">Monochromatic</option>
+              </select>
+            </div>
+            <button class="btn-copy" id="generateBtn">Generate Palette</button>
+          </div>
+
+          <div class="swatches-row" id="swatchesRow" aria-live="polite"></div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="copyCssBtn">Copy as CSS Variables</button>
+            <button class="btn-clear" id="copyTailwindBtn">Copy as Tailwind Config</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Hue, Saturation & Lightness Explained</h2>
+          <p><strong>Hue</strong> is the base color itself, measured as a position on a 0-360° color wheel — 0° is red, 120° is green, 240° is blue, and it wraps back to red at 360°. <strong>Saturation</strong> controls how intense that color is, from a flat grey at 0% to a fully vivid color at 100%. <strong>Lightness</strong> controls how close the color sits to black (0%) or white (100%), with 50% giving the purest, most saturated version of the hue.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Harmony Types Explained</h2>
+          <p><strong>Complementary</strong> pairs a hue with its opposite (180° away) for maximum contrast. <strong>Analogous</strong> uses hues that sit close together on the wheel for a naturally harmonious feel. <strong>Triadic</strong> spaces three hues 120° apart for a vibrant but balanced look. <strong>Split-complementary</strong> softens a complementary pair by using the two hues next to the opposite color. <strong>Tetradic</strong> uses four hues in two complementary pairs for rich, varied palettes. <strong>Monochromatic</strong> keeps one hue and only varies the lightness, producing a cohesive, low-risk palette.</p>
+        </article>
+        <article class="content-block">
+          <h2>Choosing a Palette for Your Brand</h2>
+          <p>For a brand or logo, cohesion usually beats novelty — monochromatic or analogous harmonies read as calm and professional because the colors already sit near each other on the wheel. Save complementary or triadic combinations for accents, calls-to-action, or projects where you want energy and contrast, and use a single dominant color with the rest as supporting shades rather than treating all five swatches as equals.</p>
+        </article>
+        <article class="content-block">
+          <h2>A Note on Accessibility</h2>
+          <p>A visually harmonious palette isn't automatically a readable one. If you plan to pair any of these colors as text on a background, check the contrast ratio against the Web Content Accessibility Guidelines (WCAG) before shipping it — this tool generates color harmony, not contrast compliance, so run text/background pairs through a dedicated contrast checker first.</p>
+        </article>
+        <article class="content-block">
+          <h2>A Worked Example</h2>
+          <p>Start with <code>#2563EB</code>, a strong blue. Converting to HSL gives roughly <code>hsl(221°, 83%, 53%)</code>. Choosing <strong>Complementary</strong> shifts the hue by 180° to about <code>41°</code> — a warm amber — and adds a lighter and darker shade of each for five usable swatches. Choosing <strong>Monochromatic</strong> instead keeps that same <code>221°</code> hue and 83% saturation, and only steps the lightness through 20%, 35%, 50%, 65% and 80%.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Real HSL color-theory math, not randomly generated colors</li>
+            <li>Six harmony rules: complementary, analogous, triadic, split-complementary, tetradic, monochromatic</li>
+            <li>Generate from a hex code, a color picker, or a plain-text keyword</li>
+            <li>One-click copy for CSS custom properties or a Tailwind config snippet</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What's the difference between hue, saturation and lightness?</summary>
+            <p>Hue is the base color on a 0-360° wheel (0 is red, 120 is green, 240 is blue). Saturation is how intense the color is, from grey to fully vivid. Lightness is how close it sits to black or white, with 50% being the purest version of the hue.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which harmony type should I use for a logo or brand?</summary>
+            <p>Monochromatic or analogous harmonies usually look cohesive and professional since the colors sit close together on the wheel. Complementary or triadic harmonies create more contrast and energy, good for bold accents but harder to balance across a full brand.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I generate a palette from a color name instead of a hex code?</summary>
+            <p>Yes — type a word like "ocean" or "sunset" and the tool sums the character codes of the letters, maps that number to a hue with modulo 360, and pairs it with a fixed 65% saturation and 50% lightness. It's a deterministic hash, not a curated designer pick, but the same word always gives the same color family.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I use the CSS variables output?</summary>
+            <p>"Copy as CSS Variables" copies a ready :root block with --color-1 through --color-5 set to your palette's hex codes. Paste it into your stylesheet and reference each color with var(--color-1), var(--color-2), and so on.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many palettes you generate. Everything runs locally in your browser.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this check color accessibility or contrast?</summary>
+            <p>Not currently. It generates harmonious palettes based on HSL color theory, but it doesn't calculate WCAG contrast ratios. If you're using a palette for text on a background, verify contrast separately with a dedicated contrast checker.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink image file size without losing quality</span>
+          </a>
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">🖼️</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images to exact dimensions</span>
+          </a>
+          <a href="https://social00.com/tools/stylish-text-generator" class="tool-card">
+            <span class="tool-icon">✨</span>
+            <span class="tool-name">Stylish Text Generator</span>
+            <span class="tool-desc">Fancy fonts for bios and captions</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
