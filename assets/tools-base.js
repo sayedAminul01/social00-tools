@@ -76,7 +76,7 @@
     const clientId = window.ADSENSE_CLIENT_ID || '';
     if (!clientId) return; // leave placeholder text as-is
 
-    if (!document.querySelector('script[data-adsbygoogle-loader]')) {
+    if (!document.querySelector('script[data-adsbygoogle-loader], script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
       const s = document.createElement('script');
       s.async = true;
       s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(clientId);

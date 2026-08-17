@@ -20,7 +20,7 @@
  * ──────────────────────────────────────────────────────────────── */
 'use strict';
 
-window.ADSENSE_CLIENT_ID = ''; // e.g. 'ca-pub-1234567890123456'
+window.ADSENSE_CLIENT_ID = 'ca-pub-9882344850230649';
 
 window.ADSENSE_SLOTS = {
   top: '',    // slot ID for .ad-slot[data-ad="top"]

@@ -11,4 +11,4 @@
 #   3. Also set window.ADSENSE_CLIENT_ID in /assets/ads-config.js to the
 #      same pub- ID.
 #
-# google.com, pub-REPLACE-WITH-YOUR-PUBLISHER-ID, DIRECT, f08c47fec0942fa0
+google.com, pub-9882344850230649, DIRECT, f08c47fec0942fa0
