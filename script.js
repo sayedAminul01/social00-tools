@@ -226,13 +226,22 @@ const TOOLS = [
     url: '/tools/color-palette-generator'
   },
   {
-    id: 'bg-remove',
-    name: 'Background Remover',
-    icon: '✂️',
+    id: 'jpg-to-pdf',
+    name: 'JPG to PDF Converter',
+    icon: '📄',
     category: 'image',
-    badge: '🪄 Magic',
-    desc: 'Remove image backgrounds instantly with AI. Perfect for product photos, profiles and thumbnails.',
-    url: '/tools/background-remover'
+    badge: '🔄 Convert',
+    desc: 'Combine one or more JPG or PNG images into a single downloadable PDF file, right in your browser.',
+    url: '/tools/jpg-to-pdf'
+  },
+  {
+    id: 'pdf-to-jpg',
+    name: 'PDF to JPG Converter',
+    icon: '🖼️',
+    category: 'image',
+    badge: '🔄 Convert',
+    desc: 'Turn each page of a PDF into a downloadable JPG image, right in your browser.',
+    url: '/tools/pdf-to-jpg'
   },
 
   // ── Student Tools ────────────────────────────────────────────

@@ -42,7 +42,8 @@
 /tools/cover-letter-generator         /coverLetterGenerator/index.html         200
 /tools/product-description-generator  /productDescriptionGenerator/index.html  200
 /tools/tweet-thread-writer            /tweetThreadWriter/index.html            200
-/tools/background-remover             /backgroundRemover/index.html            200
+/tools/jpg-to-pdf                     /jpgToPdfConverter/index.html            200
+/tools/pdf-to-jpg                     /pdfToJpgConverter/index.html            200
 /tools/image-alt-text-generator       /imageAltTextGenerator/index.html        200
 
 # ── Misc clean URLs ──────────────────────────────────────────────
