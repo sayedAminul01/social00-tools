@@ -1,0 +1,5 @@
+.git
+.wrangler
+.gitignore
+_devserver.ps1
+node_modules
