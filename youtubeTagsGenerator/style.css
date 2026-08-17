@@ -1,0 +1,97 @@
+/* YouTube Tags Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; flex: 1; min-width: 160px; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .5rem .7rem; color: var(--text); font-size: .88rem;
+}
+
+.btn-generate {
+  padding: .68rem 1.4rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .92rem;
+  border: none; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transition: transform .2s, opacity .2s; white-space: nowrap;
+}
+.btn-generate:hover { transform: translateY(-1px); opacity: .93; }
+
+/* ── Tags output ─────────────────────────────────────────── */
+.tags-output {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.1rem 1.2rem; margin-bottom: 1.1rem;
+}
+.tags-meta-row {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
+  margin-bottom: .55rem;
+}
+.tags-label { font-size: .78rem; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.char-count { font-size: .82rem; font-weight: 700; color: var(--text-2); }
+.char-count.state-good { color: #22c55e; }
+.char-count.state-warn { color: #f59e0b; }
+.char-count.state-over { color: #ef4444; }
+
+.char-bar {
+  width: 100%; height: 6px; border-radius: var(--radius-pill); background: var(--bg-3);
+  overflow: hidden; margin-bottom: 1rem;
+}
+.char-bar-fill {
+  height: 100%; width: 0%; border-radius: var(--radius-pill);
+  background: #22c55e; transition: width .25s ease, background-color .25s ease;
+}
+.char-bar-fill.state-warn { background: #f59e0b; }
+.char-bar-fill.state-over { background: #ef4444; }
+
+.tags-chips { display: flex; flex-wrap: wrap; gap: .55rem; min-height: 2.4rem; }
+.tags-empty { color: var(--text-3); font-size: .9rem; padding: .3rem 0; }
+
+.tag-chip {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius-pill);
+  padding: .38rem .5rem .38rem .85rem; font-size: .85rem; color: var(--text);
+  animation: chip-in .18s ease;
+}
+@keyframes chip-in { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
+.tag-chip button {
+  display: flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; border-radius: 50%; color: var(--text-3); font-size: .95rem; line-height: 1;
+  transition: background .2s, color .2s;
+}
+.tag-chip button:hover { background: var(--surface-2); color: var(--text); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

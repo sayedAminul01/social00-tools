@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Title Generator – Free Click-Worthy Titles | Social00</title>
+  <meta name="description" content="Free YouTube title generator. Create 10-12 click-worthy, SEO-friendly video titles from any topic in seconds. No sign-up." />
+  <meta name="keywords" content="youtube title generator, video title generator, youtube title ideas, click-worthy titles, youtube seo titles" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/youtube-title-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YouTube Title Generator – Free Click-Worthy Titles | Social00" />
+  <meta property="og:description" content="Create 10-12 click-worthy, SEO-friendly YouTube video titles from any topic instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/youtube-title-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Title Generator",
+    "url": "https://social00.com/tools/youtube-title-generator",
+    "description": "Free online YouTube title generator that turns any topic into 10-12 click-worthy, SEO-friendly video title ideas using proven title formulas.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "YouTube Title Generator", "item": "https://social00.com/tools/youtube-title-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does title length affect views?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, indirectly. Titles longer than about 60 characters get truncated in search results, suggested videos and on mobile, so the part that actually communicates value can get cut off before a viewer reads it." } },
+      { "@type": "Question", "name": "Do numbers in titles help?", "acceptedAnswer": { "@type": "Answer", "text": "Numbers often help because they set a concrete expectation (a count, a timeframe, a step) that's easy to scan, which is why listicle and how-to formats use them heavily. They're a small boost, not a guarantee." } },
+      { "@type": "Question", "name": "Is clickbait a good idea?", "acceptedAnswer": { "@type": "Answer", "text": "No. A misleading title can win a click but it hurts average view duration and audience retention once viewers feel misled, and YouTube's algorithm weighs retention heavily. Write titles that accurately describe what's in the video." } },
+      { "@type": "Question", "name": "How is the Strength score calculated?", "acceptedAnswer": { "@type": "Answer", "text": "It's a rough writing-quality heuristic, not a CTR prediction: one point for a length of roughly 40-60 characters, one point for containing a digit, and one point for containing a curiosity or power word. It's meant to guide editing, not to forecast performance." } },
+      { "@type": "Question", "name": "Is this powered by a real AI model?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is an instant, template-based generator that combines your topic with proven title formula patterns entirely in your browser. It is not connected to GPT, ChatGPT or any live AI model." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free with no account required and no limit on how many titles you generate. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / YouTube Title Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📹 YouTube Title Generator</h1>
+        <p class="hero-sub">Turn any topic into 10-12 click-worthy, SEO-friendly video titles — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="topicInput" class="tool-label">Topic or keyword</label>
+          <input type="text" id="topicInput" class="tool-input" placeholder="e.g. growing tomatoes indoors" autocomplete="off" />
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="styleSelect">Style</label>
+              <select id="styleSelect" class="tool-select">
+                <option value="any" selected>Any Style</option>
+                <option value="curiosity">Curiosity</option>
+                <option value="howto">How-To</option>
+                <option value="listicle">Listicle</option>
+                <option value="emotional">Emotional</option>
+                <option value="comparison">Comparison</option>
+                <option value="question">Question</option>
+              </select>
+            </div>
+            <label class="option-toggle">
+              <input type="checkbox" id="emojiToggle" />
+              <span>Add emoji</span>
+            </label>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="generateBtn">Generate Titles</button>
+            <button class="btn-clear" id="regenerateBtn">Regenerate</button>
+            <button class="btn-clear" id="copyAllBtn">Copy All</button>
+          </div>
+
+          <p class="strength-note">"Strength" is a rough writing-quality heuristic based on length, numbers and power words — not a real CTR or view prediction.</p>
+
+          <div class="titles-output" id="titlesOutput" aria-live="polite">
+            <p class="titles-placeholder" id="titlesPlaceholder">Your generated titles will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Titles Drive YouTube CTR</h2>
+          <p>Your thumbnail earns the first glance, but the title is what convinces a viewer to actually click. YouTube itself uses the title as a primary signal for what a video is about and who to show it to, so a clear, compelling title affects both click-through rate and search/suggested placement at the same time.</p>
+        </article>
+        <article class="content-block">
+          <h2>Ideal Title Length</h2>
+          <p>Aim for roughly 40-60 characters. YouTube truncates longer titles in search results, suggested video lists and on mobile screens, so anything past that range risks having its most important words cut off before a viewer even reads them.</p>
+        </article>
+        <article class="content-block">
+          <h2>Proven Title Formula Patterns</h2>
+          <p>Most high-performing titles follow a recognizable pattern rather than being invented from scratch: curiosity gaps ("The Secret Nobody Talks About"), how-to promises, numbered listicles, emotional personal-experiment framing, head-to-head comparisons, and direct questions. This generator draws from all six patterns.</p>
+        </article>
+        <article class="content-block">
+          <h2>Power Words That Work</h2>
+          <p>Words like <strong>secret</strong>, <strong>mistake</strong>, <strong>proven</strong>, <strong>actually</strong>, <strong>never</strong>, <strong>always</strong>, <strong>honest</strong> and <strong>warning</strong> create curiosity or signal a strong opinion, which tends to earn more attention than a flat, purely descriptive title — as long as the video actually delivers on what the word implies.</p>
+        </article>
+        <article class="content-block">
+          <h2>Worked Example</h2>
+          <p>Topic: <strong>"editing videos faster"</strong> → <code>How to Edit Videos Faster (Step by Step)</code>, <code>7 Ways to Edit Videos Faster</code>, <code>The Edit Videos Faster Secret Nobody Talks About</code>.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>10-12 varied titles across six proven formula styles in one click</li>
+            <li>Honest Strength badge to guide editing, not a fake CTR promise</li>
+            <li>Optional tasteful emoji accents, never forced on every title</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does title length affect views?</summary>
+            <p>Yes, indirectly. Titles longer than about 60 characters get truncated in search results, suggested videos and on mobile, so the part that actually communicates value can get cut off before a viewer reads it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do numbers in titles help?</summary>
+            <p>Numbers often help because they set a concrete expectation — a count, a timeframe, a step — that's easy to scan, which is why listicle and how-to formats use them heavily. They're a small boost, not a guarantee.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is clickbait a good idea?</summary>
+            <p>No. A misleading title can win a click but it hurts average view duration and audience retention once viewers feel misled, and YouTube's algorithm weighs retention heavily. Write titles that accurately describe what's actually in the video.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is the "Strength" score calculated?</summary>
+            <p>It's a rough writing-quality heuristic, not a CTR prediction: one point for a length of roughly 40-60 characters, one point for containing a digit, and one point for containing a curiosity or power word. It's meant to guide editing, not to forecast performance.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this powered by a real AI model?</summary>
+            <p>No. This is an instant, template-based generator that combines your topic with proven title formula patterns entirely in your browser. It is not connected to GPT, ChatGPT or any live AI model.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many titles you generate. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/youtube-tags-generator" class="tool-card">
+            <span class="tool-icon">🏷️</span>
+            <span class="tool-name">YouTube Tags Generator</span>
+            <span class="tool-desc">Relevant tags to boost discovery</span>
+          </a>
+          <a href="https://social00.com/tools/hashtag-generator" class="tool-card">
+            <span class="tool-icon">#️⃣</span>
+            <span class="tool-name">Hashtag Generator</span>
+            <span class="tool-desc">Trending hashtags for any post</span>
+          </a>
+          <a href="https://social00.com/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Word Counter</span>
+            <span class="tool-desc">Count words, characters &amp; reading time</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

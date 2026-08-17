@@ -28,7 +28,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '🔥 Popular',
     desc: 'Generate click-worthy, SEO-optimised YouTube titles in seconds. Boost your CTR and views instantly.',
-    url: ''   // ← ADD YOUR TOOL URL HERE e.g. '/tools/youtube-title-generator'
+    url: '/tools/youtube-title-generator'
   },
   {
     id: 'yt-thumb',
@@ -55,7 +55,7 @@ const TOOLS = [
     category: 'youtube',
     badge: '🔍 SEO',
     desc: 'Generate the most relevant YouTube tags for your video topic and dramatically improve discoverability.',
-    url: ''
+    url: '/tools/youtube-tags-generator'
   },
   {
     id: 'yt-hook',
@@ -84,7 +84,7 @@ const TOOLS = [
     category: 'instagram',
     badge: '🔥 Popular',
     desc: 'Create engaging, on-brand Instagram captions for any post. Save hours of creative thinking every week.',
-    url: ''
+    url: '/tools/instagram-caption-generator'
   },
   {
     id: 'hashtag',
@@ -93,7 +93,7 @@ const TOOLS = [
     category: 'instagram',
     badge: '✨ AI',
     desc: 'Find the most relevant trending hashtags for your niche and maximise organic reach across platforms.',
-    url: ''
+    url: '/tools/hashtag-generator'
   },
   {
     id: 'ig-bio',
@@ -102,7 +102,7 @@ const TOOLS = [
     category: 'instagram',
     badge: '🆕 New',
     desc: 'Write a professional, personality-packed Instagram bio with CTA that converts profile visits to follows.',
-    url: ''
+    url: '/tools/instagram-bio-generator'
   },
   {
     id: 'ig-reel',
@@ -131,7 +131,7 @@ const TOOLS = [
     category: 'writing',
     badge: '🎨 Fun',
     desc: 'Transform plain text into beautiful Unicode fonts and styles. Make your bios and posts stand out.',
-    url: ''
+    url: '/tools/stylish-text-generator'
   },
   {
     id: 'ai-bio',
@@ -140,7 +140,7 @@ const TOOLS = [
     category: 'writing',
     badge: '✨ AI',
     desc: 'Write the perfect professional bio for Instagram, Twitter, LinkedIn or any platform in one click.',
-    url: ''
+    url: '/tools/ai-bio-generator'
   },
   {
     id: 'resume-summary',
@@ -149,7 +149,7 @@ const TOOLS = [
     category: 'writing',
     badge: '💼 Career',
     desc: 'Generate powerful, ATS-friendly resume summaries that impress recruiters and land interviews faster.',
-    url: ''
+    url: '/tools/resume-summary-generator'
   },
   {
     id: 'blog-intro',
@@ -167,7 +167,7 @@ const TOOLS = [
     category: 'writing',
     badge: '📨 Email',
     desc: 'Create high-converting email subject lines that boost open rates for newsletters and campaigns.',
-    url: ''
+    url: '/tools/email-subject-line-generator'
   },
   {
     id: 'cover-letter',
@@ -205,7 +205,7 @@ const TOOLS = [
     category: 'image',
     badge: '⚡ Fast',
     desc: 'Compress images without losing quality. Supports JPEG, PNG and WebP. Works entirely in your browser.',
-    url: ''
+    url: '/tools/image-compressor'
   },
   {
     id: 'img-resize',
@@ -214,7 +214,7 @@ const TOOLS = [
     category: 'image',
     badge: '📏 Size',
     desc: 'Resize images to any dimension instantly. Perfect for social media templates and profile pictures.',
-    url: ''
+    url: '/tools/image-resizer'
   },
   {
     id: 'color-palette',
@@ -223,7 +223,7 @@ const TOOLS = [
     category: 'image',
     badge: '🌈 Color',
     desc: 'Generate beautiful, harmonious colour palettes from any keyword, mood or hex code. Free to export.',
-    url: ''
+    url: '/tools/color-palette-generator'
   },
   {
     id: 'bg-remove',
@@ -290,7 +290,7 @@ const TOOLS = [
     category: 'seo',
     badge: '📈 SEO',
     desc: 'Generate perfect meta titles and descriptions for any web page. Optimised for Google CTR.',
-    url: ''
+    url: '/tools/seo-meta-tag-generator'
   },
   {
     id: 'keyword-ideas',
@@ -299,7 +299,7 @@ const TOOLS = [
     category: 'seo',
     badge: '🔑 Keywords',
     desc: 'Discover long-tail keyword ideas for your niche that have real search intent and low competition.',
-    url: ''
+    url: '/tools/keyword-ideas-generator'
   },
   {
     id: 'slug-gen',
@@ -308,7 +308,7 @@ const TOOLS = [
     category: 'seo',
     badge: '🌐 URL',
     desc: 'Convert any title or phrase into an SEO-friendly URL slug instantly. Clean, readable and optimised.',
-    url: ''
+    url: '/tools/url-slug-generator'
   },
   {
     id: 'alt-text',

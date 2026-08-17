@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://social00.com/sitemap.xml

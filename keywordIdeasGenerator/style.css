@@ -1,0 +1,100 @@
+/* Keyword Ideas Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.seed-row { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.tool-input {
+  flex: 1; min-width: 220px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+
+.btn-generate {
+  padding: .85rem 1.6rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .92rem;
+  border: 1px solid transparent; color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transition: opacity .2s, transform .2s; white-space: nowrap;
+}
+.btn-generate:hover { opacity: .92; transform: translateY(-1px); }
+
+.honesty-note {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: .95rem 1.1rem; margin-bottom: 1.3rem;
+  color: var(--text-2); font-size: .88rem; line-height: 1.55;
+}
+.honesty-note strong { color: var(--text); }
+
+.empty-state {
+  color: var(--text-3); font-size: .92rem; text-align: center;
+  padding: 1.6rem 1rem; border: 1px dashed var(--border-2); border-radius: var(--radius);
+}
+
+.results-wrap { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.results-toolbar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .7rem;
+}
+.results-count { color: var(--text-3); font-size: .85rem; }
+
+.btn-copy-all, .btn-copy-group {
+  padding: .55rem 1.1rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .82rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s; white-space: nowrap;
+}
+.btn-copy-all { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy-all:hover { opacity: .92; transform: translateY(-1px); }
+.btn-copy-group:hover { border-color: var(--border-2); color: var(--text); }
+
+.groups-container { display: flex; flex-direction: column; gap: .9rem; }
+
+.keyword-group {
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-2);
+  padding: 1.1rem 1.2rem;
+}
+.keyword-group[open] { border-color: var(--border-2); }
+
+.keyword-group summary {
+  display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+  cursor: pointer; list-style: none;
+}
+.keyword-group summary::-webkit-details-marker { display: none; }
+
+.kg-heading { display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; }
+.kg-title { font-weight: 700; font-size: 1rem; color: var(--text); }
+.kg-sub { font-size: .78rem; color: var(--text-3); }
+.kg-count {
+  font-size: .74rem; color: var(--text-3); background: var(--bg-3); border: 1px solid var(--border);
+  padding: .12rem .55rem; border-radius: var(--radius-pill);
+}
+.kg-caret { color: var(--text-3); font-size: .95rem; transition: transform .2s; flex-shrink: 0; }
+.keyword-group[open] .kg-caret { transform: rotate(90deg); }
+
+.kg-body { margin-top: .9rem; }
+.kg-actions { margin-bottom: .8rem; }
+
+.kg-list { display: flex; flex-direction: column; gap: .35rem; list-style: none; padding: 0; margin: 0; }
+.kg-list li {
+  display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+  padding: .5rem .7rem; border-radius: 8px; background: var(--bg-3);
+  font-size: .9rem; color: var(--text-2); cursor: pointer; transition: background .2s, color .2s;
+}
+.kg-list li:hover { background: var(--surface-2); color: var(--text); }
+.kg-list li .kg-copy-icon { color: var(--text-3); font-size: .8rem; flex-shrink: 0; }
+.kg-list li:hover .kg-copy-icon { color: var(--accent); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

@@ -1,0 +1,88 @@
+/* Resume Summary Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+.optional-tag { font-weight: 500; color: var(--text-3); text-transform: none; letter-spacing: 0; }
+
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.field-group--wide { grid-column: 1 / -1; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+
+.tool-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .8rem 1rem; color: var(--text); font-size: 1rem;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+.tool-input::placeholder { color: var(--text-3); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.ats-tip {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .8rem 1rem; margin-bottom: 1.3rem;
+  color: var(--text-2); font-size: .86rem;
+}
+
+.results-list { display: flex; flex-direction: column; gap: .9rem; }
+
+.results-empty {
+  color: var(--text-3); font-size: .92rem; text-align: center;
+  padding: 1.6rem 1rem; border: 1px dashed var(--border-2); border-radius: var(--radius);
+}
+
+.summary-card {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  display: flex; flex-direction: column; gap: .7rem;
+  animation: summary-in .3s var(--ease);
+}
+@keyframes summary-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.summary-index {
+  font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--accent-3);
+}
+.summary-text { color: var(--text); font-size: .98rem; line-height: 1.65; }
+
+.summary-meta {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem;
+  padding-top: .6rem; border-top: 1px solid var(--border);
+}
+.summary-counts { font-size: .78rem; color: var(--text-3); }
+
+.btn-copy-sm {
+  padding: .4rem .9rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .78rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s; flex-shrink: 0;
+}
+.btn-copy-sm:hover { border-color: var(--accent); color: var(--accent); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .85em; color: var(--accent-3);
+  display: inline-block; margin-top: .3rem; line-height: 1.5;
+}

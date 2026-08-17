@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Resizer – Free Online Image Resize Tool | Social00</title>
+  <meta name="description" content="Free online image resizer. Resize images to any dimension or a social media preset — Instagram, YouTube thumbnail, profile picture — instantly. No upload, 100% private." />
+  <meta name="keywords" content="image resizer, resize image online, image resize tool, instagram image size, youtube thumbnail size, resize photo free" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/image-resizer" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Image Resizer – Free Online Image Resize Tool | Social00" />
+  <meta property="og:description" content="Resize images to any dimension or a social media preset instantly. Free, no upload, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/image-resizer" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Resizer",
+    "url": "https://social00.com/tools/image-resizer",
+    "description": "Free online image resizer that resizes images to any dimension or a social media preset entirely in the browser, with no upload.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Image Resizer", "item": "https://social00.com/tools/image-resizer" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Will resizing distort my image?", "acceptedAnswer": { "@type": "Answer", "text": "Only if 'Lock aspect ratio' is off and your new width/height don't match the original image's ratio — the image will stretch to fill those exact dimensions. Keep the lock checkbox on to resize proportionally with no distortion." } },
+      { "@type": "Question", "name": "What image size should I use for Instagram, YouTube or Twitter?", "acceptedAnswer": { "@type": "Answer", "text": "Use the dimension cheat-sheet on this page, or click one of the preset buttons above the tool — Instagram Post (1080x1080), Instagram Story (1080x1920), YouTube Thumbnail (1280x720), Twitter/X Post (1600x900) and Profile Picture (500x500) are filled in automatically." } },
+      { "@type": "Question", "name": "PNG vs JPEG output — which should I pick?", "acceptedAnswer": { "@type": "Answer", "text": "Pick PNG for logos, graphics, screenshots or anything needing transparency — it's lossless. Pick JPEG for photos; it compresses much smaller with a quality loss that's barely visible at 0.92 quality." } },
+      { "@type": "Question", "name": "Is my image uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool uses the browser's Canvas API to resize your image locally on your device. Nothing is ever sent to a server." } },
+      { "@type": "Question", "name": "Can I resize up (enlarge) an image?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, technically you can set a width/height larger than the original. But enlarging doesn't create new detail, so the result will look softer or blurrier than a photo actually taken or exported at that size." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account, no watermark, and no limit on how many images you resize." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Image Resizer</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📐 Image Resizer</h1>
+        <p class="hero-sub">Resize images to any dimension or a social media preset — instantly, in your browser. No upload, 100% private.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Upload an image to resize">
+            <input type="file" id="fileInput" accept="image/*" class="sr-only" />
+            <div class="drop-zone-inner" id="dropZoneInner">
+              <span class="drop-icon">🖼️</span>
+              <p class="drop-title">Drag &amp; drop an image here</p>
+              <p class="drop-sub">or click to browse — JPG, PNG, WEBP, GIF supported</p>
+            </div>
+          </div>
+
+          <div class="image-meta" id="imageMeta" hidden>
+            <span id="metaFileName">—</span>
+            <span class="meta-dot">•</span>
+            <span id="metaDimensions">—</span>
+            <span class="meta-dot">•</span>
+            <span id="metaFileSize">—</span>
+            <button class="btn-reset" id="resetBtn" type="button">Resize Another Image</button>
+          </div>
+
+          <div class="resize-controls" id="resizeControls" hidden>
+
+            <div class="preset-row" id="presetRow" aria-label="Dimension presets">
+              <button class="preset-btn" data-w="1080" data-h="1080" type="button">Instagram Post <span>1080×1080</span></button>
+              <button class="preset-btn" data-w="1080" data-h="1920" type="button">Instagram Story <span>1080×1920</span></button>
+              <button class="preset-btn" data-w="1280" data-h="720" type="button">YouTube Thumbnail <span>1280×720</span></button>
+              <button class="preset-btn" data-w="1600" data-h="900" type="button">Twitter/X Post <span>1600×900</span></button>
+              <button class="preset-btn" data-w="500" data-h="500" type="button">Profile Picture <span>500×500</span></button>
+            </div>
+
+            <div class="dims-row">
+              <div class="option-group">
+                <label for="widthInput">Width (px)</label>
+                <input type="number" id="widthInput" class="tool-select dim-input" min="1" max="10000" />
+              </div>
+              <button class="lock-btn" id="lockBtn" type="button" aria-label="Toggle aspect ratio lock" title="Lock aspect ratio">🔗</button>
+              <div class="option-group">
+                <label for="heightInput">Height (px)</label>
+                <input type="number" id="heightInput" class="tool-select dim-input" min="1" max="10000" />
+              </div>
+              <label class="option-toggle">
+                <input type="checkbox" id="lockAspect" checked />
+                <span>Lock aspect ratio</span>
+              </label>
+              <div class="option-group">
+                <label for="formatSelect">Output format</label>
+                <select id="formatSelect" class="tool-select">
+                  <option value="image/png" selected>PNG (lossless)</option>
+                  <option value="image/jpeg">JPEG (smaller file)</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="stretch-note">Non-matching aspect ratios will stretch the image. Keep "Lock aspect ratio" checked to avoid distortion.</p>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="resizeBtn" type="button">Resize Image</button>
+            </div>
+          </div>
+
+          <div class="result-box" id="resultBox" hidden>
+            <h3 class="result-title">Resized Image</h3>
+            <div class="result-body">
+              <img id="resultPreview" class="result-preview" alt="Resized image preview" />
+              <div class="result-info">
+                <span id="resultDimensions">—</span>
+                <span id="resultFileSize">—</span>
+                <a id="downloadBtn" class="btn-copy" download>Download Image</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="privacy-note">🔒 Your image is processed entirely in your browser — it is never uploaded to any server.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Resizing Matters for Social &amp; Page Speed</h2>
+          <p>Every platform crops, compresses, or rejects images that don't match its expected dimensions — an oversized upload gets squashed by the platform's own compressor, often looking worse than if you'd resized it properly yourself. On your own site, an unresized image forces visitors to download pixels they never see, slowing page load and hurting Core Web Vitals and SEO. Resizing to the exact dimension you need keeps quality under your control and pages fast.</p>
+        </article>
+        <article class="content-block">
+          <h2>Image Dimension Cheat-Sheet</h2>
+          <table class="dims-table">
+            <thead><tr><th>Platform / Use</th><th>Recommended Size</th></tr></thead>
+            <tbody>
+              <tr><td>Instagram Post</td><td>1080 × 1080 px</td></tr>
+              <tr><td>Instagram Story</td><td>1080 × 1920 px</td></tr>
+              <tr><td>YouTube Thumbnail</td><td>1280 × 720 px</td></tr>
+              <tr><td>Twitter/X Post</td><td>1600 × 900 px</td></tr>
+              <tr><td>Facebook Cover</td><td>820 × 312 px</td></tr>
+              <tr><td>LinkedIn Banner</td><td>1584 × 396 px</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="content-block">
+          <h2>Aspect Ratio, Explained Simply</h2>
+          <p>Aspect ratio is the relationship between width and height — 1080×1080 is a 1:1 square, while 1080×1350 is a 4:5 portrait rectangle. Force a square photo into 1080×1350 without locking the ratio and it visibly stretches taller; crop or letterbox it instead and nothing distorts. That's why this tool locks the ratio by default — type a width and the matching height is computed automatically from your original image.</p>
+        </article>
+        <article class="content-block">
+          <h2>Lossless (PNG) vs Lossy (JPEG) Resizing</h2>
+          <p>PNG re-encodes every pixel exactly, so resizing never adds compression artifacts — ideal for logos, screenshots, and graphics with sharp edges or transparency, at the cost of a larger file. JPEG uses lossy compression tuned by a quality setting (this tool defaults to 0.92, a near-invisible loss); it produces much smaller files and is the standard choice for photos.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why This Runs Entirely in Your Browser</h2>
+          <p>This resizer uses the HTML5 Canvas API to draw and re-encode your image locally — your file never leaves your device. That means instant results with no upload wait, no server storage of your photos, and zero server cost passed on to you, which is exactly why this tool can stay free with no account required.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Real Canvas-based resizing, not a fake preview</li>
+            <li>One-click presets for every major platform size</li>
+            <li>Aspect-ratio lock prevents accidental stretching</li>
+            <li>Choose PNG or JPEG output on the fly</li>
+            <li>100% private — nothing is ever uploaded</li>
+            <li>Free, unlimited, no sign-up</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Will resizing distort my image?</summary>
+            <p>Only if "Lock aspect ratio" is off and your new width/height don't match the original image's ratio — the image will stretch to fill those exact dimensions. Keep the lock checkbox on to resize proportionally with no distortion.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What image size should I use for Instagram, YouTube or Twitter?</summary>
+            <p>Use the dimension cheat-sheet above, or click a preset button in the tool — Instagram Post (1080×1080), Instagram Story (1080×1920), YouTube Thumbnail (1280×720), Twitter/X Post (1600×900) and Profile Picture (500×500) are filled in automatically.</p>
+          </details>
+          <details class="faq-item">
+            <summary>PNG vs JPEG output — which should I pick?</summary>
+            <p>Pick PNG for logos, graphics, screenshots or anything needing transparency — it's lossless. Pick JPEG for photos; it compresses much smaller with a quality loss that's barely visible at 0.92 quality.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my image uploaded anywhere?</summary>
+            <p>No. This tool uses the browser's Canvas API to resize your image locally on your device. Nothing is ever sent to a server.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I resize up (enlarge) an image?</summary>
+            <p>Yes, technically you can set a width/height larger than the original. But enlarging doesn't create new detail, so the result will look softer or blurrier than a photo actually taken or exported at that size.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account, no watermark, and no limit on how many images you resize.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink file size while keeping quality</span>
+          </a>
+          <a href="https://social00.com/tools/color-palette-generator" class="tool-card">
+            <span class="tool-icon">🎨</span>
+            <span class="tool-name">Color Palette Generator</span>
+            <span class="tool-desc">Generate palettes from any image or mood</span>
+          </a>
+          <a href="https://social00.com/tools/instagram-caption-generator" class="tool-card">
+            <span class="tool-icon">✍️</span>
+            <span class="tool-name">Instagram Caption Generator</span>
+            <span class="tool-desc">Captions &amp; hashtags for any post</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
