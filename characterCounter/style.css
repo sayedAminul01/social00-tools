@@ -1,0 +1,91 @@
+/* Character Counter — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-textarea {
+  width: 100%; resize: vertical; min-height: 120px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-textarea:focus { border-color: var(--accent); }
+
+/* ── Summary stats (secondary — the multi-platform grid is the main feature) ── */
+.summary-stats {
+  display: flex; gap: 2rem; margin: 1rem 0 1.1rem;
+  padding: .7rem 1rem; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-2);
+}
+.summary-stat { display: flex; flex-direction: column; gap: .15rem; }
+.summary-value { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text); }
+.summary-label { font-size: .74rem; color: var(--text-3); text-transform: uppercase; letter-spacing: .04em; }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.6rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+/* ── Platform limit grid ─────────────────────────────────────── */
+.platform-heading { font-size: 1.1rem; margin-bottom: 1rem; }
+
+.platform-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.platform-card {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-2); padding: 1rem 1.1rem;
+  display: flex; flex-direction: column; gap: .55rem;
+  transition: border-color .2s;
+}
+.platform-card-top { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+.platform-name { font-weight: 700; font-size: .88rem; color: var(--text); }
+.platform-limit-badge {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .74rem; font-weight: 700;
+  color: var(--text-3); background: var(--bg-3); border: 1px solid var(--border);
+  padding: .12rem .5rem; border-radius: var(--radius-pill); white-space: nowrap;
+}
+
+.progress-track {
+  width: 100%; height: 8px; border-radius: var(--radius-pill);
+  background: var(--bg-3); overflow: hidden;
+}
+.progress-fill {
+  height: 100%; width: 0%; border-radius: var(--radius-pill);
+  background: #22c55e; /* ok / green */
+  transition: width .15s ease, background-color .15s ease;
+}
+.progress-fill.tier-warn { background: #f59e0b; } /* amber, 80–100% */
+.progress-fill.tier-over { background: #ef4444; } /* red, over limit */
+
+.platform-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+.platform-count {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .82rem; color: var(--text-2);
+}
+.platform-status { font-size: .78rem; font-weight: 700; color: var(--text-3); }
+.platform-card.is-warn .platform-status { color: #f59e0b; }
+.platform-card.is-over .platform-status { color: #ef4444; }
+.platform-card.is-over { border-color: rgba(239,68,68,.4); }
+
+.platform-note { font-size: .76rem; color: var(--text-3); line-height: 1.5; }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

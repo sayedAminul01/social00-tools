@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator – Free Body Mass Index Calculator | Social00</title>
+  <meta name="description" content="Free BMI calculator. Calculate your Body Mass Index from height and weight in metric or imperial units, see your WHO category on a visual scale, and learn what BMI does and doesn't measure. No sign-up." />
+  <meta name="keywords" content="bmi calculator, body mass index calculator, calculate bmi, bmi chart, healthy weight calculator, bmi calculator kg cm, bmi calculator lbs" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/bmi-calculator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BMI Calculator – Free Body Mass Index Calculator | Social00" />
+  <meta property="og:description" content="Calculate your Body Mass Index in metric or imperial units and see where you fall on the WHO BMI scale. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/bmi-calculator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BMI Calculator",
+    "url": "https://social00.com/tools/bmi-calculator",
+    "description": "Free online BMI calculator that computes Body Mass Index from height and weight in metric or imperial units and shows the WHO adult BMI category.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "BMI Calculator", "item": "https://social00.com/tools/bmi-calculator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is BMI?", "acceptedAnswer": { "@type": "Answer", "text": "Body Mass Index is a simple ratio of your weight to the square of your height (kg/m²). It's a quick, population-level screening number, not a direct measurement of body fat." } },
+      { "@type": "Question", "name": "Is BMI accurate?", "acceptedAnswer": { "@type": "Answer", "text": "Not for individuals. BMI is a rough, population-level screening heuristic, not an individual diagnostic measure — it can't tell muscle from fat, so it regularly misclassifies muscular people as \"overweight\" and can miss high body fat in people with low muscle mass." } },
+      { "@type": "Question", "name": "What are the WHO BMI categories?", "acceptedAnswer": { "@type": "Answer", "text": "For adults: Underweight is below 18.5, Normal weight is 18.5–24.9, Overweight is 25–29.9, and Obese is 30 or above. These ranges apply to adults only." } },
+      { "@type": "Question", "name": "Why does BMI mislead athletes and muscular people?", "acceptedAnswer": { "@type": "Answer", "text": "Muscle is denser than fat, so a muscular person can weigh more per inch of height without carrying excess body fat. BMI can't tell the difference and often labels athletes and bodybuilders as \"overweight\" or \"obese\" even when their body fat is low." } },
+      { "@type": "Question", "name": "Can I use this calculator for a child's or teen's BMI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Children and teens are still growing, so a single adult BMI cutoff doesn't apply to them. Their BMI needs to be plotted on age- and sex-specific growth percentile charts, which is something a pediatrician handles." } },
+      { "@type": "Question", "name": "Is my height and weight data sent anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every calculation runs locally in your browser using JavaScript — nothing you type is sent to a server, logged, or stored anywhere, which matters since height and weight are personal health information." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / BMI Calculator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">⚖️ BMI Calculator</h1>
+        <p class="hero-sub">Calculate your Body Mass Index in metric or imperial units and see where it falls on the WHO scale — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="unit-toggle" role="tablist" aria-label="Unit system">
+            <button class="unit-btn active" role="tab" aria-selected="true" data-unit="metric" id="unitMetricBtn">Metric (cm / kg)</button>
+            <button class="unit-btn" role="tab" aria-selected="false" data-unit="imperial" id="unitImperialBtn">Imperial (ft, in / lb)</button>
+          </div>
+
+          <div class="unit-panel active" id="panel-metric">
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="heightCm">Height (cm)</label>
+                <input type="number" id="heightCm" class="tool-input" placeholder="e.g. 170" min="0" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="input-group">
+                <label for="weightKg">Weight (kg)</label>
+                <input type="number" id="weightKg" class="tool-input" placeholder="e.g. 70" min="0" inputmode="decimal" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+
+          <div class="unit-panel" id="panel-imperial">
+            <div class="input-grid input-grid--three">
+              <div class="input-group">
+                <label for="heightFt">Height (ft)</label>
+                <input type="number" id="heightFt" class="tool-input" placeholder="e.g. 5" min="0" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="input-group">
+                <label for="heightIn">Height (in)</label>
+                <input type="number" id="heightIn" class="tool-input" placeholder="e.g. 10" min="0" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="input-group">
+                <label for="weightLb">Weight (lb)</label>
+                <input type="number" id="weightLb" class="tool-input" placeholder="e.g. 154" min="0" inputmode="decimal" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="calcBtn">Calculate BMI</button>
+          </div>
+
+          <div class="result-card" id="resultCard" aria-live="polite">
+            <div class="result-top">
+              <span class="result-label">Your BMI</span>
+              <span class="result-value" id="bmiValue">—</span>
+              <span class="result-category" id="bmiCategory">Enter your height and weight above</span>
+            </div>
+
+            <div class="bmi-gauge">
+              <div class="gauge-track">
+                <span class="gauge-seg gauge-under"></span>
+                <span class="gauge-seg gauge-normal"></span>
+                <span class="gauge-seg gauge-over"></span>
+                <span class="gauge-seg gauge-obese"></span>
+                <span class="gauge-marker" id="gaugeMarker"></span>
+              </div>
+              <div class="gauge-labels">
+                <span>Underweight<br/>&lt;18.5</span>
+                <span>Normal<br/>18.5–24.9</span>
+                <span>Overweight<br/>25–29.9</span>
+                <span>Obese<br/>≥30</span>
+              </div>
+            </div>
+
+            <p class="result-note">This is a general screening tool, not a diagnosis. BMI is a useful population-level estimate, but it doesn't account for muscle mass, bone density, age, sex, or where fat is carried on your body. Talk to a doctor for a real health assessment.</p>
+            <p class="result-note result-note--secondary">The standard categories above are calibrated for adults. They don't apply the same way to children, teens, pregnant people, or highly muscular individuals.</p>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="copyBtn">Copy Result</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is BMI, Really?</h2>
+          <p>Body Mass Index is a simple ratio of your weight to the square of your height (kg/m²). It was designed in the 1830s as a way to study body-weight patterns across large populations, not to assess any one individual's health. It's popular because it's cheap and easy to calculate from just two numbers — not because it's a precise health measurement.</p>
+        </article>
+        <article class="content-block">
+          <h2>The WHO BMI Categories</h2>
+          <p>The World Health Organization defines four adult ranges: <strong>Underweight</strong> (below 18.5), <strong>Normal weight</strong> (18.5–24.9), <strong>Overweight</strong> (25–29.9), and <strong>Obese</strong> (30 and above). These thresholds are population averages used for public-health screening, not personalized cutoffs for any one body.</p>
+        </article>
+        <article class="content-block">
+          <h2>What BMI Doesn't Measure</h2>
+          <p>BMI can't distinguish muscle from fat, doesn't account for bone density or age, ignores sex differences in body composition, and says nothing about where fat is distributed on your body — a factor that matters more for health risk than total weight alone. Two people with the same BMI can have very different body compositions and very different health profiles.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why BMI Misleads Athletes and Muscular People</h2>
+          <p>Muscle is denser than fat, so a muscular person can weigh more per inch of height without carrying excess body fat. BMI can't tell the difference, which is why athletes, bodybuilders, and other muscular individuals are routinely labeled "overweight" or "obese" by BMI alone despite having low body fat.</p>
+        </article>
+        <article class="content-block">
+          <h2>BMI for Children, Teens &amp; Pregnancy</h2>
+          <p>Adult BMI cutoffs don't apply to children or teens, who are still growing — their BMI needs to be plotted on age- and sex-specific percentile charts, not measured against the adult ranges above. BMI also isn't a meaningful metric during pregnancy, when weight gain is expected and healthy. Both cases call for guidance from a doctor or pediatrician, not this calculator.</p>
+        </article>
+        <article class="content-block">
+          <h2>A Screening Tool, Not a Diagnosis</h2>
+          <p>Doctors use BMI as one quick, cheap starting point among many — alongside waist circumference, blood pressure, lab work, family history, and a physical exam — to decide whether a closer look is worthwhile. It flags a number worth discussing; it does not diagnose a condition. If your result concerns you, the right next step is a conversation with a healthcare provider, not a verdict from this page.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is BMI?</summary>
+            <p>Body Mass Index is a simple ratio of your weight to the square of your height (kg/m²). It's a quick, population-level screening number, not a direct measurement of body fat.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is BMI accurate?</summary>
+            <p>Not for individuals. BMI is a rough, population-level screening heuristic, not an individual diagnostic measure — it can't tell muscle from fat, so it regularly misclassifies muscular people as "overweight" and can miss high body fat in people with low muscle mass.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are the WHO BMI categories?</summary>
+            <p>For adults: Underweight is below 18.5, Normal weight is 18.5–24.9, Overweight is 25–29.9, and Obese is 30 or above. These ranges apply to adults only.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does BMI mislead athletes and muscular people?</summary>
+            <p>Muscle is denser than fat, so a muscular person can weigh more per inch of height without carrying excess body fat. BMI can't tell the difference and often labels athletes and bodybuilders as "overweight" or "obese" even when their body fat is low.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this calculator for a child's or teen's BMI?</summary>
+            <p>No. Children and teens are still growing, so a single adult BMI cutoff doesn't apply to them. Their BMI needs to be plotted on age- and sex-specific growth percentile charts, which is something a pediatrician handles.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my height and weight data sent anywhere?</summary>
+            <p>No. Every calculation runs locally in your browser using JavaScript — nothing you type is sent to a server, logged, or stored anywhere, which matters since height and weight are personal health information.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/age-calculator" class="tool-card">
+            <span class="tool-icon">🎂</span>
+            <span class="tool-name">Age Calculator</span>
+            <span class="tool-desc">Find your exact age in years, months &amp; days</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">🔁</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Convert any unit instantly</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, discounts &amp; markups</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

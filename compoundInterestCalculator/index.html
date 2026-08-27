@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compound Interest Calculator – Free Investment Growth Projector | Social00</title>
+  <meta name="description" content="Free compound interest calculator with optional regular contributions. See your projected growth, total interest earned, and a full year-by-year breakdown. A math tool, not investment advice." />
+  <meta name="keywords" content="compound interest calculator, investment calculator, compound interest with contributions, savings growth calculator, interest calculator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/compound-interest-calculator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compound Interest Calculator – Free Investment Growth Projector | Social00" />
+  <meta property="og:description" content="Project compound growth of an investment with optional regular contributions. Free, runs entirely in your browser, no sign-up." />
+  <meta property="og:url" content="https://social00.com/tools/compound-interest-calculator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Compound Interest Calculator",
+    "url": "https://social00.com/tools/compound-interest-calculator",
+    "description": "Free online compound interest calculator that projects investment growth from a principal, rate, time period and compounding frequency, with optional regular contributions and a year-by-year breakdown.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Compound Interest Calculator", "item": "https://social00.com/tools/compound-interest-calculator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is compound interest?", "acceptedAnswer": { "@type": "Answer", "text": "Compound interest is interest calculated on both the initial principal and the interest already earned in previous periods. Instead of earning a flat amount each period like simple interest, your balance grows faster over time because each period's interest is calculated on a larger base." } },
+      { "@type": "Question", "name": "How is compound interest different from simple interest?", "acceptedAnswer": { "@type": "Answer", "text": "Simple interest is calculated only on the original principal for the whole term (Interest = P × r × t), so it grows in a straight line. Compound interest is calculated on the principal plus all previously earned interest, so it grows faster the longer you leave money invested — the gap between the two widens every year." } },
+      { "@type": "Question", "name": "Does compounding frequency really matter?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but modestly. At the same nominal annual rate, compounding more often (daily vs. annually, for example) slightly raises the effective annual return because interest starts earning its own interest sooner. The difference is usually a fraction of a percentage point per year, not a dramatic change." } },
+      { "@type": "Question", "name": "How much do regular contributions help?", "acceptedAnswer": { "@type": "Answer", "text": "A lot, over long periods. Contributing a fixed amount every month or year means each new contribution has time to compound on its own, so a modest habit sustained for years can end up contributing more to your final balance than the initial lump sum did." } },
+      { "@type": "Question", "name": "What formula does this calculator use?", "acceptedAnswer": { "@type": "Answer", "text": "It simulates growth period by period: each compounding period, interest is added to the current balance at rate ÷ compounding frequency, then any contributions due in that period are added. This matches the standard A = P(1 + r/n)^(nt) formula for the principal, plus the correct future-value-of-annuity math for contributions, without you needing to trust a single black-box formula." } },
+      { "@type": "Question", "name": "Is this a guarantee of investment returns?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool performs a pure mathematical projection assuming a constant, unchanging rate of return — it is not investment advice and does not predict or guarantee what any real investment will do. Actual markets fluctuate, rates change, and past performance never guarantees future results." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Compound Interest Calculator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📈 Compound Interest Calculator</h1>
+        <p class="hero-sub">Project how a principal — with optional regular contributions — grows over time at a fixed rate. A math projection, not a promise: real investments carry risk and actual returns vary.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="input-grid">
+            <div class="input-group">
+              <label for="principal">Initial principal</label>
+              <div class="input-wrap">
+                <span class="input-unit prefix">$</span>
+                <input type="number" id="principal" class="tool-input has-prefix" placeholder="e.g. 10000" min="0" step="any" inputmode="decimal" autocomplete="off" value="10000" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="rate">Annual interest rate</label>
+              <div class="input-wrap">
+                <input type="number" id="rate" class="tool-input" placeholder="e.g. 5" min="0" step="any" inputmode="decimal" autocomplete="off" value="5" />
+                <span class="input-unit">%</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="years">Time period</label>
+              <div class="input-wrap">
+                <input type="number" id="years" class="tool-input" placeholder="e.g. 10" min="0" step="any" inputmode="decimal" autocomplete="off" value="10" />
+                <span class="input-unit">years</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="frequency">Compounding frequency</label>
+              <select id="frequency" class="tool-select">
+                <option value="1">Annually</option>
+                <option value="2">Semi-annually</option>
+                <option value="4">Quarterly</option>
+                <option value="12" selected>Monthly</option>
+                <option value="365">Daily</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="contribution-block">
+            <div class="contribution-header">
+              <label class="option-toggle">
+                <input type="checkbox" id="enableContrib" />
+                <span>Add regular contributions</span>
+              </label>
+            </div>
+            <div class="input-grid" id="contribFields" hidden>
+              <div class="input-group">
+                <label for="contribAmount">Contribution amount</label>
+                <div class="input-wrap">
+                  <span class="input-unit prefix">$</span>
+                  <input type="number" id="contribAmount" class="tool-input has-prefix" placeholder="e.g. 100" min="0" step="any" inputmode="decimal" autocomplete="off" value="100" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="contribFrequency">Contribution frequency</label>
+                <select id="contribFrequency" class="tool-select">
+                  <option value="12" selected>Monthly</option>
+                  <option value="1">Annually</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-summary" id="resultSummary" aria-live="polite">
+            <div class="result-row highlight">
+              <span class="result-label">Future value</span>
+              <span class="result-value" id="rvFuture">—</span>
+            </div>
+            <div class="result-row">
+              <span class="result-label">Total contributed</span>
+              <span class="result-value sub" id="rvContributed">—</span>
+            </div>
+            <div class="result-row">
+              <span class="result-label">Total interest earned</span>
+              <span class="result-value sub" id="rvInterest">—</span>
+            </div>
+            <div class="result-row">
+              <span class="result-label">Effective annual rate</span>
+              <span class="result-value sub" id="rvEar">—</span>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="copyBtn">Copy Summary</button>
+          </div>
+
+          <div class="table-wrap" id="tableWrap" hidden>
+            <h3 class="table-title">Year-by-year breakdown</h3>
+            <div class="table-scroll">
+              <table class="data-table" id="yearTable">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Starting balance</th>
+                    <th>Contributions</th>
+                    <th>Interest earned</th>
+                    <th>Ending balance</th>
+                  </tr>
+                </thead>
+                <tbody id="yearTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="disclaimer-note">This is a mathematical projection assuming a constant rate of return. It is not investment advice, and it does not guarantee any real-world outcome — actual returns fluctuate.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is Compound Interest?</h2>
+          <p>Compound interest is what happens when the interest a balance earns is added back to that balance, so future interest is calculated on a bigger number every period. Leave $1,000 at 5% annual interest for a year and you earn $50. Leave it another year and you earn 5% of $1,050 — $52.50, not $50 — because last year's interest is now earning interest of its own. Over long stretches of time, this "interest on interest" effect is what makes compound growth accelerate rather than stay flat.</p>
+        </article>
+        <article class="content-block">
+          <h2>Compound vs. Simple Interest: A Worked Example</h2>
+          <p>Simple interest only ever applies to the original principal: <strong>Interest = P × r × t</strong>. Put $10,000 at 5% for 10 years under simple interest and you get 10,000 × 0.05 × 10 = <strong>$5,000</strong> in interest, for a total of $15,000. Under annual compound interest, the same $10,000 at 5% for 10 years grows to <strong>$16,288.95</strong> — $1,288.95 more — purely because each year's interest was added to the base before the next year's interest was calculated.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Compounding Frequency Matters</h2>
+          <p>At the same nominal (stated) annual rate, compounding more often gives a slightly higher <em>effective</em> annual rate, because each compounding period locks in a bit of interest sooner, which then itself starts earning interest. A 6% nominal rate compounded annually has an effective annual rate of exactly 6%. Compounded monthly, it works out to about <strong>6.17%</strong>; compounded daily, about <strong>6.18%</strong>. The gains from compounding more frequently get smaller and smaller the more often you already compound — the jump from annual to monthly matters far more than the jump from monthly to daily.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Power of Regular Contributions</h2>
+          <p>Adding a fixed amount on a schedule — the same idea behind dollar-cost averaging — lets every contribution start compounding from the moment it's made, not just the initial lump sum. Contribute $200 a month for 20 years at a steady 7% annual rate, compounded monthly, and you'd put in $48,000 of your own money but end up with a projected <strong>$104,185.33</strong> — more than half the final balance came from growth, not from what you deposited. The earlier and more consistently contributions start, the more time each one has to compound.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Calculator Works</h2>
+          <p>Rather than relying on a single closed-form formula (which gets messy once contribution frequency and compounding frequency don't match), this tool simulates growth one compounding period at a time: it applies interest to the current balance, then adds any contribution due that period, and repeats for every period across your full time horizon. That's mathematically equivalent to A = P(1 + r/n)<sup>nt</sup> for the principal, plus the standard future-value-of-an-annuity math for contributions — but transparent enough that you can check any single year's row by hand.</p>
+        </article>
+        <article class="content-block">
+          <h2>Important: This Is a Math Tool, Not Financial Advice</h2>
+          <p>This calculator assumes your rate of return stays perfectly constant for the entire period you enter — real investments never behave that way. Stock markets, funds, and savings rates fluctuate year to year, sometimes losing money entirely. Use this tool to understand <em>how compounding math works</em>, not as a prediction or promise of what any specific investment will actually return. For real financial decisions, consider speaking with a licensed financial advisor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is compound interest?</summary>
+            <p>Compound interest is interest calculated on both the initial principal and the interest already earned in previous periods. Instead of earning a flat amount each period like simple interest, your balance grows faster over time because each period's interest is calculated on a larger base.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is compound interest different from simple interest?</summary>
+            <p>Simple interest is calculated only on the original principal for the whole term (Interest = P × r × t), so it grows in a straight line. Compound interest is calculated on the principal plus all previously earned interest, so it grows faster the longer you leave money invested — the gap between the two widens every year.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does compounding frequency really matter?</summary>
+            <p>Yes, but modestly. At the same nominal annual rate, compounding more often (daily vs. annually, for example) slightly raises the effective annual return because interest starts earning its own interest sooner. The difference is usually a fraction of a percentage point per year, not a dramatic change.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much do regular contributions help?</summary>
+            <p>A lot, over long periods. Contributing a fixed amount every month or year means each new contribution has time to compound on its own, so a modest habit sustained for years can end up contributing more to your final balance than the initial lump sum did.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What formula does this calculator use?</summary>
+            <p>It simulates growth period by period: each compounding period, interest is added to the current balance at rate ÷ compounding frequency, then any contributions due in that period are added. This matches the standard A = P(1 + r/n)^(nt) formula for the principal, plus the correct future-value-of-annuity math for contributions, without you needing to trust a single black-box formula.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this a guarantee of investment returns?</summary>
+            <p>No. This tool performs a pure mathematical projection assuming a constant, unchanging rate of return — it is not investment advice and does not predict or guarantee what any real investment will do. Actual markets fluctuate, rates change, and past performance never guarantees future results.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/loan-emi-calculator" class="tool-card">
+            <span class="tool-icon">🏦</span>
+            <span class="tool-name">Loan EMI Calculator</span>
+            <span class="tool-desc">Plan your monthly instalments</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">➗</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, discounts &amp; markups</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">🔁</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Convert any unit instantly</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

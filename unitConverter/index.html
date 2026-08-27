@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter – Free Length, Weight, Volume & Data Converter | Social00</title>
+  <meta name="description" content="Free online unit converter for length, weight, temperature, volume, area, speed and data storage. Exact conversion factors, instant results, runs entirely in your browser." />
+  <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, volume converter, metric to imperial converter, data storage converter" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/unit-converter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Unit Converter – Free Length, Weight, Volume & Data Converter | Social00" />
+  <meta property="og:description" content="Convert length, weight, temperature, volume, area, speed and data storage instantly with exact conversion factors. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/unit-converter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Unit Converter",
+    "url": "https://social00.com/tools/unit-converter",
+    "description": "Free online unit converter that handles length, weight, temperature, volume, area, speed and data storage using mathematically exact conversion factors.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Unit Converter", "item": "https://social00.com/tools/unit-converter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What unit categories does this converter support?", "acceptedAnswer": { "@type": "Answer", "text": "Length, weight/mass, temperature, volume (US customary), area, speed, and data storage (binary-based). Pick a category tab, then choose your \"from\" and \"to\" units." } },
+      { "@type": "Question", "name": "Are the conversion factors exact or rounded?", "acceptedAnswer": { "@type": "Answer", "text": "Exact wherever the underlying definition is exact — for example 1 inch = 2.54 cm and 1 pound = 0.45359237 kg are defined values, not approximations. Only the displayed result is rounded to 6 significant figures; the underlying calculation always uses the full-precision factor." } },
+      { "@type": "Question", "name": "Are the volume units US or UK/imperial?", "acceptedAnswer": { "@type": "Answer", "text": "US customary units — fluid ounce, cup, pint and gallon. A UK imperial gallon is about 20% larger than a US gallon, so mixing the two silently gives wrong answers; this tool only implements the US definitions." } },
+      { "@type": "Question", "name": "Is a gigabyte 1000 or 1024 megabytes here?", "acceptedAnswer": { "@type": "Answer", "text": "1024-based (the binary KiB/MiB/GiB convention), the same math most operating systems use for file size displays, just labeled with the everyday KB/MB/GB names." } },
+      { "@type": "Question", "name": "Why can't I convert below 0 Kelvin?", "acceptedAnswer": { "@type": "Answer", "text": "0 K (−273.15 °C) is absolute zero, the coldest temperature physically possible. Instead of showing a meaningless negative Kelvin value, the tool blocks the result and explains why." } },
+      { "@type": "Question", "name": "Does this tool send my numbers to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every conversion runs locally in your browser with plain JavaScript arithmetic — nothing you type is sent to a server or any external conversion API." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Unit Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔁 Unit Converter</h1>
+        <p class="hero-sub">Convert length, weight, temperature, volume, area, speed and data storage instantly — exact factors, no sign-up, runs entirely in your browser.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Unit category"></div>
+
+          <div class="converter-body">
+            <div class="unit-row">
+              <div class="unit-field">
+                <label for="fromUnit">From</label>
+                <select id="fromUnit" class="tool-select"></select>
+                <input type="number" id="fromValue" class="tool-input" value="1" inputmode="decimal" autocomplete="off" />
+              </div>
+
+              <button class="swap-btn" id="swapBtn" aria-label="Swap from and to units" title="Swap units">⇄</button>
+
+              <div class="unit-field">
+                <label for="toUnit">To</label>
+                <select id="toUnit" class="tool-select"></select>
+                <div class="result-display" id="resultValue" aria-live="polite">0</div>
+              </div>
+            </div>
+
+            <p class="converter-note" id="converterNote"></p>
+
+            <div class="calc-actions">
+              <button class="btn-clear" id="resetBtn">Reset</button>
+              <button class="btn-copy" id="copyResultBtn">Copy Result</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Exact Conversion Factors Matter</h2>
+          <p>Many online converters chain rounded intermediate values and quietly drift from the true answer. This tool uses defined, exact constants wherever one exists — <strong>1 inch = 2.54 cm</strong> and <strong>1 pound = 0.45359237 kg</strong> are internationally agreed exact definitions, not measurements — and derives every other unit in that category from them, so the math stays correct however many steps a conversion takes.</p>
+        </article>
+        <article class="content-block">
+          <h2>US Customary vs. Imperial Volume Units</h2>
+          <p>A US gallon (3.785411784 liters) and a UK imperial gallon (about 4.546 liters) are not the same thing — the imperial gallon is roughly 20% larger. Recipes, fuel economy figures and product labels from the US use the US customary units this tool implements (fluid ounce, cup, pint, gallon); mixing them with imperial units without converting first is a common, easy-to-miss error.</p>
+        </article>
+        <article class="content-block">
+          <h2>Binary vs. Decimal Data Sizes</h2>
+          <p>A "kilobyte" can mean 1000 bytes (SI/decimal) or 1024 bytes (binary). This tool uses the <strong>1024-based binary convention</strong> — the same one Windows, macOS and most file managers use when they show a file as "2.3 GB" — labeled with the familiar KB/MB/GB/TB names rather than the formal KiB/MiB/GiB ones, so results match what your operating system reports.</p>
+        </article>
+        <article class="content-block">
+          <h2>How Temperature Conversion Works</h2>
+          <p>Unlike length or weight, temperature scales don't share a zero point, so conversions need an offset, not just a multiplication. Celsius to Fahrenheit is <code>F = C × 9/5 + 32</code>; Celsius to Kelvin is simply <code>K = C + 273.15</code>. Every conversion here first normalizes the input to Celsius, then applies the correct formula to the target scale, so Fahrenheit-to-Kelvin and every other pair stays accurate.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Converter Works</h2>
+          <p>Each category (length, weight, volume, area, speed, data) converts through a single canonical base unit — for example everything in Length converts to and from meters. Your input is multiplied by the "from" unit's factor to reach the base unit, then divided by the "to" unit's factor. That's one multiplication and one division for any pair, instead of a error-prone table of every unit against every other unit.</p>
+        </article>
+        <article class="content-block">
+          <h2>Everyday Uses</h2>
+          <ul class="feature-list">
+            <li>Converting recipe measurements between US cups/ounces and metric liters</li>
+            <li>Checking travel distances and speed limits between miles and kilometers</li>
+            <li>Sizing storage plans or downloads in GB/TB without guessing the math</li>
+            <li>Converting body weight, height or lab measurements between unit systems</li>
+            <li>Free, no login, and nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What unit categories does this converter support?</summary>
+            <p>Length, weight/mass, temperature, volume (US customary), area, speed, and data storage (binary-based). Pick a category tab, then choose your "from" and "to" units.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are the conversion factors exact or rounded?</summary>
+            <p>Exact wherever the underlying definition is exact — for example 1 inch = 2.54 cm and 1 pound = 0.45359237 kg are defined values, not approximations. Only the displayed result is rounded to 6 significant figures; the underlying calculation always uses the full-precision factor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are the volume units US or UK/imperial?</summary>
+            <p>US customary units — fluid ounce, cup, pint and gallon. A UK imperial gallon is about 20% larger than a US gallon, so mixing the two silently gives wrong answers; this tool only implements the US definitions.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is a gigabyte 1000 or 1024 megabytes here?</summary>
+            <p>1024-based (the binary KiB/MiB/GiB convention), the same math most operating systems use for file size displays, just labeled with the everyday KB/MB/GB names.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why can't I convert below 0 Kelvin?</summary>
+            <p>0 K (−273.15 °C) is absolute zero, the coldest temperature physically possible. Instead of showing a meaningless negative Kelvin value, the tool blocks the result and explains why.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool send my numbers to a server?</summary>
+            <p>No. Every conversion runs locally in your browser with plain JavaScript arithmetic — nothing you type is sent to a server or any external conversion API.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/bmi-calculator" class="tool-card">
+            <span class="tool-icon">⚕️</span>
+            <span class="tool-name">BMI Calculator</span>
+            <span class="tool-desc">Body mass index from height &amp; weight</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">➗</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, increases &amp; discounts</span>
+          </a>
+          <a href="https://social00.com/tools/compound-interest-calculator" class="tool-card">
+            <span class="tool-icon">📈</span>
+            <span class="tool-name">Compound Interest Calculator</span>
+            <span class="tool-desc">Project savings &amp; investment growth</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

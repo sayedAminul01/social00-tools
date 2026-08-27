@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="social00 — 100 Free AI Tools for Creators. YouTube title generator, Instagram caption generator, hashtag generator, bio generator, SEO tools and more. No login required." />
+  <meta name="description" content="social00 — 41 free online tools for creators, students and everyday use. YouTube, Instagram, writing, image and SEO tools, plus calculators and generators. No login required." />
   <meta name="keywords" content="free tools for creators, YouTube title generator, Instagram caption generator, hashtag generator, AI bio generator, free online tools, SEO tools, student tools, stylish text generator" />
   <meta name="author" content="social00.com" />
   <meta name="robots" content="index, follow" />
@@ -11,8 +11,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="social00 — 100 Free AI Tools for Creators" />
-  <meta property="og:description" content="100 free tools for YouTubers, Instagrammers, freelancers, students and bloggers. No login. No cost. Always." />
+  <meta property="og:title" content="social00 — 41 Free Online Tools for Creators & Everyday Use" />
+  <meta property="og:description" content="41 free tools for YouTubers, Instagrammers, freelancers, students and everyday tasks. No login. No cost. Always." />
   <meta property="og:url" content="https://social00.com" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="social00" />
@@ -22,11 +22,11 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="social00 — 100 Free AI Tools for Creators" />
-  <meta name="twitter:description" content="100 free tools built for modern creators. No login required." />
+  <meta name="twitter:title" content="social00 — 41 Free Online Tools for Creators & Everyday Use" />
+  <meta name="twitter:description" content="41 free tools built for modern creators and everyday tasks. No login required." />
   <meta name="twitter:image" content="https://social00.com/og-image.png" />
 
-  <title>social00 — 100 Free AI Tools for Creators</title>
+  <title>social00 — 41 Free Online Tools for Creators & Everyday Use</title>
 
   <!--
     FONTS:
@@ -46,12 +46,26 @@
     "@type": "WebSite",
     "name": "social00",
     "url": "https://social00.com",
-    "description": "100 Free AI Tools for Creators — YouTubers, Instagrammers, bloggers, students and freelancers.",
+    "description": "41 free online tools for creators, students and everyday use — YouTubers, Instagrammers, bloggers, freelancers and more.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://social00.com/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Social00",
+    "url": "https://social00.com",
+    "logo": "https://social00.com/favicon.svg",
+    "description": "Social00 builds free, browser-based tools for creators, students and everyday tasks — no signup, no uploads, everything runs client-side.",
+    "email": "hellowsupprt@gmail.com",
+    "sameAs": [
+      "https://twitter.com/social00com"
+    ]
   }
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
@@ -83,7 +97,7 @@
       <div class="nav-actions">
         <div class="search-wrap" role="search">
           <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="search" id="tool-search" placeholder="Search 100 tools…" aria-label="Search tools" autocomplete="off" spellcheck="false" />
+          <input type="search" id="tool-search" placeholder="Search tools…" aria-label="Search tools" autocomplete="off" spellcheck="false" />
           <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>✕</button>
           <div id="search-results" class="search-dropdown" role="listbox" aria-label="Search results" aria-live="polite"></div>
         </div>
@@ -130,7 +144,7 @@
       <div class="hero-content reveal">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          <span>100 tools &nbsp;·&nbsp; Always free &nbsp;·&nbsp; No login required</span>
+          <span>41 tools &nbsp;·&nbsp; Always free &nbsp;·&nbsp; No login required</span>
         </div>
         <h1 class="hero-title">
           Create More.<br />
@@ -139,7 +153,7 @@
         </h1>
         <p class="hero-desc">
           The ultimate free toolkit for YouTubers, Instagrammers, bloggers,
-          freelancers, students and more. 100 AI-powered tools — zero cost, zero friction.
+          freelancers, students and more. 41 practical free tools — zero cost, zero friction.
         </p>
         <div class="hero-cta">
           <a href="#tools" class="btn btn-primary">
@@ -158,7 +172,7 @@
             <span style="background:#06b6d4"></span>
             <span style="background:#10b981"></span>
           </div>
-          <span>Trusted by <strong>50,000+</strong> creators worldwide</span>
+          <span><strong>Free forever</strong> — no signup, no catch</span>
         </div>
       </div>
 
@@ -176,7 +190,7 @@
           <div><strong>Hashtag Generator</strong><small>Boost your reach instantly</small></div>
         </div>
         <div class="hero-stats-pill">
-          <span>🔥</span><span><strong>2.4M+</strong> tools used this month</span>
+          <span>🔥</span><span><strong id="hero-pill-count">41</strong> free tools, ready right now</span>
         </div>
       </div>
     </section>
@@ -185,10 +199,10 @@
     <section class="stats-section" aria-label="Platform statistics">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-card reveal"><span class="stat-num" data-target="100">0</span><span class="stat-label">Free Tools</span></div>
-          <div class="stat-card reveal"><span class="stat-num" data-target="50000">0</span><span class="stat-label">Active Creators</span></div>
-          <div class="stat-card reveal"><span class="stat-num" data-target="2400000">0</span><span class="stat-label">Tools Used</span></div>
-          <div class="stat-card reveal"><span class="stat-num" data-target="6">0</span><span class="stat-label">Categories</span></div>
+          <div class="stat-card reveal"><span class="stat-num" id="stat-total-tools" data-target="41">0</span><span class="stat-label">Free Tools</span></div>
+          <div class="stat-card reveal"><span class="stat-num" id="stat-total-categories" data-target="7">0</span><span class="stat-label">Categories</span></div>
+          <div class="stat-card reveal"><span class="stat-num stat-num--static">$0</span><span class="stat-label">Cost, Ever</span></div>
+          <div class="stat-card reveal"><span class="stat-num stat-num--static">0</span><span class="stat-label">Sign-ups Required</span></div>
         </div>
       </div>
     </section>
@@ -198,7 +212,7 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">🛠 All Tools</span>
-          <h2 id="tools-heading" class="section-title">100+ Free Creator Tools</h2>
+          <h2 id="tools-heading" class="section-title"><span id="tools-heading-count">41</span> Free Tools for Creators &amp; Everyday Use</h2>
           <p class="section-desc">Filter by category or search to find exactly what you need.</p>
         </div>
 
@@ -211,6 +225,7 @@
           <button class="filter-btn"        data-filter="image"     role="tab" aria-selected="false" aria-controls="tools-grid">🖼️ Image</button>
           <button class="filter-btn"        data-filter="student"   role="tab" aria-selected="false" aria-controls="tools-grid">🎓 Student</button>
           <button class="filter-btn"        data-filter="seo"       role="tab" aria-selected="false" aria-controls="tools-grid">🔍 SEO</button>
+          <button class="filter-btn"        data-filter="utility"   role="tab" aria-selected="false" aria-controls="tools-grid">🧰 Utility</button>
         </div>
 
         <!-- Tools grid — populated by JS -->
@@ -244,12 +259,13 @@
           <p class="section-desc">Pick your category and explore the right tools for you.</p>
         </div>
         <div class="categories-grid">
-          <a href="#tools" class="cat-card reveal" data-jump="youtube"   aria-label="Browse YouTube Tools"><div class="cat-icon" style="--cc:#f97316">📹</div><div class="cat-info"><h3>YouTube Tools</h3><p>Titles, thumbnails, scripts &amp; more</p></div><div class="cat-count">18 tools</div><div class="cat-arrow">→</div></a>
-          <a href="#tools" class="cat-card reveal" data-jump="instagram" aria-label="Browse Instagram Tools"><div class="cat-icon" style="--cc:#e1306c">📸</div><div class="cat-info"><h3>Instagram Tools</h3><p>Captions, hashtags, bios &amp; reels</p></div><div class="cat-count">22 tools</div><div class="cat-arrow">→</div></a>
-          <a href="#tools" class="cat-card reveal" data-jump="writing"   aria-label="Browse AI Writing Tools"><div class="cat-icon" style="--cc:#8b5cf6">✍️</div><div class="cat-info"><h3>AI Writing Tools</h3><p>Blogs, emails, bios &amp; summaries</p></div><div class="cat-count">25 tools</div><div class="cat-arrow">→</div></a>
-          <a href="#tools" class="cat-card reveal" data-jump="image"     aria-label="Browse Image Tools"><div class="cat-icon" style="--cc:#06b6d4">🖼️</div><div class="cat-info"><h3>Image Tools</h3><p>Compress, resize &amp; optimise images</p></div><div class="cat-count">14 tools</div><div class="cat-arrow">→</div></a>
-          <a href="#tools" class="cat-card reveal" data-jump="student"   aria-label="Browse Student Tools"><div class="cat-icon" style="--cc:#10b981">🎓</div><div class="cat-info"><h3>Student Tools</h3><p>Calculators, planners &amp; converters</p></div><div class="cat-count">11 tools</div><div class="cat-arrow">→</div></a>
-          <a href="#tools" class="cat-card reveal" data-jump="seo"       aria-label="Browse SEO Tools"><div class="cat-icon" style="--cc:#f59e0b">🔍</div><div class="cat-info"><h3>SEO Tools</h3><p>Keywords, meta tags &amp; rankings</p></div><div class="cat-count">10 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="youtube"   aria-label="Browse YouTube Tools"><div class="cat-icon" style="--cc:#f97316">📹</div><div class="cat-info"><h3>YouTube Tools</h3><p>Titles, thumbnails, scripts &amp; more</p></div><div class="cat-count" data-count-for="youtube">6 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="instagram" aria-label="Browse Instagram Tools"><div class="cat-icon" style="--cc:#e1306c">📸</div><div class="cat-info"><h3>Instagram Tools</h3><p>Captions, hashtags, bios &amp; reels</p></div><div class="cat-count" data-count-for="instagram">5 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="writing"   aria-label="Browse AI Writing Tools"><div class="cat-icon" style="--cc:#8b5cf6">✍️</div><div class="cat-info"><h3>AI Writing Tools</h3><p>Blogs, emails, bios &amp; summaries</p></div><div class="cat-count" data-count-for="writing">8 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="image"     aria-label="Browse Image Tools"><div class="cat-icon" style="--cc:#06b6d4">🖼️</div><div class="cat-info"><h3>Image Tools</h3><p>Compress, resize &amp; optimise images</p></div><div class="cat-count" data-count-for="image">5 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="student"   aria-label="Browse Student Tools"><div class="cat-icon" style="--cc:#10b981">🎓</div><div class="cat-info"><h3>Student Tools</h3><p>Calculators, planners &amp; converters</p></div><div class="cat-count" data-count-for="student">5 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="seo"       aria-label="Browse SEO Tools"><div class="cat-icon" style="--cc:#f59e0b">🔍</div><div class="cat-info"><h3>SEO Tools</h3><p>Keywords, meta tags &amp; rankings</p></div><div class="cat-count" data-count-for="seo">4 tools</div><div class="cat-arrow">→</div></a>
+          <a href="#tools" class="cat-card reveal" data-jump="utility"   aria-label="Browse Utility Tools"><div class="cat-icon" style="--cc:#eab308">🧰</div><div class="cat-info"><h3>Utility Tools</h3><p>QR codes, passwords &amp; calculators</p></div><div class="cat-count" data-count-for="utility">8 tools</div><div class="cat-arrow">→</div></a>
         </div>
       </div>
     </section>
@@ -273,35 +289,32 @@
           <div class="about-card-stack">
             <div class="acs-card acs-1"><div class="acs-icon">🚀</div><strong>Launch Faster</strong><p>From idea to content in minutes</p></div>
             <div class="acs-card acs-2"><div class="acs-icon">📈</div><strong>Grow Smarter</strong><p>Data-driven tools for real growth</p></div>
-            <div class="acs-card acs-3"><div class="acs-icon">💸</div><strong>Zero Cost</strong><p>100 tools, always free</p></div>
+            <div class="acs-card acs-3"><div class="acs-icon">💸</div><strong>Zero Cost</strong><p>Every tool, always free</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ TESTIMONIALS ░░ -->
+    <!-- ░░ WHY SOCIAL00 ░░ -->
     <section class="testimonials-section" aria-labelledby="testi-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">💬 Creator Reviews</span>
-          <h2 id="testi-heading" class="section-title">Loved by Thousands</h2>
+          <span class="section-tag">✅ Why Social00</span>
+          <h2 id="testi-heading" class="section-title">Built Different, On Purpose</h2>
         </div>
         <div class="testi-grid">
-          <blockquote class="testi-card reveal">
-            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>"The YouTube Title Generator alone has doubled my CTR. I use social00 every single day for my channel."</p>
-            <div class="testi-author"><div class="testi-avatar" style="background:#f97316">R</div><div><strong>Rahul Sharma</strong><small>YouTube Creator · 180K subscribers</small></div></div>
-          </blockquote>
-          <blockquote class="testi-card reveal">
-            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>"As a freelance social media manager, I save at least 3 hours a week using the caption and hashtag tools."</p>
-            <div class="testi-author"><div class="testi-avatar" style="background:#e1306c">P</div><div><strong>Priya Mehta</strong><small>Freelance SMM · Mumbai</small></div></div>
-          </blockquote>
-          <blockquote class="testi-card reveal">
-            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>"The resume summary tool helped me land my first internship. It's the most underrated free tool online."</p>
-            <div class="testi-author"><div class="testi-avatar" style="background:#8b5cf6">A</div><div><strong>Arjun Patel</strong><small>Student · IIT Delhi</small></div></div>
-          </blockquote>
+          <div class="testi-card reveal">
+            <p>Image, PDF and password tools run entirely on your device using your browser's own Canvas and Web Crypto APIs — your files and data are never uploaded to any server.</p>
+            <div class="testi-author"><div class="testi-avatar" style="background:#f97316">🔒</div><div><strong>Nothing Ever Uploaded</strong><small>Client-side by design</small></div></div>
+          </div>
+          <div class="testi-card reveal">
+            <p>We're upfront about how every tool works: writing tools use proven templates and formulas, not a connected AI model — and calculators, QR codes and passwords use real, verifiable math and cryptography.</p>
+            <div class="testi-author"><div class="testi-avatar" style="background:#e1306c">💬</div><div><strong>No Fake AI Claims</strong><small>Honest, by default</small></div></div>
+          </div>
+          <div class="testi-card reveal">
+            <p>No account, no premium tier, no usage caps, no credit card. Every tool on this page works the same for everyone, for free, for as long as we run the site.</p>
+            <div class="testi-author"><div class="testi-avatar" style="background:#8b5cf6">💸</div><div><strong>Actually Free, No Catch</strong><small>Not a "free trial"</small></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -314,7 +327,7 @@
           <div class="nl-content">
             <span class="nl-emoji">✉️</span>
             <h2 id="nl-heading">Get New Tools in Your Inbox</h2>
-            <p>We add new free tools every week. Be the first to know — join 12,000+ creators on our list.</p>
+            <p>We add new free tools regularly. Be the first to know when a new one drops.</p>
             <form class="nl-form" onsubmit="handleNewsletterSubmit(event)" novalidate>
               <label for="nl-email" class="sr-only">Your email address</label>
               <input type="email" id="nl-email" placeholder="your@email.com" required aria-label="Your email address" autocomplete="email" />
@@ -337,7 +350,7 @@
         <div class="faq-list">
           <details class="faq-item reveal" open>
             <summary class="faq-q">Are all these tools really free?</summary>
-            <div class="faq-a"><p>Yes — every single one of the 100 tools on social00 is completely free. There are no hidden fees, premium tiers or paywalls. We believe creators deserve access to powerful tools without paying a fortune.</p></div>
+            <div class="faq-a"><p>Yes — every single tool on social00 is completely free. There are no hidden fees, premium tiers or paywalls. We believe creators deserve access to powerful tools without paying a fortune.</p></div>
           </details>
           <details class="faq-item reveal">
             <summary class="faq-q">Do I need to create an account or login?</summary>
@@ -352,8 +365,8 @@
             <div class="faq-a"><p>We release new tools every week based on creator requests and trends. Subscribe to our newsletter to get notified whenever a new tool drops. We're constantly building based on what creators actually need.</p></div>
           </details>
           <details class="faq-item reveal">
-            <summary class="faq-q">Are the AI-generated results accurate?</summary>
-            <div class="faq-a"><p>Our AI tools use state-of-the-art language models to generate high-quality outputs. Results are excellent starting points that you can refine to match your personal style. The more specific your input, the better the output.</p></div>
+            <summary class="faq-q">Are these tools powered by AI?</summary>
+            <div class="faq-a"><p>Most aren't, and we'd rather tell you that plainly than let "AI" do marketing work it hasn't earned. The writing tools use proven templates and formulas — not a connected language model — to generate strong first-draft content instantly. Calculators, the QR code generator and the password generator use real, verifiable math and cryptography, not AI at all. Every tool's own page states exactly how it works.</p></div>
           </details>
           <details class="faq-item reveal">
             <summary class="faq-q">Can I use the generated content commercially?</summary>
@@ -447,7 +460,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#home" class="nav-logo footer-logo">social<em>00</em></a>
-          <p>100 Free AI Tools for Creators. Built for YouTubers, Instagrammers, bloggers, freelancers and students everywhere.</p>
+          <p>41 free online tools for creators and everyday use. Built for YouTubers, Instagrammers, bloggers, freelancers, students and more.</p>
           <div class="footer-socials">
             <a href="https://twitter.com/social00com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">𝕏</a>
             <a href="#" aria-label="Follow us on Instagram">📸</a>

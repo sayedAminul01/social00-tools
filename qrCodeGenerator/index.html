@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator – Free Scannable QR Codes Online | Social00</title>
+  <meta name="description" content="Free QR code generator. Turn any URL, text or Wi-Fi network into a real, scannable QR code instantly. Runs entirely in your browser — nothing is ever uploaded. No sign-up." />
+  <meta name="keywords" content="qr code generator, free qr code, wifi qr code, url qr code, qr code maker, scannable qr code online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/qr-code-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="QR Code Generator – Free Scannable QR Codes Online | Social00" />
+  <meta property="og:description" content="Turn any URL, text or Wi-Fi network into a real, scannable QR code instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/qr-code-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "QR Code Generator",
+    "url": "https://social00.com/tools/qr-code-generator",
+    "description": "Free online QR code generator that encodes any URL, text or Wi-Fi network into a real, scannable QR code using a client-side implementation of the ISO/IEC 18004 standard. Nothing is ever uploaded to a server.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "QR Code Generator", "item": "https://social00.com/tools/qr-code-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does this QR code generator send my data anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. The QR encoder is written entirely in JavaScript and runs in your browser — your text, URL or Wi-Fi details are never sent to a server or a third-party QR-image API. Nothing you type here is ever uploaded." } },
+      { "@type": "Question", "name": "What does \"Error Correction Level M\" mean?", "acceptedAnswer": { "@type": "Answer", "text": "QR codes store the same data twice using Reed-Solomon error correction so a scanner can still read the code even if part of it is dirty, torn or covered by a logo. Level M can recover roughly 15% of the code's data — a solid middle ground between raw storage capacity (Level L, ~7%) and heavy damage resistance (Level H, ~30%), which is why it's used as the default here." } },
+      { "@type": "Question", "name": "How does the Wi-Fi QR code format work?", "acceptedAnswer": { "@type": "Answer", "text": "A Wi-Fi QR code encodes a plain-text string in the form WIFI:T:WPA;S:NetworkName;P:Password;; — T is the security type (WPA, WEP or nopass), S is the network name (SSID), and P is the password. Scanning it with a phone camera offers to join that network directly, without anyone having to type the password by hand." } },
+      { "@type": "Question", "name": "Why does every QR code have a blank white border?", "acceptedAnswer": { "@type": "Answer", "text": "That border is called the quiet zone. Scanners use the sharp contrast between the code and empty space around it to detect where the QR code starts and stops, so the ISO/IEC 18004 standard requires a clear margin of at least 4 modules on every side. Removing it can stop the code from scanning at all." } },
+      { "@type": "Question", "name": "How much text can a QR code actually hold?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the QR version (its size, from 21×21 up to 177×177 modules). At Error Correction Level M in byte mode, version 1 holds about 14 bytes and the largest version, 40, holds about 2,331 bytes. This tool automatically picks the smallest version that fits whatever you type." } },
+      { "@type": "Question", "name": "Can I use custom colors and will the QR code still scan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but keep strong contrast between the foreground and background colors. Scanners rely on clearly distinguishing dark modules from light ones, so two similar colors (like light grey on white) can make a code unreliable or unscannable even though it still looks correct on screen. This tool warns you when your chosen colors are too close." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many QR codes you generate. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / QR Code Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📱 QR Code Generator</h1>
+        <p class="hero-sub">Turn any URL, text or Wi-Fi network into a real, scannable QR code — instantly, in your browser. Nothing is ever uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="qrInput" class="tool-label">Text, URL or Wi-Fi string</label>
+          <textarea id="qrInput" class="tool-textarea" rows="3" placeholder="e.g. https://social00.com" autocomplete="off" spellcheck="false"></textarea>
+          <p class="input-meta" id="inputMeta">0 bytes · QR Version — · Error Correction: M</p>
+
+          <div class="preset-row">
+            <span class="preset-label">Quick fill:</span>
+            <button type="button" class="btn-preset" id="presetUrl">🔗 Website URL</button>
+            <button type="button" class="btn-preset" id="presetWifi">📶 Wi-Fi Network</button>
+            <button type="button" class="btn-preset" id="presetText">📝 Plain Text</button>
+          </div>
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="fgColor">Foreground</label>
+              <div class="color-picker-wrap">
+                <input type="color" id="fgColor" value="#000000" aria-label="Foreground color" />
+                <span class="color-hex" id="fgHex">#000000</span>
+              </div>
+            </div>
+            <div class="option-group">
+              <label for="bgColor">Background</label>
+              <div class="color-picker-wrap">
+                <input type="color" id="bgColor" value="#ffffff" aria-label="Background color" />
+                <span class="color-hex" id="bgHex">#FFFFFF</span>
+              </div>
+            </div>
+            <div class="option-group">
+              <label for="sizeSelect">Download size</label>
+              <select id="sizeSelect" class="tool-select">
+                <option value="200">200 × 200 px</option>
+                <option value="400" selected>400 × 400 px</option>
+                <option value="800">800 × 800 px</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="contrast-warning" id="contrastWarning" hidden>⚠ These colors are too similar — the code may not scan reliably. Choose higher-contrast colors.</p>
+
+          <div class="qr-preview-wrap">
+            <div class="qr-canvas-box">
+              <canvas id="qrCanvas" width="300" height="300" aria-label="Generated QR code preview"></canvas>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="downloadBtn">Download PNG</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How a QR Code Is Built</h2>
+          <p>A QR code is a grid of black and white squares called <strong>modules</strong>. Three large squares in the corners — the <strong>finder patterns</strong> — let a scanner detect the code's position and rotation instantly. A thin alternating line called the <strong>timing pattern</strong> tells the scanner exactly where each row and column of modules falls, and a blank margin called the <strong>quiet zone</strong> separates the code from everything else on the page so it doesn't blur into surrounding content.</p>
+        </article>
+        <article class="content-block">
+          <h2>Error Correction, Explained Simply</h2>
+          <p>Every QR code stores extra, redundant data alongside the real message using a technique called Reed-Solomon error correction. That's what lets a code still scan after a corner is torn off or a logo is placed in the middle. There are four levels — L (~7%), M (~15%), Q (~25%) and H (~30%) recoverable data — and this tool always uses <strong>Level M</strong>, a reliable balance between correction strength and how much data fits in a given size.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Wi-Fi QR Code Format</h2>
+          <p>A Wi-Fi QR code is just a specially formatted piece of text: <code>WIFI:T:WPA;S:NetworkName;P:Password;;</code>. <strong>T</strong> is the security type (WPA, WEP, or <code>nopass</code> for open networks), <strong>S</strong> is the network name, and <strong>P</strong> is the password. When a phone camera scans it, it recognizes the format and offers to join the network directly — handy for guests instead of reading a password out loud.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Uses for QR Codes</h2>
+          <p>Restaurant menus, Wi-Fi sharing at home or in an office, business cards and event badges, linking a printed flyer to a website, app store download links, and boarding passes or event tickets are some of the most common everyday uses — anywhere a printed surface needs to hand off to a phone instantly.</p>
+        </article>
+        <article class="content-block">
+          <h2>Runs Entirely in Your Browser</h2>
+          <p>This generator implements the QR encoding algorithm — bitstream construction, Reed-Solomon error correction, and module placement — directly in JavaScript. There is no server call and no third-party QR-image API involved, which matters if you're encoding something private like a home Wi-Fi password: it never leaves your device.</p>
+        </article>
+        <article class="content-block">
+          <h2>Tips for a Reliably Scannable Code</h2>
+          <ul class="feature-list">
+            <li>Keep strong contrast between foreground and background colors</li>
+            <li>Never crop away the white quiet zone border</li>
+            <li>Print or display it at a size a phone can focus on from typical distance</li>
+            <li>Test it with a real phone camera before printing hundreds of copies</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does this QR code generator send my data anywhere?</summary>
+            <p>No. The QR encoder is written entirely in JavaScript and runs in your browser — your text, URL or Wi-Fi details are never sent to a server or a third-party QR-image API. Nothing you type here is ever uploaded.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does "Error Correction Level M" mean?</summary>
+            <p>QR codes store the same data twice using Reed-Solomon error correction so a scanner can still read the code even if part of it is dirty, torn or covered by a logo. Level M can recover roughly 15% of the code's data — a solid middle ground between raw storage capacity (Level L, ~7%) and heavy damage resistance (Level H, ~30%), which is why it's used as the default here.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does the Wi-Fi QR code format work?</summary>
+            <p>A Wi-Fi QR code encodes a plain-text string in the form WIFI:T:WPA;S:NetworkName;P:Password;; — T is the security type (WPA, WEP or nopass), S is the network name (SSID), and P is the password. Scanning it with a phone camera offers to join that network directly, without anyone having to type the password by hand.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does every QR code have a blank white border?</summary>
+            <p>That border is called the quiet zone. Scanners use the sharp contrast between the code and empty space around it to detect where the QR code starts and stops, so the ISO/IEC 18004 standard requires a clear margin of at least 4 modules on every side. Removing it can stop the code from scanning at all.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much text can a QR code actually hold?</summary>
+            <p>It depends on the QR version (its size, from 21×21 up to 177×177 modules). At Error Correction Level M in byte mode, version 1 holds about 14 bytes and the largest version, 40, holds about 2,331 bytes. This tool automatically picks the smallest version that fits whatever you type.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use custom colors and will the QR code still scan?</summary>
+            <p>Yes, but keep strong contrast between the foreground and background colors. Scanners rely on clearly distinguishing dark modules from light ones, so two similar colors (like light grey on white) can make a code unreliable or unscannable even though it still looks correct on screen. This tool warns you when your chosen colors are too close.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many QR codes you generate. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/password-generator" class="tool-card">
+            <span class="tool-icon">🔒</span>
+            <span class="tool-name">Password Generator</span>
+            <span class="tool-desc">Strong, random passwords in your browser</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Convert length, weight, temperature &amp; more</span>
+          </a>
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink image file size without losing quality</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Social00. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

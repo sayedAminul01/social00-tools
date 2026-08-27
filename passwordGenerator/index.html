@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator – Free Secure Random Password Creator | Social00</title>
+  <meta name="description" content="Free password generator using real cryptographic randomness (Web Crypto API), not Math.random(). Set length and character types, guarantee variety, and see real entropy in bits. Nothing leaves your browser." />
+  <meta name="keywords" content="password generator, secure password generator, random password generator, strong password creator, web crypto password generator, cryptographically secure password" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/password-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Password Generator – Free Secure Random Password Creator | Social00" />
+  <meta property="og:description" content="Generate genuinely random, cryptographically secure passwords entirely in your browser using the Web Crypto API. Free, no sign-up, nothing ever sent to a server." />
+  <meta property="og:url" content="https://social00.com/tools/password-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Password Generator",
+    "url": "https://social00.com/tools/password-generator",
+    "description": "Free online password generator that uses the Web Crypto API for genuine cryptographic randomness, with adjustable length, character types, and a real entropy-based strength meter.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Password Generator", "item": "https://social00.com/tools/password-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is this password generator actually secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every character is chosen using window.crypto.getRandomValues(), the Web Crypto API's cryptographically secure random number generator — the same class of randomness used for encryption keys, not the predictable Math.random() function. Combined with rejection sampling to remove bias, the output is uniformly random across your chosen character set." } },
+      { "@type": "Question", "name": "Why not just use Math.random()?", "acceptedAnswer": { "@type": "Answer", "text": "Math.random() is a fast, non-cryptographic pseudo-random number generator meant for things like animations and games. Its internal state can potentially be inferred from enough output, and it was never designed to resist prediction. For anything protecting an account — like a password — that's an unacceptable risk, so this tool exclusively uses the Web Crypto API instead." } },
+      { "@type": "Question", "name": "Are my generated passwords sent to a server or stored anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every password is generated entirely inside your browser using JavaScript and the Web Crypto API. Nothing is transmitted over the network, logged, saved to a database, or stored in cookies or local storage — closing this tab makes the password exist only wherever you paste it." } },
+      { "@type": "Question", "name": "How long should my password be?", "acceptedAnswer": { "@type": "Answer", "text": "Length matters more than complexity once you're past a small alphabet. A 20-character password using only lowercase letters is harder to crack than an 8-character password mixing every character type, because entropy grows with every added character. Aim for at least 16 characters where the site allows it." } },
+      { "@type": "Question", "name": "What does \"entropy\" mean, and how is it calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Entropy measures how many guesses an attacker would need in the worst case, expressed in bits. This tool calculates it as length × log2(character set size) — for example, a 16-character password drawn from this tool's full 88-character set (upper, lower, numbers, symbols) has about 16 × 6.46 ≈ 103 bits of entropy, which is Very Strong by our scale." } },
+      { "@type": "Question", "name": "Should I use a password manager?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — a password manager lets you use a long, unique, random password like the ones this tool generates for every single account, without having to remember any of them. Reusing passwords across sites is one of the most common causes of account compromise, and a manager eliminates the need to." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Password Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔐 Password Generator</h1>
+        <p class="hero-sub">Generate genuinely random, cryptographically secure passwords — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="length-row">
+            <label for="lengthSlider" class="tool-label">Length: <span id="lengthValue">16</span> characters</label>
+            <input type="range" id="lengthSlider" class="length-slider" min="8" max="64" value="16" step="1" />
+          </div>
+
+          <div class="toggle-grid">
+            <label class="option-toggle">
+              <input type="checkbox" id="toggleUpper" checked />
+              <span>Uppercase (A-Z)</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="toggleLower" checked />
+              <span>Lowercase (a-z)</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="toggleNumbers" checked />
+              <span>Numbers (0-9)</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="toggleSymbols" checked />
+              <span>Symbols (!@#$%^&amp;*...)</span>
+            </label>
+            <label class="option-toggle option-toggle--wide">
+              <input type="checkbox" id="toggleAmbiguous" />
+              <span>Exclude ambiguous characters (l, 1, I, 0, O)</span>
+            </label>
+          </div>
+
+          <div class="pwd-display" id="pwdDisplay" aria-live="polite">
+            <span class="pwd-value" id="pwdValue">Click Generate to create a password</span>
+            <button class="copy-icon-btn" id="copyMainBtn" aria-label="Copy password" title="Copy password">📋</button>
+          </div>
+
+          <div class="strength-meter">
+            <div class="strength-bar-track"><div class="strength-bar-fill" id="strengthFill"></div></div>
+            <span class="strength-text" id="strengthText">Select options to see estimated strength</span>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="generateBtn">Generate Password</button>
+            <button class="btn-clear" id="generateBatchBtn">Generate 5</button>
+          </div>
+
+          <div class="batch-list" id="batchList" hidden></div>
+
+          <p class="privacy-note">🔒 Generated entirely in your browser using the Web Crypto API (<code>crypto.getRandomValues()</code>). Nothing is ever transmitted, logged, or stored anywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Length Beats Complexity</h2>
+          <p>Once your password draws from a reasonably sized set of characters, adding length does more to stop an attacker than adding character variety. Every extra character multiplies the number of possible passwords by the size of your character set, while adding a new character type only multiplies it once. A 20-character password of just lowercase letters (26<sup>20</sup> possibilities) is dramatically harder to brute-force than an 8-character password mixing upper, lower, numbers and symbols (88<sup>8</sup> possibilities) — length wins by orders of magnitude. This tool lets you push length up to 64 characters while still layering on complexity for the best of both.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Math Behind the Entropy Number</h2>
+          <p>Password strength is measured in bits of entropy, calculated as <code>length × log2(character set size)</code>. This tool's four character types together give an 88-character set (26 upper + 26 lower + 10 numbers + 26 symbols), and log2(88) ≈ 6.46, so a 16-character password using all of them has roughly 16 × 6.46 ≈ 103 bits of entropy. Each additional bit doubles the number of guesses an attacker needs in the worst case, so 103 bits means roughly 2<sup>103</sup> possible passwords — far beyond what any known hardware can realistically brute-force.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why This Tool Uses Web Crypto, Not Math.random()</h2>
+          <p>JavaScript's <code>Math.random()</code> is a fast pseudo-random number generator built for things like animations and shuffling — it is explicitly not designed to be unpredictable, and its internal state has been shown to be recoverable from enough observed output. A password generator that used it would look random to the eye while being far weaker than its stated entropy suggests. This tool instead calls <code>window.crypto.getRandomValues()</code>, the Web Crypto API's cryptographically secure random number generator — the same primitive browsers use to generate encryption keys — for every single character.</p>
+        </article>
+        <article class="content-block">
+          <h2>Removing Bias with Rejection Sampling</h2>
+          <p>Mapping a random byte (0–255) onto a character set with a plain <code>byte % charsetSize</code> introduces modulo bias: characters near the start of the set get chosen very slightly more often than characters near the end, whenever 256 isn't an exact multiple of the set size. This tool avoids that with rejection sampling — it draws a random byte, and any byte at or beyond the largest multiple of the character set size that fits within 256 is discarded and redrawn — so every character in the set has a mathematically equal chance of being picked.</p>
+        </article>
+        <article class="content-block">
+          <h2>Guaranteed Character Variety</h2>
+          <p>Pure randomness occasionally produces a password that happens to skip one of your selected character types entirely — more likely at shorter lengths. After generating, this tool checks the result against every enabled type and, if one is missing, either regenerates the whole password or swaps a random position for a correctly-typed character (still chosen with <code>crypto.getRandomValues()</code>, never a predictable substitution) so the guarantee always holds without weakening the randomness.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of This Generator</h2>
+          <ul class="feature-list">
+            <li>True cryptographic randomness via the Web Crypto API — never Math.random()</li>
+            <li>Rejection sampling removes modulo bias from every character choice</li>
+            <li>Guarantees at least one of each character type you select</li>
+            <li>Runs 100% locally — save the result straight into a password manager like Bitwarden or 1Password</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is this password generator actually secure?</summary>
+            <p>Yes. Every character is chosen using window.crypto.getRandomValues(), the Web Crypto API's cryptographically secure random number generator — the same class of randomness used for encryption keys, not the predictable Math.random() function. Combined with rejection sampling to remove bias, the output is uniformly random across your chosen character set.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why not just use Math.random()?</summary>
+            <p>Math.random() is a fast, non-cryptographic pseudo-random number generator meant for things like animations and games. Its internal state can potentially be inferred from enough output, and it was never designed to resist prediction. For anything protecting an account — like a password — that's an unacceptable risk, so this tool exclusively uses the Web Crypto API instead.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are my generated passwords sent to a server or stored anywhere?</summary>
+            <p>No. Every password is generated entirely inside your browser using JavaScript and the Web Crypto API. Nothing is transmitted over the network, logged, saved to a database, or stored in cookies or local storage — closing this tab makes the password exist only wherever you paste it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long should my password be?</summary>
+            <p>Length matters more than complexity once you're past a small alphabet. A 20-character password using only lowercase letters is harder to crack than an 8-character password mixing every character type, because entropy grows with every added character. Aim for at least 16 characters where the site allows it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does "entropy" mean, and how is it calculated?</summary>
+            <p>Entropy measures how many guesses an attacker would need in the worst case, expressed in bits. This tool calculates it as length × log2(character set size) — for example, a 16-character password drawn from this tool's full 88-character set (upper, lower, numbers, symbols) has about 16 × 6.46 ≈ 103 bits of entropy, which is Very Strong by our scale.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should I use a password manager?</summary>
+            <p>Yes — a password manager lets you use a long, unique, random password like the ones this tool generates for every single account, without having to remember any of them. Reusing passwords across sites is one of the most common causes of account compromise, and a manager eliminates the need to.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/qr-code-generator" class="tool-card">
+            <span class="tool-icon">🔳</span>
+            <span class="tool-name">QR Code Generator</span>
+            <span class="tool-desc">Create scannable QR codes instantly</span>
+          </a>
+          <a href="https://social00.com/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Word Counter</span>
+            <span class="tool-desc">Count words, characters &amp; reading time</span>
+          </a>
+          <a href="https://social00.com/tools/email-subject-line-generator" class="tool-card">
+            <span class="tool-icon">📧</span>
+            <span class="tool-name">Email Subject Line Generator</span>
+            <span class="tool-desc">Catchy subject lines that get opens</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Social00. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

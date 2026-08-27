@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator – Calculate Exact Age in Years, Months &amp; Days | Social00</title>
+  <meta name="description" content="Free age calculator. Find your exact age in years, months and days, or the duration between any two dates. Includes total days, weeks, months and a next-birthday countdown. No sign-up." />
+  <meta name="keywords" content="age calculator, calculate age, date of birth calculator, age in years months days, date difference calculator, days between dates calculator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/age-calculator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Age Calculator – Calculate Exact Age in Years, Months &amp; Days | Social00" />
+  <meta property="og:description" content="Find your exact age in years, months and days, or the duration between any two dates. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/age-calculator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Age Calculator",
+    "url": "https://social00.com/tools/age-calculator",
+    "description": "Free online age calculator that works out exact age in years, months and days, plus total days, weeks, months and a next-birthday countdown.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Age Calculator", "item": "https://social00.com/tools/age-calculator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How does this calculator work out age in years, months, and days?", "acceptedAnswer": { "@type": "Answer", "text": "It compares the calendar day, month, and year of your two dates directly — first counting whole years by checking whether the \"to\" date's month and day have occurred yet this year, then whole months in what's left, then the remaining days. This matches how people actually count birthdays, unlike a simple day-count divided by an average year length." } },
+      { "@type": "Question", "name": "Why isn't age just total days divided by 365.25?", "acceptedAnswer": { "@type": "Answer", "text": "Because calendar months have different lengths (28 to 31 days) and years aren't a fixed number of days, dividing by 365.25 gives an approximate decimal age that rarely lines up with the years/months/days someone would state out loud. Calendar-based subtraction, done correctly, always matches how humans actually describe age." } },
+      { "@type": "Question", "name": "What happens with a leap-day (February 29) birthday?", "acceptedAnswer": { "@type": "Answer", "text": "In a non-leap year, February 29 doesn't exist, so this calculator treats March 1 as the equivalent anniversary date — February 28 counts as one day before the birthday has occurred, and March 1 itself completes the year. In an actual leap year, February 29 is used exactly as entered." } },
+      { "@type": "Question", "name": "Can I use this to find the number of days between two arbitrary dates, not just my age?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the \"from\" and \"to\" fields work for any two dates. Leave \"to\" as today for your current age, or enter any pair of dates to get their exact year/month/day difference plus total days and weeks." } },
+      { "@type": "Question", "name": "What is an age calculator actually used for?", "acceptedAnswer": { "@type": "Answer", "text": "Common uses include verifying legal age (18, 21, or a jurisdiction's own threshold), filling in chronological age on medical, school, or government forms, working out how long until a milestone birthday, and calculating anniversaries or the exact duration since an event." } },
+      { "@type": "Question", "name": "Is my date of birth sent anywhere or stored?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every calculation happens locally in your browser with plain JavaScript — no date you enter is ever transmitted to a server, logged, or stored anywhere." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Age Calculator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🎂 Age Calculator</h1>
+        <p class="hero-sub">Find your exact age in years, months, and days — or the duration between any two dates. Instant, accurate, and it never leaves your browser.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="date-row">
+            <div class="date-field">
+              <label for="fromDate" class="tool-label">From date <span class="field-hint">(e.g. date of birth)</span></label>
+              <input type="date" id="fromDate" class="tool-date" />
+            </div>
+            <div class="date-field">
+              <label for="toDate" class="tool-label">To date <span class="field-hint">(defaults to today)</span></label>
+              <input type="date" id="toDate" class="tool-date" />
+            </div>
+            <button class="btn-today" id="todayBtn" type="button" title="Set 'To date' to today">Today</button>
+          </div>
+          <p class="date-note">Leave "To date" as today to get your current age, or enter any two dates to find the duration between them.</p>
+
+          <div class="result-card" id="resultCard">
+            <div class="result-main" id="resultMain" aria-live="polite">
+              <div class="result-stat">
+                <span class="result-num" id="rYears">0</span>
+                <span class="result-unit">Years</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-num" id="rMonths">0</span>
+                <span class="result-unit">Months</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-num" id="rDays">0</span>
+                <span class="result-unit">Days</span>
+              </div>
+            </div>
+
+            <div class="secondary-stats" id="secondaryStats">
+              <div class="stat-box">
+                <span class="stat-label">Total days lived</span>
+                <span class="stat-value" id="statTotalDays">—</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Total weeks</span>
+                <span class="stat-value" id="statTotalWeeks">—</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Total months</span>
+                <span class="stat-value" id="statTotalMonths">—</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Next birthday</span>
+                <span class="stat-value" id="statNextBirthday">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn" type="button">Clear</button>
+            <button class="btn-copy" id="copyBtn" type="button">Copy Result</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How Calendar-Correct Age Is Calculated</h2>
+          <p>This tool doesn't just count total days and convert — it subtracts calendar components the way people actually think about age. It first works out whole years by checking whether the "to" date's month and day have occurred yet in the current year, then finds whole months in what's left, then whatever days remain, borrowing from the correct month length whenever the "to" date's day-of-month falls earlier than the "from" date's.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Not Just Divide by 365.25</h2>
+          <p>A rough age is often calculated as total days ÷ 365.25, but that only gives a decimal approximation — it can't tell you "how many months" cleanly because months aren't a fixed number of days. Two people born a week apart can land on different sides of a whole-year boundary under that method. Calendar-based subtraction, done correctly, always matches the years/months/days someone would state out loud.</p>
+        </article>
+        <article class="content-block">
+          <h2>The February 29 Leap Birthday Edge Case</h2>
+          <p>Roughly 1 in 1,461 people are born on a leap day, and most years don't have one. This calculator's convention: in a non-leap year, February 28 is treated as one day before the anniversary, and March 1 is treated as the day the anniversary completes. In an actual leap year, February 29 is used exactly as entered — no adjustment needed.</p>
+        </article>
+        <article class="content-block">
+          <h2>More Than Just Years, Months, and Days</h2>
+          <p>Alongside the calendar breakdown, the result card shows total days lived, total whole weeks, total whole months, and a countdown to the next birthday (including which age you'll be turning). Useful for milestone tracking, trivia, or just satisfying curiosity about a big round number of days.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Uses for an Age Calculator</h2>
+          <p>Verifying legal age thresholds (18, 21, or a jurisdiction's own cutoff), filling in chronological age on medical, school, or government forms, calculating anniversaries or the exact time since an event, and figuring out how long until a milestone birthday.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Genuinely calendar-correct math — not a days-÷-365.25 approximation</li>
+            <li>Handles leap years and variable month lengths automatically</li>
+            <li>Works for any two dates, not just birthdays</li>
+            <li>Free, no login, nothing you enter ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How does this calculator work out age in years, months, and days?</summary>
+            <p>It compares the calendar day, month, and year of your two dates directly — first counting whole years by checking whether the "to" date's month and day have occurred yet this year, then whole months in what's left, then the remaining days. This matches how people actually count birthdays, unlike a simple day-count divided by an average year length.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why isn't age just total days divided by 365.25?</summary>
+            <p>Because calendar months have different lengths (28 to 31 days) and years aren't a fixed number of days, dividing by 365.25 gives an approximate decimal age that rarely lines up with the years/months/days someone would state out loud. Calendar-based subtraction, done correctly, always matches how humans actually describe age.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens with a leap-day (February 29) birthday?</summary>
+            <p>In a non-leap year, February 29 doesn't exist, so this calculator treats March 1 as the equivalent anniversary date — February 28 counts as one day before the birthday has occurred, and March 1 itself completes the year. In an actual leap year, February 29 is used exactly as entered.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this to find the number of days between two arbitrary dates, not just my age?</summary>
+            <p>Yes — the "from" and "to" fields work for any two dates. Leave "to" as today for your current age, or enter any pair of dates to get their exact year/month/day difference plus total days and weeks.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is an age calculator actually used for?</summary>
+            <p>Common uses include verifying legal age (18, 21, or a jurisdiction's own threshold), filling in chronological age on medical, school, or government forms, working out how long until a milestone birthday, and calculating anniversaries or the exact duration since an event.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my date of birth sent anywhere or stored?</summary>
+            <p>No. Every calculation happens locally in your browser with plain JavaScript — no date you enter is ever transmitted to a server, logged, or stored anywhere.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/bmi-calculator" class="tool-card">
+            <span class="tool-icon">⚖️</span>
+            <span class="tool-name">BMI Calculator</span>
+            <span class="tool-desc">Check your body mass index instantly</span>
+          </a>
+          <a href="https://social00.com/tools/gpa-calculator" class="tool-card">
+            <span class="tool-icon">🎓</span>
+            <span class="tool-name">GPA Calculator</span>
+            <span class="tool-desc">Work out your grade point average</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, increases &amp; discounts</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Social00. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

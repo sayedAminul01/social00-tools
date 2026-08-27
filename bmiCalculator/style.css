@@ -1,0 +1,104 @@
+/* BMI Calculator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ── Unit toggle ────────────────────────────────────────────── */
+.unit-toggle {
+  display: flex; gap: .4rem; background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); padding: .3rem; margin-bottom: 1.3rem; max-width: 460px;
+}
+.unit-btn {
+  flex: 1; padding: .55rem .9rem; border-radius: var(--radius-pill);
+  font-size: .84rem; font-weight: 700; color: var(--text-2); transition: all .2s;
+}
+.unit-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.unit-btn:not(.active):hover { color: var(--text); }
+
+/* ── Inputs ─────────────────────────────────────────────────── */
+.unit-panel { display: none; }
+.unit-panel.active { display: block; }
+
+.input-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;
+}
+.input-grid--three { grid-template-columns: 1fr 1fr 1fr; }
+.input-group { display: flex; flex-direction: column; gap: .4rem; }
+.input-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-input {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .7rem .9rem; color: var(--text); font-size: 1rem; transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.2rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+/* ── Result card ────────────────────────────────────────────── */
+.result-card {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+}
+.result-top { display: flex; flex-direction: column; align-items: center; gap: .25rem; text-align: center; margin-bottom: 1.1rem; }
+.result-label { font-size: .74rem; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.result-value { font-family: 'DM Mono', 'Courier New', monospace; font-size: 2.4rem; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.result-category { font-size: 1rem; font-weight: 700; color: var(--text); }
+.result-category.cat-under { color: var(--accent-3); }
+.result-category.cat-normal { color: #22c55e; }
+.result-category.cat-over { color: var(--accent); }
+.result-category.cat-obese { color: #ef4444; }
+
+/* ── BMI gauge ──────────────────────────────────────────────── */
+.bmi-gauge { margin: 1rem 0 1.2rem; }
+.gauge-track {
+  position: relative; display: flex; width: 100%; height: 14px;
+  border-radius: var(--radius-pill); overflow: visible; border: 1px solid var(--border);
+}
+.gauge-seg { display: block; height: 100%; }
+.gauge-seg:first-child { border-top-left-radius: var(--radius-pill); border-bottom-left-radius: var(--radius-pill); }
+.gauge-seg:last-child { border-top-right-radius: var(--radius-pill); border-bottom-right-radius: var(--radius-pill); }
+.gauge-under  { width: 14%; background: var(--accent-3); }
+.gauge-normal { width: 26%; background: #22c55e; }
+.gauge-over   { width: 20%; background: var(--accent); }
+.gauge-obese  { width: 40%; background: #ef4444; }
+
+.gauge-marker {
+  position: absolute; top: 50%; left: 0%;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--text), 0 2px 6px rgba(0,0,0,.4);
+  transform: translate(-50%, -50%); transition: left .3s var(--ease);
+}
+.gauge-labels {
+  display: flex; justify-content: space-between; gap: .5rem; margin-top: .6rem;
+}
+.gauge-labels span {
+  flex: 1; font-size: .68rem; line-height: 1.35; color: var(--text-3); text-align: center;
+}
+
+/* ── Notes ──────────────────────────────────────────────────── */
+.result-note {
+  font-size: .84rem; color: var(--text-2); line-height: 1.55;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .8rem 1rem; margin-bottom: .7rem;
+}
+.result-note--secondary { color: var(--text-3); font-size: .8rem; }
+
+@media (max-width: 640px) {
+  .input-grid--three { grid-template-columns: 1fr 1fr; }
+  .result-value { font-size: 2rem; }
+}

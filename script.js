@@ -328,6 +328,80 @@ const TOOLS = [
     desc: 'Generate descriptive, SEO-friendly alt text for images that improves accessibility and search rankings.',
     url: '/tools/image-alt-text-generator'
   },
+
+  // ── Utility Tools ──────────────────────────────────────────
+  {
+    id: 'qr-code',
+    name: 'QR Code Generator',
+    icon: '📱',
+    category: 'utility',
+    badge: '🆕 New',
+    desc: 'Generate a real, scannable QR code from any text, URL or Wi-Fi network — instantly, in your browser.',
+    url: '/tools/qr-code-generator'
+  },
+  {
+    id: 'password-gen',
+    name: 'Password Generator',
+    icon: '🔐',
+    category: 'utility',
+    badge: '🔒 Secure',
+    desc: 'Generate a strong, truly random password using your browser\'s built-in cryptography. Never sent anywhere.',
+    url: '/tools/password-generator'
+  },
+  {
+    id: 'age-calc',
+    name: 'Age Calculator',
+    icon: '🎂',
+    category: 'utility',
+    badge: '📅 Dates',
+    desc: 'Calculate exact age or the duration between any two dates — years, months, days and more.',
+    url: '/tools/age-calculator'
+  },
+  {
+    id: 'unit-converter',
+    name: 'Unit Converter',
+    icon: '🔁',
+    category: 'utility',
+    badge: '🌐 Convert',
+    desc: 'Convert length, weight, temperature, volume, area, speed and data storage units instantly.',
+    url: '/tools/unit-converter'
+  },
+  {
+    id: 'bmi-calc',
+    name: 'BMI Calculator',
+    icon: '⚖️',
+    category: 'utility',
+    badge: '🩺 Health',
+    desc: 'Calculate your Body Mass Index and see where it falls on the standard WHO scale.',
+    url: '/tools/bmi-calculator'
+  },
+  {
+    id: 'char-counter',
+    name: 'Character Counter',
+    icon: '🔤',
+    category: 'utility',
+    badge: '📏 Limits',
+    desc: 'Check your text against real platform character limits — X, Instagram, SMS, meta descriptions and more, all at once.',
+    url: '/tools/character-counter'
+  },
+  {
+    id: 'loan-emi',
+    name: 'Loan EMI Calculator',
+    icon: '🏦',
+    category: 'utility',
+    badge: '💰 Finance',
+    desc: 'Calculate your monthly loan installment, total interest and full amortization breakdown.',
+    url: '/tools/loan-emi-calculator'
+  },
+  {
+    id: 'compound-interest',
+    name: 'Compound Interest Calculator',
+    icon: '📈',
+    category: 'utility',
+    badge: '💰 Finance',
+    desc: 'Project compound growth of an investment or deposit, with optional regular contributions.',
+    url: '/tools/compound-interest-calculator'
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -346,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initThemeToggle();
   renderTools();          // Draw all tool cards from data
+  syncRealCounts();       // Derive stats/category counts from real data
   initFilterBar();        // Category filter tabs
   initSearchBar();        // Navbar search
   initMobileSearch();     // Mobile search
@@ -431,7 +506,36 @@ function renderTools(filter = 'all', query = '') {
 }
 
 function categoryLabel(cat) {
-  return { youtube:'YouTube', instagram:'Instagram', writing:'AI Writing', image:'Image', student:'Student', seo:'SEO' }[cat] || cat;
+  return { youtube:'YouTube', instagram:'Instagram', writing:'AI Writing', image:'Image', student:'Student', seo:'SEO', utility:'Utility' }[cat] || cat;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   REAL COUNTS — derive every displayed number from the actual
+   TOOLS array so stats/category counts can never go stale again.
+   ═══════════════════════════════════════════════════════════════ */
+function syncRealCounts() {
+  const total = TOOLS.length;
+  const perCategory = {};
+  TOOLS.forEach(t => { perCategory[t.category] = (perCategory[t.category] || 0) + 1; });
+  const categoryCount = Object.keys(perCategory).length;
+
+  const totalToolsEl = document.getElementById('stat-total-tools');
+  if (totalToolsEl) totalToolsEl.setAttribute('data-target', String(total));
+
+  const totalCatEl = document.getElementById('stat-total-categories');
+  if (totalCatEl) totalCatEl.setAttribute('data-target', String(categoryCount));
+
+  const pillCountEl = document.getElementById('hero-pill-count');
+  if (pillCountEl) pillCountEl.textContent = String(total);
+
+  const headingCountEl = document.getElementById('tools-heading-count');
+  if (headingCountEl) headingCountEl.textContent = String(total);
+
+  document.querySelectorAll('[data-count-for]').forEach(el => {
+    const cat = el.getAttribute('data-count-for');
+    const n = perCategory[cat] || 0;
+    el.textContent = `${n} tool${n === 1 ? '' : 's'}`;
+  });
 }
 
 /* ═══════════════════════════════════════════════════════════════

@@ -46,6 +46,16 @@
 /tools/pdf-to-jpg                     /pdfToJpgConverter/index.html            200
 /tools/image-alt-text-generator       /imageAltTextGenerator/index.html        200
 
+# ── New tools (batch 3 — Utility) ──────────────────────────────────
+/tools/qr-code-generator              /qrCodeGenerator/index.html              200
+/tools/password-generator             /passwordGenerator/index.html            200
+/tools/age-calculator                 /ageCalculator/index.html                200
+/tools/unit-converter                 /unitConverter/index.html                200
+/tools/bmi-calculator                 /bmiCalculator/index.html                200
+/tools/character-counter              /characterCounter/index.html             200
+/tools/loan-emi-calculator            /loanEmiCalculator/index.html            200
+/tools/compound-interest-calculator   /compoundInterestCalculator/index.html   200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200

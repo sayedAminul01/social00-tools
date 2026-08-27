@@ -48,6 +48,11 @@ window.AFFILIATE_RECOMMENDATIONS = {
     { name: 'Semrush', blurb: 'Full keyword-volume, backlink and competitor research suite.', url: 'https://www.semrush.com/' },
     { name: 'Ahrefs', blurb: 'Industry-standard backlink index and keyword explorer.', url: 'https://ahrefs.com/' },
     { name: 'Google Search Console', blurb: 'Free — track how your pages actually perform in Google search.', url: 'https://search.google.com/search-console' }
+  ],
+  utility: [
+    { name: 'Bitwarden', blurb: 'Free, open-source password manager to actually store what you generate here.', url: 'https://bitwarden.com/' },
+    { name: 'Google Authenticator', blurb: 'Free two-factor authentication app — pairs well with a strong password.', url: 'https://www.google.com/landing/2step/' },
+    { name: 'Wise', blurb: 'Real exchange rates for currency conversion and international transfers.', url: 'https://wise.com/' }
   ]
 };
 

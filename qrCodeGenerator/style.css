@@ -1,0 +1,93 @@
+/* QR Code Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-textarea {
+  width: 100%; resize: vertical; min-height: 70px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1rem;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  transition: border-color .2s;
+}
+.tool-textarea:focus { border-color: var(--accent); }
+
+.input-meta { font-size: .78rem; color: var(--text-3); margin: .5rem 0 0; }
+
+.preset-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .55rem;
+  margin: 1rem 0 .3rem;
+}
+.preset-label { font-size: .78rem; color: var(--text-3); font-weight: 700; margin-right: .1rem; }
+.btn-preset {
+  padding: .4rem .85rem; border-radius: var(--radius-pill); font-weight: 600; font-size: .82rem;
+  border: 1px solid var(--border-2); color: var(--text-2); background: var(--bg-2);
+  transition: all .2s; cursor: pointer;
+}
+.btn-preset:hover { border-color: var(--accent); color: var(--text); }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+
+.color-picker-wrap {
+  display: flex; align-items: center; gap: .55rem;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .35rem .6rem;
+}
+.color-picker-wrap input[type="color"] {
+  width: 34px; height: 34px; border: none; border-radius: 8px; background: none;
+  padding: 0; cursor: pointer; flex-shrink: 0;
+}
+.color-picker-wrap input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+.color-picker-wrap input[type="color"]::-webkit-color-swatch { border: 1px solid var(--border-2); border-radius: 8px; }
+.color-picker-wrap input[type="color"]::-moz-color-swatch { border: 1px solid var(--border-2); border-radius: 8px; }
+.color-hex {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .84rem; font-weight: 600;
+  color: var(--text-2); letter-spacing: .02em;
+}
+
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .55rem .7rem; color: var(--text); font-size: .86rem;
+}
+
+.contrast-warning {
+  font-size: .82rem; font-weight: 600; color: #d97706;
+  background: rgba(217,119,6,.12); border: 1px solid rgba(217,119,6,.3);
+  border-radius: var(--radius); padding: .6rem .85rem; margin: 0 0 1rem;
+}
+
+.qr-preview-wrap { display: flex; justify-content: center; margin-bottom: 1.2rem; }
+.qr-canvas-box {
+  background: #ffffff; border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1rem; display: inline-flex; align-items: center; justify-content: center;
+}
+#qrCanvas { display: block; max-width: 100%; height: auto; image-rendering: pixelated; }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s; cursor: pointer;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

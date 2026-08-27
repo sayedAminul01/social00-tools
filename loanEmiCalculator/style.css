@@ -1,0 +1,110 @@
+/* Loan EMI Calculator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ── Inputs ───────────────────────────────────────────────── */
+.input-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.input-group { display: flex; flex-direction: column; gap: .4rem; }
+.input-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.calc-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .7rem .85rem; color: var(--text); font-size: .98rem;
+  transition: border-color .2s;
+}
+.calc-input:focus { border-color: var(--accent); }
+
+.tenure-row { display: flex; gap: .5rem; align-items: stretch; }
+.tenure-row .calc-input { flex: 1; min-width: 0; }
+.tenure-toggle {
+  display: flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; flex-shrink: 0;
+}
+.tenure-btn {
+  padding: 0 .85rem; font-size: .82rem; font-weight: 700; color: var(--text-2);
+  background: var(--bg-2); border-right: 1px solid var(--border); transition: background .2s, color .2s;
+  white-space: nowrap;
+}
+.tenure-btn:last-child { border-right: none; }
+.tenure-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+
+@media (max-width: 720px) {
+  .input-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Actions ──────────────────────────────────────────────── */
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: .5rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+/* ── Results ──────────────────────────────────────────────── */
+.result-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+.result-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+.stat-card {
+  display: flex; flex-direction: column; gap: .35rem;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.stat-label { font-size: .72rem; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.stat-value { font-family: 'DM Mono', 'Courier New', monospace; font-size: 1.3rem; font-weight: 700; color: var(--accent); word-break: break-word; }
+
+@media (max-width: 720px) {
+  .result-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Principal vs Interest split visual ──────────────────── */
+.split-visual { margin-bottom: 1.4rem; }
+.split-bar {
+  display: flex; width: 100%; height: 14px; border-radius: var(--radius-pill);
+  overflow: hidden; background: var(--bg-3); margin-bottom: .7rem;
+}
+.split-fill { height: 100%; transition: width .3s var(--ease); }
+.split-principal { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.split-interest { background: var(--accent-3); }
+.split-legend { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+.legend-item { display: flex; align-items: center; gap: .45rem; font-size: .86rem; color: var(--text-2); }
+.legend-item strong { color: var(--text); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot-principal { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.dot-interest { background: var(--accent-3); }
+
+/* ── Amortization table ───────────────────────────────────── */
+.amortization-section {
+  border: 1px solid var(--border); border-radius: var(--radius); padding: .95rem 1.1rem;
+  margin-bottom: 1.2rem; transition: border-color .2s;
+}
+.amortization-section[open] { border-color: var(--border-2); }
+.amortization-section summary { font-weight: 700; font-size: .94rem; display: flex; justify-content: space-between; align-items: center; }
+.amortization-section summary::after { content: '+'; color: var(--text-3); font-size: 1.2rem; flex-shrink: 0; }
+.amortization-section[open] summary::after { content: '−'; }
+
+.amort-table-wrap { overflow-x: auto; margin-top: 1rem; }
+.amort-table { width: 100%; border-collapse: collapse; font-size: .86rem; min-width: 520px; }
+.amort-table th, .amort-table td { padding: .55rem .7rem; text-align: right; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.amort-table th:first-child, .amort-table td:first-child { text-align: left; }
+.amort-table thead th { color: var(--text-3); font-size: .74rem; text-transform: uppercase; letter-spacing: .03em; font-weight: 700; }
+.amort-table tbody td { color: var(--text-2); font-family: 'DM Mono', 'Courier New', monospace; }
+.amort-table tbody td:first-child { color: var(--text); font-family: var(--font-body); font-weight: 700; }
+.amort-table tbody tr:last-child td { border-bottom: none; }
+
+.result-disclaimer { color: var(--text-3); font-size: .82rem; margin-bottom: 1.1rem; }

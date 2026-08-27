@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Character Counter – Check Text Against Every Platform Limit | Social00</title>
+  <meta name="description" content="Free character counter that checks your text against X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google's real character limits — all at once. No sign-up." />
+  <meta name="keywords" content="character counter, character limit checker, twitter character count, sms character limit, instagram caption limit, facebook character limit, seo meta description length" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/character-counter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Character Counter – Check Text Against Every Platform Limit | Social00" />
+  <meta property="og:description" content="Paste your text once and instantly see if it fits X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google's search snippet limits — all at the same time." />
+  <meta property="og:url" content="https://social00.com/tools/character-counter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Character Counter",
+    "url": "https://social00.com/tools/character-counter",
+    "description": "Free online character counter that checks your text against real, current character limits for X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google search snippets, simultaneously.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Character Counter", "item": "https://social00.com/tools/character-counter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How is Character Counter different from Word Counter?", "acceptedAnswer": { "@type": "Answer", "text": "Word Counter focuses on general writing stats — words, sentences, paragraphs and reading time. Character Counter checks the exact character count of your text against real limits for X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google search snippets, all at the same time." } },
+      { "@type": "Question", "name": "Why do platforms use different character limits?", "acceptedAnswer": { "@type": "Answer", "text": "Each limit reflects that platform's own technical or design history — X/Twitter's 280 came from the old 160-character SMS standard, Instagram allows long captions for storytelling, and Google's snippet cutoff is driven by pixel width in search results, not a fixed character rule." } },
+      { "@type": "Question", "name": "What's the difference between Facebook's \"See More\" limit and its post limit?", "acceptedAnswer": { "@type": "Answer", "text": "Facebook truncates posts in the news feed behind a \"See More\" link at roughly 477 characters, but the actual maximum length allowed for a single post is far higher, around 63,206 characters. Both limits are shown separately on this page since confusing them is a common mistake." } },
+      { "@type": "Question", "name": "Why does my SMS card switch from 160 to 70 characters?", "acceptedAnswer": { "@type": "Answer", "text": "A standard SMS segment holds 160 characters using GSM-7 encoding, but as soon as your message contains a character outside that basic alphabet — most emoji, and many non-Latin scripts — carriers switch the whole message to Unicode encoding, which cuts each segment down to 70 characters." } },
+      { "@type": "Question", "name": "Is 155-160 characters a hard limit for Google meta descriptions?", "acceptedAnswer": { "@type": "Answer", "text": "No — it's a soft guideline. Google truncates search snippets based on pixel width, not a fixed character count, so the exact cutoff varies by device and by which characters you use. Staying near 155-160 characters is a safe practical target, not a strict rule." } },
+      { "@type": "Question", "name": "Is my text uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. All counting happens locally in your browser with JavaScript — nothing you type is ever sent to a server or stored outside your own device." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Character Counter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔤 Character Counter</h1>
+        <p class="hero-sub">Not general writing stats — that's Word Counter. This checks your exact character count against real, current limits for X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google search snippets, all at once, so you know instantly whether your text fits.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="textInput" class="tool-label">Your text</label>
+          <textarea id="textInput" class="tool-textarea" rows="5" placeholder="Paste a caption, post, meta description or message here…" autocomplete="off" spellcheck="true"></textarea>
+
+          <div class="summary-stats" aria-live="polite">
+            <div class="summary-stat">
+              <span class="summary-value" id="charWithSpaces">0</span>
+              <span class="summary-label">Characters</span>
+            </div>
+            <div class="summary-stat">
+              <span class="summary-value" id="charNoSpaces">0</span>
+              <span class="summary-label">No Spaces</span>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="copyBtn">Copy Text</button>
+          </div>
+
+          <h2 class="platform-heading">Check Against Platform Limits</h2>
+          <div class="platform-grid" id="platformGrid">
+
+            <div class="platform-card" data-platform="x">
+              <div class="platform-card-top">
+                <span class="platform-name">X / Twitter</span>
+                <span class="platform-limit-badge" id="badge-x">280</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-x"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-x">0 / 280</span>
+                <span class="platform-status" id="status-x">280 left</span>
+              </div>
+            </div>
+
+            <div class="platform-card" data-platform="instagram">
+              <div class="platform-card-top">
+                <span class="platform-name">Instagram Caption</span>
+                <span class="platform-limit-badge" id="badge-instagram">2,200</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-instagram"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-instagram">0 / 2,200</span>
+                <span class="platform-status" id="status-instagram">2,200 left</span>
+              </div>
+            </div>
+
+            <div class="platform-card" data-platform="fb-see-more">
+              <div class="platform-card-top">
+                <span class="platform-name">Facebook (before "See More")</span>
+                <span class="platform-limit-badge" id="badge-fb-see-more">~477</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-fb-see-more"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-fb-see-more">0 / 477</span>
+                <span class="platform-status" id="status-fb-see-more">477 left</span>
+              </div>
+              <p class="platform-note">Approximate feed-truncation point — not a hard cutoff.</p>
+            </div>
+
+            <div class="platform-card" data-platform="fb-max">
+              <div class="platform-card-top">
+                <span class="platform-name">Facebook (max post length)</span>
+                <span class="platform-limit-badge" id="badge-fb-max">63,206</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-fb-max"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-fb-max">0 / 63,206</span>
+                <span class="platform-status" id="status-fb-max">63,206 left</span>
+              </div>
+            </div>
+
+            <div class="platform-card" data-platform="seo">
+              <div class="platform-card-top">
+                <span class="platform-name">Google / SEO Meta Description</span>
+                <span class="platform-limit-badge" id="badge-seo">~160</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-seo"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-seo">0 / 160</span>
+                <span class="platform-status" id="status-seo">160 left</span>
+              </div>
+              <p class="platform-note">Soft guideline — Google truncates snippets by pixel width, not a strict character count.</p>
+            </div>
+
+            <div class="platform-card" data-platform="sms">
+              <div class="platform-card-top">
+                <span class="platform-name">SMS / Text Message (1 segment)</span>
+                <span class="platform-limit-badge" id="badge-sms">160</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-sms"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-sms">0 / 160</span>
+                <span class="platform-status" id="status-sms">160 left</span>
+              </div>
+              <p class="platform-note" id="note-sms">GSM-7 encoding detected — standard 160-character segment.</p>
+            </div>
+
+            <div class="platform-card" data-platform="linkedin">
+              <div class="platform-card-top">
+                <span class="platform-name">LinkedIn Post</span>
+                <span class="platform-limit-badge" id="badge-linkedin">~3,000</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-linkedin"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-linkedin">0 / 3,000</span>
+                <span class="platform-status" id="status-linkedin">3,000 left</span>
+              </div>
+            </div>
+
+            <div class="platform-card" data-platform="yt-title">
+              <div class="platform-card-top">
+                <span class="platform-name">YouTube Video Title</span>
+                <span class="platform-limit-badge" id="badge-yt-title">100</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-yt-title"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-yt-title">0 / 100</span>
+                <span class="platform-status" id="status-yt-title">100 left</span>
+              </div>
+            </div>
+
+            <div class="platform-card" data-platform="yt-desc">
+              <div class="platform-card-top">
+                <span class="platform-name">YouTube Description</span>
+                <span class="platform-limit-badge" id="badge-yt-desc">~5,000</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" id="fill-yt-desc"></div></div>
+              <div class="platform-card-bottom">
+                <span class="platform-count" id="count-yt-desc">0 / 5,000</span>
+                <span class="platform-status" id="status-yt-desc">5,000 left</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Character Counter vs. Word Counter — What's the Difference?</h2>
+          <p>Word Counter is about general writing stats: word count, sentence count, paragraphs and estimated reading time. Character Counter is a different job — it's about <strong>platform compliance</strong>. It doesn't tell you how long your text takes to read; it tells you, per platform, whether your exact character count fits inside X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube or Google's real limits, all at the same time.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Every Platform Has a Different Limit</h2>
+          <p>Each limit traces back to that platform's own history. X/Twitter's 280 characters descends from the 160-character SMS standard (originally 140, doubled in 2017). Instagram allows up to 2,200 characters because captions are meant to support longer storytelling. Google's search snippet cutoff isn't a character rule at all — it's driven by pixel width, which is why the "limit" is only ever an estimate.</p>
+        </article>
+        <article class="content-block">
+          <h2>Facebook's Two Limits: "See More" vs. Maximum Post Length</h2>
+          <p>Facebook actually has two different limits, and conflating them is a common mistake. In the news feed, a post gets truncated behind a "See More" link at roughly <strong>477 characters</strong>. But the hard maximum length Facebook allows for a single post is far higher — around <strong>63,206 characters</strong>. This tool shows both, clearly labeled, so you know which one actually matters for what you're posting.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Hidden SMS Rule: GSM-7 vs. Unicode</h2>
+          <p>A single SMS segment holds 160 characters — but only if every character is in the GSM-7 alphabet (basic Latin letters, digits and a handful of symbols). The moment your message contains a character outside that set — most emoji, and many non-Latin scripts — carriers switch the entire message to Unicode encoding, which drops the segment size to just <strong>70 characters</strong>. This tool detects that automatically and switches the SMS card's limit for you.</p>
+        </article>
+        <article class="content-block">
+          <h2>Google Meta Descriptions Aren't a Hard Limit</h2>
+          <p>The commonly cited "155-160 character" meta description limit is a soft guideline, not a rule enforced by Google. Search snippets are truncated based on how much horizontal pixel space the rendered text takes up, so the real cutoff shifts depending on which letters you use and which device is displaying the result. Staying near 160 characters is a safe target, not a guarantee.</p>
+        </article>
+        <article class="content-block">
+          <h2>Built for Speed and Privacy</h2>
+          <ul class="feature-list">
+            <li>Nine platform limits checked simultaneously — no dropdown, no switching</li>
+            <li>Automatic GSM-7 detection for accurate SMS segment limits</li>
+            <li>Facebook's two limits shown separately, correctly labeled</li>
+            <li>Everything runs locally — nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How is Character Counter different from Word Counter?</summary>
+            <p>Word Counter focuses on general writing stats — words, sentences, paragraphs and reading time. Character Counter checks the exact character count of your text against real limits for X/Twitter, Instagram, Facebook, SMS, LinkedIn, YouTube and Google search snippets, all at the same time.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why do platforms use different character limits?</summary>
+            <p>Each limit reflects that platform's own technical or design history — X/Twitter's 280 came from the old 160-character SMS standard, Instagram allows long captions for storytelling, and Google's snippet cutoff is driven by pixel width in search results, not a fixed character rule.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's the difference between Facebook's "See More" limit and its post limit?</summary>
+            <p>Facebook truncates posts in the news feed behind a "See More" link at roughly 477 characters, but the actual maximum length allowed for a single post is far higher, around 63,206 characters. Both limits are shown separately on this page since confusing them is a common mistake.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does my SMS card switch from 160 to 70 characters?</summary>
+            <p>A standard SMS segment holds 160 characters using GSM-7 encoding, but as soon as your message contains a character outside that basic alphabet — most emoji, and many non-Latin scripts — carriers switch the whole message to Unicode encoding, which cuts each segment down to 70 characters.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is 155-160 characters a hard limit for Google meta descriptions?</summary>
+            <p>No — it's a soft guideline. Google truncates search snippets based on pixel width, not a fixed character count, so the exact cutoff varies by device and by which characters you use. Staying near 155-160 characters is a safe practical target, not a strict rule.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my text uploaded anywhere?</summary>
+            <p>No. All counting happens locally in your browser with JavaScript — nothing you type is ever sent to a server or stored outside your own device.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Word Counter</span>
+            <span class="tool-desc">Count words, sentences &amp; reading time</span>
+          </a>
+          <a href="https://social00.com/tools/tweet-thread-writer" class="tool-card">
+            <span class="tool-icon">🧵</span>
+            <span class="tool-name">Tweet Thread Writer</span>
+            <span class="tool-desc">Split long text into a numbered thread</span>
+          </a>
+          <a href="https://social00.com/tools/seo-meta-tag-generator" class="tool-card">
+            <span class="tool-icon">🔍</span>
+            <span class="tool-name">SEO Meta Tag Generator</span>
+            <span class="tool-desc">Title &amp; description tags with SERP preview</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
