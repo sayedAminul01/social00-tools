@@ -1,0 +1,102 @@
+/* Text Diff Checker — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.diff-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+@media (max-width: 760px) {
+  .diff-inputs { grid-template-columns: 1fr; }
+}
+
+.diff-input-col { display: flex; flex-direction: column; }
+
+.tool-textarea {
+  width: 100%; resize: vertical; min-height: 60px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-textarea:focus { border-color: var(--accent); }
+
+.diff-textarea {
+  font-family: 'DM Mono', 'Courier New', monospace;
+  font-size: .92rem;
+  line-height: 1.5;
+}
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-toggle {
+  display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: var(--text-2);
+  cursor: pointer;
+}
+.option-toggle input { width: 16px; height: 16px; accent-color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.diff-summary {
+  font-size: .88rem; font-weight: 700; color: var(--text-2);
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .7rem 1rem; margin-bottom: 1rem;
+}
+.diff-summary .added-count { color: #34c759; }
+.diff-summary .removed-count { color: #ff5c5c; }
+
+.diff-output {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: auto; max-height: 520px;
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .88rem; line-height: 1.6;
+}
+.diff-output:empty { display: none; }
+
+.diff-line {
+  display: flex; white-space: pre-wrap; word-break: break-word;
+  padding: .05rem .9rem;
+  border-left: 3px solid transparent;
+}
+.diff-line-marker { display: inline-block; width: 1.3em; flex-shrink: 0; user-select: none; color: var(--text-3); }
+.diff-line-text { flex: 1; }
+
+.diff-line--unchanged { color: var(--text-2); }
+
+.diff-line--removed {
+  background: rgba(255, 92, 92, 0.12);
+  border-left-color: #ff5c5c;
+  color: #ff8080;
+}
+.diff-line--removed .diff-line-marker { color: #ff5c5c; }
+
+.diff-line--added {
+  background: rgba(52, 199, 89, 0.12);
+  border-left-color: #34c759;
+  color: #5fda85;
+}
+.diff-line--added .diff-line-marker { color: #34c759; }
+
+.diff-empty-state {
+  padding: 1.5rem 1rem; text-align: center; color: var(--text-3); font-family: inherit;
+}

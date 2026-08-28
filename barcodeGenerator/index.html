@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barcode Generator – Free Code 128 Barcode Maker | Social00</title>
+  <meta name="description" content="Free online barcode generator. Create real, scannable Code 128 barcodes from any text or numbers instantly. Download as PNG, 100% private." />
+  <meta name="keywords" content="barcode generator, code 128 generator, code128 barcode, free barcode maker, generate barcode online, scannable barcode" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/barcode-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Barcode Generator – Free Code 128 Barcode Maker | Social00" />
+  <meta property="og:description" content="Create real, scannable Code 128 barcodes from any text or numbers instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/barcode-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Barcode Generator",
+    "url": "https://social00.com/tools/barcode-generator",
+    "description": "Free online barcode generator that creates real, scannable Code 128 barcodes from any text or numbers.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Barcode Generator", "item": "https://social00.com/tools/barcode-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Code 128?", "acceptedAnswer": { "@type": "Answer", "text": "Code 128 is a high-density 1D barcode symbology that encodes text using variable-width bars and spaces. Each character maps to an exact 11-module bar pattern from a fixed lookup table, and a checksum symbol protects the whole barcode from being misread." } },
+      { "@type": "Question", "name": "Why does this tool use Code Set B specifically?", "acceptedAnswer": { "@type": "Answer", "text": "Code 128 has three character sets — A, B and C — and a full implementation can switch between them mid-barcode. Code Set B covers the entire printable ASCII range (32-126), which is every letter, digit and common punctuation mark, making it the most versatile choice for general text and alphanumeric barcodes without needing any set-switching." } },
+      { "@type": "Question", "name": "Can I use this for retail product barcodes like UPC or EAN?", "acceptedAnswer": { "@type": "Answer", "text": "No — retail product barcodes use UPC-A or EAN-13, a different, numeric-only symbology with its own fixed structure. This tool generates Code 128 barcodes, which are widely used for shipping labels, inventory and internal tracking, but they won't scan as a UPC/EAN product code at a retail checkout." } },
+      { "@type": "Question", "name": "What characters can I encode?", "acceptedAnswer": { "@type": "Answer", "text": "Code Set B supports the full printable ASCII range: letters (A-Z, a-z), digits (0-9), space, and standard punctuation and symbols from ! through ~. Characters outside that range, such as emoji or most non-Latin scripts, aren't supported and will be rejected with a warning instead of producing a broken barcode." } },
+      { "@type": "Question", "name": "Does this barcode generator upload my data anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. The Code 128 encoder runs entirely in JavaScript in your browser — your text is never sent to a server. Nothing you type here is ever uploaded." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many barcodes you generate. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Barcode Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📊 Barcode Generator</h1>
+        <p class="hero-sub">Turn any text or numbers into a real, scannable Code 128 barcode — instantly, in your browser. Nothing is ever uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="barcodeInput" class="tool-label">Text or numbers to encode</label>
+          <input type="text" id="barcodeInput" class="tool-input" placeholder="e.g. HELLO123" autocomplete="off" spellcheck="false" />
+          <p class="input-meta" id="inputMeta">0 characters · Code 128, Set B</p>
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="sizeSelect">Bar size</label>
+              <select id="sizeSelect" class="tool-select">
+                <option value="standard" selected>Standard</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <label class="option-toggle">
+              <input type="checkbox" id="showText" checked />
+              <span>Show text below barcode</span>
+            </label>
+          </div>
+
+          <div class="barcode-preview-wrap">
+            <div class="barcode-canvas-box">
+              <canvas id="barcodeCanvas" width="300" height="120" aria-label="Generated barcode preview"></canvas>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="downloadBtn">Download PNG</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How Code 128 Barcodes Work</h2>
+          <p>A Code 128 barcode is a sequence of black bars and white spaces of varying width, grouped into <strong>modules</strong> — the narrowest unit of width the barcode uses. Every character you type maps to one of 103 possible symbol values, and each symbol value has an exact, standardized 11-module bar/space pattern. Unlike a QR code, there's no error-correction grid or masking pattern to compute — Code 128 is deterministic, but the pattern table and checksum still have to be exactly right for a scanner to read it.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Code Set B</h2>
+          <p>Code 128 actually defines three character sets — A, B and C — and a full encoder can switch between them mid-barcode to pack digits more densely. This tool implements <strong>Code Set B</strong> on its own, which covers the entire printable ASCII range (32-126): every uppercase and lowercase letter, digit, space and common punctuation mark. That makes it the most versatile of the three for general alphanumeric barcodes, without any of the complexity of set-switching.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Checksum That Catches Misreads</h2>
+          <p>Right before the stop pattern, every Code 128 barcode carries a checksum symbol computed from a weighted sum: the Start Code's value, plus each data character's symbol value multiplied by its position (1st, 2nd, 3rd...), all summed and taken modulo 103. A scanner recomputes this same sum from what it read and compares it — if a smudge or a bad angle changes even one bar, the checksum won't match and the scan is rejected instead of silently returning wrong data.</p>
+        </article>
+        <article class="content-block">
+          <h2>Real-World Uses — and What This Isn't For</h2>
+          <p>Code 128 is everywhere in shipping and logistics — package labels, pallet tags, inventory and warehouse tracking, ID badges, and internal asset tags all lean on its density and alphanumeric flexibility. It's worth being upfront about scope, though: the barcode on a can of soup at a retail checkout is <strong>UPC-A</strong> or <strong>EAN-13</strong>, a different, numeric-only symbology with its own fixed structure. This tool generates Code 128, not retail product barcodes.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Generator Works</h2>
+          <p>Typing text builds the full symbol sequence — Start Code B, one symbol per character, the checksum symbol, and the stop pattern — entirely in JavaScript, with no server call and no third-party barcode API. The resulting bar widths are drawn straight onto a canvas with a blank quiet zone on each side, which scanners rely on to find the edges of the code, and the human-readable text can be printed underneath as a fallback if the scan ever fails.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Real Code 128 Set B encoding, not a lookalike image</li>
+            <li>Instant, live preview as you type — no page reloads</li>
+            <li>Standard and large bar-size presets for different print sizes</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is Code 128?</summary>
+            <p>Code 128 is a high-density 1D barcode symbology that encodes text using variable-width bars and spaces. Each character maps to an exact 11-module bar pattern from a fixed lookup table, and a checksum symbol protects the whole barcode from being misread.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does this tool use Code Set B specifically?</summary>
+            <p>Code 128 has three character sets — A, B and C — and a full implementation can switch between them mid-barcode. Code Set B covers the entire printable ASCII range (32-126), which is every letter, digit and common punctuation mark, making it the most versatile choice for general text and alphanumeric barcodes without needing any set-switching.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this for retail product barcodes like UPC or EAN?</summary>
+            <p>No — retail product barcodes use UPC-A or EAN-13, a different, numeric-only symbology with its own fixed structure. This tool generates Code 128 barcodes, which are widely used for shipping labels, inventory and internal tracking, but they won't scan as a UPC/EAN product code at a retail checkout.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What characters can I encode?</summary>
+            <p>Code Set B supports the full printable ASCII range: letters (A-Z, a-z), digits (0-9), space, and standard punctuation and symbols from ! through ~. Characters outside that range, such as emoji or most non-Latin scripts, aren't supported and will be rejected with a warning instead of producing a broken barcode.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this barcode generator upload my data anywhere?</summary>
+            <p>No. The Code 128 encoder runs entirely in JavaScript in your browser — your text is never sent to a server. Nothing you type here is ever uploaded.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on how many barcodes you generate. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/qr-code-generator" class="tool-card">
+            <span class="tool-icon">📱</span>
+            <span class="tool-name">QR Code Generator</span>
+            <span class="tool-desc">Scannable QR codes for URLs &amp; text</span>
+          </a>
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">🖼️</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images right in your browser</span>
+          </a>
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink image file size, keep quality</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

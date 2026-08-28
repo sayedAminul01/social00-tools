@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XML Sitemap Generator – Free Online Sitemap.xml Creator | Social00</title>
+  <meta name="description" content="Free XML sitemap generator. Paste your URLs and instantly build a valid sitemap.xml — dedupe, validate and XML-escape, then copy or download." />
+  <meta name="keywords" content="xml sitemap generator, sitemap.xml generator, sitemap creator, seo sitemap tool, google sitemap generator, sitemap maker" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/xml-sitemap-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="XML Sitemap Generator – Free Online Sitemap.xml Creator | Social00" />
+  <meta property="og:description" content="Paste your URLs and instantly build a valid, properly-escaped sitemap.xml. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/xml-sitemap-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "XML Sitemap Generator",
+    "url": "https://social00.com/tools/xml-sitemap-generator",
+    "description": "Free online XML sitemap generator that turns a pasted list of URLs into a valid, properly-escaped sitemap.xml file.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "XML Sitemap Generator", "item": "https://social00.com/tools/xml-sitemap-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is an XML sitemap for?", "acceptedAnswer": { "@type": "Answer", "text": "An XML sitemap lists your site's URLs so search engines can discover pages, especially ones with weak internal linking. It doesn't directly boost rankings — it just helps crawlers find and understand your content faster." } },
+      { "@type": "Question", "name": "Do changefreq and priority affect my ranking?", "acceptedAnswer": { "@type": "Answer", "text": "Not directly. Google has stated it treats <changefreq> and <priority> as hints it may largely ignore, since it independently determines how often to recrawl a page and how important that page is." } },
+      { "@type": "Question", "name": "How many URLs can one sitemap file hold?", "acceptedAnswer": { "@type": "Answer", "text": "Per the sitemaps.org protocol, a single sitemap file is limited to 50,000 URLs and 50MB uncompressed. Larger sites split their URLs across multiple sitemap files and list those files in a sitemap index file." } },
+      { "@type": "Question", "name": "Where do I put my sitemap and how do I submit it?", "acceptedAnswer": { "@type": "Answer", "text": "Upload sitemap.xml to your site's root, e.g. example.com/sitemap.xml, then submit it in Google Search Console or reference it with a Sitemap: line in your robots.txt file." } },
+      { "@type": "Question", "name": "Does this tool send my URLs anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Parsing, validation and XML generation all run locally in your browser. Your URL list is never uploaded or transmitted anywhere." } },
+      { "@type": "Question", "name": "Is this tool free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on how many sitemaps you generate." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / XML Sitemap Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🗺️ XML Sitemap Generator</h1>
+        <p class="hero-sub">Paste your URLs, get a valid, properly-escaped sitemap.xml — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="baseDomain" class="tool-label">Base domain <span class="label-hint">(prepended to any line that isn't already a full URL)</span></label>
+          <input type="text" id="baseDomain" class="tool-input" value="https://example.com" placeholder="https://example.com" autocomplete="off" spellcheck="false" />
+
+          <label for="urlInput" class="tool-label" style="margin-top:1.1rem;">URLs — one per line</label>
+          <textarea id="urlInput" class="tool-textarea" rows="10" placeholder="/about&#10;/contact?ref=home&#10;https://example.com/full-url&#10;/pricing" autocomplete="off" spellcheck="false"></textarea>
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="changefreq">Change frequency</label>
+              <select id="changefreq" class="tool-select">
+                <option value="">Don't include</option>
+                <option value="always">Always</option>
+                <option value="hourly">Hourly</option>
+                <option value="daily">Daily</option>
+                <option value="weekly" selected>Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+                <option value="never">Never</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label for="priority">Priority</label>
+              <select id="priority" class="tool-select">
+                <option value="">Don't include</option>
+                <option value="1.0">1.0</option>
+                <option value="0.9">0.9</option>
+                <option value="0.8" selected>0.8</option>
+                <option value="0.7">0.7</option>
+                <option value="0.6">0.6</option>
+                <option value="0.5">0.5</option>
+                <option value="0.4">0.4</option>
+                <option value="0.3">0.3</option>
+                <option value="0.2">0.2</option>
+                <option value="0.1">0.1</option>
+                <option value="0.0">0.0</option>
+              </select>
+            </div>
+            <label class="option-toggle">
+              <input type="checkbox" id="includeLastmod" />
+              <span>Include lastmod (today's date)</span>
+            </label>
+          </div>
+
+          <p class="url-summary" id="urlSummary" aria-live="polite">Parsed 0 lines → 0 valid URLs, 0 duplicates removed, 0 invalid skipped</p>
+
+          <div class="invalid-box" id="invalidBox" hidden>
+            <span class="invalid-box-title">Skipped invalid lines:</span>
+            <ul id="invalidList"></ul>
+          </div>
+
+          <p class="limit-warning" id="limitWarning" hidden></p>
+
+          <pre class="sitemap-output" id="sitemapOutput" aria-live="polite">&lt;!-- Add some URLs above to generate your sitemap --&gt;</pre>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-copy" id="copyXmlBtn">Copy XML</button>
+            <button class="btn-copy" id="downloadBtn">Download sitemap.xml</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is an XML Sitemap?</h2>
+          <p>An XML sitemap is a file that lists the URLs on your site so search engines can find them more easily. Each entry can carry a last-modified date, a change-frequency hint, and a relative priority. It's a discovery aid for crawlers, not a piece of content that visitors ever see.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Sitemaps Help — And What They Don't Do</h2>
+          <p>The real benefit of a sitemap is helping search engines discover pages that have weak internal linking — new posts, deep archive pages, or pages buried behind JavaScript navigation. It is <strong>not</strong> a ranking-boost mechanism: Google still evaluates content quality, links, and relevance completely independently of whether a URL appears in your sitemap.</p>
+        </article>
+        <article class="content-block">
+          <h2>The 50,000-URL / 50MB Limit</h2>
+          <p>Per the official sitemaps.org protocol, a single sitemap file cannot list more than <strong>50,000 URLs</strong> and cannot exceed <strong>50MB uncompressed</strong>. Sites larger than that split their URLs across multiple sitemap files and list those files inside a separate <strong>sitemap index file</strong>, which this tool will warn you about but does not generate for you.</p>
+        </article>
+        <article class="content-block">
+          <h2>Changefreq and Priority Are Hints, Not Commands</h2>
+          <p>Google has said publicly that it treats <code>&lt;changefreq&gt;</code> and <code>&lt;priority&gt;</code> as hints it may largely ignore, since it decides for itself how often to recrawl a page and how that page compares to the rest of your site. Set them if you like for completeness — just don't expect them to force a particular crawl schedule.</p>
+        </article>
+        <article class="content-block">
+          <h2>Where to Place and Submit Your Sitemap</h2>
+          <p>Convention is to place <code>sitemap.xml</code> at the root of your domain, e.g. <code>example.com/sitemap.xml</code>. From there, submit it directly in Google Search Console, or add a <code>Sitemap:</code> line pointing to it inside your <code>robots.txt</code> file so any crawler can find it automatically.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Generator Works</h2>
+          <p>Each pasted line is trimmed, combined with your base domain unless it's already a full URL, and validated with the browser's own URL parser. Exact duplicates are removed, invalid lines are skipped and listed rather than silently breaking the file, and special characters like <code>&amp;</code> in query strings are properly escaped to <code>&amp;amp;</code> so the resulting XML always parses cleanly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is an XML sitemap for?</summary>
+            <p>An XML sitemap lists your site's URLs so search engines can discover pages, especially ones with weak internal linking. It doesn't directly boost rankings — it just helps crawlers find and understand your content faster.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do changefreq and priority affect my ranking?</summary>
+            <p>Not directly. Google has stated it treats &lt;changefreq&gt; and &lt;priority&gt; as hints it may largely ignore, since it independently determines how often to recrawl a page and how important that page is.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How many URLs can one sitemap file hold?</summary>
+            <p>Per the sitemaps.org protocol, a single sitemap file is limited to 50,000 URLs and 50MB uncompressed. Larger sites split their URLs across multiple sitemap files and list those files in a sitemap index file.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where do I put my sitemap and how do I submit it?</summary>
+            <p>Upload sitemap.xml to your site's root, e.g. example.com/sitemap.xml, then submit it in Google Search Console or reference it with a Sitemap: line in your robots.txt file.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool send my URLs anywhere?</summary>
+            <p>No. Parsing, validation and XML generation all run locally in your browser. Your URL list is never uploaded or transmitted anywhere.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free to use?</summary>
+            <p>Yes — completely free, no account required, no limit on how many sitemaps you generate.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/robots-txt-generator" class="tool-card">
+            <span class="tool-icon">🤖</span>
+            <span class="tool-name">Robots.txt Generator</span>
+            <span class="tool-desc">Control crawler access &amp; link your sitemap</span>
+          </a>
+          <a href="https://social00.com/tools/seo-meta-tag-generator" class="tool-card">
+            <span class="tool-icon">🔍</span>
+            <span class="tool-name">SEO Meta Tag Generator</span>
+            <span class="tool-desc">Title &amp; description tags with SERP preview</span>
+          </a>
+          <a href="https://social00.com/tools/url-slug-generator" class="tool-card">
+            <span class="tool-icon">🔗</span>
+            <span class="tool-name">URL Slug Generator</span>
+            <span class="tool-desc">Clean, SEO-friendly URL slugs</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

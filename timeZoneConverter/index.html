@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Zone Converter – Convert Time Between Time Zones Instantly | Social00</title>
+  <meta name="description" content="Free time zone converter. Convert any date and time between IANA time zones instantly, with automatic DST handling. Compare multiple zones at once." />
+  <meta name="keywords" content="time zone converter, timezone converter, convert time zones, utc converter, dst calculator, world clock converter" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/time-zone-converter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Time Zone Converter – Convert Time Between Time Zones Instantly | Social00" />
+  <meta property="og:description" content="Convert any date and time between IANA time zones instantly, with automatic, accurate DST handling. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/time-zone-converter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Time Zone Converter",
+    "url": "https://social00.com/tools/time-zone-converter",
+    "description": "Free online time zone converter that converts a date and time between IANA time zones instantly, with automatic and accurate Daylight Saving Time handling.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Time Zone Converter", "item": "https://social00.com/tools/time-zone-converter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Why isn't a time zone just a fixed UTC offset like GMT+5?", "acceptedAnswer": { "@type": "Answer", "text": "Many time zones observe Daylight Saving Time, so their offset from UTC changes twice a year — America/New_York is UTC-5 in winter and UTC-4 in summer. A fixed \"GMT+X\" label can't represent that shift, which is why this tool works with IANA identifiers like America/New_York instead." } },
+      { "@type": "Question", "name": "What is an IANA time zone identifier?", "acceptedAnswer": { "@type": "Answer", "text": "It's a name like Europe/London or Asia/Kolkata from the IANA Time Zone Database — the same dataset built into every browser, phone, and server. Unlike \"GMT+1\", it encodes a region's entire history of offset changes and DST rules, so the correct offset for any past or future date can be looked up automatically." } },
+      { "@type": "Question", "name": "Do all time zones observe Daylight Saving Time?", "acceptedAnswer": { "@type": "Answer", "text": "No. Zones like Asia/Kolkata (India), Asia/Tokyo, and UTC itself never change their offset. Others, like America/New_York or Europe/London, shift by an hour twice a year — and the exact transition dates differ by country and can even change when a government changes the law." } },
+      { "@type": "Question", "name": "What happens right at a DST transition, like 2:00 AM on transition day?", "acceptedAnswer": { "@type": "Answer", "text": "In zones that spring forward, that clock hour (e.g. 2:00–2:59 AM) doesn't exist at all — clocks jump straight from 1:59 AM to 3:00 AM. In zones that fall back, that hour happens twice. This tool uses the browser's own time zone database to resolve exactly which offset applies to your chosen date, rather than guessing." } },
+      { "@type": "Question", "name": "Is this converter accurate for dates far in the future?", "acceptedAnswer": { "@type": "Answer", "text": "It's as accurate as the time zone data built into your browser, which is updated regularly and reflects the current legally scheduled DST rules. If a country changes its DST law after your browser's data was last updated, results for dates past that change may be off until the browser updates — but this affects every time zone tool, not just this one." } },
+      { "@type": "Question", "name": "Is my date/time data sent to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every conversion runs locally using your browser's built-in Intl.DateTimeFormat API and its own IANA time zone database — nothing you enter here is ever transmitted anywhere." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Time Zone Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🌍 Time Zone Converter</h1>
+        <p class="hero-sub">Convert any date and time between time zones instantly, with real, DST-accurate offsets — powered by your browser's own time zone database. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="tz-row">
+            <div class="tz-field">
+              <label for="sourceDateTime" class="tool-label">Date &amp; time</label>
+              <input type="datetime-local" id="sourceDateTime" class="tool-date" step="60" />
+            </div>
+            <div class="tz-field tz-field--zone">
+              <label for="sourceZone" class="tool-label">Source time zone</label>
+              <select id="sourceZone" class="tool-select"></select>
+            </div>
+            <button class="btn-now" id="nowBtn" type="button">Use current moment</button>
+          </div>
+
+          <div class="source-info" id="sourceInfo" aria-live="polite">
+            <span class="source-info-zone" id="sourceInfoZone">—</span>
+            <span class="source-info-offset" id="sourceInfoOffset">UTC+0</span>
+            <span class="dst-badge dst-badge--off" id="sourceInfoDst">Standard time</span>
+          </div>
+
+          <div class="target-add-row">
+            <label for="targetZoneSelect" class="tool-label">Add a target time zone</label>
+            <div class="target-add-controls">
+              <select id="targetZoneSelect" class="tool-select"></select>
+              <button class="btn-add-target" id="addTargetBtn" type="button">+ Add</button>
+            </div>
+          </div>
+
+          <div class="targets-list" id="targetsList" aria-live="polite"></div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearTargetsBtn" type="button">Clear All Targets</button>
+            <button class="btn-copy" id="copySummaryBtn" type="button">Copy Summary</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Time Zone Conversion Is Genuinely Tricky</h2>
+          <p>A time zone isn't a fixed number — it's a set of rules. Roughly half the world's time zones observe Daylight Saving Time, shifting their UTC offset by an hour twice a year, and the exact start and end dates differ by country and can change whenever a government amends the law. Treating a zone as a constant "GMT+X" value works fine in January but silently breaks in July, or the moment a country changes its DST policy.</p>
+        </article>
+        <article class="content-block">
+          <h2>What Are IANA Time Zone Identifiers?</h2>
+          <p>Names like <strong>Europe/London</strong> or <strong>Asia/Kolkata</strong> come from the IANA Time Zone Database (tzdata) — the dataset built into every browser, phone, and server operating system. Instead of a single number, each identifier stores a region's complete history of offset changes and DST transition rules, so software can look up the correct offset for any date, past or future, automatically.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Converter Works</h2>
+          <p>This tool never hard-codes an offset. It uses the browser's built-in <code>Intl.DateTimeFormat</code> API to ask each IANA zone what its offset actually was (or will be) on your chosen date, then converts your wall-clock time to the equivalent moment in UTC and re-formats that same instant for every target zone you add. The result automatically reflects DST for the specific date you picked — not just today's date.</p>
+        </article>
+        <article class="content-block">
+          <h2>A Real DST Edge Case, Worked Out</h2>
+          <p>On March 9, 2025, clocks in <strong>America/New_York</strong> sprang forward at 2:00 AM. So <strong>01:30 AM</strong> that day is still EST (UTC-5), converting to <strong>06:30 UTC</strong> — but <strong>03:30 AM</strong> that same morning is already EDT (UTC-4), converting to <strong>07:30 UTC</strong>. Two clock times just two hours apart produced UTC times only one hour apart, because the 2:00–2:59 AM hour never happened. Fixed-offset math gets this wrong; real IANA-based conversion gets it right.</p>
+        </article>
+        <article class="content-block">
+          <h2>UTC Offset vs. Time Zone: Why They're Not the Same Thing</h2>
+          <p>"UTC-5" describes a moment's relationship to UTC right now, but it isn't a stable identity for a place. New York is UTC-5 in January and UTC-4 in July — the city didn't move, its offset did. A time zone identifier like America/New_York names the place and its rules; the offset shown for it is just the current answer to "what is that rule today," recalculated for whatever date you enter.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Real DST handling via the browser's own IANA time zone database — not hand-rolled offset math</li>
+            <li>Compare a source moment against as many target zones as you need, at once</li>
+            <li>Shows the exact UTC offset and DST status for every zone, for the date you chose</li>
+            <li>Free, no login, nothing you enter ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Why isn't a time zone just a fixed UTC offset like GMT+5?</summary>
+            <p>Many time zones observe Daylight Saving Time, so their offset from UTC changes twice a year — America/New_York is UTC-5 in winter and UTC-4 in summer. A fixed "GMT+X" label can't represent that shift, which is why this tool works with IANA identifiers like America/New_York instead.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is an IANA time zone identifier?</summary>
+            <p>It's a name like Europe/London or Asia/Kolkata from the IANA Time Zone Database — the same dataset built into every browser, phone, and server. Unlike "GMT+1", it encodes a region's entire history of offset changes and DST rules, so the correct offset for any past or future date can be looked up automatically.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do all time zones observe Daylight Saving Time?</summary>
+            <p>No. Zones like Asia/Kolkata (India), Asia/Tokyo, and UTC itself never change their offset. Others, like America/New_York or Europe/London, shift by an hour twice a year — and the exact transition dates differ by country and can even change when a government changes the law.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens right at a DST transition, like 2:00 AM on transition day?</summary>
+            <p>In zones that spring forward, that clock hour (e.g. 2:00–2:59 AM) doesn't exist at all — clocks jump straight from 1:59 AM to 3:00 AM. In zones that fall back, that hour happens twice. This tool uses the browser's own time zone database to resolve exactly which offset applies to your chosen date, rather than guessing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this converter accurate for dates far in the future?</summary>
+            <p>It's as accurate as the time zone data built into your browser, which is updated regularly and reflects the current legally scheduled DST rules. If a country changes its DST law after your browser's data was last updated, results for dates past that change may be off until the browser updates — but this affects every time zone tool, not just this one.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my date/time data sent to a server?</summary>
+            <p>No. Every conversion runs locally using your browser's built-in Intl.DateTimeFormat API and its own IANA time zone database — nothing you enter here is ever transmitted anywhere.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/age-calculator" class="tool-card">
+            <span class="tool-icon">🎂</span>
+            <span class="tool-name">Age Calculator</span>
+            <span class="tool-desc">Exact age or duration between two dates</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Convert length, weight, temperature &amp; more</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, increases &amp; discounts</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Social00. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

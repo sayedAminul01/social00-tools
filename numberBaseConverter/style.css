@@ -1,0 +1,90 @@
+/* Number Base Converter — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+:root { --danger: #f43f5e; }
+[data-theme="light"] { --danger: #e11d48; }
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.base-row { margin-bottom: 1.1rem; }
+.base-row:last-of-type { margin-bottom: 1.3rem; }
+
+.base-label {
+  display: flex; align-items: center; gap: .5rem;
+  font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem;
+}
+.base-tag {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--text-3); background: var(--bg-3); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); padding: .1rem .55rem;
+}
+
+.base-input-group { display: flex; gap: .6rem; }
+
+.base-input {
+  flex: 1; width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.05rem;
+  font-family: 'DM Mono', 'Courier New', monospace; letter-spacing: .02em;
+  transition: border-color .2s;
+}
+.base-input:focus { border-color: var(--accent); }
+
+.base-row.has-error .base-input { border-color: var(--danger); }
+
+.btn-copy-field {
+  flex-shrink: 0;
+  padding: 0 1.1rem; border-radius: var(--radius); font-weight: 700; font-size: .84rem;
+  border: 1px solid var(--border-2); color: var(--text-2); background: transparent;
+  transition: all .2s; cursor: pointer;
+}
+.btn-copy-field:hover { border-color: var(--accent); color: var(--text); }
+
+.field-error {
+  min-height: 1.2em; margin-top: .35rem;
+  font-size: .8rem; color: var(--danger);
+  display: none;
+}
+.base-row.has-error .field-error { display: block; }
+
+.value-meta {
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .8rem 1.1rem; margin-bottom: 1.1rem;
+  font-size: .86rem; color: var(--text-2); font-weight: 600;
+}
+.value-meta strong { color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); background: transparent;
+  transition: all .2s; cursor: pointer;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+
+/* Quick-reference table */
+.ref-table-wrap { overflow-x: auto; margin-top: .75rem; }
+.ref-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.ref-table th, .ref-table td {
+  padding: .5rem .7rem; text-align: left; border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', 'Courier New', monospace;
+}
+.ref-table th {
+  font-family: var(--font-body); font-weight: 700; color: var(--text-3);
+  font-size: .74rem; text-transform: uppercase; letter-spacing: .04em;
+  border-bottom: 1px solid var(--border-2);
+}
+.ref-table tbody tr:hover { background: var(--bg-3); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

@@ -56,6 +56,18 @@
 /tools/loan-emi-calculator            /loanEmiCalculator/index.html            200
 /tools/compound-interest-calculator   /compoundInterestCalculator/index.html   200
 
+# ── New tools (batch 4) ─────────────────────────────────────────────
+/tools/text-case-converter             /textCaseConverter/index.html            200
+/tools/lorem-ipsum-generator           /loremIpsumGenerator/index.html          200
+/tools/uuid-generator                  /uuidGenerator/index.html                200
+/tools/number-base-converter           /numberBaseConverter/index.html          200
+/tools/random-number-generator         /randomNumberGenerator/index.html        200
+/tools/robots-txt-generator            /robotsTxtGenerator/index.html           200
+/tools/xml-sitemap-generator           /xmlSitemapGenerator/index.html          200
+/tools/barcode-generator               /barcodeGenerator/index.html             200
+/tools/time-zone-converter             /timeZoneConverter/index.html            200
+/tools/text-diff-checker               /textDiffChecker/index.html              200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200

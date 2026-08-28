@@ -1,0 +1,65 @@
+/* UUID Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .5rem .7rem; color: var(--text); font-size: .88rem;
+}
+.option-toggle {
+  display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: var(--text-2);
+  cursor: pointer; padding-bottom: .35rem;
+}
+.option-toggle input { width: 16px; height: 16px; accent-color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.3rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.uuid-list {
+  display: flex; flex-direction: column; gap: .6rem;
+}
+.uuid-empty {
+  color: var(--text-3); font-size: .92rem; text-align: center; padding: 1.4rem 0;
+}
+.uuid-item {
+  display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .7rem .9rem;
+}
+.uuid-value {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .98rem; font-weight: 600;
+  color: var(--accent); word-break: break-all;
+}
+.uuid-copy-btn {
+  flex-shrink: 0;
+  padding: .4rem .9rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .78rem;
+  border: 1px solid var(--border-2); color: var(--text-2); background: transparent;
+  transition: all .2s; cursor: pointer;
+}
+.uuid-copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

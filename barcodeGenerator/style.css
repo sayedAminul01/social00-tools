@@ -1,0 +1,63 @@
+/* Barcode Generator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-input {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  transition: border-color .2s;
+}
+.tool-input:focus { border-color: var(--accent); }
+
+.input-meta { font-size: .78rem; color: var(--text-3); margin: .5rem 0 0; }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .55rem .7rem; color: var(--text); font-size: .86rem;
+}
+.option-toggle {
+  display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: var(--text-2);
+  cursor: pointer; padding-bottom: .35rem;
+}
+.option-toggle input { width: 16px; height: 16px; accent-color: var(--accent); }
+
+.barcode-preview-wrap { display: flex; justify-content: center; margin: 1.2rem 0; }
+.barcode-canvas-box {
+  background: #ffffff; border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.2rem 1.5rem; display: inline-flex; align-items: center; justify-content: center;
+  max-width: 100%; overflow-x: auto;
+}
+#barcodeCanvas { display: block; max-width: 100%; height: auto; }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s; cursor: pointer;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

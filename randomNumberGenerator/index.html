@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Number Generator – Cryptographically Unbiased | Social00</title>
+  <meta name="description" content="Free random number generator using real cryptographic randomness, not Math.random(). Set a range, generate unique numbers, and check fairness live." />
+  <meta name="keywords" content="random number generator, random number picker, unbiased random generator, crypto random number, dice roller, raffle number generator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/random-number-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Random Number Generator – Cryptographically Unbiased | Social00" />
+  <meta property="og:description" content="Generate genuinely uniform random numbers using the Web Crypto API with rejection sampling — no modulo bias, no Math.random(). Free, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/random-number-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Random Number Generator",
+    "url": "https://social00.com/tools/random-number-generator",
+    "description": "Free online random number generator that uses the Web Crypto API and rejection sampling to produce genuinely unbiased random integers in a chosen range.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Random Number Generator", "item": "https://social00.com/tools/random-number-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Why not just use Math.random()?", "acceptedAnswer": { "@type": "Answer", "text": "Math.random() is a fast pseudo-random number generator (PRNG) designed for speed, not unpredictability. Its output can be predicted or reproduced under certain conditions, which makes it unsuitable for anything where fairness or security matters — raffles, giveaways, security tokens, or games with real stakes. This tool uses the Web Crypto API instead, the same source of randomness used for encryption keys." } },
+      { "@type": "Question", "name": "What is modulo bias?", "acceptedAnswer": { "@type": "Answer", "text": "Modulo bias happens when you take a random value and reduce it with random() % range to fit a smaller range. Unless the random value's total space divides evenly by your range, some remainders come up slightly more often than others, subtly skewing the results. It's a well-known, easy-to-miss bug in naive random number code." } },
+      { "@type": "Question", "name": "How does this tool avoid modulo bias?", "acceptedAnswer": { "@type": "Answer", "text": "It uses rejection sampling: it draws random bytes from crypto.getRandomValues(), works out the largest multiple of your range that fits evenly into the byte space, and silently discards and re-draws any value that falls in the leftover \"excess\" zone. Every remaining value maps to your range with exactly equal probability, so no number is ever favored." } },
+      { "@type": "Question", "name": "Can I generate unique, non-repeating numbers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Uncheck \"Allow duplicates\" and the tool will draw unbiased random numbers until it has the exact quantity you asked for, with no repeats. If you request more unique numbers than exist in your chosen range, it shows a validation error instead of hanging or silently returning fewer numbers." } },
+      { "@type": "Question", "name": "What can I use a random number generator for?", "acceptedAnswer": { "@type": "Answer", "text": "Common uses include picking winners for raffles and giveaways, drawing random samples for statistics or research, simulating dice rolls or card draws for games, assigning random IDs or test data, and settling ties fairly." } },
+      { "@type": "Question", "name": "Is anything I generate sent to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every number is generated locally in your browser using the Web Crypto API. Nothing about your range, quantity, or results is transmitted anywhere or stored." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Random Number Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🎲 Random Number Generator</h1>
+        <p class="hero-sub">Genuinely uniform random numbers using real cryptographic randomness — not Math.random(). No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="options-row">
+            <div class="option-group">
+              <label for="minValue">Minimum</label>
+              <input type="number" id="minValue" class="tool-input" value="1" step="1" />
+            </div>
+            <div class="option-group">
+              <label for="maxValue">Maximum</label>
+              <input type="number" id="maxValue" class="tool-input" value="100" step="1" />
+            </div>
+            <div class="option-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" class="tool-input" value="1" min="1" max="10000" step="1" />
+            </div>
+            <label class="option-toggle">
+              <input type="checkbox" id="allowDuplicates" checked />
+              <span>Allow duplicates</span>
+            </label>
+          </div>
+
+          <p class="field-error" id="fieldError" hidden></p>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="generateBtn">Generate</button>
+          </div>
+
+          <div class="rng-output" id="rngOutput" aria-live="polite" hidden>
+            <div class="rng-output-head">
+              <span class="slug-label">Result</span>
+              <button class="btn-clear btn-small" id="copyAllBtn">Copy All</button>
+            </div>
+            <div class="rng-result-list" id="rngResultList"></div>
+          </div>
+
+          <details class="fairness-section" id="fairnessSection">
+            <summary>Fairness sanity check (optional diagnostic)</summary>
+            <div class="fairness-body">
+              <p class="fairness-desc">Generate a large sample in a small range and see how evenly the values come up. A genuinely unbiased generator should spread results roughly equally across every value.</p>
+              <div class="options-row">
+                <div class="option-group">
+                  <label for="fairMin">Min</label>
+                  <input type="number" id="fairMin" class="tool-input tool-input--sm" value="1" step="1" />
+                </div>
+                <div class="option-group">
+                  <label for="fairMax">Max</label>
+                  <input type="number" id="fairMax" class="tool-input tool-input--sm" value="10" step="1" />
+                </div>
+                <div class="option-group">
+                  <label for="fairSamples">Sample size</label>
+                  <select id="fairSamples" class="tool-select">
+                    <option value="1000">1,000</option>
+                    <option value="10000" selected>10,000</option>
+                    <option value="100000">100,000</option>
+                  </select>
+                </div>
+                <button class="btn-clear btn-small" id="runFairnessBtn">Run Test</button>
+              </div>
+              <div class="fairness-chart" id="fairnessChart"></div>
+              <p class="fairness-summary" id="fairnessSummary"></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Why Math.random() Isn't Good Enough</h2>
+          <p>Math.random() is a fast pseudo-random number generator (PRNG) built for speed, not unpredictability. It's fine for shuffling a UI animation, but its internal state can potentially be inferred or reproduced, which makes it a poor choice for anything where fairness or security actually matters — raffle winners, giveaway draws, or security-sensitive values. This tool uses the Web Crypto API's <code>crypto.getRandomValues()</code> instead, the same randomness source browsers use for generating encryption keys.</p>
+        </article>
+        <article class="content-block">
+          <h2>What Is Modulo Bias?</h2>
+          <p>A common shortcut for turning a random value into a number within a range is <code>random() % range</code>. The problem: unless the random value's total space divides evenly by your range, some remainders occur slightly more often than others. Over many draws this "modulo bias" quietly skews results toward certain numbers — a subtle bug that looks correct in casual testing but breaks true fairness.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Generator Works</h2>
+          <p>Each number is produced by drawing bytes from <code>crypto.getRandomValues()</code> and applying rejection sampling: the tool calculates the largest multiple of your range's size that fits evenly into the drawn value space, and discards (re-draws) any value that lands in the small leftover zone. Every value that survives maps onto your range with exactly equal probability — no bias, no shortcuts.</p>
+        </article>
+        <article class="content-block">
+          <h2>Unique vs. Repeating Numbers</h2>
+          <p>With "Allow duplicates" checked, each number is drawn independently, so the same value can appear more than once — correct behavior for dice rolls or lottery-style draws. Uncheck it to draw unique values only: the tool keeps generating unbiased numbers until it has exactly the quantity you asked for, with no repeats, and it validates up front that your requested quantity actually fits within the range so it never loops forever.</p>
+        </article>
+        <article class="content-block">
+          <h2>Real-World Uses</h2>
+          <p>Pick a winner for a raffle or giveaway, draw a random sample for a survey or research study, simulate dice rolls or card draws for games and tabletop apps, generate random test data or IDs, or settle a tie fairly. Anywhere the outcome needs to be genuinely unpredictable and not favor any particular value.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Real cryptographic randomness, not a lightweight PRNG</li>
+            <li>Unbiased by design — rejection sampling eliminates modulo bias</li>
+            <li>Built-in fairness chart to see the distribution for yourself</li>
+            <li>Free, no login, everything runs locally in your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Why not just use Math.random()?</summary>
+            <p>Math.random() is a fast pseudo-random number generator (PRNG) designed for speed, not unpredictability. Its output can be predicted or reproduced under certain conditions, which makes it unsuitable for anything where fairness or security matters — raffles, giveaways, security tokens, or games with real stakes. This tool uses the Web Crypto API instead, the same source of randomness used for encryption keys.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is modulo bias?</summary>
+            <p>Modulo bias happens when you take a random value and reduce it with random() % range to fit a smaller range. Unless the random value's total space divides evenly by your range, some remainders come up slightly more often than others, subtly skewing the results. It's a well-known, easy-to-miss bug in naive random number code.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does this tool avoid modulo bias?</summary>
+            <p>It uses rejection sampling: it draws random bytes from crypto.getRandomValues(), works out the largest multiple of your range that fits evenly into the byte space, and silently discards and re-draws any value that falls in the leftover "excess" zone. Every remaining value maps to your range with exactly equal probability, so no number is ever favored.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I generate unique, non-repeating numbers?</summary>
+            <p>Yes. Uncheck "Allow duplicates" and the tool will draw unbiased random numbers until it has the exact quantity you asked for, with no repeats. If you request more unique numbers than exist in your chosen range, it shows a validation error instead of hanging or silently returning fewer numbers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What can I use a random number generator for?</summary>
+            <p>Common uses include picking winners for raffles and giveaways, drawing random samples for statistics or research, simulating dice rolls or card draws for games, assigning random IDs or test data, and settling ties fairly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is anything I generate sent to a server?</summary>
+            <p>No. Every number is generated locally in your browser using the Web Crypto API. Nothing about your range, quantity, or results is transmitted anywhere or stored.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/password-generator" class="tool-card">
+            <span class="tool-icon">🔐</span>
+            <span class="tool-name">Password Generator</span>
+            <span class="tool-desc">Strong, cryptographically random passwords</span>
+          </a>
+          <a href="https://social00.com/tools/uuid-generator" class="tool-card">
+            <span class="tool-icon">🆔</span>
+            <span class="tool-name">UUID Generator</span>
+            <span class="tool-desc">Generate unique identifiers instantly</span>
+          </a>
+          <a href="https://social00.com/tools/number-base-converter" class="tool-card">
+            <span class="tool-icon">🔁</span>
+            <span class="tool-name">Number Base Converter</span>
+            <span class="tool-desc">Convert between binary, hex, decimal &amp; more</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

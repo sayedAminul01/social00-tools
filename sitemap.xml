@@ -48,4 +48,15 @@
   <url><loc>https://social00.com/tools/character-counter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://social00.com/tools/loan-emi-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://social00.com/tools/compound-interest-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://social00.com/tools/text-case-converter</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://social00.com/tools/lorem-ipsum-generator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://social00.com/tools/uuid-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://social00.com/tools/number-base-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://social00.com/tools/random-number-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://social00.com/tools/robots-txt-generator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://social00.com/tools/xml-sitemap-generator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://social00.com/tools/barcode-generator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://social00.com/tools/time-zone-converter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://social00.com/tools/text-diff-checker</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

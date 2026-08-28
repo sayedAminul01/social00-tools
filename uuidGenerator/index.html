@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UUID Generator – Free Online v4 UUID / GUID Creator | Social00</title>
+  <meta name="description" content="Free UUID generator. Create spec-compliant, cryptographically random v4 UUIDs (GUIDs) instantly — batch generate, uppercase, or wrapped in braces." />
+  <meta name="keywords" content="uuid generator, guid generator, uuid v4 generator, random uuid, generate uuid online, uuid creator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/uuid-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="UUID Generator – Free Online v4 UUID / GUID Creator | Social00" />
+  <meta property="og:description" content="Create spec-compliant, cryptographically random v4 UUIDs instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/uuid-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "UUID Generator",
+    "url": "https://social00.com/tools/uuid-generator",
+    "description": "Free online UUID generator that creates spec-compliant, cryptographically random version 4 UUIDs (GUIDs).",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "UUID Generator", "item": "https://social00.com/tools/uuid-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a UUID?", "acceptedAnswer": { "@type": "Answer", "text": "A Universally Unique Identifier is a 128-bit value, usually written as 32 hex digits in five hyphen-separated groups (8-4-4-4-12), used to identify something without a central authority handing out IDs." } },
+      { "@type": "Question", "name": "How unique is a random v4 UUID, really?", "acceptedAnswer": { "@type": "Answer", "text": "A v4 UUID has 122 random bits (the other 6 are fixed version/variant bits). Using the birthday-paradox math, you'd need to generate roughly 2.71 quintillion random v4 UUIDs before there's just a 50% chance any two of them ever match." } },
+      { "@type": "Question", "name": "What do the version and variant digits mean?", "acceptedAnswer": { "@type": "Answer", "text": "In a v4 UUID the first digit of the third group is always \"4\", marking it as version 4 (random), and the first digit of the fourth group is always 8, 9, a, or b, marking the RFC 4122 variant. Every UUID this tool generates has both set correctly." } },
+      { "@type": "Question", "name": "Is anything sent to a server when I generate a UUID here?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every UUID is generated locally in your browser using the Web Crypto API. Nothing you generate is ever transmitted anywhere or logged." } },
+      { "@type": "Question", "name": "Uppercase or lowercase — does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "The RFC 4122 spec recommends lowercase, and most systems output lowercase by convention, but uppercase hex digits represent the exact same value. Use whichever case your target system expects." } },
+      { "@type": "Question", "name": "Should I use v4 or another UUID version?", "acceptedAnswer": { "@type": "Answer", "text": "Version 4 (fully random) is the practical default for almost every use case today, which is why this tool focuses on it. Other versions encode a timestamp or a namespace hash instead of pure randomness, which is only worth the added complexity for specialized needs." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / UUID Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🆔 UUID Generator</h1>
+        <p class="hero-sub">Generate spec-compliant, cryptographically random v4 UUIDs — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="options-row">
+            <div class="option-group">
+              <label for="quantity">Quantity</label>
+              <select id="quantity" class="tool-select">
+                <option value="1" selected>Generate 1</option>
+                <option value="5">Generate 5</option>
+                <option value="10">Generate 10</option>
+                <option value="25">Generate 25</option>
+              </select>
+            </div>
+            <label class="option-toggle">
+              <input type="checkbox" id="uppercaseToggle" />
+              <span>Uppercase</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="hyphensToggle" checked />
+              <span>Hyphens</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="bracesToggle" />
+              <span>Include braces { }</span>
+            </label>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="generateBtn">Generate</button>
+            <button class="btn-clear" id="copyAllBtn">Copy All</button>
+          </div>
+
+          <div class="uuid-list" id="uuidList" aria-live="polite">
+            <p class="uuid-empty" id="uuidEmpty">Click "Generate" to create your first UUID.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is a UUID?</h2>
+          <p>A Universally Unique Identifier (UUID), also called a GUID (Globally Unique Identifier) on Windows and in .NET, is a 128-bit value written as 32 hexadecimal digits split into five groups by hyphens — 8-4-4-4-12, e.g. <code>3fa85f64-5717-4562-b3fc-2c963f66afa6</code>. It gives you an identifier you can generate anywhere, on any machine, with no central registry or database round-trip required to guarantee it doesn't collide with one already in use.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why UUIDs Are Practically Unique</h2>
+          <p>A version 4 UUID sets 6 of its 128 bits to fixed version/variant markers, leaving 122 bits of genuine randomness. Applying the classic "birthday paradox" — the same math behind the surprising odds of two people in a room sharing a birthday — to a space that large works out to roughly <strong>2.71 quintillion</strong> (2.71 × 10<sup>18</sup>) randomly generated v4 UUIDs before there's even a 50% chance that any two of them ever match. For any realistic application, the collision risk is negligible.</p>
+        </article>
+        <article class="content-block">
+          <h2>Version &amp; Variant Bits Explained</h2>
+          <p>Look at a v4 UUID's third group: it always starts with <strong>4</strong> — that's the version nibble, marking "version 4, randomly generated." The fourth group always starts with <strong>8, 9, a, or b</strong> — that's the RFC 4122 variant marker, occupying the top two bits of that byte. Every other digit is unconstrained randomness. Those two fixed markers are exactly what the regex <code>^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$</code> checks for, and every UUID this tool produces satisfies it.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Generator Works</h2>
+          <p>Generation uses <code>crypto.randomUUID()</code> where the browser supports it — a native, spec-guaranteed-correct implementation. As a transparent fallback, the same result can be built manually: pull 16 cryptographically random bytes from <code>crypto.getRandomValues()</code>, force the high nibble of byte 6 to <code>0100</code> (the version bits) and the top two bits of byte 8 to <code>10</code> (the variant bits), then format the 16 bytes as 32 hex characters in the standard 8-4-4-4-12 groups. Both paths use the Web Crypto API — never <code>Math.random()</code>, which is not cryptographically secure.</p>
+        </article>
+        <article class="content-block">
+          <h2>Real-World Use Cases</h2>
+          <ul class="feature-list">
+            <li>Database primary keys that can be generated by any client, offline, before a row is ever inserted</li>
+            <li>Distributed-system object and request IDs, without a central ID-issuing service</li>
+            <li>Session tokens and idempotency keys for APIs</li>
+            <li>File names, correlation IDs in logs, and test fixtures that must never collide</li>
+          </ul>
+        </article>
+        <article class="content-block">
+          <h2>Format Options Explained</h2>
+          <p>Some systems have their own formatting expectations for the same underlying 128-bit value: <strong>uppercase</strong> hex digits (the value is identical, just the letters A–F instead of a–f), <strong>no hyphens</strong> (a flat 32-character hex string some APIs and databases store more compactly), and <strong>braces</strong> (<code>{...}</code>), a convention inherited from older Windows and COM interfaces that still shows up in registry keys and some .NET APIs. All three toggles only change presentation — never the underlying random value.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is a UUID?</summary>
+            <p>A Universally Unique Identifier is a 128-bit value, usually written as 32 hex digits in five hyphen-separated groups (8-4-4-4-12), used to identify something without a central authority handing out IDs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How unique is a random v4 UUID, really?</summary>
+            <p>A v4 UUID has 122 random bits (the other 6 are fixed version/variant bits). Using the birthday-paradox math, you'd need to generate roughly 2.71 quintillion random v4 UUIDs before there's just a 50% chance any two of them ever match.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What do the version and variant digits mean?</summary>
+            <p>In a v4 UUID the first digit of the third group is always "4", marking it as version 4 (random), and the first digit of the fourth group is always 8, 9, a, or b, marking the RFC 4122 variant. Every UUID this tool generates has both set correctly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is anything sent to a server when I generate a UUID here?</summary>
+            <p>No. Every UUID is generated locally in your browser using the Web Crypto API. Nothing you generate is ever transmitted anywhere or logged.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Uppercase or lowercase — does it matter?</summary>
+            <p>The RFC 4122 spec recommends lowercase, and most systems output lowercase by convention, but uppercase hex digits represent the exact same value. Use whichever case your target system expects.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should I use v4 or another UUID version?</summary>
+            <p>Version 4 (fully random) is the practical default for almost every use case today, which is why this tool focuses on it. Other versions encode a timestamp or a namespace hash instead of pure randomness, which is only worth the added complexity for specialized needs.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/password-generator" class="tool-card">
+            <span class="tool-icon">🔐</span>
+            <span class="tool-name">Password Generator</span>
+            <span class="tool-desc">Cryptographically secure random passwords</span>
+          </a>
+          <a href="https://social00.com/tools/random-number-generator" class="tool-card">
+            <span class="tool-icon">🎲</span>
+            <span class="tool-name">Random Number Generator</span>
+            <span class="tool-desc">Secure random numbers in any range</span>
+          </a>
+          <a href="https://social00.com/tools/number-base-converter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Number Base Converter</span>
+            <span class="tool-desc">Convert between binary, hex, decimal &amp; more</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

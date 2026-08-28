@@ -402,6 +402,96 @@ const TOOLS = [
     desc: 'Project compound growth of an investment or deposit, with optional regular contributions.',
     url: '/tools/compound-interest-calculator'
   },
+  {
+    id: 'text-case',
+    name: 'Text Case Converter',
+    icon: 'Aa',
+    category: 'utility',
+    badge: '🔤 Text',
+    desc: 'Convert text between UPPERCASE, Title Case, camelCase, snake_case and 7 other real case styles.',
+    url: '/tools/text-case-converter'
+  },
+  {
+    id: 'lorem-ipsum',
+    name: 'Lorem Ipsum Generator',
+    icon: '📄',
+    category: 'utility',
+    badge: '📝 Design',
+    desc: 'Generate classic Lorem Ipsum placeholder text by words, sentences or paragraphs, with optional HTML output.',
+    url: '/tools/lorem-ipsum-generator'
+  },
+  {
+    id: 'uuid-gen',
+    name: 'UUID Generator',
+    icon: '🆔',
+    category: 'utility',
+    badge: '🔒 Secure',
+    desc: 'Generate spec-compliant v4 UUIDs using real cryptography, with uppercase, hyphen and braces options.',
+    url: '/tools/uuid-generator'
+  },
+  {
+    id: 'number-base',
+    name: 'Number Base Converter',
+    icon: '🔢',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Convert numbers between Binary, Octal, Decimal and Hexadecimal instantly, with full precision for huge numbers.',
+    url: '/tools/number-base-converter'
+  },
+  {
+    id: 'random-number',
+    name: 'Random Number Generator',
+    icon: '🎲',
+    category: 'utility',
+    badge: '🔒 Secure',
+    desc: 'Generate genuinely unbiased random numbers in any range using real cryptography, with a unique-values option.',
+    url: '/tools/random-number-generator'
+  },
+  {
+    id: 'robots-txt',
+    name: 'Robots.txt Generator',
+    icon: '🤖',
+    category: 'seo',
+    badge: '🔍 SEO',
+    desc: 'Build a correct, standards-compliant robots.txt file for your site, including AI-crawler rules, in seconds.',
+    url: '/tools/robots-txt-generator'
+  },
+  {
+    id: 'xml-sitemap',
+    name: 'XML Sitemap Generator',
+    icon: '🗺️',
+    category: 'seo',
+    badge: '🔍 SEO',
+    desc: 'Turn a list of URLs into a valid XML sitemap, with automatic escaping, deduping and lastmod dates.',
+    url: '/tools/xml-sitemap-generator'
+  },
+  {
+    id: 'barcode-gen',
+    name: 'Barcode Generator',
+    icon: '📊',
+    category: 'utility',
+    badge: '🆕 New',
+    desc: 'Generate a real, scannable Code 128 barcode from any text, entirely in your browser.',
+    url: '/tools/barcode-generator'
+  },
+  {
+    id: 'timezone-converter',
+    name: 'Time Zone Converter',
+    icon: '🌍',
+    category: 'utility',
+    badge: '🕐 Time',
+    desc: 'Convert a date and time between any IANA time zones, with automatic, correct DST handling.',
+    url: '/tools/time-zone-converter'
+  },
+  {
+    id: 'text-diff',
+    name: 'Text Diff Checker',
+    icon: '🔍',
+    category: 'utility',
+    badge: '📝 Compare',
+    desc: 'Compare two texts line-by-line and see exactly what was added or removed, using a real diff algorithm.',
+    url: '/tools/text-diff-checker'
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════

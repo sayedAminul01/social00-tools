@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Base Converter – Binary, Octal, Decimal, Hex | Social00</title>
+  <meta name="description" content="Free number base converter. Convert between binary, octal, decimal and hexadecimal instantly, live, with full precision for very large numbers. No sign-up." />
+  <meta name="keywords" content="number base converter, binary to decimal, decimal to hex, hex to binary, octal converter, base converter online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/number-base-converter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Number Base Converter – Binary, Octal, Decimal, Hex | Social00" />
+  <meta property="og:description" content="Convert between binary, octal, decimal and hexadecimal instantly, with full precision even for very large numbers. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/number-base-converter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Number Base Converter",
+    "url": "https://social00.com/tools/number-base-converter",
+    "description": "Free online number base converter that converts between binary, octal, decimal and hexadecimal instantly, with exact precision for arbitrarily large numbers.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Number Base Converter", "item": "https://social00.com/tools/number-base-converter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a number base (radix)?", "acceptedAnswer": { "@type": "Answer", "text": "A number base, or radix, is how many distinct digits a numbering system uses before it carries over into a new place value. Binary uses 2 digits (0-1), octal uses 8 (0-7), decimal uses 10 (0-9), and hexadecimal uses 16 (0-9 and a-f)." } },
+      { "@type": "Question", "name": "How does positional notation work across bases?", "acceptedAnswer": { "@type": "Answer", "text": "Each digit's value is multiplied by the base raised to its position, counting from 0 on the right. For example, binary 1101 = (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13 in decimal. The same logic applies to any base, just swap in that base's value for the exponent." } },
+      { "@type": "Question", "name": "Why is binary used in computing?", "acceptedAnswer": { "@type": "Answer", "text": "Computer hardware is built from transistors that are either on or off, which maps naturally to two states: 0 and 1. Every operation a CPU performs, from arithmetic to bitwise logic (AND, OR, XOR, shifts), happens directly on these binary values." } },
+      { "@type": "Question", "name": "Why do Unix file permissions use octal, like chmod 755?", "acceptedAnswer": { "@type": "Answer", "text": "Unix permissions pack three 3-bit groups (owner, group, other), and 3 bits map exactly to one octal digit (0-7). \"755\" is really binary 111 101 101 — read, write, execute for the owner, and read, execute for group and other — condensed into three easy-to-type digits." } },
+      { "@type": "Question", "name": "Why is hexadecimal used for memory addresses and colors?", "acceptedAnswer": { "@type": "Answer", "text": "One hex digit represents exactly 4 bits (half a byte), so two hex digits cleanly represent a full byte (0-255). This makes hex a compact, human-readable stand-in for raw binary data, which is why it's used for memory addresses, byte dumps, and RGB colors like #ff8800." } },
+      { "@type": "Question", "name": "Does this tool send my numbers anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every conversion runs locally in your browser using JavaScript's BigInt — nothing you type is ever sent to a server, logged, or stored." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Number Base Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔢 Number Base Converter</h1>
+        <p class="hero-sub">Convert between binary, octal, decimal and hexadecimal instantly — with exact precision, even for very large numbers. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="base-row" data-base="2">
+            <label for="binaryInput" class="base-label">Binary <span class="base-tag">Base 2</span></label>
+            <div class="base-input-group">
+              <input type="text" id="binaryInput" class="base-input" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 11111111" />
+              <button class="btn-copy-field" data-target="binaryInput" aria-label="Copy binary value">Copy</button>
+            </div>
+            <p class="field-error" id="binaryError" role="alert"></p>
+          </div>
+
+          <div class="base-row" data-base="8">
+            <label for="octalInput" class="base-label">Octal <span class="base-tag">Base 8</span></label>
+            <div class="base-input-group">
+              <input type="text" id="octalInput" class="base-input" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 377" />
+              <button class="btn-copy-field" data-target="octalInput" aria-label="Copy octal value">Copy</button>
+            </div>
+            <p class="field-error" id="octalError" role="alert"></p>
+          </div>
+
+          <div class="base-row" data-base="10">
+            <label for="decimalInput" class="base-label">Decimal <span class="base-tag">Base 10</span></label>
+            <div class="base-input-group">
+              <input type="text" id="decimalInput" class="base-input" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 255" />
+              <button class="btn-copy-field" data-target="decimalInput" aria-label="Copy decimal value">Copy</button>
+            </div>
+            <p class="field-error" id="decimalError" role="alert"></p>
+          </div>
+
+          <div class="base-row" data-base="16">
+            <label for="hexInput" class="base-label">Hexadecimal <span class="base-tag">Base 16</span></label>
+            <div class="base-input-group">
+              <input type="text" id="hexInput" class="base-input" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. ff" />
+              <button class="btn-copy-field" data-target="hexInput" aria-label="Copy hexadecimal value">Copy</button>
+            </div>
+            <p class="field-error" id="hexError" role="alert"></p>
+          </div>
+
+          <div class="value-meta" id="valueMeta" aria-live="polite">0 bits, 0 bytes</div>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear All</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is a Number Base?</h2>
+          <p>A number base (or radix) defines how many unique digits a counting system uses before it rolls over into a new place value. Decimal, the system most people count in, uses 10 digits (0-9). Binary uses only 2 (0-1), octal uses 8 (0-7), and hexadecimal uses 16 — the ten decimal digits plus a-f standing in for 10 through 15. The same quantity can be written in any of these systems; only the representation changes.</p>
+        </article>
+        <article class="content-block">
+          <h2>How Positional Notation Works</h2>
+          <p>Every digit in a number carries a value equal to itself multiplied by the base raised to its position, counted from 0 at the rightmost digit. Take binary <code>1101</code>: reading right to left, that's (1×2⁰) + (0×2¹) + (1×2²) + (1×2³) = 1 + 0 + 4 + 8 = <strong>13</strong> in decimal. The exact same mechanism converts hex <code>1a</code> to decimal: (a×16⁰) + (1×16¹) = 10 + 16 = <strong>26</strong>. Only the base value in the exponent changes.</p>
+        </article>
+        <article class="content-block">
+          <h2>Binary in Low-Level Computing</h2>
+          <p>Transistors are either on or off, so hardware naturally speaks in two states: 0 and 1. Every CPU instruction, memory cell, and network packet ultimately reduces to binary digits, and bitwise operations — AND, OR, XOR, shifts — operate directly on those bits. Programmers work with binary explicitly when writing flags, masks, and low-level protocol handling.</p>
+        </article>
+        <article class="content-block">
+          <h2>Octal and Unix File Permissions</h2>
+          <p>Unix-style permissions group access rights into three 3-bit sets — owner, group, and other — and 3 bits map perfectly onto a single octal digit (0-7). Running <code>chmod 755</code> sets binary <code>111 101 101</code>: full read/write/execute for the owner, and read/execute for group and everyone else. Octal survives in permission syntax purely because it condenses those bit groups so cleanly.</p>
+        </article>
+        <article class="content-block">
+          <h2>Hexadecimal for Bytes, Addresses &amp; Colors</h2>
+          <p>One hex digit represents exactly 4 bits, so two hex digits represent a full byte (0-255) — far more compact than writing out 8 binary digits. That's why memory addresses, debugger byte dumps, and RGB color codes like <code>#ff8800</code> are written in hex: it's a dense, human-readable stand-in for the raw binary underneath.</p>
+        </article>
+        <article class="content-block">
+          <h2>Quick Reference: 0-15 in All Four Bases</h2>
+          <div class="ref-table-wrap">
+            <table class="ref-table">
+              <thead>
+                <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>0001</td><td>1</td><td>1</td></tr>
+                <tr><td>2</td><td>0010</td><td>2</td><td>2</td></tr>
+                <tr><td>3</td><td>0011</td><td>3</td><td>3</td></tr>
+                <tr><td>4</td><td>0100</td><td>4</td><td>4</td></tr>
+                <tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr>
+                <tr><td>6</td><td>0110</td><td>6</td><td>6</td></tr>
+                <tr><td>7</td><td>0111</td><td>7</td><td>7</td></tr>
+                <tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+                <tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+                <tr><td>10</td><td>1010</td><td>12</td><td>a</td></tr>
+                <tr><td>11</td><td>1011</td><td>13</td><td>b</td></tr>
+                <tr><td>12</td><td>1100</td><td>14</td><td>c</td></tr>
+                <tr><td>13</td><td>1101</td><td>15</td><td>d</td></tr>
+                <tr><td>14</td><td>1110</td><td>16</td><td>e</td></tr>
+                <tr><td>15</td><td>1111</td><td>17</td><td>f</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is a number base (radix)?</summary>
+            <p>A number base, or radix, is how many distinct digits a numbering system uses before it carries over into a new place value. Binary uses 2 digits (0-1), octal uses 8 (0-7), decimal uses 10 (0-9), and hexadecimal uses 16 (0-9 and a-f).</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does positional notation work across bases?</summary>
+            <p>Each digit's value is multiplied by the base raised to its position, counting from 0 on the right. For example, binary 1101 = (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13 in decimal. The same logic applies to any base, just swap in that base's value for the exponent.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why is binary used in computing?</summary>
+            <p>Computer hardware is built from transistors that are either on or off, which maps naturally to two states: 0 and 1. Every operation a CPU performs, from arithmetic to bitwise logic (AND, OR, XOR, shifts), happens directly on these binary values.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why do Unix file permissions use octal, like chmod 755?</summary>
+            <p>Unix permissions pack three 3-bit groups (owner, group, other), and 3 bits map exactly to one octal digit (0-7). "755" is really binary 111 101 101 — read, write, execute for the owner, and read, execute for group and other — condensed into three easy-to-type digits.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why is hexadecimal used for memory addresses and colors?</summary>
+            <p>One hex digit represents exactly 4 bits (half a byte), so two hex digits cleanly represent a full byte (0-255). This makes hex a compact, human-readable stand-in for raw binary data, which is why it's used for memory addresses, byte dumps, and RGB colors like #ff8800.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool send my numbers anywhere?</summary>
+            <p>No. Every conversion runs locally in your browser using JavaScript's BigInt — nothing you type is ever sent to a server, logged, or stored.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/uuid-generator" class="tool-card">
+            <span class="tool-icon">🆔</span>
+            <span class="tool-name">UUID Generator</span>
+            <span class="tool-desc">Generate random UUIDs / GUIDs instantly</span>
+          </a>
+          <a href="https://social00.com/tools/random-number-generator" class="tool-card">
+            <span class="tool-icon">🎲</span>
+            <span class="tool-name">Random Number Generator</span>
+            <span class="tool-desc">Random numbers in any range</span>
+          </a>
+          <a href="https://social00.com/tools/unit-converter" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Unit Converter</span>
+            <span class="tool-desc">Length, weight, temperature &amp; more</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
