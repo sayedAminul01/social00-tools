@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Timer – Free Online Countdown, Stopwatch & Timer | Social00</title>
+  <meta name="description" content="Free countdown timer to any date, plus a drift-free stopwatch and timer. Accurate, no sign-up, runs entirely in your browser." />
+  <meta name="keywords" content="countdown timer, online countdown timer, event countdown, stopwatch, online timer, countdown to date" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/countdown-timer" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Countdown Timer – Free Online Countdown, Stopwatch & Timer | Social00" />
+  <meta property="og:description" content="Count down to any date, or use the built-in stopwatch and timer. Accurate, drift-free, free, and runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/countdown-timer" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Countdown Timer",
+    "url": "https://social00.com/tools/countdown-timer",
+    "description": "Free online countdown timer that counts down to any date and time, plus a built-in stopwatch and countdown timer for elapsed-time tracking.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Countdown Timer", "item": "https://social00.com/tools/countdown-timer" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How accurate is this countdown timer?", "acceptedAnswer": { "@type": "Answer", "text": "Very accurate. Every tick reads the actual current time with Date.now() and subtracts it from your target moment, instead of just decrementing a number, so the display self-corrects even if the tab was throttled or backgrounded for a while." } },
+      { "@type": "Question", "name": "Why not just subtract one second from a counter every tick?", "acceptedAnswer": { "@type": "Answer", "text": "Browsers throttle or pause JavaScript timers in background tabs, so a simple decrementing counter falls behind — missed or delayed ticks add up to real drift. Recomputing the remaining time from the actual timestamp on every tick avoids that problem entirely." } },
+      { "@type": "Question", "name": "Do I need to allow browser notifications for this to work?", "acceptedAnswer": { "@type": "Answer", "text": "No. Notifications are optional — granting permission adds a system notification when the countdown hits zero, but the on-page \"Time's up!\" display and beep work whether or not you ever enable notifications." } },
+      { "@type": "Question", "name": "Does this tool need an account or a server to keep running?", "acceptedAnswer": { "@type": "Answer", "text": "No. The countdown, stopwatch and timer all run with plain JavaScript in your browser — there's no account, no server, and nothing you enter is ever sent or stored anywhere." } },
+      { "@type": "Question", "name": "What happens if I close the tab or my browser?", "acceptedAnswer": { "@type": "Answer", "text": "The countdown stops. There's no server keeping time on your behalf, so closing the tab, closing the browser, or letting your device sleep will stop it — just reopen the page and set your target again to keep tracking it." } },
+      { "@type": "Question", "name": "What's the difference between the countdown and the stopwatch/timer mode?", "acceptedAnswer": { "@type": "Answer", "text": "\"Countdown to a Date\" counts down to a specific calendar date and time, like a launch or exam. \"Stopwatch/Timer\" mode works from right now instead — the stopwatch counts up from zero, and its timer counts down from minutes and seconds you set, which is handy for workouts or cooking." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Countdown Timer</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">⏳ Countdown Timer</h1>
+        <p class="hero-sub">Count down to any date, or use the built-in stopwatch and timer. Accurate, drift-free, and runs entirely in your browser.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="mode-tabs" role="tablist" aria-label="Countdown mode">
+            <button class="mode-tab active" id="tabCountdown" data-mode="countdown" role="tab" aria-selected="true">Countdown to a Date</button>
+            <button class="mode-tab" id="tabStopwatch" data-mode="stopwatch" role="tab" aria-selected="false">Stopwatch / Timer</button>
+          </div>
+
+          <div class="mode-panel" id="panelCountdown" data-panel="countdown">
+            <label for="countdownTarget" class="tool-label">Target date &amp; time</label>
+            <input type="datetime-local" id="countdownTarget" class="tool-datetime" autocomplete="off" />
+
+            <div class="preset-row">
+              <button class="preset-btn" data-preset="1h">In 1 Hour</button>
+              <button class="preset-btn" data-preset="tomorrow9">Tomorrow at 9 AM</button>
+              <button class="preset-btn" data-preset="7d">In 7 Days</button>
+              <button class="preset-btn" data-preset="30d">In 30 Days</button>
+            </div>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="startCountdownBtn">Start Countdown</button>
+              <button class="btn-clear" id="resetCountdownBtn">Reset</button>
+            </div>
+
+            <div class="countdown-display" id="countdownDisplay" aria-live="polite">
+              <div class="digit-block">
+                <span class="digit-value" id="cdDays">00</span>
+                <span class="digit-label" id="cdDaysLabel">Days</span>
+              </div>
+              <div class="digit-block">
+                <span class="digit-value" id="cdHours">00</span>
+                <span class="digit-label" id="cdHoursLabel">Hours</span>
+              </div>
+              <div class="digit-block">
+                <span class="digit-value" id="cdMinutes">00</span>
+                <span class="digit-label" id="cdMinutesLabel">Minutes</span>
+              </div>
+              <div class="digit-block">
+                <span class="digit-value" id="cdSeconds">00</span>
+                <span class="digit-label" id="cdSecondsLabel">Seconds</span>
+              </div>
+            </div>
+
+            <p class="countdown-status" id="countdownStatus" aria-live="polite"></p>
+
+            <div class="notify-row">
+              <button class="btn-ghost-small" id="enableNotifyBtn" type="button">🔔 Enable "Time's up" notification</button>
+              <span class="notify-status" id="notifyStatus"></span>
+            </div>
+          </div>
+
+          <div class="mode-panel" id="panelStopwatch" data-panel="stopwatch" hidden>
+            <div class="sub-tabs" role="tablist" aria-label="Stopwatch or timer">
+              <button class="sub-tab active" id="subTabStopwatch" data-submode="stopwatch" role="tab" aria-selected="true">Stopwatch</button>
+              <button class="sub-tab" id="subTabTimer" data-submode="timer" role="tab" aria-selected="false">Timer</button>
+            </div>
+
+            <div class="sub-panel" id="subPanelStopwatch" data-subpanel="stopwatch">
+              <div class="big-display" id="stopwatchDisplay" aria-live="polite">00:00:00.0</div>
+              <div class="calc-actions">
+                <button class="btn-copy" id="swToggleBtn">Start</button>
+                <button class="btn-clear" id="swResetBtn">Reset</button>
+              </div>
+            </div>
+
+            <div class="sub-panel" id="subPanelTimer" data-subpanel="timer" hidden>
+              <div class="timer-inputs">
+                <div class="option-group">
+                  <label for="timerMinutes">Minutes</label>
+                  <input type="number" id="timerMinutes" class="tool-select" min="0" max="999" value="5" />
+                </div>
+                <div class="option-group">
+                  <label for="timerSeconds">Seconds</label>
+                  <input type="number" id="timerSeconds" class="tool-select" min="0" max="59" value="0" />
+                </div>
+              </div>
+              <div class="big-display" id="timerDisplay" aria-live="polite">05:00</div>
+              <p class="countdown-status" id="timerStatus" aria-live="polite"></p>
+              <div class="calc-actions">
+                <button class="btn-copy" id="timerToggleBtn">Start</button>
+                <button class="btn-clear" id="timerResetBtn">Reset</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>Where a Countdown Timer Comes In Handy</h2>
+          <p>Counting down to a fixed moment is useful anywhere a deadline matters: a product launch, a webinar or sale start time, a wedding or concert date, an exam or assignment due date. Set the target once and the big display keeps everyone looking at the page instantly aware of exactly how much time is left.</p>
+        </article>
+        <article class="content-block">
+          <h2>Timestamp Math, Not a Ticking Counter</h2>
+          <p>Instead of decrementing a number once a second, this tool re-reads the real current time on every tick and subtracts it from your target timestamp. That one design choice matters: it means the countdown is always correct, never a running total of small approximations.</p>
+        </article>
+        <article class="content-block">
+          <h2>Stopwatch and Timer, Built the Same Careful Way</h2>
+          <p>The stopwatch records the moment you press Start and adds elapsed real time to whatever was already accumulated before a pause, so pausing and resuming never loses or double-counts time. The countdown timer for minutes and seconds uses the same accumulated-time approach in reverse.</p>
+        </article>
+        <article class="content-block">
+          <h2>Optional Browser Notifications</h2>
+          <p>Click "Enable notification" and your browser will ask for permission once. If you grant it, you'll get a system notification the moment a countdown or timer hits zero — even if you've switched to another tab. Deny or ignore the prompt and the tool still works fine; you'll just rely on the on-page display and beep instead.</p>
+        </article>
+        <article class="content-block">
+          <h2>Nothing Leaves Your Browser</h2>
+          <p>There's no account to create and no server involved — every calculation happens in JavaScript running on your own device. That also means the timer only keeps running while this tab stays open; closing the tab, closing the browser, or putting your device to sleep will stop it, since nothing on a server is keeping time for you.</p>
+        </article>
+        <article class="content-block">
+          <h2>Getting the Most Out of This Tool</h2>
+          <ul class="feature-list">
+            <li>Use the quick presets for common targets like "in 1 hour" or "tomorrow at 9 AM"</li>
+            <li>Keep the tab open (or pinned) so the countdown keeps running in the background</li>
+            <li>Use the Timer sub-mode for cooking, workouts, or timed breaks</li>
+            <li>Use the Stopwatch sub-mode to time a task and pause it whenever you're interrupted</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How accurate is this countdown timer?</summary>
+            <p>Very accurate. Every tick reads the actual current time with Date.now() and subtracts it from your target moment, instead of just decrementing a number, so the display self-corrects even if the tab was throttled or backgrounded for a while.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why not just subtract one second from a counter every tick?</summary>
+            <p>Browsers throttle or pause JavaScript timers in background tabs, so a simple decrementing counter falls behind — missed or delayed ticks add up to real drift. Recomputing the remaining time from the actual timestamp on every tick avoids that problem entirely.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to allow browser notifications for this to work?</summary>
+            <p>No. Notifications are optional — granting permission adds a system notification when the countdown hits zero, but the on-page "Time's up!" display and beep work whether or not you ever enable notifications.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool need an account or a server to keep running?</summary>
+            <p>No. The countdown, stopwatch and timer all run with plain JavaScript in your browser — there's no account, no server, and nothing you enter is ever sent or stored anywhere.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens if I close the tab or my browser?</summary>
+            <p>The countdown stops. There's no server keeping time on your behalf, so closing the tab, closing the browser, or letting your device sleep will stop it — just reopen the page and set your target again to keep tracking it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's the difference between the countdown and the stopwatch/timer mode?</summary>
+            <p>"Countdown to a Date" counts down to a specific calendar date and time, like a launch or exam. "Stopwatch/Timer" mode works from right now instead — the stopwatch counts up from zero, and its timer counts down from minutes and seconds you set, which is handy for workouts or cooking.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/time-zone-converter" class="tool-card">
+            <span class="tool-icon">🌍</span>
+            <span class="tool-name">Time Zone Converter</span>
+            <span class="tool-desc">Compare times across time zones</span>
+          </a>
+          <a href="https://social00.com/tools/age-calculator" class="tool-card">
+            <span class="tool-icon">🎂</span>
+            <span class="tool-name">Age Calculator</span>
+            <span class="tool-desc">Exact age in years, months &amp; days</span>
+          </a>
+          <a href="https://social00.com/tools/random-number-generator" class="tool-card">
+            <span class="tool-icon">🎲</span>
+            <span class="tool-name">Random Number Generator</span>
+            <span class="tool-desc">Generate random numbers instantly</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

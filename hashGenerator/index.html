@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hash Generator – Free MD5, SHA-1, SHA-256 & SHA-512 Tool | Social00</title>
+  <meta name="description" content="Free hash generator. Compute MD5, SHA-1, SHA-256, SHA-384 & SHA-512 for text or files instantly in your browser, and compare checksums." />
+  <meta name="keywords" content="hash generator, md5 generator, sha256 generator, sha1 hash, checksum calculator, file hash checker" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/hash-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hash Generator – Free MD5, SHA-1, SHA-256 & SHA-512 Tool | Social00" />
+  <meta property="og:description" content="Compute MD5, SHA-1, SHA-256, SHA-384 & SHA-512 hashes of text or files instantly. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/hash-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Hash Generator",
+    "url": "https://social00.com/tools/hash-generator",
+    "description": "Free online hash generator that computes MD5, SHA-1, SHA-256, SHA-384 and SHA-512 digests of text or files entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Hash Generator", "item": "https://social00.com/tools/hash-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a cryptographic hash?", "acceptedAnswer": { "@type": "Answer", "text": "A one-way fingerprint of your data. The same input always produces the same fixed-length output, but you cannot reverse the output back into the original input, and changing even one character completely changes the result." } },
+      { "@type": "Question", "name": "Are MD5 and SHA-1 safe to use?", "acceptedAnswer": { "@type": "Answer", "text": "Not for security purposes. Both are cryptographically broken — practical collision attacks exist, meaning two different files can be crafted to produce the same hash. Use SHA-256 or SHA-512 for anything security-sensitive; MD5 and SHA-1 are fine only for checksums and legacy compatibility." } },
+      { "@type": "Question", "name": "Can I use this to verify a downloaded file?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — switch to File mode, hash the file you downloaded, paste the checksum published by the source into the Compare field, and the tool tells you instantly whether they match." } },
+      { "@type": "Question", "name": "Why does Git use SHA-1 for commit IDs?", "acceptedAnswer": { "@type": "Answer", "text": "Git uses SHA-1 hashes as content-addressable identifiers for commits, trees, and blobs — a convenient way to detect accidental corruption and duplicate content, not a security guarantee against a deliberate attacker." } },
+      { "@type": "Question", "name": "Can I use this tool to hash passwords for storage?", "acceptedAnswer": { "@type": "Answer", "text": "No. Password storage needs a slow, salted algorithm designed to resist brute-force attacks, such as bcrypt or Argon2 — this tool only computes fast general-purpose hashes (MD5, SHA-1, SHA-256, SHA-384, SHA-512), which are unsuitable for that job." } },
+      { "@type": "Question", "name": "Does this tool upload my files or text anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every hash is computed locally in your browser using the native Web Crypto API (and a local MD5 implementation) — nothing you type or upload ever leaves your device." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Hash Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">#️⃣ Hash Generator</h1>
+        <p class="hero-sub">Compute MD5, SHA-1, SHA-256, SHA-384 &amp; SHA-512 hashes of text or files — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="mode-tabs" role="tablist" aria-label="Input mode">
+            <button class="mode-tab active" id="tabText" data-mode="text" role="tab" aria-selected="true">Text</button>
+            <button class="mode-tab" id="tabFile" data-mode="file" role="tab" aria-selected="false">File</button>
+          </div>
+
+          <div class="mode-panel" id="panelText">
+            <label for="textInput" class="tool-label">Text to hash</label>
+            <textarea id="textInput" class="tool-textarea" rows="4" placeholder="Type or paste any text…" autocomplete="off" spellcheck="false"></textarea>
+            <div class="calc-actions">
+              <button class="btn-clear" id="clearBtn">Clear</button>
+              <button class="btn-copy" id="hashTextBtn">Generate Hashes</button>
+            </div>
+          </div>
+
+          <div class="mode-panel hidden" id="panelFile">
+            <label for="fileInput" class="tool-label">File to hash</label>
+            <input type="file" id="fileInput" class="tool-file" />
+            <p class="file-meta" id="fileMeta">No file selected — hashes compute over the raw file bytes, nothing is uploaded.</p>
+          </div>
+
+          <div class="results-block" id="resultsBlock">
+            <h3 class="results-title">Hash Results</h3>
+            <ul class="hash-list" id="hashList">
+              <li class="hash-row" data-algo="MD5">
+                <span class="hash-algo">MD5</span>
+                <span class="hash-value" id="hash-MD5">—</span>
+                <button class="btn-hash-copy" data-target="hash-MD5" aria-label="Copy MD5 hash">Copy</button>
+              </li>
+              <li class="hash-row" data-algo="SHA-1">
+                <span class="hash-algo">SHA-1</span>
+                <span class="hash-value" id="hash-SHA-1">—</span>
+                <button class="btn-hash-copy" data-target="hash-SHA-1" aria-label="Copy SHA-1 hash">Copy</button>
+              </li>
+              <li class="hash-row" data-algo="SHA-256">
+                <span class="hash-algo">SHA-256</span>
+                <span class="hash-value" id="hash-SHA-256">—</span>
+                <button class="btn-hash-copy" data-target="hash-SHA-256" aria-label="Copy SHA-256 hash">Copy</button>
+              </li>
+              <li class="hash-row" data-algo="SHA-384">
+                <span class="hash-algo">SHA-384</span>
+                <span class="hash-value" id="hash-SHA-384">—</span>
+                <button class="btn-hash-copy" data-target="hash-SHA-384" aria-label="Copy SHA-384 hash">Copy</button>
+              </li>
+              <li class="hash-row" data-algo="SHA-512">
+                <span class="hash-algo">SHA-512</span>
+                <span class="hash-value" id="hash-SHA-512">—</span>
+                <button class="btn-hash-copy" data-target="hash-SHA-512" aria-label="Copy SHA-512 hash">Copy</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="compare-row">
+            <label for="compareInput" class="tool-label">Compare against expected hash</label>
+            <div class="compare-input-wrap">
+              <input type="text" id="compareInput" class="compare-input" placeholder="Paste a published checksum to verify a match…" autocomplete="off" spellcheck="false" />
+              <span class="compare-result" id="compareResult"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is a Cryptographic Hash?</h2>
+          <p>A cryptographic hash function takes any input — text, an image, a whole video file — and produces a fixed-length string of characters called a digest. The same input always produces the exact same digest, a single changed byte produces a completely different one, and there is no way to work backward from the digest to recover the original input.</p>
+        </article>
+        <article class="content-block">
+          <h2>Verifying Downloaded Files</h2>
+          <p>Software publishers often list a SHA-256 checksum next to a download link. After downloading, hash the file with this tool and compare it to the published value: an exact match means the file arrived intact and untampered with, while a mismatch means it was corrupted in transit or altered.</p>
+        </article>
+        <article class="content-block">
+          <h2>Detecting Duplicate Files</h2>
+          <p>Because identical bytes always produce an identical hash, hashing is a fast, reliable way to spot exact duplicate files without comparing their contents byte-by-byte — useful for cleaning up storage or confirming two copies of a file are truly the same.</p>
+        </article>
+        <article class="content-block">
+          <h2>MD5 and SHA-1: Broken, but Still Useful</h2>
+          <p>MD5 and SHA-1 are considered cryptographically broken — researchers have demonstrated practical collision attacks, where two different inputs are deliberately crafted to produce the same hash. Neither should be used to protect anything sensitive. They remain widely used for non-adversarial checksums and legacy compatibility, such as Git's commit identifiers, which is why this tool still supports them.</p>
+        </article>
+        <article class="content-block">
+          <h2>Never Use This for Password Storage</h2>
+          <p>General-purpose hashes like SHA-256 are designed to run as fast as possible, which is exactly wrong for passwords — it makes brute-forcing cheap. Password storage requires a dedicated slow, salted algorithm such as bcrypt or Argon2. This tool does not implement those and should never be used to hash passwords for storage.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Tool Works</h2>
+          <ul class="feature-list">
+            <li>SHA-1, SHA-256, SHA-384 &amp; SHA-512 via the browser's native Web Crypto API</li>
+            <li>MD5 computed with a from-scratch, RFC 1321-verified implementation</li>
+            <li>Hash raw text or an entire file's bytes, all five algorithms at once</li>
+            <li>100% client-side — nothing you type or upload ever leaves your device</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is a cryptographic hash?</summary>
+            <p>A one-way fingerprint of your data. The same input always produces the same fixed-length output, but you cannot reverse the output back into the original input, and changing even one character completely changes the result.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are MD5 and SHA-1 safe to use?</summary>
+            <p>Not for security purposes. Both are cryptographically broken — practical collision attacks exist, meaning two different files can be crafted to produce the same hash. Use SHA-256 or SHA-512 for anything security-sensitive; MD5 and SHA-1 are fine only for checksums and legacy compatibility.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this to verify a downloaded file?</summary>
+            <p>Yes — switch to File mode, hash the file you downloaded, paste the checksum published by the source into the Compare field, and the tool tells you instantly whether they match.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does Git use SHA-1 for commit IDs?</summary>
+            <p>Git uses SHA-1 hashes as content-addressable identifiers for commits, trees, and blobs — a convenient way to detect accidental corruption and duplicate content, not a security guarantee against a deliberate attacker.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this tool to hash passwords for storage?</summary>
+            <p>No. Password storage needs a slow, salted algorithm designed to resist brute-force attacks, such as bcrypt or Argon2 — this tool only computes fast general-purpose hashes (MD5, SHA-1, SHA-256, SHA-384, SHA-512), which are unsuitable for that job.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool upload my files or text anywhere?</summary>
+            <p>No. Every hash is computed locally in your browser using the native Web Crypto API (and a local MD5 implementation) — nothing you type or upload ever leaves your device.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/base64-converter" class="tool-card">
+            <span class="tool-icon">🔤</span>
+            <span class="tool-name">Base64 Converter</span>
+            <span class="tool-desc">Encode &amp; decode Base64 text and files</span>
+          </a>
+          <a href="https://social00.com/tools/password-generator" class="tool-card">
+            <span class="tool-icon">🔑</span>
+            <span class="tool-name">Password Generator</span>
+            <span class="tool-desc">Strong, random passwords instantly</span>
+          </a>
+          <a href="https://social00.com/tools/uuid-generator" class="tool-card">
+            <span class="tool-icon">🆔</span>
+            <span class="tool-name">UUID Generator</span>
+            <span class="tool-desc">Spec-compliant v4 UUIDs / GUIDs</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

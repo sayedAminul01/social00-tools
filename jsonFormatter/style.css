@@ -1,0 +1,88 @@
+/* JSON Formatter & Validator — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+.output-label { margin-top: 1.1rem; }
+
+.json-textarea {
+  width: 100%; resize: vertical; min-height: 200px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .9rem 1rem; color: var(--text); font-size: .92rem;
+  font-family: 'DM Mono', 'Courier New', monospace; line-height: 1.55;
+  transition: border-color .2s;
+}
+.json-textarea:focus { border-color: var(--accent); }
+
+.options-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.option-group { display: flex; flex-direction: column; gap: .35rem; }
+.option-group label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .5rem .7rem; color: var(--text); font-size: .88rem;
+}
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.btn-format, .btn-minify, .btn-copy, .btn-clear {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-format {
+  border-color: transparent; color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+.btn-format:hover { opacity: .92; transform: translateY(-1px); }
+.btn-minify { border-color: var(--accent-3); color: var(--accent-3); }
+.btn-minify:hover { background: color-mix(in srgb, var(--accent-3) 12%, transparent); }
+.btn-copy { border-color: transparent; background: var(--bg-3); color: var(--text); }
+.btn-copy:hover { border-color: var(--border-2); }
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+
+.json-status {
+  border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: .8rem 1rem; margin-bottom: 1rem;
+  font-size: .88rem; font-weight: 600; line-height: 1.5;
+  word-break: break-word;
+}
+.json-status.is-neutral { color: var(--text-2); background: var(--bg-2); }
+.json-status.is-valid { color: #22c55e; background: rgba(34,197,94,.1); border-color: rgba(34,197,94,.35); }
+.json-status.is-invalid { color: #f87171; background: rgba(248,113,113,.1); border-color: rgba(248,113,113,.35); }
+
+.json-size-compare {
+  border: 1px dashed var(--border-2); border-radius: var(--radius);
+  padding: .6rem .9rem; margin-bottom: 1rem;
+  font-size: .82rem; font-weight: 600; color: var(--accent-3);
+  background: var(--bg-2);
+}
+
+.json-output-wrap {
+  width: 100%; max-height: 420px; overflow: auto;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .9rem 1rem; margin: 0;
+}
+.json-output {
+  font-family: 'DM Mono', 'Courier New', monospace; font-size: .92rem; line-height: 1.55;
+  color: var(--text-2); white-space: pre; display: block;
+}
+.json-key { color: var(--accent-3); }
+.json-string { color: #4ade80; }
+.json-number { color: var(--accent-2); }
+.json-boolean { color: var(--accent); font-weight: 700; }
+.json-null { color: var(--text-3); font-style: italic; }
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

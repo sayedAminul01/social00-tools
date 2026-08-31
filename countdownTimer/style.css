@@ -1,0 +1,108 @@
+/* Countdown Timer — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+/* ── Mode / sub-mode tabs ─────────────────────────────────── */
+.mode-tabs, .sub-tabs {
+  display: flex; gap: .5rem; margin-bottom: 1.3rem;
+  border-bottom: 1px solid var(--border); padding-bottom: 0;
+}
+.sub-tabs { margin-bottom: 1.4rem; }
+.mode-tab, .sub-tab {
+  flex: 1; text-align: center;
+  padding: .75rem 1rem; font-weight: 700; font-size: .92rem;
+  color: var(--text-2); border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.mode-tab:hover, .sub-tab:hover { color: var(--text); }
+.mode-tab.active, .sub-tab.active { color: var(--accent); border-color: var(--accent); }
+
+.mode-panel[hidden], .sub-panel[hidden] { display: none; }
+
+/* ── Countdown target input ──────────────────────────────── */
+.tool-datetime {
+  width: 100%;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1.02rem;
+  transition: border-color .2s;
+}
+.tool-datetime:focus { border-color: var(--accent); }
+.tool-datetime::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+.preset-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 1.2rem; }
+.preset-btn {
+  padding: .5rem 1rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .82rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.preset-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.4rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+.btn-copy:disabled, .btn-clear:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+/* ── Big digit countdown display ─────────────────────────── */
+.countdown-display {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.4rem 1rem; margin-bottom: 1rem;
+}
+.digit-block { display: flex; flex-direction: column; align-items: center; gap: .25rem; }
+.digit-value {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 6vw, 2.8rem);
+  color: var(--accent); line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.digit-label { font-size: .72rem; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+
+.countdown-status {
+  text-align: center; font-weight: 700; font-size: .95rem; color: var(--text-2);
+  min-height: 1.4rem; margin-bottom: .9rem;
+}
+.countdown-status.is-done { color: var(--accent); font-size: 1.1rem; }
+
+.notify-row { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; }
+.btn-ghost-small {
+  padding: .5rem 1rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .82rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-ghost-small:hover { border-color: var(--accent); color: var(--accent); }
+.notify-status { font-size: .82rem; color: var(--text-3); }
+
+/* ── Stopwatch / Timer big display ───────────────────────── */
+.big-display {
+  text-align: center;
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 8vw, 3.6rem);
+  color: var(--accent); line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--radius);
+  padding: 1.6rem 1rem; margin-bottom: 1.2rem;
+}
+
+.timer-inputs { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 1.2rem; }
+.timer-inputs .option-group { display: flex; flex-direction: column; gap: .35rem; flex: 1; min-width: 100px; }
+.timer-inputs label { font-size: .78rem; color: var(--text-3); font-weight: 700; }
+.timer-inputs .tool-select {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .6rem .8rem; color: var(--text); font-size: .95rem;
+}
+
+@media (max-width: 560px) {
+  .countdown-display { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}

@@ -1,0 +1,114 @@
+/* URL Encoder / Decoder — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tool-label { display: block; font-weight: 700; font-size: .88rem; color: var(--text-2); margin-bottom: .5rem; }
+
+.tool-textarea {
+  width: 100%; resize: vertical; min-height: 90px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .85rem 1rem; color: var(--text); font-size: 1rem;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  transition: border-color .2s;
+  margin-bottom: 1rem;
+}
+.tool-textarea:focus { border-color: var(--accent); }
+.tool-textarea[readonly] { color: var(--accent); background: var(--bg-3); }
+
+/* Mode tabs (URI Component vs Full URI) */
+.mode-tabs, .op-toggle {
+  display: flex; gap: .5rem; margin-bottom: .8rem; flex-wrap: wrap;
+}
+.mode-tab, .op-btn {
+  flex: 1 1 auto;
+  min-width: 130px;
+  padding: .6rem 1rem;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-2);
+  font-weight: 700;
+  font-size: .88rem;
+  transition: all .2s;
+}
+.mode-tab:hover, .op-btn:hover { border-color: var(--accent); color: var(--text); }
+.mode-tab.active, .op-btn.active {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.mode-note {
+  font-size: .84rem;
+  color: var(--text-3);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .7rem .9rem;
+  margin: 0 0 1.1rem;
+  line-height: 1.5;
+}
+
+.output-meta {
+  font-size: .78rem;
+  color: var(--text-3);
+  margin: -.6rem 0 1rem;
+}
+
+.calc-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.1rem; }
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+}
+.btn-clear:hover { border-color: var(--accent); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+
+/* Reference table */
+.ref-table-wrap { margin-top: 1.3rem; }
+.ref-table-scroll { overflow-x: auto; }
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .86rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.ref-table th, .ref-table td {
+  text-align: left;
+  padding: .55rem .8rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.ref-table thead th {
+  color: var(--text-3);
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: var(--bg-3);
+}
+.ref-table tbody tr:last-child td { border-bottom: none; }
+.ref-table code {
+  font-family: 'DM Mono', 'Courier New', monospace;
+  color: var(--accent-3);
+  background: var(--bg-3);
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  font-size: .88em;
+}
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

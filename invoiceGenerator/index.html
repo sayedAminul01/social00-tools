@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Generator – Free Online Invoice Maker with PDF Export | Social00</title>
+  <meta name="description" content="Free invoice generator for freelancers. Add line items, tax and discount, preview live, and export a real PDF straight from your browser." />
+  <meta name="keywords" content="invoice generator, invoice maker, free invoice template, pdf invoice generator, online invoice creator, freelance invoice tool" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/invoice-generator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Invoice Generator – Free Online Invoice Maker with PDF Export | Social00" />
+  <meta property="og:description" content="Build a professional invoice with a live preview and export it as a real PDF, entirely in your browser. Free, no sign-up." />
+  <meta property="og:url" content="https://social00.com/tools/invoice-generator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Invoice Generator",
+    "url": "https://social00.com/tools/invoice-generator",
+    "description": "Free online invoice generator that builds a professional invoice with a live preview and exports it as a real PDF using the browser's print function.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Invoice Generator", "item": "https://social00.com/tools/invoice-generator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What should a professional invoice include?", "acceptedAnswer": { "@type": "Answer", "text": "At minimum: a unique invoice number, the issue date and due date, your business details and the client's details, an itemized list of charges, the total due, and clear payment terms. Missing any of these is a common reason invoices get questioned or paid late." } },
+      { "@type": "Question", "name": "Why itemize charges instead of billing one lump sum?", "acceptedAnswer": { "@type": "Answer", "text": "A single total gives a client nothing to check it against. Itemized lines let them verify quantities and rates against what was agreed, which builds trust and makes any dispute quick to resolve by pointing at the exact line in question." } },
+      { "@type": "Question", "name": "Should tax be calculated before or after the discount?", "acceptedAnswer": { "@type": "Answer", "text": "Conventions differ by country and business. This tool applies the discount to the subtotal first, then calculates tax on the discounted amount — a common approach, but not universal. Always follow your local tax authority's rules rather than assuming this order is correct for your situation." } },
+      { "@type": "Question", "name": "Why does every invoice need a unique invoice number?", "acceptedAnswer": { "@type": "Answer", "text": "It's the reference both sides use for record-keeping, bookkeeping software, and tax filing. Without one, matching a payment back to a specific job becomes guesswork for you and your client's accounts team." } },
+      { "@type": "Question", "name": "What payment terms should I put on an invoice?", "acceptedAnswer": { "@type": "Answer", "text": "State the due date explicitly, the accepted payment methods (bank transfer, card, etc.), and any late-payment policy. Vague terms like \"payment due soon\" are far more likely to slip to the bottom of a client's to-do list than a specific date." } },
+      { "@type": "Question", "name": "Is my invoice data uploaded anywhere, and how does the PDF export work?", "acceptedAnswer": { "@type": "Answer", "text": "No — everything you type stays in your browser and nothing is sent to any server. The \"Print / Save as PDF\" button calls your browser's native print function; in the dialog that opens, choose \"Save as PDF\" (or \"Microsoft Print to PDF\" on Windows) as the destination to produce a real PDF file. This isn't a server-side generator, just your browser's own printing engine." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Invoice Generator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🧾 Invoice Generator</h1>
+        <p class="hero-sub">Build a professional invoice, preview it live, and export a real PDF — entirely in your browser. No sign-up, nothing uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <div class="invoice-app">
+
+            <div class="invoice-form-panel">
+              <div class="form-row two-col">
+                <div class="field-group">
+                  <label class="tool-label" for="fromInfo">From (your business)</label>
+                  <textarea id="fromInfo" class="tool-textarea" rows="4" placeholder="Your Name / Business&#10;123 Main St, City, Country&#10;you@business.com">Your Business Name
+123 Main Street, Springfield
+you@yourbusiness.com</textarea>
+                </div>
+                <div class="field-group">
+                  <label class="tool-label" for="toInfo">To (bill client)</label>
+                  <textarea id="toInfo" class="tool-textarea" rows="4" placeholder="Client Name / Company&#10;456 Client Ave, City, Country&#10;client@email.com">Client Name
+456 Client Avenue, Rivertown
+client@email.com</textarea>
+                </div>
+              </div>
+
+              <div class="form-row three-col">
+                <div class="field-group">
+                  <label class="tool-label" for="invoiceNumber">Invoice number</label>
+                  <input type="text" id="invoiceNumber" class="tool-input" autocomplete="off" />
+                </div>
+                <div class="field-group">
+                  <label class="tool-label" for="invoiceDate">Invoice date</label>
+                  <input type="date" id="invoiceDate" class="tool-input" />
+                </div>
+                <div class="field-group">
+                  <label class="tool-label" for="dueDate">Due date</label>
+                  <input type="date" id="dueDate" class="tool-input" />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="tool-label">Line items</label>
+                <div class="line-items-wrap">
+                  <table class="line-items-table">
+                    <thead>
+                      <tr>
+                        <th class="col-desc">Description</th>
+                        <th class="col-qty">Qty</th>
+                        <th class="col-price">Unit price</th>
+                        <th class="col-amount">Amount</th>
+                        <th class="col-remove"><span class="sr-only">Remove</span></th>
+                      </tr>
+                    </thead>
+                    <tbody id="lineItemsBody"></tbody>
+                  </table>
+                  <button class="btn-add-item" id="addItemBtn" type="button">+ Add Item</button>
+                </div>
+              </div>
+
+              <div class="form-row three-col">
+                <div class="field-group">
+                  <label class="tool-label" for="taxRate">Tax rate (%)</label>
+                  <input type="number" id="taxRate" class="tool-input" value="0" min="0" step="0.01" inputmode="decimal" />
+                </div>
+                <div class="field-group">
+                  <label class="tool-label" for="discountValue">Discount</label>
+                  <input type="number" id="discountValue" class="tool-input" value="0" min="0" step="0.01" inputmode="decimal" />
+                </div>
+                <div class="field-group">
+                  <label class="tool-label" for="discountType">Discount type</label>
+                  <select id="discountType" class="tool-select">
+                    <option value="flat" selected>Flat amount ($)</option>
+                    <option value="percent">Percentage (%)</option>
+                  </select>
+                </div>
+              </div>
+              <p class="calc-order-note">Discount is applied to the subtotal first, then tax is calculated on the discounted amount. See the FAQ below — this order varies by jurisdiction.</p>
+
+              <div class="field-group">
+                <label class="tool-label" for="notes">Notes / payment terms</label>
+                <textarea id="notes" class="tool-textarea" rows="3" placeholder="e.g. Payment due within 14 days via bank transfer.">Payment due within 14 days via bank transfer. Thank you for your business!</textarea>
+              </div>
+
+              <div class="calc-actions">
+                <button class="btn-clear" id="resetBtn" type="button">Reset</button>
+                <button class="btn-copy" id="copyTextBtn" type="button">Copy as Plain Text</button>
+                <button class="btn-print" id="printBtn" type="button">🖨️ Print / Save as PDF</button>
+              </div>
+              <p class="print-hint">Clicking "Print / Save as PDF" opens your browser's print dialog — choose <strong>Save as PDF</strong> (or <strong>Microsoft Print to PDF</strong> on Windows) as the destination to get a PDF file.</p>
+            </div>
+
+            <div class="invoice-preview-panel">
+              <div class="invoice-preview" id="invoicePreview">
+                <div class="preview-head">
+                  <div class="preview-from">
+                    <span class="preview-doctitle">INVOICE</span>
+                    <p id="previewFrom" class="preview-block"></p>
+                  </div>
+                  <div class="preview-to">
+                    <span class="preview-label">Bill to</span>
+                    <p id="previewTo" class="preview-block"></p>
+                  </div>
+                </div>
+
+                <div class="preview-meta">
+                  <div><span class="preview-label">Invoice #</span><span id="previewNumber"></span></div>
+                  <div><span class="preview-label">Invoice date</span><span id="previewDate"></span></div>
+                  <div><span class="preview-label">Due date</span><span id="previewDue"></span></div>
+                </div>
+
+                <table class="preview-table">
+                  <thead>
+                    <tr>
+                      <th class="col-desc">Description</th>
+                      <th class="col-qty">Qty</th>
+                      <th class="col-price">Unit price</th>
+                      <th class="col-amount">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="previewItemsBody"></tbody>
+                </table>
+
+                <div class="preview-totals">
+                  <div class="totals-row"><span>Subtotal</span><span id="previewSubtotal">$0.00</span></div>
+                  <div class="totals-row" id="previewDiscountRow"><span id="previewDiscountLabel">Discount</span><span id="previewDiscount">$0.00</span></div>
+                  <div class="totals-row"><span id="previewTaxLabel">Tax (0%)</span><span id="previewTax">$0.00</span></div>
+                  <div class="totals-row totals-final"><span>Total</span><span id="previewTotal">$0.00</span></div>
+                </div>
+
+                <div class="preview-notes">
+                  <span class="preview-label">Notes</span>
+                  <p id="previewNotes"></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Should a Professional Invoice Include?</h2>
+          <p>A complete invoice needs a unique invoice number, the issue date and due date, your business details and the client's details, an itemized breakdown of the work or goods, the total amount due, and clear payment terms. Leaving any of these out is one of the most common reasons invoices get questioned, delayed, or sent back for corrections.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Itemizing Every Charge Builds Trust</h2>
+          <p>A single lump-sum total gives a client nothing to check it against. Breaking charges into individual lines — what was delivered, how many units, at what rate — lets them verify the invoice against what was agreed. If a question ever comes up, both sides can point to the exact line instead of re-litigating the whole bill.</p>
+        </article>
+        <article class="content-block">
+          <h2>Tax Before or After Discount? It Depends Where You Are</h2>
+          <p>This tool applies the discount to the subtotal first, then calculates tax on the discounted amount — a common convention, but not a universal one. Some tax authorities require tax on the pre-discount subtotal instead. Treat the order used here as a sensible default, not tax advice, and confirm the correct sequence with your local tax rules before relying on it.</p>
+        </article>
+        <article class="content-block">
+          <h2>Invoice Numbering Is a Small Habit With a Big Payoff</h2>
+          <p>A unique, sequential invoice number is the reference both you and your client use to match a payment to a job in bookkeeping software and tax filings. This tool suggests one based on today's date, but you can edit it to fit whatever numbering scheme your accounting already uses.</p>
+        </article>
+        <article class="content-block">
+          <h2>Payment Terms That Actually Get You Paid Faster</h2>
+          <p>A specific due date and a stated payment method beat a vague "payment due soon" every time — specific instructions are far less likely to slip down a client's to-do list. Note your accepted payment methods and any late-payment policy directly in the invoice's notes section.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Generator Works — and What It Doesn't Do</h2>
+          <p>Everything you type is calculated and rendered locally in your browser; nothing is uploaded to a server. The "Print / Save as PDF" button uses your browser's own native print engine — the same preview you see on screen is what gets printed, so there's no separate server-side PDF renderer and no risk of the numbers drifting between what you see and what you print.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What should a professional invoice include?</summary>
+            <p>At minimum: a unique invoice number, the issue date and due date, your business details and the client's details, an itemized list of charges, the total due, and clear payment terms. Missing any of these is a common reason invoices get questioned or paid late.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why itemize charges instead of billing one lump sum?</summary>
+            <p>A single total gives a client nothing to check it against. Itemized lines let them verify quantities and rates against what was agreed, which builds trust and makes any dispute quick to resolve by pointing at the exact line in question.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should tax be calculated before or after the discount?</summary>
+            <p>Conventions differ by country and business. This tool applies the discount to the subtotal first, then calculates tax on the discounted amount — a common approach, but not universal. Always follow your local tax authority's rules rather than assuming this order is correct for your situation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does every invoice need a unique invoice number?</summary>
+            <p>It's the reference both sides use for record-keeping, bookkeeping software, and tax filing. Without one, matching a payment back to a specific job becomes guesswork for you and your client's accounts team.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What payment terms should I put on an invoice?</summary>
+            <p>State the due date explicitly, the accepted payment methods (bank transfer, card, etc.), and any late-payment policy. Vague terms like "payment due soon" are far more likely to slip to the bottom of a client's to-do list than a specific date.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my invoice data uploaded anywhere, and how does the PDF export work?</summary>
+            <p>No — everything you type stays in your browser and nothing is sent to any server. The "Print / Save as PDF" button calls your browser's native print function; in the dialog that opens, choose "Save as PDF" (or "Microsoft Print to PDF" on Windows) as the destination to produce a real PDF file. This isn't a server-side generator, just your browser's own printing engine.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, increases &amp; discounts</span>
+          </a>
+          <a href="https://social00.com/tools/loan-emi-calculator" class="tool-card">
+            <span class="tool-icon">🏦</span>
+            <span class="tool-name">Loan EMI Calculator</span>
+            <span class="tool-desc">Plan your monthly instalments</span>
+          </a>
+          <a href="https://social00.com/tools/resume-summary-generator" class="tool-card">
+            <span class="tool-icon">📄</span>
+            <span class="tool-name">Resume Summary Generator</span>
+            <span class="tool-desc">Short, punchy resume summaries</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -492,6 +492,96 @@ const TOOLS = [
     desc: 'Compare two texts line-by-line and see exactly what was added or removed, using a real diff algorithm.',
     url: '/tools/text-diff-checker'
   },
+  {
+    id: 'json-formatter',
+    name: 'JSON Formatter & Validator',
+    icon: '{ }',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Validate, pretty-print or minify JSON instantly, with exact line/column error reporting for invalid input.',
+    url: '/tools/json-formatter'
+  },
+  {
+    id: 'base64-converter',
+    name: 'Base64 Encoder / Decoder',
+    icon: '🔐',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Encode or decode text and files to/from Base64, with correct UTF-8 handling and Data URI support.',
+    url: '/tools/base64-converter'
+  },
+  {
+    id: 'url-encoder',
+    name: 'URL Encoder / Decoder',
+    icon: '🔗',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Encode or decode text for safe use in URLs, with both encodeURIComponent and encodeURI modes.',
+    url: '/tools/url-encoder-decoder'
+  },
+  {
+    id: 'hash-generator',
+    name: 'Hash Generator',
+    icon: '#️⃣',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes of text or a file, with a checksum compare tool.',
+    url: '/tools/hash-generator'
+  },
+  {
+    id: 'color-contrast',
+    name: 'Color Contrast Checker',
+    icon: '🎨',
+    category: 'utility',
+    badge: '♿ A11y',
+    desc: 'Check any foreground/background color pair against real WCAG 2.1 AA/AAA contrast requirements.',
+    url: '/tools/color-contrast-checker'
+  },
+  {
+    id: 'image-format',
+    name: 'Image Format Converter',
+    icon: '🖼️',
+    category: 'image',
+    badge: '🔄 Convert',
+    desc: 'Convert an image between PNG, JPEG and WebP instantly, with correct transparency handling.',
+    url: '/tools/image-format-converter'
+  },
+  {
+    id: 'invoice-generator',
+    name: 'Invoice Generator',
+    icon: '🧾',
+    category: 'utility',
+    badge: '💼 Freelance',
+    desc: 'Build a professional invoice with live totals and export it as a PDF, right in your browser.',
+    url: '/tools/invoice-generator'
+  },
+  {
+    id: 'countdown-timer',
+    name: 'Countdown Timer',
+    icon: '⏳',
+    category: 'utility',
+    badge: '⏱️ Time',
+    desc: 'Count down to any date, or use the built-in stopwatch and timer — accurate even if the tab is backgrounded.',
+    url: '/tools/countdown-timer'
+  },
+  {
+    id: 'markdown-to-html',
+    name: 'Markdown to HTML Converter',
+    icon: '📝',
+    category: 'utility',
+    badge: '💻 Dev',
+    desc: 'Convert Markdown to clean HTML with a live preview — headers, bold/italic, lists, links, code and more.',
+    url: '/tools/markdown-to-html'
+  },
+  {
+    id: 'final-grade',
+    name: 'Final Grade Calculator',
+    icon: '🎯',
+    category: 'student',
+    badge: '🎓 Student',
+    desc: 'Find out exactly what score you need on your final exam to hit your target grade in the class.',
+    url: '/tools/final-grade-calculator'
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════

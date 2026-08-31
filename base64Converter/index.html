@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64 Encoder / Decoder – Free Online Base64 Converter | Social00</title>
+  <meta name="description" content="Free Base64 encoder/decoder for text and files. UTF-8 safe (emoji & accents), Data URI support, 100% client-side — nothing uploaded." />
+  <meta name="keywords" content="base64 encoder, base64 decoder, base64 converter, encode base64 online, decode base64 online, base64 to file, file to base64, data uri generator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/base64-converter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Base64 Encoder / Decoder – Free Online Base64 Converter | Social00" />
+  <meta property="og:description" content="Encode text or files to Base64, or decode Base64 back to text or a downloadable file. UTF-8 safe, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/base64-converter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Base64 Encoder / Decoder",
+    "url": "https://social00.com/tools/base64-converter",
+    "description": "Free online Base64 encoder and decoder for text and files, with correct UTF-8 handling for emoji and accented characters and optional Data URI output.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Base64 Encoder / Decoder", "item": "https://social00.com/tools/base64-converter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Base64 encoding?", "acceptedAnswer": { "@type": "Answer", "text": "Base64 is a binary-to-text encoding scheme that represents binary data using only 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It's used to safely transmit or store binary data in systems designed for text." } },
+      { "@type": "Question", "name": "Is Base64 the same as encryption?", "acceptedAnswer": { "@type": "Answer", "text": "No. Base64 is not encryption or compression — it provides zero security. Anyone can decode a Base64 string back to its original form instantly with no key required, so never use it to protect sensitive data." } },
+      { "@type": "Question", "name": "Why does Base64 make output about 33% larger?", "acceptedAnswer": { "@type": "Answer", "text": "Base64 encodes every 3 bytes of input as 4 output characters, and padding rounds shorter groups up to that same 4-character block. That fixed 3-to-4 ratio is what produces the roughly 33% size increase over the original binary." } },
+      { "@type": "Question", "name": "Why do some Base64 tools break on emoji or accented characters?", "acceptedAnswer": { "@type": "Answer", "text": "Plain btoa() and atob() only understand Latin1 text and will throw an error or silently corrupt anything outside that range, including emoji and accented letters. This tool converts text to UTF-8 bytes first, so multi-byte characters encode and decode correctly." } },
+      { "@type": "Question", "name": "What is a Data URI and when should I use one?", "acceptedAnswer": { "@type": "Answer", "text": "A Data URI embeds a file's Base64-encoded contents directly inside an href, src, or CSS url() value, like data:image/png;base64,.... It's useful for small images, icons, or fonts you want to inline in CSS or HTML instead of loading as a separate request." } },
+      { "@type": "Question", "name": "Is anything uploaded when I use this tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every conversion, including file encoding and decoding, happens locally in your browser using JavaScript. Your text and files are never sent to any server." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Base64 Encoder / Decoder</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔐 Base64 Encoder / Decoder</h1>
+        <p class="hero-sub">Encode text or files to Base64, or decode Base64 back — fully UTF-8 safe, 100% client-side. No sign-up, nothing uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="mode-tabs" role="tablist" aria-label="Conversion mode">
+            <button class="mode-tab active" id="tabText" type="button" role="tab" aria-selected="true" aria-controls="textPanel">📝 Text</button>
+            <button class="mode-tab" id="tabFile" type="button" role="tab" aria-selected="false" aria-controls="filePanel">📁 File</button>
+          </div>
+
+          <div class="mode-panel" id="textPanel" role="tabpanel" aria-labelledby="tabText">
+            <div class="convert-block">
+              <div class="convert-block-header"><h3>Encode: Text → Base64</h3></div>
+              <label for="textEncodeInput" class="tool-label">Text</label>
+              <textarea id="textEncodeInput" class="tool-textarea" rows="4" placeholder="Type or paste any text, including emoji 🎉 or accented characters like café…" spellcheck="false"></textarea>
+              <div class="calc-actions">
+                <button class="btn-copy" id="textEncodeBtn">Encode to Base64</button>
+                <button class="btn-clear" id="textEncodeClearBtn">Clear</button>
+              </div>
+              <label for="textEncodeOutput" class="tool-label">Base64 output</label>
+              <textarea id="textEncodeOutput" class="tool-textarea tool-textarea--output" rows="4" readonly placeholder="Encoded Base64 will appear here…"></textarea>
+              <div class="output-footer">
+                <span class="output-meta" id="textEncodeMeta">0 characters</span>
+                <button class="btn-copy-small" id="textEncodeCopyBtn">Copy</button>
+              </div>
+            </div>
+
+            <div class="convert-divider"></div>
+
+            <div class="convert-block">
+              <div class="convert-block-header"><h3>Decode: Base64 → Text</h3></div>
+              <label for="textDecodeInput" class="tool-label">Base64</label>
+              <textarea id="textDecodeInput" class="tool-textarea" rows="4" placeholder="Paste a Base64 string here…" spellcheck="false"></textarea>
+              <div class="calc-actions">
+                <button class="btn-copy" id="textDecodeBtn">Decode to Text</button>
+                <button class="btn-clear" id="textDecodeClearBtn">Clear</button>
+              </div>
+              <label for="textDecodeOutput" class="tool-label">Text output</label>
+              <textarea id="textDecodeOutput" class="tool-textarea tool-textarea--output" rows="4" readonly placeholder="Decoded text will appear here…"></textarea>
+              <div class="output-footer">
+                <span class="output-meta" id="textDecodeMeta">0 characters</span>
+                <button class="btn-copy-small" id="textDecodeCopyBtn">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-panel" id="filePanel" role="tabpanel" aria-labelledby="tabFile" hidden>
+            <div class="convert-block">
+              <div class="convert-block-header"><h3>Encode: File → Base64</h3></div>
+              <p class="privacy-note">🔒 Your file is processed entirely in your browser — it is never uploaded to any server.</p>
+              <div class="drop-zone" id="fileDropZone" tabindex="0" role="button" aria-label="Choose a file or drag and drop one here">
+                <input type="file" id="fileEncodeInput" class="sr-only" />
+                <div class="drop-zone-icon">📁</div>
+                <p class="drop-zone-text"><strong>Drag &amp; drop any file here</strong><br/>or click to browse — images, fonts, PDFs, anything</p>
+              </div>
+              <p class="empty-state" id="fileEmptyState">No file selected yet.</p>
+              <div class="file-meta-row" id="fileMetaRow" hidden>
+                <span class="file-name" id="fileEncodeName"></span>
+                <span class="file-size" id="fileEncodeSize"></span>
+              </div>
+              <label class="option-toggle" id="dataUriToggleRow" hidden>
+                <input type="checkbox" id="dataUriToggle" />
+                <span>Output as Data URI (data:&lt;mimetype&gt;;base64,…)</span>
+              </label>
+              <label for="fileEncodeOutput" class="tool-label">Base64 output</label>
+              <textarea id="fileEncodeOutput" class="tool-textarea tool-textarea--output" rows="5" readonly placeholder="Encoded Base64 will appear here after you choose a file…"></textarea>
+              <div class="output-footer">
+                <span class="output-meta" id="fileEncodeMeta">0 characters</span>
+                <button class="btn-copy-small" id="fileEncodeCopyBtn">Copy</button>
+              </div>
+            </div>
+
+            <div class="convert-divider"></div>
+
+            <div class="convert-block">
+              <div class="convert-block-header"><h3>Decode: Base64 → File</h3></div>
+              <label for="fileDecodeInput" class="tool-label">Base64 (with or without a data: URI prefix)</label>
+              <textarea id="fileDecodeInput" class="tool-textarea" rows="5" placeholder="Paste a Base64 string or a full data:mimetype;base64,... URI…" spellcheck="false"></textarea>
+              <div class="options-row">
+                <div class="option-group option-group--grow">
+                  <label for="fileDecodeName">File name</label>
+                  <input type="text" id="fileDecodeName" class="tool-select" placeholder="decoded-file" autocomplete="off" />
+                </div>
+                <div class="option-group option-group--grow">
+                  <label for="fileDecodeMime">MIME type</label>
+                  <input type="text" id="fileDecodeMime" class="tool-select" placeholder="application/octet-stream" autocomplete="off" />
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button class="btn-copy" id="fileDecodeBtn">Decode &amp; Download</button>
+                <button class="btn-clear" id="fileDecodeClearBtn">Clear</button>
+              </div>
+              <p class="format-note" id="fileDecodeStatus"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is Base64, Really?</h2>
+          <p>Base64 is a <strong>binary-to-text encoding scheme</strong> — it represents any sequence of bytes using only 64 printable ASCII characters. It is <strong>not encryption and not compression</strong>: it doesn't hide data (anyone can decode it instantly, with no key) and it doesn't shrink data (it actually grows it). Its job is simpler — making binary data safe to carry through systems built for plain text, like email (MIME), JSON, XML, and URLs.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Base64 Output Is Always ~33% Bigger</h2>
+          <p>Base64 maps every <strong>3 bytes</strong> of input to <strong>4 output characters</strong> (each character encodes 6 bits, and 4 × 6 = 24 bits = 3 bytes). When the input length isn't a multiple of 3, the last group is padded with <code>=</code> to complete the block. That fixed 3-to-4 ratio is a mathematical property of the encoding, not an inefficiency in any particular tool — every correct Base64 implementation grows data by the same ~33%.</p>
+        </article>
+        <article class="content-block">
+          <h2>The UTF-8 Trap: Why Plain btoa()/atob() Fail on Emoji</h2>
+          <p>JavaScript's built-in <code>btoa()</code> and <code>atob()</code> only understand <strong>Latin1</strong> — code points 0–255. Feed them an emoji, an accented letter like "é", or any non-Latin script and they either throw <code>InvalidCharacterError</code> or silently mangle the result. This tool avoids that pitfall entirely: text is first converted to raw <strong>UTF-8 bytes</strong> with <code>TextEncoder</code>, those bytes are Base64-encoded, and decoding reverses the process with <code>TextDecoder</code> — so multi-byte characters always round-trip correctly.</p>
+        </article>
+        <article class="content-block">
+          <h2>Data URIs: Inlining Files in CSS and HTML</h2>
+          <p>A <strong>Data URI</strong> embeds a file's Base64 contents directly inside a value, e.g. <code>data:image/png;base64,iVBORw0...</code>, so a browser can render it without a separate network request. It's genuinely useful for small icons, background images, or fonts inlined straight into CSS or HTML — but it isn't free: the ~33% size overhead and loss of browser caching mean it's best reserved for small assets, not full-size images.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Real-World Uses of Base64</h2>
+          <ul class="feature-list">
+            <li>Embedding small images, icons, or fonts as Data URIs in CSS/HTML</li>
+            <li>Sending binary attachments inside JSON or XML API payloads</li>
+            <li>Encoding credentials for HTTP Basic Authentication headers</li>
+            <li>Storing binary blobs safely inside text-based config files or env vars</li>
+            <li>Attaching files to email under the MIME standard</li>
+          </ul>
+        </article>
+        <article class="content-block">
+          <h2>Built for Accuracy — and Your Privacy</h2>
+          <ul class="feature-list">
+            <li>Correct UTF-8 handling — emoji and accented text round-trip perfectly</li>
+            <li>Byte conversion is chunked, so even large files won't crash the tab</li>
+            <li>Optional Data URI output, auto-detected from the file's real MIME type</li>
+            <li>100% client-side — files and text never leave your browser, ever</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is Base64 encoding?</summary>
+            <p>Base64 is a binary-to-text encoding scheme that represents binary data using only 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It's used to safely transmit or store binary data in systems designed for text.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is Base64 the same as encryption?</summary>
+            <p>No. Base64 is not encryption or compression — it provides zero security. Anyone can decode a Base64 string back to its original form instantly with no key required, so never use it to protect sensitive data.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does Base64 make output about 33% larger?</summary>
+            <p>Base64 encodes every 3 bytes of input as 4 output characters, and padding rounds shorter groups up to that same 4-character block. That fixed 3-to-4 ratio is what produces the roughly 33% size increase over the original binary.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why do some Base64 tools break on emoji or accented characters?</summary>
+            <p>Plain btoa() and atob() only understand Latin1 text and will throw an error or silently corrupt anything outside that range, including emoji and accented letters. This tool converts text to UTF-8 bytes first, so multi-byte characters encode and decode correctly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is a Data URI and when should I use one?</summary>
+            <p>A Data URI embeds a file's Base64-encoded contents directly inside an href, src, or CSS url() value, like data:image/png;base64,.... It's useful for small images, icons, or fonts you want to inline in CSS or HTML instead of loading as a separate request.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is anything uploaded when I use this tool?</summary>
+            <p>No. Every conversion, including file encoding and decoding, happens locally in your browser using JavaScript. Your text and files are never sent to any server.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/json-formatter" class="tool-card">
+            <span class="tool-icon">🧩</span>
+            <span class="tool-name">JSON Formatter</span>
+            <span class="tool-desc">Format, validate &amp; minify JSON</span>
+          </a>
+          <a href="https://social00.com/tools/url-encoder-decoder" class="tool-card">
+            <span class="tool-icon">🔗</span>
+            <span class="tool-name">URL Encoder / Decoder</span>
+            <span class="tool-desc">Encode or decode URLs &amp; query strings</span>
+          </a>
+          <a href="https://social00.com/tools/hash-generator" class="tool-card">
+            <span class="tool-icon">🔑</span>
+            <span class="tool-name">Hash Generator</span>
+            <span class="tool-desc">Generate MD5, SHA-1 &amp; SHA-256 hashes</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

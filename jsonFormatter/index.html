@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON Formatter & Validator – Free Online JSON Beautifier | Social00</title>
+  <meta name="description" content="Free JSON formatter and validator. Pretty-print, minify, and check JSON syntax instantly in your browser — nothing is sent to a server." />
+  <meta name="keywords" content="json formatter, json validator, json beautifier, json pretty print, minify json, validate json online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/json-formatter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JSON Formatter & Validator – Free Online JSON Beautifier | Social00" />
+  <meta property="og:description" content="Pretty-print, minify, and validate JSON instantly. Free, no sign-up, runs entirely in your browser — nothing is ever sent to a server." />
+  <meta property="og:url" content="https://social00.com/tools/json-formatter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JSON Formatter & Validator",
+    "url": "https://social00.com/tools/json-formatter",
+    "description": "Free online JSON formatter and validator that pretty-prints, minifies, and checks JSON syntax entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "JSON Formatter & Validator", "item": "https://social00.com/tools/json-formatter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What makes JSON invalid?", "acceptedAnswer": { "@type": "Answer", "text": "The most common causes are trailing commas after the last item, unquoted or single-quoted keys and strings, and comments — none of which the JSON spec allows. Double quotes are required around every key and string value." } },
+      { "@type": "Question", "name": "Why do JSON keys need double quotes?", "acceptedAnswer": { "@type": "Answer", "text": "The JSON specification only recognizes double-quoted strings. Single quotes, backticks, or unquoted keys are valid in JavaScript object literals but are not valid JSON, so JSON.parse() will reject them." } },
+      { "@type": "Question", "name": "Can I put comments in a JSON file?", "acceptedAnswer": { "@type": "Answer", "text": "No. JSON has no comment syntax — not // and not /* */. If you need comments, consider JSON5, JSONC, or YAML, or strip the comments before parsing as plain JSON." } },
+      { "@type": "Question", "name": "What's the difference between formatting and minifying JSON?", "acceptedAnswer": { "@type": "Answer", "text": "Formatting (pretty-printing) adds indentation and line breaks so nested structures are easy to read and debug. Minifying strips all unnecessary whitespace to produce the smallest possible payload — useful for APIs, configs, and production files." } },
+      { "@type": "Question", "name": "How do I fix an 'Unexpected token' error?", "acceptedAnswer": { "@type": "Answer", "text": "This tool converts the position JSON.parse() reports into a line and column number so you can jump straight to the problem — it's almost always a trailing comma, a missing quote, or a missing comma between elements." } },
+      { "@type": "Question", "name": "Is my JSON data sent to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Parsing, formatting, minifying, and validation all happen locally in your browser using JavaScript's built-in JSON.parse() and JSON.stringify() — nothing you paste here, including API keys or config values, is ever uploaded or transmitted." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / JSON Formatter & Validator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">{ } JSON Formatter & Validator</h1>
+        <p class="hero-sub">Pretty-print, minify, and validate JSON instantly — right in your browser. No sign-up, nothing uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="jsonInput" class="tool-label">Paste your JSON</label>
+          <textarea id="jsonInput" class="tool-textarea json-textarea" rows="10" placeholder='{"a": 1, "b": [1, 2, 3], "c": null}' autocomplete="off" spellcheck="false"></textarea>
+
+          <div class="options-row">
+            <div class="option-group">
+              <label for="indentSelect">Indent size</label>
+              <select id="indentSelect" class="tool-select">
+                <option value="2" selected>2 spaces</option>
+                <option value="4">4 spaces</option>
+                <option value="tab">Tab</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-format" id="formatBtn">Format / Validate</button>
+            <button class="btn-minify" id="minifyBtn">Minify</button>
+            <button class="btn-copy" id="copyBtn">Copy Output</button>
+            <button class="btn-clear" id="clearBtn">Clear</button>
+          </div>
+
+          <div class="json-status is-neutral" id="jsonStatus" aria-live="polite">Paste JSON above, then click <strong>Format / Validate</strong>.</div>
+
+          <div class="json-size-compare" id="sizeCompare" hidden></div>
+
+          <label class="tool-label output-label" for="jsonOutput">Result</label>
+          <pre class="json-output-wrap"><code class="json-output" id="jsonOutput"></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is JSON Formatting & Validation?</h2>
+          <p>JSON (JavaScript Object Notation) is a strict, text-based data format built from objects, arrays, strings, numbers, booleans, and null. "Validating" means confirming the text actually follows that spec — this tool runs it through the browser's own <code>JSON.parse()</code>, the same engine every server and app uses, so a pass here means it will parse anywhere.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Mistakes That Break JSON</h2>
+          <p>The usual culprits: a trailing comma after the last item or property, single-quoted strings (<code>'like this'</code>) instead of double quotes, unquoted object keys, and <code>//</code> or <code>/* */</code> comments. All are valid-looking to a human eye but every one of them is rejected by the JSON spec.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Pretty-Printing Helps You Debug</h2>
+          <p>Minified JSON from an API response is nearly impossible to scan for a missing brace or a misplaced comma. Indenting it reveals the nesting structure at a glance, so mismatched brackets and misaligned arrays jump out visually instead of hiding in a single unbroken line.</p>
+        </article>
+        <article class="content-block">
+          <h2>When Should You Minify JSON?</h2>
+          <p>Minify before sending JSON over a network or storing it in a config bundle — stripping whitespace shrinks payload size, which matters for API responses, mobile clients, and build artifacts. Keep the pretty-printed version only while you're actively editing or debugging it.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Validator Pinpoints Errors</h2>
+          <p>When <code>JSON.parse()</code> fails, its error message buries a character offset inside a sentence like "Unexpected token } in JSON at position 42". This tool extracts that offset and counts newlines up to it, converting a raw character position into the exact line and column you need to look at.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Instant validation using your browser's native JSON engine</li>
+            <li>Line/column error locations, not just "invalid JSON"</li>
+            <li>One-click formatting with 2-space, 4-space, or tab indent</li>
+            <li>Minify mode with a live bytes-saved comparison</li>
+            <li>Free, no login, nothing you paste ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What makes JSON invalid?</summary>
+            <p>The most common causes are trailing commas after the last item, unquoted or single-quoted keys and strings, and comments — none of which the JSON spec allows. Double quotes are required around every key and string value.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why do JSON keys need double quotes?</summary>
+            <p>The JSON specification only recognizes double-quoted strings. Single quotes, backticks, or unquoted keys are valid in JavaScript object literals but are not valid JSON, so JSON.parse() will reject them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I put comments in a JSON file?</summary>
+            <p>No. JSON has no comment syntax — not // and not /* */. If you need comments, consider JSON5, JSONC, or YAML, or strip the comments before parsing as plain JSON.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's the difference between formatting and minifying JSON?</summary>
+            <p>Formatting (pretty-printing) adds indentation and line breaks so nested structures are easy to read and debug. Minifying strips all unnecessary whitespace to produce the smallest possible payload — useful for APIs, configs, and production files.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I fix an 'Unexpected token' error?</summary>
+            <p>This tool converts the position JSON.parse() reports into a line and column number so you can jump straight to the problem — it's almost always a trailing comma, a missing quote, or a missing comma between elements.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my JSON data sent to a server?</summary>
+            <p>No. Parsing, formatting, minifying, and validation all happen locally in your browser using JavaScript's built-in JSON.parse() and JSON.stringify() — nothing you paste here, including API keys or config values, is ever uploaded or transmitted.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/base64-converter" class="tool-card">
+            <span class="tool-icon">🔤</span>
+            <span class="tool-name">Base64 Converter</span>
+            <span class="tool-desc">Encode & decode Base64 strings</span>
+          </a>
+          <a href="https://social00.com/tools/url-encoder-decoder" class="tool-card">
+            <span class="tool-icon">🔗</span>
+            <span class="tool-name">URL Encoder / Decoder</span>
+            <span class="tool-desc">Encode & decode URL components</span>
+          </a>
+          <a href="https://social00.com/tools/hash-generator" class="tool-card">
+            <span class="tool-icon">🔒</span>
+            <span class="tool-name">Hash Generator</span>
+            <span class="tool-desc">MD5, SHA-1, SHA-256 & more</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

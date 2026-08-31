@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown to HTML Converter – Free Online Markdown Renderer | Social00</title>
+  <meta name="description" content="Free Markdown to HTML converter with live preview and raw HTML output. Runs entirely in your browser — no sign-up, nothing uploaded." />
+  <meta name="keywords" content="markdown to html, markdown converter, markdown renderer, markdown preview, md to html online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/markdown-to-html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Markdown to HTML Converter – Free Online Markdown Renderer | Social00" />
+  <meta property="og:description" content="Convert Markdown to HTML instantly with a live preview and raw HTML source. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/markdown-to-html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Markdown to HTML Converter",
+    "url": "https://social00.com/tools/markdown-to-html",
+    "description": "Free online Markdown to HTML converter with a live preview and raw HTML source view, built with a self-contained parser that runs entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Markdown to HTML Converter", "item": "https://social00.com/tools/markdown-to-html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Markdown?", "acceptedAnswer": { "@type": "Answer", "text": "Markdown is a lightweight plain-text formatting syntax created by John Gruber in 2004. You write simple symbols like # for headers or ** for bold, and a Markdown processor converts that plain text into HTML — which is why it's the default format for README files, GitHub comments, forums, and countless note-taking and documentation tools." } },
+      { "@type": "Question", "name": "Which Markdown features does this converter support?", "acceptedAnswer": { "@type": "Answer", "text": "This tool implements a clearly-scoped subset: ATX headers (# through ######), bold and italic, links and images, inline code, fenced code blocks, flat unordered and ordered lists, blockquotes, horizontal rules, and paragraphs. The supported-syntax note above the input field is the definitive list." } },
+      { "@type": "Question", "name": "Why isn't everything supported, like tables or nested lists?", "acceptedAnswer": { "@type": "Answer", "text": "This converter uses a small parser written from scratch rather than a full CommonMark library, so it deliberately covers a defined subset instead of claiming full spec compliance. Tables, nested/multi-level lists, footnotes, and some CommonMark edge cases aren't implemented — for those, a dedicated Markdown library is a better fit." } },
+      { "@type": "Question", "name": "Is it safe to type HTML tags inside my Markdown?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any HTML-special characters you type — like <, >, and & — are escaped before formatting is applied, so raw HTML or a pasted <script> tag renders as inert, visible text in the preview instead of running or altering the page. Only the HTML tags this tool generates itself (headers, links, etc.) are ever inserted as real markup." } },
+      { "@type": "Question", "name": "Is my Markdown text uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Parsing and rendering happen entirely in your browser using JavaScript running on your device — nothing you type is sent to a server, stored, or transmitted anywhere." } },
+      { "@type": "Question", "name": "Can I use the raw HTML output on my own website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The HTML Source tab shows the exact markup the preview is built from, and the Copy HTML button copies it as-is so you can paste it into a page, CMS, or email template." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Markdown to HTML Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">📝 Markdown to HTML Converter</h1>
+        <p class="hero-sub">Convert Markdown to clean HTML instantly, with a live preview and raw HTML source. Runs entirely in your browser — no sign-up, nothing uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+          <label for="mdInput" class="tool-label">Markdown input</label>
+          <textarea id="mdInput" class="tool-textarea md-textarea" rows="12" placeholder="# Hello world&#10;&#10;This is **bold** and *italic* text with a [link](https://example.com).&#10;&#10;- First item&#10;- Second item" autocomplete="off" spellcheck="false"></textarea>
+
+          <p class="md-note">
+            <strong>Supported:</strong> headers (<code># – ######</code>), <strong>bold</strong>/<em>italic</em>, links, images, <code>inline code</code>, fenced code blocks, flat bullet &amp; numbered lists, blockquotes, and horizontal rules.
+            <strong>Not supported:</strong> nested/multi-level lists, tables, footnotes, and other CommonMark edge cases — this is a small hand-written parser, not a full spec implementation.
+          </p>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="clearBtn">Clear</button>
+            <button class="btn-clear" id="sampleBtn">Load Sample</button>
+          </div>
+
+          <div class="md-tabs" role="tablist">
+            <button class="md-tab is-active" id="tabPreviewBtn" role="tab" aria-selected="true" aria-controls="previewPanel">Preview</button>
+            <button class="md-tab" id="tabSourceBtn" role="tab" aria-selected="false" aria-controls="sourcePanel">HTML Source</button>
+          </div>
+
+          <div class="md-panel is-active" id="previewPanel" role="tabpanel">
+            <div class="md-panel-head">
+              <span class="md-panel-label">Live preview</span>
+              <button class="btn-copy" id="copyPreviewBtn">Copy HTML</button>
+            </div>
+            <div class="md-preview" id="mdPreview" aria-live="polite"></div>
+          </div>
+
+          <div class="md-panel" id="sourcePanel" role="tabpanel" hidden>
+            <div class="md-panel-head">
+              <span class="md-panel-label">Raw HTML output</span>
+              <button class="btn-copy" id="copySourceBtn">Copy HTML</button>
+            </div>
+            <pre class="md-source-wrap"><code class="md-source" id="mdSource"></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is Markdown?</h2>
+          <p>Markdown is a lightweight plain-text formatting syntax created by John Gruber in 2004. Instead of clicking toolbar buttons, you type simple symbols — <code>#</code> for a header, <code>**</code> for bold — and a Markdown processor turns that plain text into HTML. It's popular precisely because it's write-once, render-anywhere: the same <code>.md</code> file looks right on GitHub, in a static site generator, or pasted into a forum post.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Converter Works</h2>
+          <p>The input is split into block-level chunks first — headers, lists, code fences, blockquotes, paragraphs — and only then is each chunk's text run through a second, inline pass that handles bold, italic, links, images, and inline code. This two-pass approach is the standard way to structure a small Markdown parser, and it avoids a lot of the bugs a single giant regex would introduce.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Supported Syntax at a Glance</h2>
+          <p>ATX headers (<code>#</code> through <code>######</code>), <strong>bold</strong> and <em>italic</em> using either <code>**</code>/<code>__</code> or <code>*</code>/<code>_</code>, <code>[links](url)</code>, <code>![images](url)</code>, <code>`inline code`</code>, fenced <code>```</code> code blocks, flat unordered/ordered lists, <code>&gt; blockquotes</code>, and <code>---</code> horizontal rules. The note above the input box is the authoritative list.</p>
+        </article>
+        <article class="content-block">
+          <h2>What's Deliberately Left Out</h2>
+          <p>This is a small hand-written parser, not a CommonMark implementation, so it's scoped honestly rather than claiming full spec coverage. Nested or multi-level lists, tables, footnotes, definition lists, and assorted CommonMark edge cases aren't implemented — for those, reach for an established library instead of this tool.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why HTML-Escaping Matters for Security</h2>
+          <p>Whatever you type is escaped for HTML-special characters (<code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>) before any Markdown formatting is applied, so a literal <code>&lt;script&gt;</code> tag or a stray angle bracket in your text becomes inert, visible text instead of live markup. That matters any time rendered output gets inserted into a page's DOM — which is exactly what the live preview does.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Instant conversion with a live visual preview, no page reload</li>
+            <li>Raw HTML source view, copyable separately from the preview</li>
+            <li>Escapes stray HTML in your Markdown so it can't break the page</li>
+            <li>Free, no login, nothing you type ever leaves your browser</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is Markdown?</summary>
+            <p>Markdown is a lightweight plain-text formatting syntax created by John Gruber in 2004. You write simple symbols like # for headers or ** for bold, and a Markdown processor converts that plain text into HTML — which is why it's the default format for README files, GitHub comments, forums, and countless note-taking and documentation tools.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which Markdown features does this converter support?</summary>
+            <p>This tool implements a clearly-scoped subset: ATX headers (# through ######), bold and italic, links and images, inline code, fenced code blocks, flat unordered and ordered lists, blockquotes, horizontal rules, and paragraphs. The supported-syntax note above the input field is the definitive list.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why isn't everything supported, like tables or nested lists?</summary>
+            <p>This converter uses a small parser written from scratch rather than a full CommonMark library, so it deliberately covers a defined subset instead of claiming full spec compliance. Tables, nested/multi-level lists, footnotes, and some CommonMark edge cases aren't implemented — for those, a dedicated Markdown library is a better fit.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is it safe to type HTML tags inside my Markdown?</summary>
+            <p>Yes. Any HTML-special characters you type — like &lt;, &gt;, and &amp; — are escaped before formatting is applied, so raw HTML or a pasted &lt;script&gt; tag renders as inert, visible text in the preview instead of running or altering the page. Only the HTML tags this tool generates itself (headers, links, etc.) are ever inserted as real markup.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my Markdown text uploaded anywhere?</summary>
+            <p>No. Parsing and rendering happen entirely in your browser using JavaScript running on your device — nothing you type is sent to a server, stored, or transmitted anywhere.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use the raw HTML output on my own website?</summary>
+            <p>Yes. The HTML Source tab shows the exact markup the preview is built from, and the Copy HTML button copies it as-is so you can paste it into a page, CMS, or email template.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/word-counter" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <span class="tool-name">Word Counter</span>
+            <span class="tool-desc">Count words, characters &amp; reading time</span>
+          </a>
+          <a href="https://social00.com/tools/lorem-ipsum-generator" class="tool-card">
+            <span class="tool-icon">📄</span>
+            <span class="tool-name">Lorem Ipsum Generator</span>
+            <span class="tool-desc">Placeholder paragraphs, sentences &amp; words</span>
+          </a>
+          <a href="https://social00.com/tools/text-case-converter" class="tool-card">
+            <span class="tool-icon">🔠</span>
+            <span class="tool-name">Text Case Converter</span>
+            <span class="tool-desc">Switch between upper, lower &amp; title case</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

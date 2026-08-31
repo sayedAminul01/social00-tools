@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Encoder / Decoder – Encode &amp; Decode URLs Online | Social00</title>
+  <meta name="description" content="Free URL encoder/decoder. Percent-encode or decode text with correct encodeURIComponent vs encodeURI modes explained. Runs in your browser." />
+  <meta name="keywords" content="url encoder, url decoder, percent encoding, encodeuricomponent, encodeuri, decode url online, url escape" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/url-encoder-decoder" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="URL Encoder / Decoder – Encode & Decode URLs Online | Social00" />
+  <meta property="og:description" content="Percent-encode or decode text for safe use in URLs. Correctly explains encodeURIComponent vs encodeURI. Free, no sign-up, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/url-encoder-decoder" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "URL Encoder / Decoder",
+    "url": "https://social00.com/tools/url-encoder-decoder",
+    "description": "Free online URL encoder and decoder that percent-encodes or decodes text, with separate encodeURIComponent and encodeURI modes for accurate results.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "URL Encoder / Decoder", "item": "https://social00.com/tools/url-encoder-decoder" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the difference between encodeURIComponent and encodeURI?", "acceptedAnswer": { "@type": "Answer", "text": "encodeURIComponent escapes every character that isn't safe inside a single URI component — including /, ?, &, =, and # — so it's the right choice for a query parameter value or a path segment. encodeURI is for encoding a complete URI and deliberately leaves structural characters like :, /, ?, &, =, and # unescaped, since they still need to work as URL syntax." } },
+      { "@type": "Question", "name": "Why do some forms turn spaces into + instead of %20?", "acceptedAnswer": { "@type": "Answer", "text": "That's the application/x-www-form-urlencoded convention used by HTML form submissions, not standard percent-encoding. Percent-encoding itself always represents a space as %20 — encodeURIComponent and encodeURI both do this. The + shorthand only applies inside form-encoded query strings and request bodies." } },
+      { "@type": "Question", "name": "Why did decoding fail with an error?", "acceptedAnswer": { "@type": "Answer", "text": "decodeURIComponent and decodeURI throw a URIError when they hit malformed percent-encoding, such as a lone % that isn't followed by two valid hex digits, or an incomplete multi-byte UTF-8 sequence. This tool catches that error and shows a friendly message instead of crashing." } },
+      { "@type": "Question", "name": "Is it safe to encode an already-encoded string?", "acceptedAnswer": { "@type": "Answer", "text": "No — encoding an already-encoded string turns every existing % into %25, corrupting the result. Only encode raw, unencoded text, and only decode a string once to get back the original." } },
+      { "@type": "Question", "name": "What characters are safe to leave unencoded in a URL?", "acceptedAnswer": { "@type": "Answer", "text": "Unreserved characters — letters, digits, and - _ . ~ — are always safe and never get encoded. Reserved characters like / ? & = # : have structural meaning and are only left alone by encodeURI, not by encodeURIComponent." } },
+      { "@type": "Question", "name": "Does this tool send my data anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Encoding and decoding happen entirely in your browser using JavaScript's built-in functions. Nothing you type is ever sent to a server or stored." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / URL Encoder / Decoder</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔗 URL Encoder / Decoder</h1>
+        <p class="hero-sub">Percent-encode or decode text for safe use in URLs — instantly, in your browser. No sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="mode-tabs" role="tablist" aria-label="Encoding mode">
+            <button type="button" class="mode-tab active" id="modeComponentBtn" data-mode="component" role="tab" aria-selected="true">URI Component</button>
+            <button type="button" class="mode-tab" id="modeFullBtn" data-mode="full" role="tab" aria-selected="false">Full URI</button>
+          </div>
+          <p class="mode-note" id="modeNote"></p>
+
+          <div class="op-toggle" role="tablist" aria-label="Operation">
+            <button type="button" class="op-btn active" id="encodeBtn" data-op="encode" role="tab" aria-selected="true">Encode</button>
+            <button type="button" class="op-btn" id="decodeBtn" data-op="decode" role="tab" aria-selected="false">Decode</button>
+          </div>
+
+          <label for="urlInput" class="tool-label">Input</label>
+          <textarea id="urlInput" class="tool-textarea" rows="4" placeholder="e.g. https://example.com/search?q=hello world&amp;lang=en" autocomplete="off" spellcheck="false"></textarea>
+
+          <div class="calc-actions">
+            <button class="btn-clear" id="swapBtn">⇅ Swap</button>
+            <button class="btn-clear" id="clearBtn">Clear</button>
+          </div>
+
+          <label for="urlOutput" class="tool-label">Output</label>
+          <textarea id="urlOutput" class="tool-textarea" rows="4" placeholder="Your result will appear here" readonly aria-live="polite"></textarea>
+          <div class="output-meta" id="outputMeta">0 characters</div>
+
+          <div class="calc-actions">
+            <button class="btn-copy" id="copyBtn">Copy Output</button>
+          </div>
+
+          <div class="ref-table-wrap">
+            <span class="tool-label">Common Characters, Encoded</span>
+            <div class="ref-table-scroll">
+              <table class="ref-table">
+                <thead>
+                  <tr><th>Character</th><th>Percent-encoded</th><th>Form-encoded (+)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Space</td><td><code>%20</code></td><td><code>+</code></td></tr>
+                  <tr><td><code>&amp;</code></td><td><code>%26</code></td><td><code>%26</code></td></tr>
+                  <tr><td><code>=</code></td><td><code>%3D</code></td><td><code>%3D</code></td></tr>
+                  <tr><td><code>?</code></td><td><code>%3F</code></td><td><code>%3F</code></td></tr>
+                  <tr><td><code>#</code></td><td><code>%23</code></td><td><code>%23</code></td></tr>
+                  <tr><td><code>/</code></td><td><code>%2F</code></td><td><code>%2F</code></td></tr>
+                  <tr><td><code>:</code></td><td><code>%3A</code></td><td><code>%3A</code></td></tr>
+                  <tr><td><code>@</code></td><td><code>%40</code></td><td><code>%40</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is Percent-Encoding?</h2>
+          <p>Percent-encoding (also called URL encoding) represents unsafe or reserved characters as a <code>%</code> followed by two hexadecimal digits — the character's byte value in UTF-8. A space becomes <code>%20</code>, an ampersand becomes <code>%26</code>. It exists because URLs can only reliably contain a limited set of ASCII characters; everything else has to be escaped to travel safely through browsers, servers, and links.</p>
+        </article>
+        <article class="content-block">
+          <h2>encodeURIComponent vs encodeURI: The Real Difference</h2>
+          <p><code>encodeURIComponent</code> escapes almost everything that isn't a letter, digit, or <code>- _ . ~</code> — including <code>/ ? &amp; = #</code> — because it assumes you're encoding one isolated piece of a URL, like a query value. <code>encodeURI</code> assumes you already have a complete, structured URL and leaves <code>: / ? &amp; = #</code> alone since removing them would break the URL's syntax. Mixing the two up is one of the most common URL-encoding bugs.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Spaces Sometimes Become + Instead of %20</h2>
+          <p>Standard percent-encoding always turns a space into <code>%20</code> — that's what <code>encodeURIComponent</code> and <code>encodeURI</code> both produce. The <code>+</code> shorthand for spaces comes from a separate, older convention: <code>application/x-www-form-urlencoded</code>, the format browsers use when submitting an HTML form. It's not "more standard" or "less standard" than <code>%20</code> — it's a different encoding used in a different context, and the two aren't always interchangeable.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Use Cases</h2>
+          <p>Encode a value before appending it to a query string (<code>?q=</code> plus a user's search term), encode a path segment that might contain spaces or symbols, or encode data being embedded inside another URL (like a redirect target passed as a parameter). Decoding is just as common — reading values back out of a query string, or making a logged, encoded URL human-readable again.</p>
+        </article>
+        <article class="content-block">
+          <h2>How This Tool Works</h2>
+          <p>Choose a mode — URI Component or Full URI — and an operation — Encode or Decode — then type or paste into the input. The output updates live as you type, using the matching native JavaScript function. If a decode fails because the input contains malformed percent-encoding, the tool catches the error and shows a clear message instead of breaking.</p>
+        </article>
+        <article class="content-block">
+          <h2>Best Practices to Avoid Mistakes</h2>
+          <ul class="feature-list">
+            <li>Never encode a string twice — it turns every <code>%</code> into <code>%25</code> and corrupts the result</li>
+            <li>Use URI Component mode for query values and path segments, Full URI mode only for a complete link</li>
+            <li>Don't hand-roll <code>+</code> for spaces unless you're specifically building form-encoded data</li>
+            <li>Decode before reading a value, encode right before inserting it into a URL — not earlier</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What's the difference between encodeURIComponent and encodeURI?</summary>
+            <p>encodeURIComponent escapes every character that isn't safe inside a single URI component — including /, ?, &amp;, =, and # — so it's the right choice for a query parameter value or a path segment. encodeURI is for encoding a complete URI and deliberately leaves structural characters like :, /, ?, &amp;, =, and # unescaped, since they still need to work as URL syntax.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why do some forms turn spaces into + instead of %20?</summary>
+            <p>That's the application/x-www-form-urlencoded convention used by HTML form submissions, not standard percent-encoding. Percent-encoding itself always represents a space as %20 — encodeURIComponent and encodeURI both do this. The + shorthand only applies inside form-encoded query strings and request bodies.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why did decoding fail with an error?</summary>
+            <p>decodeURIComponent and decodeURI throw a URIError when they hit malformed percent-encoding, such as a lone % that isn't followed by two valid hex digits, or an incomplete multi-byte UTF-8 sequence. This tool catches that error and shows a friendly message instead of crashing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is it safe to encode an already-encoded string?</summary>
+            <p>No — encoding an already-encoded string turns every existing % into %25, corrupting the result. Only encode raw, unencoded text, and only decode a string once to get back the original.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What characters are safe to leave unencoded in a URL?</summary>
+            <p>Unreserved characters — letters, digits, and - _ . ~ — are always safe and never get encoded. Reserved characters like / ? &amp; = # : have structural meaning and are only left alone by encodeURI, not by encodeURIComponent.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this tool send my data anywhere?</summary>
+            <p>No. Encoding and decoding happen entirely in your browser using JavaScript's built-in functions. Nothing you type is ever sent to a server or stored.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/base64-converter" class="tool-card">
+            <span class="tool-icon">🔡</span>
+            <span class="tool-name">Base64 Converter</span>
+            <span class="tool-desc">Encode &amp; decode Base64 text instantly</span>
+          </a>
+          <a href="https://social00.com/tools/json-formatter" class="tool-card">
+            <span class="tool-icon">🧾</span>
+            <span class="tool-name">JSON Formatter</span>
+            <span class="tool-desc">Format, validate &amp; minify JSON</span>
+          </a>
+          <a href="https://social00.com/tools/url-slug-generator" class="tool-card">
+            <span class="tool-icon">✂️</span>
+            <span class="tool-name">URL Slug Generator</span>
+            <span class="tool-desc">Turn titles into clean SEO slugs</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

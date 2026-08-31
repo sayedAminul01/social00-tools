@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Grade Calculator – What Score Do I Need on My Final? | Social00</title>
+  <meta name="description" content="Free final grade calculator. Find the exact score needed on your final exam to hit any grade, or predict your grade instantly." />
+  <meta name="keywords" content="final grade calculator, what do i need on my final exam, final exam grade calculator, weighted grade calculator, grade needed calculator" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/final-grade-calculator" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Final Grade Calculator – What Score Do I Need on My Final? | Social00" />
+  <meta property="og:description" content="Find the exact score you need on your final exam, or predict your grade — instant, accurate, runs in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/final-grade-calculator" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Final Grade Calculator",
+    "url": "https://social00.com/tools/final-grade-calculator",
+    "description": "Free online final grade calculator that computes the exact score needed on a final exam to reach a target course grade, or predicts the resulting grade from a hypothetical final exam score.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Final Grade Calculator", "item": "https://social00.com/tools/final-grade-calculator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How is the required final exam score calculated?", "acceptedAnswer": { "@type": "Answer", "text": "It uses the standard weighted-average formula: desired grade = current grade × (1 − final weight) + final score × final weight. Rearranged for the final score, F = (desired grade − current grade × (1 − final weight)) ÷ final weight. Plug in your numbers and that's exactly what this tool computes." } },
+      { "@type": "Question", "name": "What does it mean if the required score is over 100%?", "acceptedAnswer": { "@type": "Answer", "text": "It means your target grade is mathematically out of reach no matter what you score on the final. The tool tells you this directly and shows your real achievable ceiling — the highest overall grade possible if you scored a perfect 100% on the final." } },
+      { "@type": "Question", "name": "What if the required score is 0% or negative?", "acceptedAnswer": { "@type": "Answer", "text": "It means you've already secured your target grade based on your current standing alone — even a 0% on the final wouldn't drop you below it. The tool flags this so you know your desired grade is already locked in." } },
+      { "@type": "Question", "name": "Can I break down my current grade into individual assignments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch on the component breakdown in the \"What Do I Need?\" tab and add each graded item — homework, quizzes, midterms — with its own weight and score. The tool automatically computes your weighted current grade so you don't have to do that math by hand." } },
+      { "@type": "Question", "name": "Does this account for my school's specific grading policy?", "acceptedAnswer": { "@type": "Answer", "text": "No — this is a general weighted-average planning tool, not a substitute for your syllabus or your school's official grading system. Curves, dropped lowest scores, extra credit, and rounding rules vary by course and institution, so always confirm against your instructor's actual policy." } },
+      { "@type": "Question", "name": "Is this calculator accurate and does it store my data?", "acceptedAnswer": { "@type": "Answer", "text": "The math is exact weighted-average algebra, computed instantly and entirely in your browser — nothing is sent to a server. It's a planning tool to help you understand what you need, not a guarantee of your final grade." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Final Grade Calculator</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🎯 Final Grade Calculator</h1>
+        <p class="hero-sub">Find the exact score you need on your final exam — or predict your grade before you walk in. Instant, exact weighted-average math, in your browser.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <div class="mode-tabs" role="tablist" aria-label="Calculator mode">
+            <button class="tab active" id="tab-need" data-mode="need" role="tab" aria-selected="true" aria-controls="panel-need">🎯 What Do I Need?</button>
+            <button class="tab" id="tab-predict" data-mode="predict" role="tab" aria-selected="false" aria-controls="panel-predict">🔮 What Will I Get?</button>
+          </div>
+
+          <!-- MODE 1: What score do I need on the final? -->
+          <div class="calc-panel active" id="panel-need" role="tabpanel" aria-labelledby="tab-need">
+            <p class="panel-hint">Enter your current grade, how much the final is worth, and the grade you're aiming for.</p>
+
+            <label class="option-toggle component-toggle">
+              <input type="checkbox" id="useComponents" />
+              <span>Break down my current grade into weighted components instead</span>
+            </label>
+
+            <div class="field-group" id="directGradeGroup">
+              <label for="currentGrade" class="tool-label">Current grade so far (%)</label>
+              <input type="number" id="currentGrade" class="tool-input" placeholder="e.g. 85" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+            </div>
+
+            <div class="components-block" id="componentsBlock" hidden>
+              <div class="components-list" id="componentsList"></div>
+              <button type="button" class="btn-add-component" id="addComponent">+ Add component</button>
+              <div class="components-summary">
+                Weighted average so far: <strong id="componentsAvg">—</strong>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="finalWeight" class="tool-label">Final exam weight (%)</label>
+                <input type="number" id="finalWeight" class="tool-input" placeholder="e.g. 20" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="field-group">
+                <label for="desiredGrade" class="tool-label">Desired overall grade (%)</label>
+                <input type="number" id="desiredGrade" class="tool-input" placeholder="e.g. 90" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="result-card" id="resultNeed">
+              <span class="result-label" id="resultNeedLabel">Score needed on the final</span>
+              <span class="result-value" id="resultNeedValue">—</span>
+              <p class="result-detail" id="resultNeedDetail">Fill in the fields above to see what you need.</p>
+            </div>
+
+            <div class="calc-actions">
+              <button class="btn-clear" id="clearNeed">Clear</button>
+              <button class="btn-copy" id="copyNeed">Copy Result</button>
+            </div>
+          </div>
+
+          <!-- MODE 2: What will my grade be? -->
+          <div class="calc-panel" id="panel-predict" role="tabpanel" aria-labelledby="tab-predict">
+            <p class="panel-hint">Enter your current grade, the final's weight, and a hypothetical final exam score to see what your overall grade would be.</p>
+
+            <div class="field-row field-row--three">
+              <div class="field-group">
+                <label for="currentGrade2" class="tool-label">Current grade so far (%)</label>
+                <input type="number" id="currentGrade2" class="tool-input" placeholder="e.g. 85" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="field-group">
+                <label for="finalWeight2" class="tool-label">Final exam weight (%)</label>
+                <input type="number" id="finalWeight2" class="tool-input" placeholder="e.g. 20" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+              </div>
+              <div class="field-group">
+                <label for="predictedScore" class="tool-label">Predicted final exam score (%)</label>
+                <input type="number" id="predictedScore" class="tool-input" placeholder="e.g. 75" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="result-card" id="resultPredict">
+              <span class="result-label">Your overall course grade would be</span>
+              <span class="result-value" id="resultPredictValue">—</span>
+              <p class="result-detail" id="resultPredictDetail">Fill in the fields above to see your projected grade.</p>
+            </div>
+
+            <div class="calc-actions">
+              <button class="btn-clear" id="clearPredict">Clear</button>
+              <button class="btn-copy" id="copyPredict">Copy Result</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>How the Weighted Final Grade Formula Works</h2>
+          <p>Almost every course grade is a weighted average: each piece — homework, midterms, the final — contributes a percentage of the total. If your final is worth a fraction <code>w</code> of the course and everything else so far averages to <code>C</code>, then your overall grade is <code>overall = C × (1 − w) + F × w</code>, where <code>F</code> is your final exam score. Solve that equation for <code>F</code> and you get exactly what you need to score to hit any target grade — no guessing required.</p>
+        </article>
+        <article class="content-block">
+          <h2>Worked Example, Step by Step</h2>
+          <p>Say your current grade is <strong>85%</strong>, the final is worth <strong>20%</strong> of your course grade, and you want an overall <strong>90%</strong>. The non-final portion is worth 80%, so: F = (90 − 85 × 0.8) ÷ 0.2 = (90 − 68) ÷ 0.2 = <strong>110%</strong>. Since no exam gives 110%, a 90% overall isn't reachable here — even a perfect final only gets you to 85 × 0.8 + 100 × 0.2 = <strong>88%</strong>. Change the target to 88% instead and the required score becomes a very achievable 80%.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why the "Not Achievable" Result Matters</h2>
+          <p>Plenty of calculators just spit out ">100%" and leave you to figure out what that means. That's not actually useful — it's just an unlabeled contradiction. Knowing the honest truth that a grade is out of reach, along with the real ceiling you can still hit with a perfect final, is far more useful for deciding where to focus your remaining study time or whether to talk to your professor about extra credit.</p>
+        </article>
+        <article class="content-block">
+          <h2>Common Course Weighting Scenarios</h2>
+          <p>Final exam weights vary widely by course and institution: a 10–15% final is common in courses with heavy ongoing assessment, 20–30% is typical for a standard lecture course, and some courses — especially certain math, language, or comprehensive-exam courses — weight the final at 40% or more. The higher the final's weight, the more it can move your grade in either direction, so always check your syllabus for the exact number.</p>
+        </article>
+        <article class="content-block">
+          <h2>Breaking Down Your Grade by Components</h2>
+          <p>If you don't already know your exact current percentage, switch on the component breakdown. Add each graded item you've completed — homework 20% at 88%, midterm 30% at 75%, quizzes 10% at 92%, and so on — and the tool automatically computes the weighted average for you. That average then feeds straight into the same formula, so you never have to do the averaging by hand.</p>
+        </article>
+        <article class="content-block">
+          <h2>Using the Number Wisely</h2>
+          <p>A required score of 95% tells you to prioritize studying hard for this exam; a required score of 40% tells you that you can afford to relax slightly and focus energy elsewhere; and an "unreachable" result tells you it may be time to recalibrate expectations or ask your instructor about options like extra credit. Either way, knowing the real number beats guessing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How is the required final exam score calculated?</summary>
+            <p>It uses the standard weighted-average formula: desired grade = current grade × (1 − final weight) + final score × final weight. Rearranged for the final score, F = (desired grade − current grade × (1 − final weight)) ÷ final weight. Plug in your numbers and that's exactly what this tool computes.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does it mean if the required score is over 100%?</summary>
+            <p>It means your target grade is mathematically out of reach no matter what you score on the final. The tool tells you this directly and shows your real achievable ceiling — the highest overall grade possible if you scored a perfect 100% on the final.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if the required score is 0% or negative?</summary>
+            <p>It means you've already secured your target grade based on your current standing alone — even a 0% on the final wouldn't drop you below it. The tool flags this so you know your desired grade is already locked in.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I break down my current grade into individual assignments?</summary>
+            <p>Yes. Switch on the component breakdown in the "What Do I Need?" tab and add each graded item — homework, quizzes, midterms — with its own weight and score. The tool automatically computes your weighted current grade so you don't have to do that math by hand.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this account for my school's specific grading policy?</summary>
+            <p>No — this is a general weighted-average planning tool, not a substitute for your syllabus or your school's official grading system. Curves, dropped lowest scores, extra credit, and rounding rules vary by course and institution, so always confirm against your instructor's actual policy.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this calculator accurate and does it store my data?</summary>
+            <p>The math is exact weighted-average algebra, computed instantly and entirely in your browser — nothing is sent to a server. It's a planning tool to help you understand what you need, not a guarantee of your final grade.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/gpa-calculator" class="tool-card">
+            <span class="tool-icon">🎓</span>
+            <span class="tool-name">GPA Calculator</span>
+            <span class="tool-desc">Semester GPA, CGPA &amp; grade conversions</span>
+          </a>
+          <a href="https://social00.com/tools/percentage-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Percentage Calculator</span>
+            <span class="tool-desc">Percentages, increases &amp; grade scoring</span>
+          </a>
+          <a href="https://social00.com/tools/essay-outline-generator" class="tool-card">
+            <span class="tool-icon">📝</span>
+            <span class="tool-name">Essay Outline Generator</span>
+            <span class="tool-desc">Structured outlines for any essay topic</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

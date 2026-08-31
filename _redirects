@@ -68,6 +68,18 @@
 /tools/time-zone-converter             /timeZoneConverter/index.html            200
 /tools/text-diff-checker               /textDiffChecker/index.html              200
 
+# ── New tools (batch 5) ─────────────────────────────────────────────
+/tools/json-formatter                  /jsonFormatter/index.html                200
+/tools/base64-converter                /base64Converter/index.html              200
+/tools/url-encoder-decoder             /urlEncoderDecoder/index.html            200
+/tools/hash-generator                  /hashGenerator/index.html                200
+/tools/color-contrast-checker          /colorContrastChecker/index.html         200
+/tools/image-format-converter          /imageFormatConverter/index.html         200
+/tools/invoice-generator               /invoiceGenerator/index.html             200
+/tools/countdown-timer                 /countdownTimer/index.html               200
+/tools/markdown-to-html                /markdownToHtml/index.html               200
+/tools/final-grade-calculator          /finalGradeCalculator/index.html         200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Format Converter – Free PNG, JPEG &amp; WebP Converter | Social00</title>
+  <meta name="description" content="Free online image format converter. Convert PNG, JPEG and WebP instantly in your browser — no upload, 100% private." />
+  <meta name="keywords" content="image format converter, png to jpeg, png to webp, jpeg to png, webp converter, convert image format online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/image-format-converter" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Image Format Converter – Free PNG, JPEG & WebP Converter | Social00" />
+  <meta property="og:description" content="Convert images between PNG, JPEG and WebP instantly in your browser. Free, no sign-up, no upload — 100% private and runs entirely on your device." />
+  <meta property="og:url" content="https://social00.com/tools/image-format-converter" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Format Converter",
+    "url": "https://social00.com/tools/image-format-converter",
+    "description": "Free online image format converter that converts images between PNG, JPEG and WebP entirely in the browser, with correct transparency handling and instant download.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Image Format Converter", "item": "https://social00.com/tools/image-format-converter" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the actual difference between PNG, JPEG and WebP?", "acceptedAnswer": { "@type": "Answer", "text": "PNG is lossless and supports transparency, but produces the largest files — best for logos, screenshots and graphics with sharp edges. JPEG is lossy and has no transparency channel at all, but compresses photos much smaller. WebP is a modern format that supports both lossy and lossless compression plus transparency, and is generally smaller than both PNG and JPEG at equivalent quality, with near-universal browser support today." } },
+      { "@type": "Question", "name": "Why did my transparent PNG turn black when I converted it to JPEG?", "acceptedAnswer": { "@type": "Answer", "text": "JPEG has no alpha channel, so any transparent pixel has to become some solid color. Naive converters draw the image onto a blank canvas, which defaults to black, so transparency turns black. This tool fills the canvas with your chosen background color (white by default) before drawing the image, so transparent areas become that color instead." } },
+      { "@type": "Question", "name": "Which format should I use for photos, and which for logos or screenshots?", "acceptedAnswer": { "@type": "Answer", "text": "Use JPEG or WebP for photos — their lossy compression shrinks file size dramatically with little visible quality loss. Use PNG or WebP for logos, screenshots, icons and anything with transparency or sharp text/edges, since lossy compression can blur fine lines and JPEG can't preserve transparency at all." } },
+      { "@type": "Question", "name": "Does converting to WebP always produce a smaller file than PNG or JPEG?", "acceptedAnswer": { "@type": "Answer", "text": "Usually, but not always. WebP's compression algorithm typically beats both formats at the same visual quality, especially for photos, but results depend on the source image's content and the quality setting you choose. Always check the before/after file sizes shown by this tool rather than assuming." } },
+      { "@type": "Question", "name": "What happens if my browser doesn't support WebP encoding?", "acceptedAnswer": { "@type": "Answer", "text": "Nearly every current browser supports it, but a few older ones silently fail to encode WebP. This tool checks the actual MIME type of the converted file after encoding, and if it doesn't match WebP, it shows a warning instead of letting you download a mislabeled file." } },
+      { "@type": "Question", "name": "Is my image uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Everything happens locally using your browser's Canvas API — your image is decoded, redrawn and re-encoded entirely on your own device and is never uploaded or sent to any server." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Image Format Converter</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🖼️ Image Format Converter</h1>
+        <p class="hero-sub">Convert between PNG, JPEG and WebP right in your browser — correct transparency handling, instant download, nothing ever uploaded.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <p class="privacy-note">🔒 Your image is processed entirely in your browser — it is never uploaded to any server.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose an image or drag and drop one here">
+            <input type="file" id="fileInput" accept="image/*" class="sr-only" />
+            <div class="drop-zone-icon">🖼️</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop an image here</strong><br/>or click to browse (JPEG, PNG, WebP, GIF…)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No image selected yet — choose or drop a file above to get started.</p>
+          <p class="warning-state" id="warningState" hidden></p>
+
+          <div class="file-panel" id="filePanel" hidden>
+            <div class="file-meta">
+              <span class="file-name" id="fileName"></span>
+              <span class="file-size" id="fileOriginalMeta"></span>
+            </div>
+
+            <div class="options-row">
+              <div class="option-group">
+                <label for="formatSelect">Convert to</label>
+                <select id="formatSelect" class="tool-select">
+                  <option value="image/png">PNG (lossless)</option>
+                  <option value="image/jpeg" selected>JPEG (smaller, no transparency)</option>
+                  <option value="image/webp">WebP (modern, smaller)</option>
+                </select>
+              </div>
+              <div class="option-group option-group--grow" id="qualityRow">
+                <label for="qualityRange">Quality <span id="qualityValue">90</span></label>
+                <input type="range" id="qualityRange" class="tool-range" min="0" max="100" value="90" />
+              </div>
+              <div class="option-group" id="bgRow" hidden>
+                <label for="bgColorInput">Background color</label>
+                <input type="color" id="bgColorInput" class="tool-color" value="#ffffff" />
+              </div>
+            </div>
+            <p class="format-note" id="bgNote" hidden>This image may contain transparency, and JPEG has no transparency support — pick a background color to fill transparent areas with instead of black.</p>
+
+            <div class="calc-actions">
+              <button class="btn-copy" id="convertBtn">Convert Image</button>
+              <button class="btn-clear" id="resetBtn">Convert Another Image</button>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden>Converting…</div>
+
+            <div class="result-panel" id="resultPanel" hidden>
+              <div class="result-grid">
+                <div class="result-preview">
+                  <img id="resultImg" alt="Converted image preview" />
+                </div>
+                <div class="result-stats">
+                  <div class="stat-row">
+                    <span class="stat-label">Original</span>
+                    <span class="stat-value" id="statOriginal"></span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Converted</span>
+                    <span class="stat-value" id="statConverted"></span>
+                  </div>
+                  <div class="stat-row stat-row--highlight">
+                    <span class="stat-label">Size change</span>
+                    <span class="stat-value" id="statChange"></span>
+                  </div>
+                  <a class="btn-copy btn-download" id="downloadBtn" download>Download Converted Image</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>PNG vs JPEG vs WebP: The Real Differences</h2>
+          <p><strong>PNG</strong> is lossless — every pixel is stored exactly, and it supports full transparency — which makes it the right choice for logos, screenshots and graphics with sharp edges or text, at the cost of larger files. <strong>JPEG</strong> is lossy, has no transparency channel at all, and is tuned for photographs, where it can shrink file size dramatically with little visible loss. <strong>WebP</strong> is the newer format: it supports both lossy and lossless compression plus transparency in a single format, and typically produces smaller files than either PNG or JPEG at equivalent visual quality, with near-universal browser support today.</p>
+        </article>
+        <article class="content-block">
+          <h2>The Transparent PNG → JPEG Black Background Bug</h2>
+          <p>JPEG cannot represent transparency, so when a naive converter draws a transparent PNG onto a blank canvas and encodes it as JPEG, every transparent pixel becomes whatever color the canvas defaulted to — usually black. It's a genuinely common bug in quick-and-dirty converters. This tool avoids it by filling the canvas with a background color (white by default, but you can pick any color) before drawing the image on top, so transparent areas render as that solid color instead of turning black.</p>
+        </article>
+        <article class="content-block">
+          <h2>When to Use Each Format</h2>
+          <ul class="feature-list">
+            <li>Photos for the web — JPEG or WebP, quality 75-90</li>
+            <li>Logos, icons, screenshots — PNG or lossless WebP</li>
+            <li>Images needing transparency — PNG or WebP (never JPEG)</li>
+            <li>Smallest possible file at good quality — WebP first</li>
+            <li>Maximum compatibility with old tools — JPEG or PNG</li>
+          </ul>
+        </article>
+        <article class="content-block">
+          <h2>How This Converter Works</h2>
+          <p>Your image is decoded into an <code>&lt;img&gt;</code> element, drawn onto an off-screen <code>&lt;canvas&gt;</code> at its full natural size, and then re-encoded to the format you chose using <code>canvas.toBlob()</code>. All of this happens locally in your browser using the Canvas API — nothing is ever uploaded, so conversion is instant and your files stay completely private.</p>
+        </article>
+        <article class="content-block">
+          <h2>Understanding the Quality Slider</h2>
+          <p>PNG is always lossless, so there's no quality setting to adjust — every pixel is preserved exactly. JPEG and WebP are both lossy formats with an adjustable quality parameter: higher values keep more detail and produce bigger files, lower values discard more detail for smaller files. A quality around 80-90 is usually the sweet spot — a big reduction in size with a difference that's barely visible to the eye.</p>
+        </article>
+        <article class="content-block">
+          <h2>Benefits of Using This Tool</h2>
+          <ul class="feature-list">
+            <li>Correct transparency handling — no more black backgrounds</li>
+            <li>Detects and warns if your browser can't actually encode WebP</li>
+            <li>Live before/after preview with real file sizes</li>
+            <li>100% private — your image never leaves your device</li>
+            <li>Free, unlimited, no sign-up, no watermark</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What's the actual difference between PNG, JPEG and WebP?</summary>
+            <p>PNG is lossless and supports transparency, but produces the largest files — best for logos, screenshots and graphics with sharp edges. JPEG is lossy and has no transparency channel at all, but compresses photos much smaller. WebP is a modern format that supports both lossy and lossless compression plus transparency, and is generally smaller than both PNG and JPEG at equivalent quality, with near-universal browser support today.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why did my transparent PNG turn black when I converted it to JPEG?</summary>
+            <p>JPEG has no alpha channel, so any transparent pixel has to become some solid color. Naive converters draw the image onto a blank canvas, which defaults to black, so transparency turns black. This tool fills the canvas with your chosen background color (white by default) before drawing the image, so transparent areas become that color instead.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which format should I use for photos, and which for logos or screenshots?</summary>
+            <p>Use JPEG or WebP for photos — their lossy compression shrinks file size dramatically with little visible quality loss. Use PNG or WebP for logos, screenshots, icons and anything with transparency or sharp text/edges, since lossy compression can blur fine lines and JPEG can't preserve transparency at all.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does converting to WebP always produce a smaller file than PNG or JPEG?</summary>
+            <p>Usually, but not always. WebP's compression algorithm typically beats both formats at the same visual quality, especially for photos, but results depend on the source image's content and the quality setting you choose. Always check the before/after file sizes shown by this tool rather than assuming.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens if my browser doesn't support WebP encoding?</summary>
+            <p>Nearly every current browser supports it, but a few older ones silently fail to encode WebP. This tool checks the actual MIME type of the converted file after encoding, and if it doesn't match WebP, it shows a warning instead of letting you download a mislabeled file.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my image uploaded to a server?</summary>
+            <p>No. Everything happens locally using your browser's Canvas API — your image is decoded, redrawn and re-encoded entirely on your own device and is never uploaded or sent to any server.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink file size while keeping quality</span>
+          </a>
+          <a href="https://social00.com/tools/image-resizer" class="tool-card">
+            <span class="tool-icon">📐</span>
+            <span class="tool-name">Image Resizer</span>
+            <span class="tool-desc">Resize images to exact dimensions</span>
+          </a>
+          <a href="https://social00.com/tools/jpg-to-pdf" class="tool-card">
+            <span class="tool-icon">📄</span>
+            <span class="tool-name">JPG to PDF</span>
+            <span class="tool-desc">Combine images into one PDF</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
