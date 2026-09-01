@@ -582,6 +582,17 @@ const TOOLS = [
     desc: 'Find out exactly what score you need on your final exam to hit your target grade in the class.',
     url: '/tools/final-grade-calculator'
   },
+
+  // ── New tools (batch 6) ────────────────────────────────────────
+  {
+    id: 'pdf-editor',
+    name: 'PDF Editor',
+    icon: '✏️',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Add text, images, signatures and drawings to any PDF, cover content, and rotate, delete or reorder pages — free, right in your browser.',
+    url: '/tools/pdf-editor'
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════

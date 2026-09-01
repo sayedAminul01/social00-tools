@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Editor – Add Text, Images & Signatures to PDFs Online | Social00</title>
+  <meta name="description" content="Free online PDF editor. Add text, images, signatures & drawings, cover content, and rotate, delete or reorder pages — entirely in your browser." />
+  <meta name="keywords" content="pdf editor, edit pdf online, add text to pdf, sign pdf online, whiteout pdf, rotate pdf pages, delete pdf pages, free pdf editor" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/pdf-editor" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PDF Editor – Add Text, Images & Signatures to PDFs Online | Social00" />
+  <meta property="og:description" content="Add text, images, signatures and drawings to any PDF, cover content, and manage pages — free, private, and entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/pdf-editor" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PDF Editor",
+    "url": "https://social00.com/tools/pdf-editor",
+    "description": "Free online PDF editor that lets you add text, images, signatures and freehand drawings to a PDF, cover content, and rotate, delete or reorder pages, entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "PDF Editor", "item": "https://social00.com/tools/pdf-editor" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is my PDF uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool loads your PDF locally using PDF.js for rendering and pdf-lib for editing, both running entirely in your browser. Your file is never uploaded to any server — everything, including the final export, happens on your own device." } },
+      { "@type": "Question", "name": "Does the Whiteout tool actually redact or remove content from my PDF?", "acceptedAnswer": { "@type": "Answer", "text": "No — and this is important. Whiteout only draws an opaque box on top of the existing content in the visual output. The original text or image underneath is still present in the PDF's data and could be recovered by removing the box or extracting content with other tools. Do not use Whiteout to hide sensitive data like SSNs or account numbers that must be permanently removed — genuine redaction requires stripping the underlying content, which this tool does not do." } },
+      { "@type": "Question", "name": "Why are added text and images real PDF content instead of a flattened image?", "acceptedAnswer": { "@type": "Answer", "text": "Your edits are drawn using pdf-lib's native drawing commands, so the rest of the page keeps its original text layer, fonts, and image quality — nothing gets flattened or re-rendered as a picture. That means the untouched parts of your document stay fully searchable, selectable, and crisp at any zoom level." } },
+      { "@type": "Question", "name": "Can I use my own custom fonts for added text?", "acceptedAnswer": { "@type": "Answer", "text": "Not in this version. Text is added using the three PDF Standard 14 fonts — Helvetica, Times Roman, and Courier — because they're built into every PDF viewer and need no extra font file to embed. Custom font upload may be added in a future version." } },
+      { "@type": "Question", "name": "What happens to pages I rotate or delete when I export?", "acceptedAnswer": { "@type": "Answer", "text": "Rotations and deletions are only applied when you click Download — the original file on disk is never touched. Rotating a page queues a 90° turn that's applied to the exported copy, and deleting a page simply leaves it out of the new file; any reordering you've done in the sidebar is preserved too." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no watermark, and no page or file-size limit imposed by this tool. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / PDF Editor</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">✏️ PDF Editor</h1>
+        <p class="hero-sub">Add text, images, signatures and drawings to any PDF, cover content, and manage pages — right in your browser. No upload, no sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card tool-card--editor">
+
+          <p class="privacy-note">🔒 Your PDF is processed entirely in your browser using PDF.js and pdf-lib — it is never uploaded to any server.</p>
+          <p class="desktop-note">🖥️ This is the most detailed tool on Social00 — it works best on a desktop or laptop screen with a mouse or trackpad.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose a PDF or drag and drop one here">
+            <input type="file" id="fileInput" accept="application/pdf" class="sr-only" />
+            <div class="drop-zone-icon">📄</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop a PDF here</strong><br/>or click to browse (.pdf files only)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No PDF selected yet — choose or drop a file above to start editing.</p>
+          <p class="warning-state" id="warningState" hidden></p>
+
+          <div class="editor-panel" id="editorPanel" hidden>
+
+            <div class="editor-file-bar">
+              <div class="file-meta">
+                <span class="file-name" id="fileName"></span>
+                <span class="file-size" id="fileSize"></span>
+                <span class="file-pages" id="pageCountNote"></span>
+              </div>
+              <div class="editor-file-actions">
+                <button type="button" class="btn-clear" id="startOverBtn">Start Over</button>
+                <button type="button" class="btn-copy" id="downloadBtn">Download Edited PDF</button>
+              </div>
+            </div>
+
+            <div class="editor-toolbar" id="editorToolbar" role="toolbar" aria-label="Editing tools">
+              <button type="button" class="tool-btn active" data-tool="select" title="Select / Move"><span class="tb-icon">🖱️</span><span class="tb-label">Select</span></button>
+              <button type="button" class="tool-btn" data-tool="text" title="Add Text"><span class="tb-icon">🔤</span><span class="tb-label">Text</span></button>
+              <button type="button" class="tool-btn" data-tool="image" title="Add Image / Signature"><span class="tb-icon">🖼️</span><span class="tb-label">Image</span></button>
+              <button type="button" class="tool-btn" data-tool="draw" title="Freehand Draw"><span class="tb-icon">✏️</span><span class="tb-label">Draw</span></button>
+              <button type="button" class="tool-btn" data-tool="whiteout" title="Whiteout / Cover"><span class="tb-icon">⬜</span><span class="tb-label">Whiteout</span></button>
+              <span class="toolbar-sep" aria-hidden="true"></span>
+              <button type="button" class="tool-action-btn" id="undoBtn" title="Undo last added edit"><span class="tb-icon">↩️</span><span class="tb-label">Undo</span></button>
+              <button type="button" class="tool-action-btn" id="deleteSelectedBtn" title="Delete selected annotation" disabled><span class="tb-icon">🗑️</span><span class="tb-label">Delete</span></button>
+            </div>
+
+            <div class="tool-options" id="toolOptions">
+              <div class="opt-panel" data-panel="select">
+                <p class="opt-hint">Click any added text, image, drawing or whiteout box to select it. Drag to move it, use the corner handle to resize images and whiteout boxes, or press <strong>Delete</strong>.</p>
+              </div>
+              <div class="opt-panel" data-panel="text" hidden>
+                <div class="opt-row">
+                  <label class="opt-field">Font
+                    <select id="textFontSelect">
+                      <option value="Helvetica" selected>Helvetica</option>
+                      <option value="TimesRoman">Times Roman</option>
+                      <option value="Courier">Courier</option>
+                    </select>
+                  </label>
+                  <label class="opt-field">Size
+                    <select id="textSizeSelect">
+                      <option value="10">10pt</option>
+                      <option value="12" selected>12pt</option>
+                      <option value="14">14pt</option>
+                      <option value="18">18pt</option>
+                      <option value="24">24pt</option>
+                      <option value="36">36pt</option>
+                    </select>
+                  </label>
+                  <label class="opt-field">Color <input type="color" id="textColorInput" value="#111111" /></label>
+                </div>
+                <p class="opt-hint">Click anywhere on the page to add text there. Click existing text to edit it, or clear it and press Enter to remove it.</p>
+              </div>
+              <div class="opt-panel" data-panel="image" hidden>
+                <div class="opt-row">
+                  <label class="file-btn">Upload Image<input type="file" id="imageFileInput" accept="image/*" class="sr-only" /></label>
+                  <span class="opt-or">or draw a signature below</span>
+                </div>
+                <div class="signature-pad-wrap">
+                  <canvas id="signaturePad" width="320" height="120"></canvas>
+                  <div class="signature-pad-actions">
+                    <button type="button" class="btn-clear" id="clearSignatureBtn">Clear</button>
+                    <button type="button" class="btn-copy" id="useSignatureBtn">Use This Signature</button>
+                  </div>
+                </div>
+                <p class="opt-hint">The image or signature is placed on the page automatically — drag it into place and use the corner handle to resize it.</p>
+              </div>
+              <div class="opt-panel" data-panel="draw" hidden>
+                <div class="opt-row">
+                  <label class="opt-field">Color <input type="color" id="drawColorInput" value="#e11d48" /></label>
+                  <label class="opt-field">Width
+                    <select id="drawWidthSelect">
+                      <option value="1">Thin</option>
+                      <option value="2.5" selected>Medium</option>
+                      <option value="5">Thick</option>
+                    </select>
+                  </label>
+                </div>
+                <p class="opt-hint">Click and drag on the page to draw freehand.</p>
+              </div>
+              <div class="opt-panel" data-panel="whiteout" hidden>
+                <div class="opt-row">
+                  <label class="opt-field">Cover color <input type="color" id="whiteoutColorInput" value="#ffffff" /></label>
+                </div>
+                <p class="warning-callout">⚠️ <strong>Whiteout / Cover only hides content visually — it does not delete or redact the underlying data.</strong> Anyone who removes the box, or extracts text/images from the file with another tool, can still recover what's underneath. Never use this to hide sensitive information (SSNs, account numbers, etc.) that must be genuinely removed — real redaction requires stripping the underlying content, which this tool does not do.</p>
+                <p class="opt-hint">Click and drag on the page to draw a cover box.</p>
+              </div>
+            </div>
+
+            <div class="editor-layout">
+              <aside class="page-sidebar">
+                <h3 class="sidebar-title">Pages</h3>
+                <ul class="page-thumb-list" id="pageThumbList"></ul>
+              </aside>
+              <div class="editor-main">
+                <div class="canvas-scroll" id="canvasScroll">
+                  <div class="canvas-stack" id="canvasStack">
+                    <canvas id="pageCanvas"></canvas>
+                    <canvas id="overlayCanvas"></canvas>
+                  </div>
+                </div>
+                <p class="canvas-hint" id="canvasHint">Loading page…</p>
+              </div>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is This PDF Editor?</h2>
+          <p>This tool lets you make real edits to a PDF — add text, drop in images or a hand-drawn signature, sketch freehand, cover content you want hidden from view, and rotate, delete or reorder pages — without installing anything or sending your document anywhere. It uses <strong>PDF.js</strong> to render pages for editing and <strong>pdf-lib</strong> to write the final file, both running entirely on your own device.</p>
+        </article>
+        <article class="content-block">
+          <h2>Adding Text, Images &amp; Signatures</h2>
+          <p>Pick the Text tool, click anywhere on the page, and type — you can choose the font, size and color before or after placing it. Images work the same way: upload a file or draw a signature on the built-in pad, and it's placed on the page as a box you can drag and resize. Text is limited to the three PDF Standard 14 fonts (Helvetica, Times Roman, Courier) in this version, since they need no extra font file to embed.</p>
+        </article>
+        <article class="content-block">
+          <h2>Whiteout / Cover: What It Does (and Doesn't Do)</h2>
+          <p>The Whiteout tool draws an opaque box on top of content you want out of view — useful for cleaning up a scanned form or blocking out a stray mark. But it is a visual cover, not a deletion: the text or image underneath is still present in the PDF's data and can be recovered by removing the box or pulling content with another tool. Don't rely on it to hide anything genuinely sensitive.</p>
+        </article>
+        <article class="content-block">
+          <h2>Managing Pages: Rotate, Delete &amp; Reorder</h2>
+          <p>Every page gets a thumbnail in the sidebar with its own rotate, delete and move buttons — click a thumbnail to load that page into the main editor. Rotations, deletions and reordering are tracked as a plan and only applied to the file when you click Download, so the original document is never touched until you're ready.</p>
+        </article>
+        <article class="content-block">
+          <h2>Why Your Edits Stay Real PDF Content</h2>
+          <p>Some tools flatten an edited page into a single image, which quietly destroys the original text layer — no more searching, selecting or copying text from that page, and everything looks blurrier when you zoom in. This editor draws your additions with pdf-lib's native text and vector commands instead, so the rest of the page keeps its original fonts, sharpness and searchability untouched.</p>
+        </article>
+        <article class="content-block">
+          <h2>Privacy: Everything Happens in Your Browser</h2>
+          <ul class="feature-list">
+            <li>Your PDF is read locally and never uploaded to a server</li>
+            <li>Rendering (PDF.js) and editing/export (pdf-lib) both run on your device</li>
+            <li>Nothing is stored, logged, or sent anywhere — close the tab and it's gone</li>
+            <li>Free, unlimited, no sign-up, no watermark</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is my PDF uploaded to a server?</summary>
+            <p>No. This tool loads your PDF locally using PDF.js for rendering and pdf-lib for editing, both running entirely in your browser. Your file is never uploaded to any server — everything, including the final export, happens on your own device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does the Whiteout tool actually redact or remove content from my PDF?</summary>
+            <p>No — and this is important. Whiteout only draws an opaque box on top of the existing content in the visual output. The original text or image underneath is still present in the PDF's data and could be recovered by removing the box or extracting content with other tools. Do not use Whiteout to hide sensitive data like SSNs or account numbers that must be permanently removed — genuine redaction requires stripping the underlying content, which this tool does not do.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why are added text and images real PDF content instead of a flattened image?</summary>
+            <p>Your edits are drawn using pdf-lib's native drawing commands, so the rest of the page keeps its original text layer, fonts, and image quality — nothing gets flattened or re-rendered as a picture. That means the untouched parts of your document stay fully searchable, selectable, and crisp at any zoom level.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use my own custom fonts for added text?</summary>
+            <p>Not in this version. Text is added using the three PDF Standard 14 fonts — Helvetica, Times Roman, and Courier — because they're built into every PDF viewer and need no extra font file to embed. Custom font upload may be added in a future version.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens to pages I rotate or delete when I export?</summary>
+            <p>Rotations and deletions are only applied when you click Download — the original file on disk is never touched. Rotating a page queues a 90° turn that's applied to the exported copy, and deleting a page simply leaves it out of the new file; any reordering you've done in the sidebar is preserved too.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no watermark, and no page or file-size limit imposed by this tool. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/jpg-to-pdf" class="tool-card">
+            <span class="tool-icon">📑</span>
+            <span class="tool-name">JPG to PDF Converter</span>
+            <span class="tool-desc">Combine images into a single PDF</span>
+          </a>
+          <a href="https://social00.com/tools/pdf-to-jpg" class="tool-card">
+            <span class="tool-icon">🖼️</span>
+            <span class="tool-name">PDF to JPG Converter</span>
+            <span class="tool-desc">Turn PDF pages into JPG images</span>
+          </a>
+          <a href="https://social00.com/tools/image-compressor" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Image Compressor</span>
+            <span class="tool-desc">Shrink JPEG, PNG &amp; WebP file sizes</span>
+          </a>
+          <a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -80,6 +80,9 @@
 /tools/markdown-to-html                /markdownToHtml/index.html               200
 /tools/final-grade-calculator          /finalGradeCalculator/index.html         200
 
+# ── New tools (batch 6) ─────────────────────────────────────────────
+/tools/pdf-editor                      /pdfEditor/index.html                    200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200
