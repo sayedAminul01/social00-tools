@@ -613,12 +613,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTools();          // Draw all tool cards from data
   syncRealCounts();       // Derive stats/category counts from real data
   initFilterBar();        // Category filter tabs
-  initSearchBar();        // Navbar search
-  initMobileSearch();     // Mobile search
+  initSearchBar();        // Top search bar
   initCategoryJumps();    // Category card → filter tools
   initScrollReveal();
-  initStatCounters();
-  initParticles();
   initSmoothScroll();
   initBackToTop();
   initFAQ();
@@ -708,16 +705,6 @@ function syncRealCounts() {
   const total = TOOLS.length;
   const perCategory = {};
   TOOLS.forEach(t => { perCategory[t.category] = (perCategory[t.category] || 0) + 1; });
-  const categoryCount = Object.keys(perCategory).length;
-
-  const totalToolsEl = document.getElementById('stat-total-tools');
-  if (totalToolsEl) totalToolsEl.setAttribute('data-target', String(total));
-
-  const totalCatEl = document.getElementById('stat-total-categories');
-  if (totalCatEl) totalCatEl.setAttribute('data-target', String(categoryCount));
-
-  const pillCountEl = document.getElementById('hero-pill-count');
-  if (pillCountEl) pillCountEl.textContent = String(total);
 
   const headingCountEl = document.getElementById('tools-heading-count');
   if (headingCountEl) headingCountEl.textContent = String(total);
@@ -932,30 +919,6 @@ function doDropdownSearch(q, dropdown) {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   MOBILE SEARCH
-   ═══════════════════════════════════════════════════════════════ */
-function initMobileSearch() {
-  const input = document.getElementById('mobile-search-input');
-  if (!input) return;
-  let timer;
-  input.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      const q = input.value.trim();
-      if (!q) return;
-      currentSearch = q;
-      renderTools(currentFilter, q);
-      // Close mobile menu & scroll to tools
-      document.getElementById('hamburger')?.classList.remove('open');
-      const mm = document.getElementById('mobile-menu');
-      if (mm) { mm.classList.remove('open'); mm.setAttribute('aria-hidden', 'true'); }
-      document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' });
-      input.value = '';
-    }, 500);
-  });
-}
-
-/* ═══════════════════════════════════════════════════════════════
    CATEGORY CARDS → jump to filter
    ═══════════════════════════════════════════════════════════════ */
 function initCategoryJumps() {
@@ -1059,63 +1022,12 @@ function initScrollReveal() {
   );
 
   // Stagger siblings
-  document.querySelectorAll('.section-header, .stats-grid, .categories-grid, .testi-grid, .about-grid, .faq-list, .contact-grid, .newsletter-box').forEach(parent => {
+  document.querySelectorAll('.section-header, .categories-grid, .testi-grid, .about-grid, .faq-list, .contact-grid, .newsletter-box').forEach(parent => {
     const revealKids = parent.querySelectorAll('.reveal');
     revealKids.forEach((el, i) => { el.style.transitionDelay = `${i * 60}ms`; });
   });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   STAT COUNTERS
-   ═══════════════════════════════════════════════════════════════ */
-function initStatCounters() {
-  const nums = document.querySelectorAll('.stat-num[data-target]');
-  const fmt  = n => n >= 1_000_000 ? (n/1_000_000).toFixed(1).replace(/\.0$/,'')+'M+' : n >= 1_000 ? Math.round(n/1_000)+'K+' : n+'+';
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.getAttribute('data-target'), 10);
-      const start  = performance.now();
-      const dur    = 1600;
-      const tick   = (now) => {
-        const prog = Math.min((now - start) / dur, 1);
-        const ease = 1 - Math.pow(1 - prog, 3);
-        el.textContent = fmt(Math.round(target * ease));
-        if (prog < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-
-  nums.forEach(el => observer.observe(el));
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   PARTICLES
-   ═══════════════════════════════════════════════════════════════ */
-function initParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-  const colors = ['var(--accent)', 'var(--accent-2)', 'var(--accent-3)', '#22c55e'];
-  for (let i = 0; i < 30; i++) {
-    const p = document.createElement('span');
-    p.className = 'particle';
-    const size = Math.random() * 3 + 1.5;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    Object.assign(p.style, {
-      width: `${size}px`, height: `${size}px`,
-      left: `${Math.random()*100}%`, top: `${Math.random()*100}%`,
-      background: color, boxShadow: `0 0 ${size*3}px ${color}`,
-      animationDuration: `${Math.random()*5+3}s`,
-      animationDelay: `${Math.random()*6}s`,
-    });
-    container.appendChild(p);
-  }
 }
 
 /* ═══════════════════════════════════════════════════════════════

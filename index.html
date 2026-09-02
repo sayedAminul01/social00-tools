@@ -95,13 +95,6 @@
       </ul>
 
       <div class="nav-actions">
-        <div class="search-wrap" role="search">
-          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="search" id="tool-search" placeholder="Search tools…" aria-label="Search tools" autocomplete="off" spellcheck="false" />
-          <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>✕</button>
-          <div id="search-results" class="search-dropdown" role="listbox" aria-label="Search results" aria-live="polite"></div>
-        </div>
-
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
           <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -115,10 +108,6 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
-      <div class="mobile-search">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" id="mobile-search-input" placeholder="Search tools…" aria-label="Search tools on mobile" />
-      </div>
       <ul role="list">
         <li><a href="#home"       class="nav-link">Home</a></li>
         <li><a href="#tools"      class="nav-link">Tools</a></li>
@@ -131,93 +120,21 @@
 
   <main id="main-content">
 
-    <!-- ░░ HERO ░░ -->
-    <section id="home" class="hero" aria-label="Hero section">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <div class="grid-overlay"></div>
-        <div class="particles" id="particles"></div>
-      </div>
-
-      <div class="hero-content reveal">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span>62 tools &nbsp;·&nbsp; Always free &nbsp;·&nbsp; No login required</span>
-        </div>
-        <h1 class="hero-title">
-          Create More.<br />
-          <span class="gradient-text">Work Smarter.</span><br />
-          Grow Faster.
-        </h1>
-        <p class="hero-desc">
-          The ultimate free toolkit for YouTubers, Instagrammers, bloggers,
-          freelancers, students and more. 62 practical free tools — zero cost, zero friction.
-        </p>
-        <div class="hero-cta">
-          <a href="#tools" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            Explore Tools
-          </a>
-          <a href="#categories" class="btn btn-ghost">
-            Browse Categories
-            <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-        <div class="hero-trust">
-          <div class="avatars" aria-label="Creator community">
-            <span style="background:#f97316"></span>
-            <span style="background:#8b5cf6"></span>
-            <span style="background:#06b6d4"></span>
-            <span style="background:#10b981"></span>
-          </div>
-          <span><strong>Free forever</strong> — no signup, no catch</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal" aria-hidden="true">
-        <div class="hero-card-float card-f1">
-          <div class="hcf-icon" style="background:#f97316">📹</div>
-          <div><strong>YouTube Title Generator</strong><small>AI-powered titles that rank</small></div>
-        </div>
-        <div class="hero-card-float card-f2">
-          <div class="hcf-icon" style="background:#8b5cf6">✨</div>
-          <div><strong>AI Bio Generator</strong><small>Stand out in seconds</small></div>
-        </div>
-        <div class="hero-card-float card-f3">
-          <div class="hcf-icon" style="background:#06b6d4">#️⃣</div>
-          <div><strong>Hashtag Generator</strong><small>Boost your reach instantly</small></div>
-        </div>
-        <div class="hero-stats-pill">
-          <span>🔥</span><span><strong id="hero-pill-count">62</strong> free tools, ready right now</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ░░ STATS ░░ -->
-    <section class="stats-section" aria-label="Platform statistics">
+    <!-- ░░ PAGE INTRO — headline + prominent search + category filters ░░ -->
+    <section id="home" class="page-intro" aria-label="Find a tool">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card reveal"><span class="stat-num" id="stat-total-tools" data-target="62">0</span><span class="stat-label">Free Tools</span></div>
-          <div class="stat-card reveal"><span class="stat-num" id="stat-total-categories" data-target="7">0</span><span class="stat-label">Categories</span></div>
-          <div class="stat-card reveal"><span class="stat-num stat-num--static">$0</span><span class="stat-label">Cost, Ever</span></div>
-          <div class="stat-card reveal"><span class="stat-num stat-num--static">0</span><span class="stat-label">Sign-ups Required</span></div>
-        </div>
-      </div>
-    </section>
+        <h1 class="intro-title">Every Tool You Need, <span class="intro-accent">100% Free</span></h1>
+        <p class="intro-desc"><span id="tools-heading-count">62</span> browser-based tools for creators, students and everyday tasks — no sign-up, nothing uploaded.</p>
 
-    <!-- ░░ TOOLS SECTION — Filter tabs + full grid + related tools ░░ -->
-    <section id="tools" class="tools-section" aria-labelledby="tools-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">🛠 All Tools</span>
-          <h2 id="tools-heading" class="section-title"><span id="tools-heading-count">62</span> Free Tools for Creators &amp; Everyday Use</h2>
-          <p class="section-desc">Filter by category or search to find exactly what you need.</p>
+        <div class="intro-search" role="search">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="tool-search" placeholder="Search tools… e.g. QR code, resume, invoice, PDF" aria-label="Search tools" autocomplete="off" spellcheck="false" />
+          <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>✕</button>
+          <div id="search-results" class="search-dropdown" role="listbox" aria-label="Search results" aria-live="polite"></div>
         </div>
 
         <!-- Category filter tabs -->
-        <div class="filter-bar reveal" role="tablist" aria-label="Filter tools by category">
+        <div class="filter-bar" role="tablist" aria-label="Filter tools by category">
           <button class="filter-btn active" data-filter="all"       role="tab" aria-selected="true"  aria-controls="tools-grid">All Tools</button>
           <button class="filter-btn"        data-filter="youtube"   role="tab" aria-selected="false" aria-controls="tools-grid">📹 YouTube</button>
           <button class="filter-btn"        data-filter="instagram" role="tab" aria-selected="false" aria-controls="tools-grid">📸 Instagram</button>
@@ -227,7 +144,12 @@
           <button class="filter-btn"        data-filter="seo"       role="tab" aria-selected="false" aria-controls="tools-grid">🔍 SEO</button>
           <button class="filter-btn"        data-filter="utility"   role="tab" aria-selected="false" aria-controls="tools-grid">🧰 Utility</button>
         </div>
+      </div>
+    </section>
 
+    <!-- ░░ TOOLS SECTION — full grid + related tools ░░ -->
+    <section id="tools" class="tools-section" aria-label="All tools">
+      <div class="container">
         <!-- Tools grid — populated by JS -->
         <div class="tools-grid" id="tools-grid" aria-live="polite" aria-label="Tools list"></div>
 
