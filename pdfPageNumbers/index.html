@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Page Numbers to PDF – Free Online Tool | Social00</title>
+  <meta name="description" content="Add page numbers to a PDF online for free. Choose position, format, starting number and font, skip the cover page, and download. Runs in your browser." />
+  <meta name="keywords" content="add page numbers to pdf, pdf page numbers, number pdf pages, pdf pagination online, free pdf page numberer" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/pdf-page-numbers" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Add Page Numbers to PDF – Free Online Tool | Social00" />
+  <meta property="og:description" content="Stamp page numbers onto every page of a PDF — pick the position, format, starting number and font, then download. Free and entirely browser-based." />
+  <meta property="og:url" content="https://social00.com/tools/pdf-page-numbers" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Add Page Numbers to PDF",
+    "url": "https://social00.com/tools/pdf-page-numbers",
+    "description": "Free online tool that stamps page numbers onto every page of a PDF, with control over position, format, starting number, font size and color, entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Add Page Numbers to PDF", "item": "https://social00.com/tools/pdf-page-numbers" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is my PDF uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool reads your PDF locally using PDF.js for the preview and pdf-lib for the export, both running entirely in your browser. Your file is never uploaded anywhere — everything happens on your own device." } },
+      { "@type": "Question", "name": "What does {total} mean if I skip the first page?", "acceptedAnswer": { "@type": "Answer", "text": "{total} always equals the document's total physical page count, including any skipped cover page. For example, in a 10-page document with the cover skipped, the second page (the first numbered one) reads \"Page 1 of 10\", not \"Page 1 of 9\" — the total reflects the whole file, not just the numbered pages." } },
+      { "@type": "Question", "name": "How does \"Skip first page\" affect the numbering?", "acceptedAnswer": { "@type": "Answer", "text": "The first page gets no stamp at all, and the page right after it becomes the one showing your chosen starting number. So with a starting number of 1, physical page 2 shows \"1\", physical page 3 shows \"2\", and so on — the cover page is excluded from the count entirely rather than being page \"0\"." } },
+      { "@type": "Question", "name": "Can I start numbering from something other than 1?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Set any starting integer, which is useful when this file is a continuation of another document — for example starting at 45 so the numbering carries on from a previous part." } },
+      { "@type": "Question", "name": "Will this replace page numbers my PDF already has?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool stamps new page numbers as a separate layer on top of the page — it can't detect or remove existing printed numbers. If your document already has numbers baked into the page content, you'll end up with both, so use this tool on documents that don't already have numbering." } },
+      { "@type": "Question", "name": "Why won't my PDF open in this tool?", "acceptedAnswer": { "@type": "Answer", "text": "The file may be corrupted or, more commonly, password-protected. Both PDF.js and pdf-lib, the libraries this tool runs on, cannot open encrypted PDFs — you'd need to remove the password with the file's original owner or software first." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Add Page Numbers to PDF</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">🔢 Add Page Numbers to PDF</h1>
+        <p class="hero-sub">Stamp page numbers onto every page — pick the position, format and starting number, then download. No upload, no sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card">
+
+          <p class="privacy-note">🔒 Your PDF is processed entirely in your browser using PDF.js and pdf-lib — it is never uploaded to any server.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose a PDF or drag and drop one here">
+            <input type="file" id="fileInput" accept="application/pdf" class="sr-only" />
+            <div class="drop-zone-icon">📄</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop a PDF here</strong><br/>or click to browse (.pdf files only)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No PDF selected yet — choose or drop a file above to get started.</p>
+          <p class="warning-state" id="warningState" hidden></p>
+
+          <div class="editor-panel" id="editorPanel" hidden>
+
+            <div class="editor-file-bar">
+              <div class="file-meta">
+                <span class="file-name" id="fileName"></span>
+                <span class="file-size" id="fileSize"></span>
+                <span class="file-pages" id="pageCountNote"></span>
+              </div>
+              <div class="editor-file-actions">
+                <button type="button" class="btn-clear" id="startOverBtn">Start Over</button>
+                <button type="button" class="btn-copy" id="applyBtn">Add Page Numbers</button>
+              </div>
+            </div>
+
+            <div class="pn-layout">
+              <div class="pn-options">
+
+                <div class="opt-block">
+                  <span class="opt-block-label">Position</span>
+                  <div class="position-grid" id="positionGrid" role="group" aria-label="Page number position">
+                    <button type="button" class="pos-btn" data-pos="top-left" title="Top left">↖</button>
+                    <button type="button" class="pos-btn" data-pos="top-center" title="Top center">↑</button>
+                    <button type="button" class="pos-btn" data-pos="top-right" title="Top right">↗</button>
+                    <button type="button" class="pos-btn" data-pos="bottom-left" title="Bottom left">↙</button>
+                    <button type="button" class="pos-btn active" data-pos="bottom-center" title="Bottom center">↓</button>
+                    <button type="button" class="pos-btn" data-pos="bottom-right" title="Bottom right">↘</button>
+                  </div>
+                </div>
+
+                <div class="opt-block">
+                  <span class="opt-block-label">Format</span>
+                  <div class="format-presets" id="formatPresets">
+                    <button type="button" class="preset-btn" data-format="{n}">{n}</button>
+                    <button type="button" class="preset-btn active" data-format="Page {n} of {total}">Page {n} of {total}</button>
+                    <button type="button" class="preset-btn" data-format="Page {n}">Page {n}</button>
+                    <button type="button" class="preset-btn" data-format="- {n} -">- {n} -</button>
+                  </div>
+                  <input type="text" id="formatInput" class="format-input" value="Page {n} of {total}" autocomplete="off" />
+                  <p class="opt-hint">Use <code>{n}</code> for the page number and <code>{total}</code> for the total page count.</p>
+                </div>
+
+                <div class="opt-row-grid">
+                  <label class="opt-field-col">Starting number
+                    <input type="number" id="startNumberInput" value="1" step="1" />
+                  </label>
+                  <label class="opt-field-col">Font size
+                    <input type="number" id="fontSizeInput" value="11" min="6" max="48" step="1" />
+                  </label>
+                  <label class="opt-field-col">Color
+                    <input type="color" id="colorInput" value="#444444" />
+                  </label>
+                </div>
+
+                <label class="option-toggle">
+                  <input type="checkbox" id="skipFirstCheckbox" />
+                  <span>Skip first page (e.g. don't number a cover page)</span>
+                </label>
+              </div>
+
+              <div class="pn-preview">
+                <span class="opt-block-label">Preview</span>
+                <div class="preview-canvas-wrap">
+                  <canvas id="previewCanvas"></canvas>
+                </div>
+                <p class="canvas-hint" id="previewHint">Loading preview…</p>
+              </div>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What This Tool Does</h2>
+          <p>This tool stamps a page number onto every page of a PDF — choose where it sits, how it reads, and where the count starts, then download the finished file. It's built for the common case: a report, ebook, or contract that needs clean pagination without opening desktop software.</p>
+        </article>
+        <article class="content-block">
+          <h2>Position, Format &amp; Starting Number</h2>
+          <p>Pick any of the six corner/edge positions, choose a preset format or type your own using <code>{n}</code> and <code>{total}</code> as placeholders, and set a starting number other than 1 if this file continues from an earlier document. Font size and color are adjustable too.</p>
+        </article>
+        <article class="content-block">
+          <h2>Skipping a Cover Page</h2>
+          <p>Check <strong>Skip first page</strong> and the first page gets no stamp at all — the page right after it becomes the one showing your chosen starting number, so a cover page never throws off the count.</p>
+        </article>
+        <article class="content-block">
+          <h2>What {total} Means</h2>
+          <p><code>{total}</code> always refers to the document's total physical page count, including any page you chose to skip. In a 10-page file with the cover skipped, the first numbered page reads "Page 1 of 10" — the total reflects the whole document, not just the pages that got a number.</p>
+        </article>
+        <article class="content-block">
+          <h2>Precise, Real PDF Text</h2>
+          <p>Numbers are added using pdf-lib's native text drawing with the standard Helvetica font, with each position calculated from the exact page dimensions and measured text width — not a flattened image. The result stays sharp, searchable, and selectable at any zoom.</p>
+        </article>
+        <article class="content-block">
+          <h2>Privacy: Everything Happens in Your Browser</h2>
+          <ul class="feature-list">
+            <li>Your PDF is read locally and never uploaded to a server</li>
+            <li>Rendering (PDF.js) and export (pdf-lib) both run on your device</li>
+            <li>Nothing is stored, logged, or sent anywhere — close the tab and it's gone</li>
+            <li>Free, unlimited, no sign-up, no watermark</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is my PDF uploaded to a server?</summary>
+            <p>No. This tool reads your PDF locally using PDF.js for the preview and pdf-lib for the export, both running entirely in your browser. Your file is never uploaded anywhere — everything happens on your own device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does {total} mean if I skip the first page?</summary>
+            <p>{total} always equals the document's total physical page count, including any skipped cover page. For example, in a 10-page document with the cover skipped, the second page (the first numbered one) reads "Page 1 of 10", not "Page 1 of 9" — the total reflects the whole file, not just the numbered pages.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does "Skip first page" affect the numbering?</summary>
+            <p>The first page gets no stamp at all, and the page right after it becomes the one showing your chosen starting number. So with a starting number of 1, physical page 2 shows "1", physical page 3 shows "2", and so on — the cover page is excluded from the count entirely rather than being page "0".</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I start numbering from something other than 1?</summary>
+            <p>Yes. Set any starting integer, which is useful when this file is a continuation of another document — for example starting at 45 so the numbering carries on from a previous part.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will this replace page numbers my PDF already has?</summary>
+            <p>No. This tool stamps new page numbers as a separate layer on top of the page — it can't detect or remove existing printed numbers. If your document already has numbers baked into the page content, you'll end up with both, so use this tool on documents that don't already have numbering.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why won't my PDF open in this tool?</summary>
+            <p>The file may be corrupted or, more commonly, password-protected. Both PDF.js and pdf-lib, the libraries this tool runs on, cannot open encrypted PDFs — you'd need to remove the password with the file's original owner or software first.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/watermark-pdf" class="tool-card">
+            <span class="tool-icon">💧</span>
+            <span class="tool-name">Watermark PDF</span>
+            <span class="tool-desc">Stamp CONFIDENTIAL, DRAFT & more on every page</span>
+          </a>
+          <a href="https://social00.com/tools/merge-pdf" class="tool-card">
+            <span class="tool-icon">🧩</span>
+            <span class="tool-name">Merge PDF</span>
+            <span class="tool-desc">Combine multiple PDFs into one</span>
+          </a>
+          <a href="https://social00.com/tools/pdf-editor" class="tool-card">
+            <span class="tool-icon">✏️</span>
+            <span class="tool-name">PDF Editor</span>
+            <span class="tool-desc">Add text, images & signatures to a PDF</span>
+          </a>
+<a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

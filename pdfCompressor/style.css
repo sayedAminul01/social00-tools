@@ -1,0 +1,135 @@
+/* Compress PDF — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.privacy-note {
+  font-size: .86rem; color: var(--text-2);
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .7rem .9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Drop zone ─────────────────────────────────────────────── */
+.drop-zone {
+  border: 2px dashed var(--border-2); border-radius: var(--radius-lg);
+  background: var(--bg-2); padding: 2.4rem 1.5rem; text-align: center;
+  cursor: pointer; transition: border-color .2s, background .2s;
+}
+.drop-zone:hover, .drop-zone:focus-visible { border-color: var(--accent); }
+.drop-zone.drag-over { border-color: var(--accent); background: var(--accent-glow); }
+.drop-zone-icon { font-size: 2.2rem; margin-bottom: .6rem; }
+.drop-zone-text { color: var(--text-2); font-size: .92rem; line-height: 1.55; }
+.drop-zone-text strong { color: var(--text); }
+
+.empty-state {
+  color: var(--text-3); font-size: .88rem; text-align: center;
+  margin-top: 1rem;
+}
+.warning-state {
+  color: #f59e0b; font-size: .88rem; text-align: center;
+  background: rgba(245, 158, 11, .1); border: 1px solid rgba(245, 158, 11, .3);
+  border-radius: var(--radius); padding: .7rem .9rem; margin-top: 1rem;
+}
+
+/* ── File bar ──────────────────────────────────────────────── */
+.compress-panel { margin-top: 1.2rem; }
+
+.editor-file-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 1.2rem;
+  padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+}
+.file-meta { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+.file-name { font-weight: 700; font-size: .96rem; color: var(--text); word-break: break-all; }
+.file-size, .file-pages { font-size: .82rem; color: var(--text-3); white-space: nowrap; }
+.editor-file-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; background: transparent;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+.btn-copy:disabled, .btn-clear:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+/* ── Quality selector ──────────────────────────────────────── */
+.quality-block { margin-bottom: 1.2rem; }
+.quality-label {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--text-3); font-weight: 700; margin-bottom: .6rem;
+}
+.quality-select {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem;
+  margin-bottom: .6rem;
+}
+.quality-option {
+  position: relative; display: flex; flex-direction: column; gap: .25rem;
+  border: 1.5px solid var(--border-2); border-radius: var(--radius);
+  background: var(--bg-2); padding: .8rem .9rem; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.quality-option:hover { border-color: var(--accent); }
+.quality-option.selected { border-color: var(--accent); background: var(--accent-glow); }
+.quality-option input[type="radio"] { position: absolute; top: .7rem; right: .7rem; margin: 0; accent-color: var(--accent); }
+.quality-name { font-weight: 700; font-size: .88rem; color: var(--text); padding-right: 1.2rem; }
+.quality-desc { font-size: .76rem; color: var(--text-3); line-height: 1.4; }
+
+.opt-hint { font-size: .8rem; color: var(--text-3); margin: 0; line-height: 1.55; }
+
+@media (max-width: 640px) {
+  .quality-select { grid-template-columns: 1fr; }
+}
+
+/* ── Compress button ───────────────────────────────────────── */
+.btn-compress {
+  width: 100%; padding: .85rem 1.2rem; font-size: .96rem; margin-bottom: .2rem;
+}
+
+.progress-note {
+  font-size: .86rem; color: var(--text-2); margin-top: 1rem;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .65rem .9rem;
+}
+
+/* ── Results ───────────────────────────────────────────────── */
+.results-box {
+  margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid var(--border);
+}
+.results-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem;
+  margin-bottom: 1rem;
+}
+.result-stat {
+  display: flex; flex-direction: column; gap: .3rem; text-align: center;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .8rem .5rem;
+}
+.result-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--text-3); }
+.result-value { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+.result-value--accent { color: var(--accent-3, var(--accent)); }
+
+.results-message {
+  font-size: .88rem; color: var(--text-2); line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .results-row { grid-template-columns: 1fr; }
+}
+
+.content-block code {
+  font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3);
+  padding: .1rem .4rem; border-radius: 4px; font-size: .88em; color: var(--accent-3);
+}

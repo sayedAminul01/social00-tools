@@ -593,6 +593,62 @@ const TOOLS = [
     desc: 'Add text, images, signatures and drawings to any PDF, cover content, and rotate, delete or reorder pages — free, right in your browser.',
     url: '/tools/pdf-editor'
   },
+
+  // ── New tools (batch 7 — PDF suite) ─────────────────────────────
+  {
+    id: 'merge-pdf',
+    name: 'Merge PDF',
+    icon: '🧩',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Combine multiple PDF files into one, reorder them however you like, and download a single merged PDF — free, right in your browser.',
+    url: '/tools/merge-pdf'
+  },
+  {
+    id: 'split-pdf',
+    name: 'Split PDF',
+    icon: '✂️',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Extract specific pages into a new PDF, or split every page into its own file, delivered as a ZIP — free, right in your browser.',
+    url: '/tools/split-pdf'
+  },
+  {
+    id: 'rotate-pdf',
+    name: 'Rotate PDF',
+    icon: '🔄',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Rotate one, several, or all pages of a PDF 90° at a time and download the fixed file — free, right in your browser.',
+    url: '/tools/rotate-pdf'
+  },
+  {
+    id: 'pdf-page-numbers',
+    name: 'Add Page Numbers to PDF',
+    icon: '🔖',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Stamp page numbers onto every page of a PDF with your choice of position, format and starting number — free, right in your browser.',
+    url: '/tools/pdf-page-numbers'
+  },
+  {
+    id: 'watermark-pdf',
+    name: 'Watermark PDF',
+    icon: '💧',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Stamp a text watermark — like CONFIDENTIAL or DRAFT — across every page of a PDF with full control over size, color and angle.',
+    url: '/tools/watermark-pdf'
+  },
+  {
+    id: 'compress-pdf',
+    name: 'Compress PDF',
+    icon: '🗜️',
+    category: 'image',
+    badge: '🆕 New',
+    desc: 'Shrink a PDF by re-compressing its embedded JPEG images, with three quality levels to choose from — free, right in your browser.',
+    url: '/tools/compress-pdf'
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════

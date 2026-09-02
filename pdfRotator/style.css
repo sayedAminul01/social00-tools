@@ -1,0 +1,103 @@
+/* Rotate PDF — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.privacy-note {
+  font-size: .86rem; color: var(--text-2);
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .7rem .9rem;
+  margin-bottom: .8rem;
+}
+
+/* ── Drop zone ─────────────────────────────────────────────── */
+.drop-zone {
+  border: 2px dashed var(--border-2); border-radius: var(--radius-lg);
+  background: var(--bg-2); padding: 2.4rem 1.5rem; text-align: center;
+  cursor: pointer; transition: border-color .2s, background .2s;
+}
+.drop-zone:hover, .drop-zone:focus-visible { border-color: var(--accent); }
+.drop-zone.drag-over { border-color: var(--accent); background: var(--accent-glow); }
+.drop-zone-icon { font-size: 2.2rem; margin-bottom: .6rem; }
+.drop-zone-text { color: var(--text-2); font-size: .92rem; line-height: 1.55; }
+.drop-zone-text strong { color: var(--text); }
+
+.empty-state {
+  color: var(--text-3); font-size: .88rem; text-align: center;
+  margin-top: 1rem;
+}
+.warning-state {
+  color: #f59e0b; font-size: .88rem; text-align: center;
+  background: rgba(245, 158, 11, .1); border: 1px solid rgba(245, 158, 11, .3);
+  border-radius: var(--radius); padding: .7rem .9rem; margin-top: 1rem;
+}
+
+/* ── Editor file bar ───────────────────────────────────────── */
+.editor-panel { margin-top: 1.2rem; }
+
+.editor-file-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: .8rem;
+  padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+}
+.file-meta { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+.file-name { font-weight: 700; font-size: .96rem; color: var(--text); word-break: break-all; }
+.file-size, .file-pages { font-size: .82rem; color: var(--text-3); white-space: nowrap; }
+.editor-file-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+
+.btn-clear, .btn-copy, .btn-ghost-action {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; background: transparent;
+}
+.btn-clear:hover, .btn-ghost-action:hover { border-color: var(--accent); color: var(--accent); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+.btn-copy:disabled, .btn-clear:disabled, .btn-ghost-action:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+.opt-hint { font-size: .82rem; color: var(--text-3); margin: 0 0 1.1rem; line-height: 1.55; }
+.opt-hint strong { color: var(--text-2); }
+
+/* ── Page rotate grid ─────────────────────────────────────── */
+.rotate-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem; list-style: none; padding: 0; margin: 0;
+}
+.rotate-item {
+  border: 1px solid var(--border); border-radius: var(--radius); padding: .7rem;
+  background: var(--bg-2); text-align: center;
+}
+.rotate-num { display: block; font-size: .76rem; font-weight: 700; color: var(--text-3); margin-bottom: .5rem; }
+.rotate-thumb-wrap {
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  min-height: 110px; border-radius: 6px; background: var(--bg-3); margin-bottom: .6rem;
+}
+.rotate-thumb-img { max-width: 90%; max-height: 130px; transition: transform .2s ease; }
+.rotate-actions { display: flex; gap: .4rem; }
+.rotate-btn {
+  flex: 1 1 auto; height: 32px; border-radius: 6px;
+  border: 1px solid var(--border-2); background: transparent; color: var(--text-2);
+  font-size: .95rem; cursor: pointer; transition: all .15s;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.rotate-btn:hover { border-color: var(--accent); color: var(--accent); }
+.rotate-deg { display: block; font-size: .72rem; color: var(--text-3); margin-top: .4rem; }
+
+.progress-note {
+  font-size: .86rem; color: var(--text-2); margin-top: 1rem;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .65rem .9rem;
+}
+
+@media (max-width: 480px) {
+  .rotate-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+}

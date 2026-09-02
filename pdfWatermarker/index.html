@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watermark PDF – Add Text Watermarks to PDF Online | Social00</title>
+  <meta name="description" content="Free online PDF watermark tool. Stamp custom text on every page or a page range — pick font, color, opacity & rotation. Runs entirely in your browser." />
+  <meta name="keywords" content="watermark pdf, add watermark to pdf, pdf watermark tool, stamp text on pdf, confidential watermark pdf, free pdf watermark" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Social00" />
+  <link rel="canonical" href="https://social00.com/tools/watermark-pdf" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Watermark PDF – Add Text Watermarks to PDF Online | Social00" />
+  <meta property="og:description" content="Stamp a custom text watermark onto any PDF — choose font, color, opacity, rotation and page range. Free, private, runs entirely in your browser." />
+  <meta property="og:url" content="https://social00.com/tools/watermark-pdf" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Watermark PDF",
+    "url": "https://social00.com/tools/watermark-pdf",
+    "description": "Free online tool that adds a customizable text watermark — font, color, opacity, rotation and page range — to a PDF, entirely in the browser.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Social00", "url": "https://social00.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://social00.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://social00.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Watermark PDF", "item": "https://social00.com/tools/watermark-pdf" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is my PDF uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. This tool loads your PDF locally using PDF.js for rendering and pdf-lib for writing the watermark, both running entirely in your browser. Your file is never uploaded anywhere — the watermarked copy is generated on your own device." } },
+      { "@type": "Question", "name": "Can I watermark a password-protected PDF?", "acceptedAnswer": { "@type": "Answer", "text": "Not currently. This tool cannot open PDFs that are encrypted or password-protected, since the underlying libraries (PDF.js and pdf-lib) require the file to be unlocked first. Remove the password with your PDF viewer, then upload the unlocked file." } },
+      { "@type": "Question", "name": "Can I remove the watermark afterward?", "acceptedAnswer": { "@type": "Answer", "text": "No, and this is important to know before you export. The watermark is drawn as real, permanent page content — the same way the rest of the page's text is — not as a separate overlay or annotation layer that can be toggled off. If you need an unmarked copy later, keep your original file; there is no built-in way to strip the watermark back out." } },
+      { "@type": "Question", "name": "Can I use a logo or image as the watermark instead of text?", "acceptedAnswer": { "@type": "Answer", "text": "Not in this version — only text watermarks are supported, since that covers the overwhelming majority of real use cases like \"CONFIDENTIAL\", \"DRAFT\", or a company name. Image/logo watermarking may be added in a future version." } },
+      { "@type": "Question", "name": "Can I watermark only some pages instead of the whole document?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose \"Custom range\" and enter page numbers like 1-3,5 to watermark only those pages, leaving the rest of the document untouched. The default is to apply the watermark to every page." } },
+      { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free, no account required, no limit on file size or how many PDFs you watermark. Everything runs locally in your browser." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/assets/tools-base.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9882344850230649" crossorigin="anonymous"></script>
+</head>
+<body data-theme="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://social00.com" class="logo" aria-label="Social00 Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">social00</span>
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="https://social00.com/#tools" class="nav-link">All Tools</a>
+        <a href="https://social00.com" class="nav-link">Home</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">◗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <p class="breadcrumb"><a href="https://social00.com">Home</a> / <a href="https://social00.com/#tools">Tools</a> / Watermark PDF</p>
+        <div class="hero-badge">Free Online Tool</div>
+        <h1 class="hero-title">💧 Watermark PDF</h1>
+        <p class="hero-sub">Stamp a custom text watermark onto any PDF — pick the font, color, opacity, rotation and pages. No upload, no sign-up.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="top" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="tool-section">
+      <div class="container">
+        <div class="tool-card tool-card--watermark">
+
+          <p class="privacy-note">🔒 Your PDF is processed entirely in your browser using PDF.js and pdf-lib — it is never uploaded to any server.</p>
+
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose a PDF or drag and drop one here">
+            <input type="file" id="fileInput" accept="application/pdf" class="sr-only" />
+            <div class="drop-zone-icon">📄</div>
+            <p class="drop-zone-text"><strong>Drag &amp; drop a PDF here</strong><br/>or click to browse (.pdf files only)</p>
+          </div>
+
+          <p class="empty-state" id="emptyState">No PDF selected yet — choose or drop a file above to start.</p>
+          <p class="warning-state" id="warningState" hidden></p>
+
+          <div class="editor-panel" id="editorPanel" hidden>
+
+            <div class="editor-file-bar">
+              <div class="file-meta">
+                <span class="file-name" id="fileName"></span>
+                <span class="file-size" id="fileSize"></span>
+                <span class="file-pages" id="pageCountNote"></span>
+              </div>
+              <div class="editor-file-actions">
+                <button type="button" class="btn-clear" id="startOverBtn">Start Over</button>
+                <button type="button" class="btn-copy" id="downloadBtn">Add Watermark &amp; Download</button>
+              </div>
+            </div>
+
+            <div class="watermark-layout">
+              <div class="watermark-options" id="watermarkOptions">
+                <div class="opt-field-block">
+                  <label for="wmText">Watermark text</label>
+                  <input type="text" id="wmText" maxlength="200" value="CONFIDENTIAL" placeholder="e.g. CONFIDENTIAL, DRAFT, Your Company" />
+                </div>
+
+                <div class="opt-row">
+                  <label class="opt-field">Font
+                    <select id="wmFont">
+                      <option value="Helvetica" selected>Helvetica</option>
+                      <option value="TimesRoman">Times Roman</option>
+                      <option value="Courier">Courier</option>
+                    </select>
+                  </label>
+                  <label class="opt-field">Font size
+                    <input type="number" id="wmSize" min="6" max="300" value="48" />
+                  </label>
+                  <label class="opt-field">Color <input type="color" id="wmColor" value="#888888" /></label>
+                </div>
+
+                <div class="opt-row opt-row--sliders">
+                  <label class="opt-field opt-field--slider">
+                    Opacity <span class="opt-value" id="wmOpacityValue">30%</span>
+                    <input type="range" id="wmOpacity" min="0" max="100" value="30" />
+                  </label>
+                  <label class="opt-field opt-field--slider">
+                    Rotation <span class="opt-value" id="wmRotationValue">45°</span>
+                    <input type="range" id="wmRotation" min="-90" max="90" value="45" />
+                  </label>
+                </div>
+
+                <div class="opt-row">
+                  <label class="opt-field">Apply to
+                    <select id="wmPageMode">
+                      <option value="all" selected>All pages</option>
+                      <option value="custom">Custom range</option>
+                    </select>
+                  </label>
+                  <label class="opt-field opt-field--range" id="wmCustomRangeWrap" hidden>
+                    Pages
+                    <input type="text" id="wmCustomRange" placeholder="e.g. 1-3,5" />
+                  </label>
+                </div>
+                <p class="opt-hint">The watermark is drawn as real, permanent page content on every export — it can't be removed later, so keep your original file if you might need an unmarked copy.</p>
+              </div>
+
+              <div class="watermark-preview">
+                <h3 class="sidebar-title">Preview</h3>
+                <div class="preview-canvas-wrap" id="previewCanvasWrap">
+                  <div class="preview-stage" id="previewStage">
+                    <canvas id="previewCanvas"></canvas>
+                    <div class="preview-watermark" id="previewWatermark">CONFIDENTIAL</div>
+                  </div>
+                </div>
+                <p class="canvas-hint" id="canvasHint">Approximate preview — exact placement is calculated at export time.</p>
+              </div>
+            </div>
+
+            <div class="progress-note" id="progressNote" hidden></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="mid" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+
+    <section class="content-section" id="guide">
+      <div class="container content-grid">
+        <article class="content-block">
+          <h2>What Is This Watermark Tool?</h2>
+          <p>This tool stamps a custom text watermark — like "CONFIDENTIAL", "DRAFT", or your company name — onto every page of a PDF, or just the pages you choose. It uses <strong>PDF.js</strong> to render pages for the preview and <strong>pdf-lib</strong> to write the final watermarked file, both running entirely on your own device.</p>
+        </article>
+        <article class="content-block">
+          <h2>How the Watermark Is Centered</h2>
+          <p>The watermark text is centered on the page after rotation is applied, using the text's real measured width and a rotation-aware offset — not a naive fixed anchor point. That means a 45° diagonal watermark lands with its visual center on the page's actual center, however wide the text or however large the page.</p>
+        </article>
+        <article class="content-block">
+          <h2>Customizing Your Watermark</h2>
+          <p>Choose from the three PDF Standard 14 fonts (Helvetica, Times Roman, Courier), set the font size and color, and control how strongly it shows through with the opacity slider. The rotation slider lets you angle the text anywhere from -90° to 90°, with 45° as a classic diagonal default.</p>
+        </article>
+        <article class="content-block">
+          <h2>Watermarking Specific Pages</h2>
+          <p>By default the watermark is applied to every page. Switch "Apply to" to Custom range and enter page numbers like <code>1-3,5</code> to mark only a subset — useful when a cover page or appendix shouldn't carry the same stamp as the body of the document.</p>
+        </article>
+        <article class="content-block">
+          <h2>Permanent, Not an Overlay</h2>
+          <p>Unlike a sticky-note style annotation, the watermark this tool draws becomes part of the page's actual content — the same way the original text and images are part of it. That makes it far harder to accidentally strip out, but it also means there's no "remove watermark" button here: if you need a clean copy later, hold onto your original file.</p>
+        </article>
+        <article class="content-block">
+          <h2>Privacy: Everything Happens in Your Browser</h2>
+          <ul class="feature-list">
+            <li>Your PDF is read locally and never uploaded to a server</li>
+            <li>Rendering (PDF.js) and watermarking/export (pdf-lib) both run on your device</li>
+            <li>Nothing is stored, logged, or sent anywhere — close the tab and it's gone</li>
+            <li>Free, unlimited, no sign-up, no watermark on the watermark tool itself</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is my PDF uploaded to a server?</summary>
+            <p>No. This tool loads your PDF locally using PDF.js for rendering and pdf-lib for writing the watermark, both running entirely in your browser. Your file is never uploaded anywhere — the watermarked copy is generated on your own device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I watermark a password-protected PDF?</summary>
+            <p>Not currently. This tool cannot open PDFs that are encrypted or password-protected, since the underlying libraries (PDF.js and pdf-lib) require the file to be unlocked first. Remove the password with your PDF viewer, then upload the unlocked file.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I remove the watermark afterward?</summary>
+            <p>No, and this is important to know before you export. The watermark is drawn as real, permanent page content — the same way the rest of the page's text is — not as a separate overlay or annotation layer that can be toggled off. If you need an unmarked copy later, keep your original file; there is no built-in way to strip the watermark back out.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use a logo or image as the watermark instead of text?</summary>
+            <p>Not in this version — only text watermarks are supported, since that covers the overwhelming majority of real use cases like "CONFIDENTIAL", "DRAFT", or a company name. Image/logo watermarking may be added in a future version.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I watermark only some pages instead of the whole document?</summary>
+            <p>Yes. Choose "Custom range" and enter page numbers like 1-3,5 to watermark only those pages, leaving the rest of the document untouched. The default is to apply the watermark to every page.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this tool free?</summary>
+            <p>Yes — completely free, no account required, no limit on file size or how many PDFs you watermark. Everything runs locally in your browser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section">
+      <div class="container">
+        <div id="affiliate-box"></div>
+      </div>
+    </section>
+
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="section-title">Related Tools on Social00</h2>
+        <div class="tools-grid">
+          <a href="https://social00.com/tools/pdf-page-numbers" class="tool-card">
+            <span class="tool-icon">🔖</span>
+            <span class="tool-name">Add Page Numbers to PDF</span>
+            <span class="tool-desc">Stamp page numbers on every page</span>
+          </a>
+          <a href="https://social00.com/tools/compress-pdf" class="tool-card">
+            <span class="tool-icon">🗜️</span>
+            <span class="tool-name">Compress PDF</span>
+            <span class="tool-desc">Shrink a PDF's file size</span>
+          </a>
+          <a href="https://social00.com/tools/pdf-editor" class="tool-card">
+            <span class="tool-icon">✏️</span>
+            <span class="tool-name">PDF Editor</span>
+            <span class="tool-desc">Add text, images & signatures to a PDF</span>
+          </a>
+<a href="https://social00.com/#tools" class="tool-card tool-card--all">
+            <span class="tool-icon">🛠️</span>
+            <span class="tool-name">View All Tools →</span>
+            <span class="tool-desc">Browse the full toolkit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="ad-slot" data-ad="bottom" aria-label="Advertisement"><span>Advertisement</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <a href="https://social00.com">Social00</a>. Free online tools.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://social00.com/#tools">Tools</a>
+          <a href="https://social00.com/privacy">Privacy</a>
+          <a href="https://social00.com/#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="/assets/ads-config.js"></script>
+  <script src="/assets/affiliate-config.js"></script>
+  <script src="/assets/tools-base.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

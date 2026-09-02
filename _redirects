@@ -83,6 +83,14 @@
 # ── New tools (batch 6) ─────────────────────────────────────────────
 /tools/pdf-editor                      /pdfEditor/index.html                    200
 
+# ── New tools (batch 7 — PDF suite) ──────────────────────────────────
+/tools/merge-pdf                       /pdfMerger/index.html                    200
+/tools/split-pdf                       /pdfSplitter/index.html                  200
+/tools/rotate-pdf                      /pdfRotator/index.html                   200
+/tools/pdf-page-numbers                /pdfPageNumbers/index.html               200
+/tools/watermark-pdf                   /pdfWatermarker/index.html               200
+/tools/compress-pdf                    /pdfCompressor/index.html                200
+
 # ── Misc clean URLs ──────────────────────────────────────────────
 /privacy    /privacy-policy.html    200
 /terms      /terms-of-service.html  200

@@ -1,0 +1,144 @@
+/* Add Page Numbers to PDF — tool-specific styles (chrome lives in /assets/tools-base.css) */
+
+.tool-section { padding: .5rem 0 1rem; }
+
+.tool-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.privacy-note {
+  font-size: .86rem; color: var(--text-2);
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .7rem .9rem;
+  margin-bottom: .8rem;
+}
+
+/* ── Drop zone ─────────────────────────────────────────────── */
+.drop-zone {
+  border: 2px dashed var(--border-2); border-radius: var(--radius-lg);
+  background: var(--bg-2); padding: 2.4rem 1.5rem; text-align: center;
+  cursor: pointer; transition: border-color .2s, background .2s;
+}
+.drop-zone:hover, .drop-zone:focus-visible { border-color: var(--accent); }
+.drop-zone.drag-over { border-color: var(--accent); background: var(--accent-glow); }
+.drop-zone-icon { font-size: 2.2rem; margin-bottom: .6rem; }
+.drop-zone-text { color: var(--text-2); font-size: .92rem; line-height: 1.55; }
+.drop-zone-text strong { color: var(--text); }
+
+.empty-state {
+  color: var(--text-3); font-size: .88rem; text-align: center;
+  margin-top: 1rem;
+}
+.warning-state {
+  color: #f59e0b; font-size: .88rem; text-align: center;
+  background: rgba(245, 158, 11, .1); border: 1px solid rgba(245, 158, 11, .3);
+  border-radius: var(--radius); padding: .7rem .9rem; margin-top: 1rem;
+}
+
+/* ── Editor file bar ───────────────────────────────────────── */
+.editor-panel { margin-top: 1.2rem; }
+
+.editor-file-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 1.1rem;
+  padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+}
+.file-meta { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+.file-name { font-weight: 700; font-size: .96rem; color: var(--text); word-break: break-all; }
+.file-size, .file-pages { font-size: .82rem; color: var(--text-3); white-space: nowrap; }
+.editor-file-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+
+.btn-clear, .btn-copy {
+  padding: .6rem 1.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: .86rem;
+  border: 1px solid var(--border-2); color: var(--text-2); transition: all .2s;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; background: transparent;
+}
+.btn-clear:hover { border-color: var(--border-2); color: var(--text); }
+.btn-copy { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.btn-copy:hover { opacity: .92; transform: translateY(-1px); }
+.btn-copy:disabled, .btn-clear:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+/* ── Layout: options + preview ────────────────────────────── */
+.pn-layout { display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap; }
+.pn-options { flex: 1 1 320px; min-width: 280px; }
+.pn-preview { flex: 1 1 320px; min-width: 280px; }
+
+.opt-block-label {
+  display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--text-3); font-weight: 700; margin-bottom: .5rem;
+}
+.opt-block { margin-bottom: 1.2rem; }
+
+/* Position grid */
+.position-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; max-width: 220px;
+}
+.pos-btn {
+  aspect-ratio: 1; border-radius: var(--radius); border: 1px solid var(--border-2);
+  background: var(--bg-2); color: var(--text-2); font-size: 1.1rem; cursor: pointer;
+  transition: all .15s; display: flex; align-items: center; justify-content: center;
+}
+.pos-btn:hover { border-color: var(--accent); color: var(--accent); }
+.pos-btn.active { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+
+/* Format presets */
+.format-presets { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .6rem; }
+.preset-btn {
+  padding: .45rem .8rem; border-radius: var(--radius-pill); border: 1px solid var(--border-2);
+  background: transparent; color: var(--text-2); font-size: .8rem; font-weight: 600; cursor: pointer;
+  transition: all .15s;
+}
+.preset-btn:hover { border-color: var(--accent); color: var(--accent); }
+.preset-btn.active { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.format-input {
+  width: 100%; background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .6rem .8rem; color: var(--text); font-size: .92rem; margin-bottom: .4rem;
+}
+.format-input:focus { border-color: var(--accent); }
+.opt-hint { font-size: .78rem; color: var(--text-3); margin: 0; line-height: 1.5; }
+.opt-hint code { font-family: 'DM Mono', 'Courier New', monospace; background: var(--bg-3); padding: .05rem .3rem; border-radius: 4px; color: var(--accent-3); }
+
+/* Field row */
+.opt-row-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin-bottom: 1.1rem; }
+.opt-field-col {
+  display: flex; flex-direction: column; gap: .35rem; font-size: .78rem; color: var(--text-3); font-weight: 700;
+}
+.opt-field-col input[type="number"] {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .5rem .7rem; color: var(--text); font-size: .92rem;
+}
+.opt-field-col input[type="color"] {
+  width: 100%; height: 38px; padding: 0; border: 1px solid var(--border); border-radius: var(--radius);
+  background: transparent; cursor: pointer;
+}
+
+.option-toggle {
+  display: flex; align-items: center; gap: .6rem; font-size: .88rem; color: var(--text-2);
+  cursor: pointer;
+}
+.option-toggle input { width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; }
+
+/* Preview */
+.preview-canvas-wrap {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-3); display: flex; align-items: center; justify-content: center;
+  padding: 1rem; min-height: 260px; overflow: auto; max-height: 560px;
+}
+#previewCanvas { display: block; background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.25); max-width: 100%; }
+.canvas-hint { font-size: .78rem; color: var(--text-3); margin-top: .6rem; text-align: center; }
+
+.progress-note {
+  font-size: .86rem; color: var(--text-2); margin-top: 1.2rem;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .65rem .9rem;
+}
+
+@media (max-width: 760px) {
+  .opt-row-grid { grid-template-columns: 1fr 1fr; }
+}
